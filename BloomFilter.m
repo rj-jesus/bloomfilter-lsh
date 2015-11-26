@@ -32,7 +32,7 @@ classdef BloomFilter
         end
         
         %% Contains
-        function [c] = contains(self, str)
+        function c = contains(self, str)
             for seed = 1:self.k
                 res = mod(self.hash(str, seed), self.arraySize) + 1;
                 c = self.byteArray(res);
@@ -42,17 +42,12 @@ classdef BloomFilter
             end
         end
 
-        
     end
     
     methods(Static)
         %% Hash
         function [h] = hash(str, seed)
-            h = int64(seed);
-            MAX_64 = int64(intmax);
-            for i = 1:numel(str)
-                h = mod(31 * h + str(i), MAX_64);
-            end
+            h = string2hash([str 1:seed]);
         end
     end
     
