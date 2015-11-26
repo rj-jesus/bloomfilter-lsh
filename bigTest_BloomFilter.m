@@ -1,17 +1,19 @@
 clear, clc
 %% Variables
-setSize = 1e5;
+setSize = 1e6;
 stringSize = 50;
 randomStringSize = 0; % False = 0 / True = else
-set = generateStrings(setSize, stringSize, 1);
-notSet = generateStrings(setSize, stringSize, 1);
+set = unique(generateStrings(setSize, stringSize, 1));
+notSet = unique(setdiff(generateStrings(setSize, stringSize, 1), set));
+setSize = length(set);
+notSetSize = length(notSet);
 if randomStringSize == 0
     fprintf('Length of the randomly generated strings: %d\n', stringSize);
 else
     fprintf('Max length of the randomly generated strings: %d\n', stringSize);
 end
 
-falsePositiveProbability = 0.001;
+falsePositiveProbability = 0.0001;
 obj = BloomFilter(falsePositiveProbability, setSize);
 fprintf('Probability of false positive: %f\n', falsePositiveProbability);
 fprintf('Length of the set to add (m): %d\n\n', setSize);
@@ -34,11 +36,11 @@ fprintf('%d strings that were previously added are not in the set.\n\n', setSize
 
 %% Verify if other elems that were not added may be in the set
 numExisting = 0;
-for idx = 1:setSize
+for idx = 1:notSetSize
     if obj.contains(notSet{idx}) == 1
         numExisting = numExisting + 1;
     end
 end
 fprintf('%d strings that were not added are probably in the set.\n', numExisting);
-fprintf('%d strings that were not added are not in the set.\n', setSize - numExisting);
-fprintf('Probability of false positives (observed): %f\n\n', numExisting / setSize);
+fprintf('%d strings that were not added are not in the set.\n', notSetSize - numExisting);
+fprintf('Probability of false positives (observed): %f\n\n', numExisting / notSetSize);

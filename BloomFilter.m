@@ -2,7 +2,8 @@ classdef BloomFilter < handle
     %BloomFilter Implementation of a simple Bloom-filter
     %   Detailed explanation goes here
     
-    properties (Access = private)
+    %properties (Access = private)
+    properties
         %%%%%
         %   Bloom-Filter related attributes
         %%%%%
@@ -13,6 +14,7 @@ classdef BloomFilter < handle
         expectedMaxSize;    % m - Expected maximum size
         %%%%%
         %   Hash function related attributes
+        %       This was taken from http://www.mathworks.com/matlabcentral/fileexchange/45123-data-structures/content/Data%20Structures/Hash%20Tables/HashTable.m
         %%%%%
         % Hash function parameters
         p;                  % hash function parameter
@@ -57,7 +59,8 @@ classdef BloomFilter < handle
         
         %% Hash
         function h = hash(self, str, seed)
-            h = mod(self.HashCode([str 1:seed]), self.arraySize) + 1;
+            %h = mod(self.HashCode([str 1:seed]), self.arraySize) + 1;
+            h = mod(MurmurHash3(str, seed), self.arraySize) + 1;
         end
     end
     
