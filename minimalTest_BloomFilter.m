@@ -10,7 +10,7 @@ fprintf('Length of the set to add (m): %f\n\n', length(set));
 
 %% Add set to filter
 for idx = 1:length(set)
-    obj = obj.add(set{idx});
+    obj.add(set{idx});
     fprintf('%s added to the filter.\n', set{idx});
 end
 fprintf('\n');
