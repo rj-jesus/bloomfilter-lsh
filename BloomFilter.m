@@ -38,7 +38,7 @@ classdef BloomFilter < handle
         %% Add
         function add(self, str)
             for seed = 1:self.k
-                res = mod(self.hash(str, seed), self.arraySize) + 1;
+                res = self.hash(str, seed);
                 self.byteArray(res) = 1;
             end
             self.amountAdded = self.amountAdded + 1;
@@ -47,12 +47,17 @@ classdef BloomFilter < handle
         %% Contains
         function c = contains(self, str)
             for seed = 1:self.k
-                res = mod(self.hash(str, seed), self.arraySize) + 1;
+                res = self.hash(str, seed);
                 c = self.byteArray(res);
                 if ~c
                     return
                 end
             end
+        end
+        
+        %% Hash
+        function h = hash(self, str, seed)
+            h = mod(self.HashCode([str 1:seed]), self.arraySize) + 1;
         end
     end
     
@@ -118,15 +123,7 @@ classdef BloomFilter < handle
                 % shifts (see reference)
                 hk = mod(self.c * hk + key(i),self.p);
             end
-            hk = mod(mod(self.a * hk + self.b,self.p),self.m) + 1;
+            hk = mod(mod(self.a * hk + self.b,self.p),self.arraySize) + 1;
         end
     end
-    
-    methods(Static)
-        %% Hash
-        function [h] = hash(str, seed)
-            h = string2hash([str 1:seed]);
-        end
-    end
-    
 end
