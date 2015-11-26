@@ -2,7 +2,7 @@ clear, clc
 %% Variables
 setSize = 1e5;
 stringSize = 50;
-randomStringSize = 1; % False = 0 / True = else
+randomStringSize = 0; % False = 0 / True = else
 set = generateStrings(setSize, stringSize, 1);
 notSet = generateStrings(setSize, stringSize, 1);
 if randomStringSize == 0
@@ -40,5 +40,5 @@ for idx = 1:setSize
     end
 end
 fprintf('%d strings that were not added are probably in the set.\n', numExisting);
-fprintf('%d strings that were not added are not in the set.\n\n', setSize - numExisting);
-fprintf('Probability of false positives (observed): %f', numExisting / setSize);
+fprintf('%d strings that were not added are not in the set.\n', setSize - numExisting);
+fprintf('Probability of false positives (observed): %f\n\n', numExisting / setSize);
