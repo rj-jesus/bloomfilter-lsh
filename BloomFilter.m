@@ -2,8 +2,7 @@ classdef BloomFilter < handle
     %BloomFilter Implementation of a simple Bloom-filter
     %   Detailed explanation goes here
     
-    %properties (Access = private)
-    properties
+    properties (Access = private)
         %%%%%
         %   Bloom-Filter related attributes
         %%%%%
