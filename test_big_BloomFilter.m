@@ -1,6 +1,6 @@
 clear, clc
 %% Variables
-setSize = 1e4;
+setSize = 1e6;
 stringSize = 50;
 randomStringSize = 0; % False = 0 / True = else
 % "Save" only different strings 
@@ -15,7 +15,7 @@ else
     fprintf('Max length of the randomly generated strings: %d\n', stringSize);
 end
 
-falsePositiveProbability = 0.0001;
+falsePositiveProbability = 0.00001;
 obj = BloomFilter(falsePositiveProbability, setSize);
 fprintf('Probability of false positive: %f\n', falsePositiveProbability);
 fprintf('Length of the set to add (m): %d\n\n', setSize);
