@@ -1,6 +1,6 @@
 clear, clc
 %% Variables
-setSize = 1e6;
+setSize = 1e4;
 stringSize = 50;
 randomStringSize = 0; % False = 0 / True = else
 % "Save" only different strings 

@@ -31,26 +31,28 @@ hist(hashedStrings);
 epsilon = 10; % coeficiente de erro
 counter = 0;
 numTests = 1e3;
-setSize = 1e6;
-set = unique(generateStrings(setSize, stringSize, 1));
-setSize = length(set); 
 k = 10;
+falsePositiveProbability = 0.01;
 
 
-for i = 1:setSize
+for i = 1:numTests
+    set = unique(generateStrings(k, stringSize, 1));
+    n = ceil(length(set) * log(1 / falsePositiveProbability) / (log(2)) ^ 2);
     x = zeros(1, k);
     y = zeros(1, k);
-    for seed = 1:10
-        x(seed) = mod(MurmurHash3(set{i}, seed), setSize) + 1;
-        y(seed) = mod(MurmurHash3(set{i}, floor(rand * setSize) + 1), setSize) + 1;
+    for seed = 1:k
+        x(seed) = mod(MurmurHash3(set{j}, seed), n) + 1;
+        y(seed) = mod(MurmurHash3(set{j}, floor(rand * k) + 1), n) + 1;
     end
+    setSize = n;
     
     if x == y
        counter = counter + 1; 
     end
 end
 
-if counter / setSize <= epsilon * (1 / m)^k
+p = counter * setSize^k / numTests;
+if 1 - p < 0.05
     fprintf('HashFunctions are independent from each other\n');
 else
     fprintf('HashFunctions are not independent from each other\n');
