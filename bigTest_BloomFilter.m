@@ -3,7 +3,9 @@ clear, clc
 setSize = 1e6;
 stringSize = 50;
 randomStringSize = 0; % False = 0 / True = else
+% "Save" only different strings 
 set = unique(generateStrings(setSize, stringSize, 1));
+% Save only different strings and that were not in the original set
 notSet = unique(setdiff(generateStrings(setSize, stringSize, 1), set));
 setSize = length(set);
 notSetSize = length(notSet);
