@@ -15,8 +15,6 @@ end
 
 %% Get hash values using MurmurHash3
 % ***** Check the comments below, this is not true *****
-% If the result is a uniform distributed set, then it's guaranteed that the
-% hash functions are independent and can fill a set equally distributed
 k = [1:5; 6:10];    % Change seed, in order to assume "the use of different hashfunctions"
                     % build the matrix following this pattern so that later
                     % the plots work nicely
@@ -42,8 +40,6 @@ end
 numTests = 1e6;
 stringSize = 50;
 k = 10;
-%falsePositiveProbability = 0.01;
-%n = ceil(k * log(1 / falsePositiveProbability) / (log(2)) ^ 2);
 n = 5;	% Hard coding n's value since otherwise n^k will get too close to zero
 
 counter = 0;
