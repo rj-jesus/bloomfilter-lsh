@@ -33,9 +33,11 @@ classdef BloomFilter < handle
             self.byteArray = uint8(zeros(1, self.arraySize));
             % k = n * ln(2) / m
             self.k = ceil(self.arraySize * log(2) / expectedMaxSize);
+            if exist('debug', 'var')
+                self.debug = debug;
+            end
             % Initialize hash function
             self.InitHashFunction();
-            self.debug = debug;
         end
         
         %% Add
@@ -69,6 +71,7 @@ classdef BloomFilter < handle
         function setArraySize(self, arraySize)
             if self.debug == 1
                 self.arraySize = arraySize;
+                self.byteArray = uint8(zeros(1, self.arraySize));
             end
         end
         
