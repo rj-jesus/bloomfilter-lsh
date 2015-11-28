@@ -15,7 +15,7 @@ end
 
 %% Get hash values using MurmurHash3
 % If the result is a uniform distributed set, then it's guaranteed that the
-% hash functions are independent and can fill a set equally distributed
+% hash functions can fill a set equally distributed
 seed = [1 2 3]; % Change seed, in order to assume "the use of different hashfunctions"
 hashedStrings = zeros(1, setSize);
 
