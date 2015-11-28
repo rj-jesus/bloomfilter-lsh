@@ -4,7 +4,7 @@ set = {'Aveiro', 'Porto', 'Lisboa', 'Braga', 'Coimbra'};
 notSet = {'Faro', 'Viseu', 'Viana do Castelo'};
 falsePositiveProbability = 0.01;
 
-obj = BloomFilter(falsePositiveProbability, length(set));
+obj = BloomFilter(falsePositiveProbability, length(set), 0);
 fprintf('Probability of false positive: %f\n', falsePositiveProbability);
 fprintf('Length of the set to add (m): %f\n\n', length(set));
 

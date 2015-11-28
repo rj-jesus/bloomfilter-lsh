@@ -11,6 +11,7 @@ classdef BloomFilter < handle
         arraySize;          % n - Size of bit array
         amountAdded;        % Number of elements added
         expectedMaxSize;    % m - Expected maximum size
+        debug;              % debug - enable setters to use in tests
         %%%%%
         %   Hash function related attributes
         %       This was taken from http://www.mathworks.com/matlabcentral/fileexchange/45123-data-structures/content/Data%20Structures/Hash%20Tables/HashTable.m
@@ -24,7 +25,7 @@ classdef BloomFilter < handle
     
     methods
         %% Constructor
-        function self = BloomFilter(falsePositiveProbability, expectedMaxSize)
+        function self = BloomFilter(falsePositiveProbability, expectedMaxSize, debug)
             self.expectedMaxSize = expectedMaxSize;
             self.amountAdded = 0;
             % n = m * ln(1 / p) / (ln(2)) ^ 2
@@ -34,6 +35,7 @@ classdef BloomFilter < handle
             self.k = ceil(self.arraySize * log(2) / expectedMaxSize);
             % Initialize hash function
             self.InitHashFunction();
+            self.debug = debug;
         end
         
         %% Add
@@ -61,6 +63,19 @@ classdef BloomFilter < handle
             % The function below works but it's too slow
             % h = mod(self.HashCode([str num2str(1:seed, '%d')]), self.arraySize) + 1;
             h = mod(MurmurHash3(str, seed), self.arraySize) + 1;
+        end
+        
+        %% Setters (if debug is on)
+        function setArraySize(self, arraySize)
+            if self.debug == 1
+                self.arraySize = arraySize;
+            end
+        end
+        
+        function setK(self, k)
+            if self.debug == 1
+                self.k = k;
+            end
         end
     end
     

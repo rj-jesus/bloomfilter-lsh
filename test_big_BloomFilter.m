@@ -16,7 +16,7 @@ else
 end
 
 falsePositiveProbability = 0.0001;
-obj = BloomFilter(falsePositiveProbability, setSize);
+obj = BloomFilter(falsePositiveProbability, setSize, 0);
 fprintf('Probability of false positive: %f\n', falsePositiveProbability);
 fprintf('Length of the set to add (m): %d\n\n', setSize);
 
