@@ -58,7 +58,8 @@ classdef BloomFilter < handle
         
         %% Hash
         function h = hash(self, str, seed)
-            %h = mod(self.HashCode([str 1:seed]), self.arraySize) + 1;
+            % The function below works but it's too slow
+            % h = mod(self.HashCode([str num2str(1:seed, '%d')]), self.arraySize) + 1;
             h = mod(MurmurHash3(str, seed), self.arraySize) + 1;
         end
     end
