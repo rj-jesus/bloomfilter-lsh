@@ -10,9 +10,9 @@ notSet = unique(setdiff(generateStrings(setSize, stringSize, 1), set));
 setSize = length(set);
 notSetSize = length(notSet);
 if randomStringSize == 0
-    fprintf('Length of the randomly generated strings: %d\n', stringSize);
+    fprintf('Generated strings with fixed length: %d\n', stringSize);
 else
-    fprintf('Max length of the randomly generated strings: %d\n', stringSize);
+    fprintf('Generated strings with maximum random length: %d\n', stringSize);
 end
 
 arraySize = 8 * setSize;                                    % arraySize -> n
