@@ -4,7 +4,7 @@
 Overview
 --------
 
-Bloom-Filter + MinHash is a project which implements and uses both of concepts. It is currently being developed while we take "MPEI - Métodos Probabilísticos para Engenharia Informática".
+Bloom-Filter + MinHash is a project which implements and uses both a Bloom filter and the MinHash technique. It is currently being developed while we take "MPEI - Métodos Probabilísticos para Engenharia Informática".
 
 Special Notes
 -------------
