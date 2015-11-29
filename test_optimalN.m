@@ -2,7 +2,7 @@ clear, clc, close all
 %% Variables
 setSize = 1e5;
 stringSize = 50;
-randomStringSize = 0; % False = 0 / True = else
+randomStringSize = 1; % False = 0 / True = else
 % Store only unique strings 
 set = unique(generateStrings(setSize, stringSize, randomStringSize));
 % Store only unique strings and that were not in the original set
@@ -21,7 +21,7 @@ nValues = setSize:setSize/2:10*setSize;
 PfalsePositive = zeros(1, length(nValues));
 PfalsePositive_theoretical = zeros(1, length(nValues));
 for i = 1:length(nValues)
-    n = nValues(i);
+    n = round(nValues(i));
     fprintf('Testing for n = %d... ', n);
     k = f_k(n);
     %% Create a new filter with size n to test

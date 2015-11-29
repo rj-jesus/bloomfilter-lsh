@@ -1,8 +1,8 @@
 clear, clc, close all
 %% Variables
 setSize = 1e5;
-stringSize = 40;
-randomStringSize = 0; % False = 0 / True = else
+stringSize = 50;
+randomStringSize = 1; % False = 0 / True = else
 % "Save" only different strings 
 set = unique(generateStrings(setSize, stringSize, randomStringSize));
 % Save only different strings and that were not in the original set
