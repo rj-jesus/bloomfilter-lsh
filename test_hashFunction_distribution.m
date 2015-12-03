@@ -1,6 +1,6 @@
 clear, clc
 %% Distribution test
-setSize = 1e6;
+setSize = 1e4;
 stringSize = 50;
 randomStringSize = 0; % False = 0 / True = else
 % Allow only different strings 
@@ -25,3 +25,26 @@ for seed = k(:)'
     histogram(hashedStrings);
     title(sprintf('k = %d', seed));
 end
+
+%% Prove that MurmurHash3 k-functions are independent
+kValues = (1:10);
+expectedError = 1e-4;
+count = 0;
+total = 0;
+for seed = kValues
+    str = X{ceil(rand * setSize)};                          % Select a random string from the set
+    hashK = mod(MurmurHash3(str, seed), setSize) + 1
+    hashedStr = [];
+    for kseed = kValues(kValues ~= seed)
+        hashedStr = [hashedStr mod(MurmurHash3(str, kseed), setSize) + 1];
+        total = total + 1;
+    end
+    
+    if all(hashK == hashedStr) ~= 0
+        count = count + 1;
+    end
+end
+
+count
+total
+count / total
