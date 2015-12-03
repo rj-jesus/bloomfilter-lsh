@@ -81,6 +81,11 @@ classdef BloomFilter < handle
             idx = self.getIndexes(str);
             self.byteArray(idx) = self.byteArray(idx) + 1;
             self.amountAdded = self.amountAdded + 1;
+%             for s = cellstr(str)
+%                 idx = self.getIndexes(s{:});
+%                 self.byteArray(idx) = self.byteArray(idx) + 1;
+%                 self.amountAdded = self.amountAdded + 1;
+%             end
         end
         
         %% Contains
