@@ -2,7 +2,7 @@ clear, clc
 % Adapted from PL07 MPEI 2015-2016
 %% Parse data
 udata = load('u.data');                 % Load movies' data
-u = udata(1:100, 1:2); clear udata;         % Keep only first two rows
+u = udata(:, 1:2); clear udata;         % Keep only first two rows
 users = unique(u(:, 1));                % Set of users
 Nu = length(users);                     % No. of users
 Set = cell(Nu, 1);                      % List of movies for each user
