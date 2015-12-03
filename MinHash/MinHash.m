@@ -44,6 +44,32 @@ classdef MinHash < handle
             end
         end
         
+        %% Similarity
+        function J = similarity(self, A, B)
+            Sa = uint64(zeros(self.k, 1));
+            Sb = uint64(zeros(self.k, 1));
+            for seed = 1:self.k
+                min_h = intmax('uint64');
+                for i = 1:length(A)
+                    h = MurmurHash3(A{i}, seed);
+                    if h < min_h
+                        min_h = h;
+                    end
+                end
+                Sa(seed) = min_h;
+                min_h = intmax('uint64');
+                for i = 1:length(B)
+                    h = MurmurHash3(B{i}, seed);
+                    if h < min_h
+                        min_h = h;
+                    end
+                end
+                Sb(seed) = min_h;
+            end
+            y = length(intersect(Sa, Sb));
+            J = y / self.k;
+        end
+        
         %% Jaccard
         function J = Jaccard(self, A, B)
             H = uint64(zeros(1, length(A)));
