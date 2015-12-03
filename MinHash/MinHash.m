@@ -46,26 +46,40 @@ classdef MinHash < handle
         
         %% Similarity
         function J = similarity(self, A, B)
-            Sa = uint64(zeros(self.k, 1));
-            Sb = uint64(zeros(self.k, 1));
-            for seed = 1:self.k
-                min_h = intmax('uint64');
-                for i = 1:length(A)
-                    h = MurmurHash3(A{i}, seed);
-                    if h < min_h
-                        min_h = h;
-                    end
+            Sa = uint64(ones(self.k, 1)) * intmax('uint64');
+            Sb = uint64(ones(self.k, 1)) * intmax('uint64');
+            
+            for i = 1:length(A)
+                str = A{i};
+                for seed = 1:self.k
+                    Sa(seed) = min(MurmurHash3(str, seed), Sa(seed));
                 end
-                Sa(seed) = min_h;
-                min_h = intmax('uint64');
-                for i = 1:length(B)
-                    h = MurmurHash3(B{i}, seed);
-                    if h < min_h
-                        min_h = h;
-                    end
-                end
-                Sb(seed) = min_h;
             end
+            
+            for i = 1:length(B)
+                str = B{i};
+                for seed = 1:self.k
+                    Sb(seed) = min(MurmurHash3(str, seed), Sb(seed));
+                end
+            end
+%             for seed = 1:self.k
+%                 min_h = intmax('uint64');
+%                 for i = 1:length(A)
+%                     h = MurmurHash3(A{i}, seed);
+%                     if h < min_h
+%                         min_h = h;
+%                     end
+%                 end
+%                 Sa(seed) = min_h;
+%                 min_h = intmax('uint64');
+%                 for i = 1:length(B)
+%                     h = MurmurHash3(B{i}, seed);
+%                     if h < min_h
+%                         min_h = h;
+%                     end
+%                 end
+%                 Sb(seed) = min_h;
+%             end
             y = length(intersect(Sa, Sb));
             J = y / self.k;
         end
