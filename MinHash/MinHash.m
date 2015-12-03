@@ -51,7 +51,7 @@ classdef MinHash < handle
                 H(i) = MurmurHash3(A{i}, 0);
             end
             H = unique(H);
-            Sa = H(1:self.k);   % signature of B
+            Sa = H(1:self.k);   % signature of A
             H = uint64(zeros(1, length(B)));
             for i = 1:length(B)
                 H(i) = MurmurHash3(B{i}, 0);
