@@ -7,6 +7,8 @@ classdef MinHash < handle
 % Properties:   (none)
 %               
 % Methods:      double  MH.Jaccard(A, B);
+%               (static)
+%               cell    MinHash.shingleWords(Set)
 %               
 % Indexing:     No indexing supported
 %               
@@ -44,50 +46,14 @@ classdef MinHash < handle
             end
         end
         
-        %% Similarity
-        function J = similarity(self, A, B)
-            Sa = uint64(zeros(self.k, 1));
-            Sb = uint64(zeros(self.k, 1));
-            for seed = 1:self.k
-                min_h = intmax('uint64');
-                for i = 1:length(A)
-                    h = MurmurHash3(A{i}, seed);
-                    if h < min_h
-                        min_h = h;
-                    end
+        %% Minhash Signatures
+        function [S] = singnature(self, Shingles)
+            S = uint64(ones(self.k, 1)) * intmax('uint64');
+            for i = 1:length(Shingles)
+                for seed = 1:self.k
+                    S(seed) = min(S(seed), MurmurHash3(Shingles{i}, seed));
                 end
-                Sa(seed) = min_h;
-                min_h = intmax('uint64');
-                for i = 1:length(B)
-                    h = MurmurHash3(B{i}, seed);
-                    if h < min_h
-                        min_h = h;
-                    end
-                end
-                Sb(seed) = min_h;
             end
-            y = length(intersect(Sa, Sb));
-            J = y / self.k;
-        end
-        
-        %% Jaccard
-        function J = Jaccard(self, A, B)
-            H = uint64(zeros(1, length(A)));
-            for i = 1:length(A)
-                H(i) = MurmurHash3(A{i}, 0);
-            end
-            H = unique(H);
-            Sa = H(1:self.k);   % signature of A
-            H = uint64(zeros(1, length(B)));
-            for i = 1:length(B)
-                H(i) = MurmurHash3(B{i}, 0);
-            end
-            H = unique(H);
-            Sb = H(1:self.k);   % signature of B
-            H = sort(union(Sa, Sb));
-            Sx = H(1:self.k);   % signature of A UNION B
-            y = length(intersect(Sx, intersect(Sa, Sb)));
-            J = y / self.k;
         end
         
         %% Setters (if debug is on)
@@ -99,6 +65,45 @@ classdef MinHash < handle
     end
     
     methods (Access = private)
+        
+    end
+    
+    methods (Static)
+        %% Shingles built from words
+        function [S] = shingleWords(Doc)
+            % > Disclaimer: In case of a small Doc[ument] this shingling
+            % might fail, but then it shouldn't be being used in first
+            % place... Not considering such cases.
+            
+            % 100 Most Common Words from
+            %   https://www.englishclub.com/vocabulary/common-words-100.htm
+            stop_words = {'the', 'be', 'to', 'of', 'and', 'a', 'in', ...
+                'that', 'have', 'I', 'it', 'for', 'not', 'on', 'with', ...
+                'he', 'as', 'you', 'do', 'at', 'this', 'but', 'his', ...
+                'by', 'from', 'they', 'we', 'say', 'her', 'she', 'or', ...
+                'an', 'will', 'my', 'one', 'all', 'would', 'there', ...
+                'their', 'what', 'so', 'up', 'out', 'if', 'about', ...
+                'who', 'get', 'which', 'go', 'me', 'when', 'make', ...
+                'can', 'like', 'time', 'no', 'just', 'him', 'know', ...
+                'take', 'person', 'into', 'year', 'your', 'good', ...
+                'some', 'could', 'them', 'see', 'other', 'than', ...
+                'then', 'now', 'look', 'only', 'come', 'its', 'over', ...
+                'think', 'also', 'back', 'after', 'use', 'two', 'how', ...
+                'our', 'work', 'first', 'well', 'way', 'even', 'new', ...
+                'want', 'because', 'any', 'these', 'give', 'day', ...
+                'most', 'us'};
+            % Counter for S{k}
+            k = 1;
+            % Pre-allocate memory
+            S = cell(length(Doc), 1);
+            for i = 1:length(Doc)-2
+                if any(strcmpi(stop_words, Doc{i}))
+                    S{k} = strjoin(Doc(:, i:i+2));
+                    k = k + 1;
+                end
+            end
+            S = unique(S(1:k-1));
+        end
         
     end
 end
