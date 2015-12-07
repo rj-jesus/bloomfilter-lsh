@@ -1,8 +1,8 @@
-classdef MinHash < handle
+classdef LSH < handle
 %--------------------------------------------------------------------------
 % Class:        MinHash < handle
 %               
-% Constructor:  MH = MinHash(expectedError[, debug]);
+% Constructor:  LSH = LSH(expectedError[, debug]);
 %               
 % Properties:   (none)
 %               
@@ -33,11 +33,11 @@ classdef MinHash < handle
     
     methods
         %% Constructor
-        function self = MinHash(expectedError, debug)
+        function self = LSH(expectedError, debug)
             % the result bellow for k is given by Chernoff Bounds. See
-            % 	https://en.wikipedia.org/wiki/Chernoff_bound
+            %   https://en.wikipedia.org/wiki/MinHash
             % or more specifically
-            %   https://en.wikipedia.org/wiki/MinHash#Variant_with_a_single_hash_function
+            % 	https://en.wikipedia.org/wiki/Chernoff_bound
             % Result:
             %   k >= 1 / eps^2
             self.k = ceil(1 / expectedError^2);
@@ -51,7 +51,37 @@ classdef MinHash < handle
             S = uint64(ones(self.k, 1)) * intmax('uint64');
             for i = 1:length(Shingles)
                 for seed = 1:self.k
-                    S(seed) = min(S(seed), MurmurHash3(Shingles{i}, seed));
+                    %S(seed) = min(S(seed), MurmurHash3(Shingles{i}, seed));
+                    S(seed) = min(S(seed), string2hash(Shingles{i}));
+                end
+            end
+        end
+        
+        %% Banding
+        function [Candidates] = candidates(self, Signatures, threshold)
+            % #Rows
+            r = 1;
+            while (r / self.k) ^ (1 / r) < threshold
+                r = r + 1;
+            end
+            % #Bands
+            b = floor(self.k / r);
+            % Candidates' structure is as follows
+            % this --sim--> that
+            % Doc1          { [DocA DocB DocC ...]
+            % Doc2            [DocI DocJ DocK ...]
+            % ...              ...
+            % DocN            [DocX DocY DocZ ...] }
+            Candidates = cell(length(Signatures)-1, 1);
+            for i = 1:b
+                % Strip this band from the Signatures' matrix
+                Band = Signatures(1 + (i-1)*r:i*r, :);
+                for j = 1:length(Signatures)-1
+                    % Get Doc{Y...} which 'match' this Doc{X}
+                    [~, cols] = find(ismember(Band(:, j+1:end), ...
+                        Band(:, j)));
+                    cols = j + unique(cols)';
+                    Candidates{j} = unique([Candidates{j} cols]);
                 end
             end
         end

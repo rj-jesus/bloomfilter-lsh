@@ -8,9 +8,9 @@ clear, clc
 %   P(h1(x1) = zi AND h2(x2) = z2 AND ... AND hk(xk) = zk) = 1 / n^k
 % For more information see: https://en.wikipedia.org/wiki/K-independent_hashing
 %%%%%
-numTests = 1e7;
+numTests = 1e5;
 stringSize = 50;
-k = 10;
+k = 5;
 n = 5;	% Hard coding n's value since otherwise n^k will get too close to zero
 
 counter = 0;

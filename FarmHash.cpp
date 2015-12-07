@@ -2002,7 +2002,7 @@ void mexFunction(int nlhs, mxArray *plhs[],
 
     /* get the value of the input String */
     key = mxArrayToString(prhs[0]);
-
+    
     /* check for null key */
     if (key == NULL)
         mexErrMsgIdAndTxt("MATLAB:MurmurHash3:conversionFailed",
@@ -2017,9 +2017,11 @@ void mexFunction(int nlhs, mxArray *plhs[],
     /* allocate memory for output hash */
     mwSignedIndex dims[2] = {1, 1};
     plhs[0] = mxCreateNumericArray(2, dims, mxUINT64_CLASS, mxREAL);
-    void *out = mxGetPr(plhs[0]);
-    
-    /* call the C++ subroutine */
-    ((uint64_t *) out)[0] = Hash64WithSeed(key, len, seed);
+    //void *out = mxGetPr(plhs[0]);
+ 
+	/* call the C++ subroutine */
+    //((uint64_t *) out)[0] = Hash64WithSeed(key, len, seed);
+    ((uint64_t *) mxGetPr(plhs[0]))[0] = Hash64WithSeed(key, len, seed);
+    mxFree(key);
     return;
 }
