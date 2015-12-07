@@ -1975,53 +1975,84 @@ namespace NAMESPACE_FOR_HASH_FUNCTIONS {
 
 void mexFunction(int nlhs, mxArray *plhs[],
                  int nrhs, const mxArray *prhs[]) {
-    char *key;              /* key */
-    size_t len;             /* length of key */
-    double seed;            /* seed */
-
+    
+    char *key;
+    mwSize len;
+    
     /* check for proper number of arguments */
     if (nrhs != 2) {
-        mexErrMsgIdAndTxt("MyToolbox:MurmurHash3:nrhs",
+        mexErrMsgIdAndTxt("MyToolbox:FarmHash:nrhs",
                           "Two inputs required.");
     }
     if (nlhs > 1) {
-        mexErrMsgIdAndTxt("MyToolbox:MurmurHash3:nlhs",
+        mexErrMsgIdAndTxt("MyToolbox:FarmHash:nlhs",
                           "One output required.");
     }
-    /* make sure the first input argument is a String */
-    if (!mxIsChar(prhs[0])) {
-        mexErrMsgIdAndTxt("MyToolbox:MurmurHash3:notString",
-                          "Input key must be a String.");
-    }
-    /* make sure the second input argument is type double */
-    if (!mxIsDouble(prhs[1]) ||
+    /* make sure the second input argument is of type double */
+	if (!mxIsDouble(prhs[1]) ||
         mxGetNumberOfElements(prhs[1]) != 1) {
-        mexErrMsgIdAndTxt("MyToolbox:MurmurHash3:notDouble",
-                          "Input seed must be type double.");
+        mexErrMsgIdAndTxt("MyToolbox:FarmHash:notDouble",
+                          "Input seed must be of type double.");
     }
-
-    /* get the value of the input String */
-    key = mxArrayToString(prhs[0]);
     
-    /* check for null key */
-    if (key == NULL)
-        mexErrMsgIdAndTxt("MATLAB:MurmurHash3:conversionFailed",
-                          "Could not convert input to string.");
-
-    /* get the length of the input String */
-    len = (mxGetM(prhs[0]) * mxGetN(prhs[0])) + 1;
-
     /* get the value of the scalar input */
-    seed = mxGetScalar(prhs[1]);
+    double seed = mxGetScalar(prhs[1]);
+    
+    /* make sure the first input argument is a String */
+    if (mxIsChar(prhs[0])) {
+        /* get the value of the input string + its length */
+        key = mxArrayToString(prhs[0]);
+        len = (mxGetM(prhs[0]) * mxGetN(prhs[0])) + 1;
+        
+        /* allocate memory for the output hash */
+        mwSignedIndex dims[2] = {1, 1};
+        plhs[0] = mxCreateNumericArray(2, dims, mxUINT64_CLASS, mxREAL);
 
-    /* allocate memory for output hash */
-    mwSignedIndex dims[2] = {1, 1};
-    plhs[0] = mxCreateNumericArray(2, dims, mxUINT64_CLASS, mxREAL);
-    //void *out = mxGetPr(plhs[0]);
- 
-	/* call the C++ subroutine */
-    //((uint64_t *) out)[0] = Hash64WithSeed(key, len, seed);
-    ((uint64_t *) mxGetPr(plhs[0]))[0] = Hash64WithSeed(key, len, seed);
-    mxFree(key);
+        /* call the C++ subroutine */
+        ((uint64_t *) mxGetPr(plhs[0]))[0] = Hash64WithSeed(key, len, seed);
+        
+        mxFree(key);
+    }
+    else if(mxIsCell(prhs[0])) {
+        const mxArray *cell_element_p;
+        
+        /* get the number of keys */
+        mwSize num_of_keys = mxGetNumberOfElements(prhs[0]);
+
+        /* allocate memory for the output hashes */
+        mwSignedIndex dims[2] = {num_of_keys, 1};
+        plhs[0] = mxCreateNumericArray(2, dims, mxUINT64_CLASS, mxREAL);
+        uint64_t *out = (uint64_t *) mxGetPr(plhs[0]);
+
+        mwIndex i;
+        for(i = 0; i < num_of_keys; i++) {
+            cell_element_p = mxGetCell(prhs[0], i);
+
+            /* get the ith input string + its length */
+            key = mxArrayToString(cell_element_p);
+            len = (mxGetM(cell_element_p) * mxGetN(cell_element_p)) + 1;
+
+            /* check for null key */
+            if (key == NULL)
+                mexErrMsgIdAndTxt("MyToolbox:FarmHash:conversionFailed",
+                                  "Could not convert input to string.");
+            
+            /* Compute the ith hash */
+            out[i] = Hash64WithSeed(key, len, seed);
+
+            /* Free the allocated memory */
+            mxFree(key);
+        }
+        
+    }
+    else {
+        mexErrMsgIdAndTxt("MyToolbox:FarmHash:notString&&notCell",
+                          "Input key must be a string or cell array of "
+                          "strings.");
+    }
+    
+    // 64587443534255158        Ricardo
+    // 664594991364749440       Jesus
+    
     return;
 }

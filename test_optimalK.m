@@ -22,8 +22,8 @@ obj.setArraySize(arraySize);                                % force n to be eigh
 fprintf('Array size (n): %d\n', arraySize);
 fprintf('Length of the set to add (m): %d\n\n', setSize);
 kValues = 1:15;                                             % Test with different values of K
-PfalsePositive = zeros(1, length(kValues));
-PfalsePositive_theoretical = zeros(1, length(kValues));     % p = (1 - e ^ (- k * m / n)) ^k
+PfalsePositive_e = zeros(1, length(kValues));
+PfalsePositive_t = zeros(1, length(kValues));     % p = (1 - e ^ (- k * m / n)) ^k
 
 %% Test for k different values
 for k = kValues
@@ -37,21 +37,23 @@ for k = kValues
     %% Verify if other elems that were not added may be in the set
     numExisting = 0;
     for idx = 1:notSetSize
-        if obj.contains(notSet{idx}) == 1
+        if obj.contains(notSet{idx})
             numExisting = numExisting + 1;
         end
     end
-    PfalsePositive(k) = numExisting / notSetSize;
-    PfalsePositive_theoretical(k) = (1 - exp(-k * setSize / arraySize)) ^ k;
+    PfalsePositive_e(k) = numExisting / notSetSize;
+    PfalsePositive_t(k) = (1 - exp(-k * setSize / arraySize)) ^ k;
 end
 
-plot(kValues, PfalsePositive, '-ro', kValues, PfalsePositive_theoretical, '-.b');
+save('test_optimalK.mat', 'kValues', 'PfalsePositive_e', 'PfalsePositive_t');
+
+plot(kValues, PfalsePositive_e, '-ro', kValues, PfalsePositive_t, '-.b');
 legend('Observed', 'Theoretical')
 title('Probability of false positives for k hash functions');
 xlabel('k');
 ylabel('False positive probability');
 
-fprintf('\nMinimal probability of false positives (observed): %f', min(PfalsePositive));
-fprintf('\nOptimal K (observed): %d\n', find(PfalsePositive == min(PfalsePositive)));
-fprintf('\n\nMinimal probability of false positives (thoeretical): %f', min(PfalsePositive_theoretical));
+fprintf('\nMinimal probability of false positives (observed): %f', min(PfalsePositive_e));
+fprintf('\nOptimal K (observed): %d\n', find(PfalsePositive_e == min(PfalsePositive_e)));
+fprintf('\n\nMinimal probability of false positives (thoeretical): %f', min(PfalsePositive_t));
 fprintf('\nOptimal K (theoretical, that would have been used by default): %d\n', ceil(arraySize * log(2) / setSize));

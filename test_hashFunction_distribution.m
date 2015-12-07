@@ -12,17 +12,14 @@ else
     fprintf('Generated strings with maximum random length: %d\n', stringSize);
 end
 
-%% Get hash values using MurmurHash3
+%% Get hash values using FarmHash
 k = [1:5; 6:10];    % Seed values, in order to assume "the use of different
                     % hashfunctions". Build the matrix following this
                     % pattern so that later the plots work nicely
 hashedStrings = zeros(1, setSize);
 Hf = HashFunction(2^32 - 1);
 for seed = k(:)'
-    for i = 1:setSize
-        %hashedStrings(i) = mod(Hf.HashCode(X{i}, seed), setSize) + 1;
-        hashedStrings(i) = mod(Hf.HashCode(X{i}, seed), setSize) + 1;
-    end
+    hashedStrings = mod(FarmHash(X, seed), setSize);
     subplot(size(k, 1), size(k, 2), seed);
     histogram(hashedStrings);
     title(sprintf('k = %d', seed));

@@ -18,8 +18,8 @@ fprintf('Length of the set to add (m): %d\n\n', setSize);
 
 f_k = @(n)(ceil(n * log(2) / setSize));     % useful to update k's value (since it depends on n)
 nValues = setSize:setSize/2:10*setSize;
-PfalsePositive = zeros(1, length(nValues));
-PfalsePositive_theoretical = zeros(1, length(nValues));
+PfalsePositive_e = zeros(1, length(nValues));
+PfalsePositive_t = zeros(1, length(nValues));
 for i = 1:length(nValues)
     n = round(nValues(i));
     fprintf('Testing for n = %d... ', n);
@@ -39,18 +39,20 @@ for i = 1:length(nValues)
             numExisting = numExisting + 1;
         end
     end
-    PfalsePositive(i) = numExisting / notSetSize;
-    PfalsePositive_theoretical(i) = (1 - exp(-k * setSize / n)) ^ k;
+    PfalsePositive_e(i) = numExisting / notSetSize;
+    PfalsePositive_t(i) = (1 - exp(-k * setSize / n)) ^ k;
     fprintf('Completed.\n');
 end
 
-plot(nValues, PfalsePositive, '-ro', nValues, PfalsePositive_theoretical, '-.b');
+save('test_optimalN.mat', 'nValues', 'PfalsePositive_e', 'PfalsePositive_t');
+
+plot(nValues, PfalsePositive_e, '-ro', nValues, PfalsePositive_t, '-.b');
 legend('Observed', 'Theoretical')
 title('Probability of false positives for different values of n');
 xlabel('n');
 ylabel('False positive probability');
 
-fprintf('\nMinimal probability of false positives (observed): %f', min(PfalsePositive));
-fprintf('\nOptimal n (observed): %d\n', nValues(PfalsePositive == min(PfalsePositive)));
-fprintf('\n\nMinimal probability of false positives (thoeretical): %f', min(PfalsePositive_theoretical));
-fprintf('\nOptimal n (theoretical, that would have been used by default): %d\n', ceil(setSize * log(1 / min(PfalsePositive_theoretical)) / (log(2)) ^ 2));
+fprintf('\nMinimal probability of false positives (observed): %f', min(PfalsePositive_e));
+fprintf('\nOptimal n (observed): %d\n', nValues(PfalsePositive_e == min(PfalsePositive_e)));
+fprintf('\n\nMinimal probability of false positives (thoeretical): %f', min(PfalsePositive_t));
+fprintf('\nOptimal n (theoretical, that would have been used by default): %d\n', ceil(setSize * log(1 / min(PfalsePositive_t)) / (log(2)) ^ 2));
