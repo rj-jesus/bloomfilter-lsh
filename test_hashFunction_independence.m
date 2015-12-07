@@ -1,5 +1,16 @@
 clear, clc
 %% Independence test
+stringSize = 50;
+k = 10;
+n = 5;	% Hard coding n's value since otherwise n^k will get too close to zero
+strSet = unique(generateStrings(k*2, stringSize, 1));       % Generate a unique set of Strings
+set = zeros(k, k);
+
+
+
+
+
+%% Independence test
 %%%%%
 % > Theoretical intro
 % A family of hash functions is k-independent if for any k-distinct keys
