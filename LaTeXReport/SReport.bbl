@@ -1,0 +1,46 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist{entry}{none}
+    \entry{Website1}{misc}{}
+      \field{sortinit}{0}
+      \field{labeltitle}{Synthesizing Hammond Organ Effecss}
+      \field{howpublished}{\url{http://www.soundonsound.com/sos/jan04/articles/synthsecrets.htm}}
+      \field{title}{Synthesizing Hammond Organ Effecss}
+      \field{year}{2015}
+    \endentry
+    \entry{Website2}{misc}{}
+      \field{sortinit}{0}
+      \field{labeltitle}{Synthesizing Tonewheel Organs}
+      \field{howpublished}{\url{http://www.soundonsound.com/sos/nov03/articles/synthsecrets.htm}}
+      \field{title}{Synthesizing Tonewheel Organs}
+      \field{year}{2015}
+    \endentry
+    \entry{Website3}{misc}{}
+      \field{sortinit}{0}
+      \field{labeltitle}{Hammond Organ}
+      \field{howpublished}{\url{http://en.wikipedia.org/wiki/Hammond_organ}}
+      \field{title}{Hammond Organ}
+      \field{year}{2015}
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+
