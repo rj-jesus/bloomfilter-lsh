@@ -50,13 +50,14 @@ classdef LSH < handle
         
         %% Minhash Signatures
         function [S] = singnature(self, Shingles)
-            S = uint64(ones(self.k, 1)) * intmax('uint64');
-            for i = 1:length(Shingles)
-                for seed = 1:self.k
-                    %S(seed) = min(S(seed), MurmurHash3(Shingles{i}, seed));
-                    %S(seed) = min(S(seed), string2hash(Shingles{i}));
-                    S(seed) = min(S(seed), FarmHash(Shingles{i}, seed));
-                end
+            S = ones(self.k, 1, 'uint64') * intmax('uint64');
+%             for i = 1:length(Shingles)
+%                 for seed = 1:self.k
+%                     S(seed) = min(S(seed), FarmHash(Shingles{i}, seed));
+%                 end
+%             end
+            for seed = 1:self.k
+                S(seed) = min(FarmHash(Shingles, seed));
             end
         end
         
@@ -105,7 +106,7 @@ classdef LSH < handle
                     % Get Doc{Y...} which 'match' this Doc{X}
                     [~, cols] = find(sum(ismember(Band(:, j+1:end), ...
                         Band(:, j))) == r);
-                    cols = j + unique(cols)';
+                    cols = j + unique(cols(:))';
                     Candidates{j} = unique([Candidates{j} cols]);
                 end
             end
