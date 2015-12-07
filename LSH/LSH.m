@@ -46,15 +46,40 @@ classdef LSH < handle
             end
         end
         
+        
+        
         %% Minhash Signatures
         function [S] = singnature(self, Shingles)
             S = uint64(ones(self.k, 1)) * intmax('uint64');
             for i = 1:length(Shingles)
                 for seed = 1:self.k
                     %S(seed) = min(S(seed), MurmurHash3(Shingles{i}, seed));
-                    S(seed) = min(S(seed), string2hash(Shingles{i}));
+                    %S(seed) = min(S(seed), string2hash(Shingles{i}));
+                    S(seed) = min(S(seed), FarmHash(Shingles{i}, seed));
                 end
             end
+        end
+        
+        %% Similarities
+        function [Similars] = similars(self, Candidates, Signatures, ...
+                threshold)
+            Similars = zeros(length(Candidates), 3);
+            idx = 1;
+            for i = 1:length(Candidates)
+                Candidates_i = Candidates{i};
+                Signature_A = Signatures(:, i);
+                for j = 1:length(Candidates_i)
+                    Candidate = Candidates_i(j);
+                    Signature_B = Signatures(:, Candidate);
+                    sim = length(intersect(Signature_A, Signature_B)) ...
+                        / self.k;
+                    if sim >= threshold
+                        Similars(idx, :) = [i Candidate sim];
+                        idx = idx + 1;
+                    end
+                end
+            end
+            Similars = Similars(1:idx-1, :);
         end
         
         %% Banding
@@ -72,18 +97,22 @@ classdef LSH < handle
             % Doc2            [DocI DocJ DocK ...]
             % ...              ...
             % DocN            [DocX DocY DocZ ...] }
-            Candidates = cell(length(Signatures)-1, 1);
+            Candidates = cell(length(Signatures), 1);
             for i = 1:b
                 % Strip this band from the Signatures' matrix
                 Band = Signatures(1 + (i-1)*r:i*r, :);
                 for j = 1:length(Signatures)-1
                     % Get Doc{Y...} which 'match' this Doc{X}
-                    [~, cols] = find(ismember(Band(:, j+1:end), ...
-                        Band(:, j)));
+                    [~, cols] = find(sum(ismember(Band(:, j+1:end), ...
+                        Band(:, j))) == r);
                     cols = j + unique(cols)';
                     Candidates{j} = unique([Candidates{j} cols]);
                 end
             end
+        end
+        
+        function k = getK(self)
+            k = self.k;
         end
         
         %% Setters (if debug is on)

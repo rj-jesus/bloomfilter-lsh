@@ -1,25 +1,30 @@
-clear, clc
 % Adapted from PL07 MPEI 2015-2016
-%% Parse data
+%% Init (this could be saved...)
+clear, clc
+LSH = LSH(0.05);                        % Locality-sensitive hashing object
 udata = load('u.data');                 % Load movies' data
 u = udata(:, 1:2); clear udata;         % Keep only first two rows
 users = unique(u(:, 1));                % Set of users
 Nu = length(users);                     % No. of users
+%% Parse data
 Shingles = cell(1, Nu);                 % List of movies for each user
-LSH = LSH(0.05);                        % Locality-sensitive hashing object
-Signatures = cell(1, Nu);               % Signatures' cell matrix
+Signatures = zeros(LSH.getK(), ...      % Signatures' cell matrix
+    Nu, 'uint64');
 for n = 1:Nu,                           % for-each user
     ind = find(u(:, 1) == users(n));    % Get his movies
     Shingles{n} = u(ind, 2);            % Save them
-    % Compute the signature of this user
-    Signatures{n} = LSH.singnature(cellstr(num2str(Shingles{n})));
+        Signatures(:, n) = ...          % Compute this user's signature
+            LSH.singnature(cellstr(num2str(Shingles{n})));
 end
 save('u.data.shingles.mat', ...         % Save matrix of shingles
     'Shingles');
+clear Shingles;
 save('u.data.sig.mat', 'Signatures');   % Save matrix of signatures
+clear Signatures;
 
 %% Compute theoretical Jaccard's similarity
-load('u.data.shingles.mat', 'Set');     % Load matrix of shingles
+load('u.data.shingles.mat', ...         % Load matrix of shingles
+    'Shingles');
 load('u.data.sig.mat', 'Signatures');   % Load matrix of signatures
 J = zeros(Nu);                          % Array to store similarities
 h = waitbar(0, 'Computing (theoretical)...');
@@ -32,9 +37,12 @@ for n1 = 1:Nu,
     end
 end
 delete(h)
+save('u.data.Jac.mat', 'J');
+clear J;
 %% Choose which pairs are above epsilon (theoretical)
+load('u.data.Jac.mat', 'J');
 threshold = 1 - 0.4;                    % chosen epsilon
-SimilarUsers_t = zeros(1, 3);             % Store similar pairs [u1 u2 J]
+SimilarUsers_t = zeros(1, 3);           % Store similar pairs [u1 u2 J]
 k = 1;
 for n1 = 1:Nu,
     for n2 = n1+1:Nu,
@@ -44,3 +52,14 @@ for n1 = 1:Nu,
         end
     end
 end
+save('u.data.sim_t.mat', 'SimilarUsers_t');
+
+%% Compute candidate pairs + SimilarUsers_e (above epsilon)
+load('u.data.sig.mat', 'Signatures');   % Load matrix of signatures
+threshold = 1 - 0.4;                    % chosen epsilon
+C = LSH.candidates(Signatures, 0.6);    % Compute candidates
+save('u.data.cand.mat', 'C');
+%%% Choose which pairs are above epsilon (experimental result)
+SimilarUsers_e = LSH.similars(C, ...    % Verify which are actually similar
+    Signatures, 0.6);
+save('u.data.sim_e.mat', 'SimilarUsers_e');

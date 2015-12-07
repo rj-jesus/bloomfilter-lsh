@@ -177,7 +177,7 @@ classdef BloomFilter < handle
         function [h] = getIndexes(self, str)
             h = zeros(1, self.k);
             for seed = 1:self.k
-                h(seed) = mod(MurmurHash3(str, seed), self.arraySize) + 1;
+                h(seed) = mod(FarmHash(str, seed), self.arraySize) + 1;
             end
         end
         
