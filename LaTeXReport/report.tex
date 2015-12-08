@@ -23,7 +23,7 @@
 \begin{titlepage}
 \begin{center}
 
-{\vspace*{50mm}\textsc{\Huge\textbf{Bloom-Filter + Locality-filter}\\ \small{Métodos Probabilísticos para Engenharia Informática}}\\[2cm]
+{\vspace*{50mm}\textsc{\Huge\textbf{Bloom-filter + Locality-Sensitive Hashing}\\ \small{Métodos Probabilísticos para Engenharia Informática}}}\\[2cm]
 {\textsc{\small\textbf{Universidade de Aveiro}}}\\[0.5cm]
 {\small Pedro Martins 76551\\Ricardo Jesus 76613}\\[0.5cm]
 {\small	17 de Dezembro de 2015}\\
@@ -38,7 +38,7 @@
 
 \end{titlepage}
 
-\title{\textbf{Bloom-Filter + Locality-filter}\\[1cm]\textsc{\small {Departamento de Electrónica, Telecomunicações e Informática} \\ \large {UNIVERSIDADE DE AVEIRO}}}
+\title{\textbf{Bloom-filter + Locality-Sensitive Hashing}\\[1cm]\textsc{\small {Departamento de Electrónica, Telecomunicações e Informática} \\ \large {UNIVERSIDADE DE AVEIRO}}}
 \author{Pedro Martins 76551, pbmartins@ua.pt\\Ricardo Jesus 76613, ricardojesus@ua.pt}
 \date{17 de Dezembro de 2015}
 
@@ -68,12 +68,12 @@ Este filtros usam uma ou várias funções de \textit{hashing} para determinar a
 
 Neste trabalho, foi desenvolvido em Matlab um \textit{Bloom-filter} e desenhada uma interface para um função de \textit{hashing} desenhada em C++ para atingir este objetivo.
 
-\chapter{Bloom-Filter}
+\chapter{Bloom-filter}
 \label{chap.bloom}
 
-Os \texit{Bloom-filters} usam uma ou várias funções de \textit{hashing} para determinar a pertença de um elemento no \textit{set}. Deste modo, mesmo que se opere sobre um conjunto com milhões ou milhares de milhões de elementos, será sempre um processo muito mais eficiente do que se se iterasse sobre todo o \textit{set} à procura do elemento em questão (dependendo também do número e da qualidade das funções de \textit{hashing} utilizadas).
+Os \textit{Bloom-filters} usam uma ou várias funções de \textit{hashing} para determinar a pertença de um elemento no \textit{set}. Deste modo, mesmo que se opere sobre um conjunto com milhões ou milhares de milhões de elementos, será sempre um processo muito mais eficiente do que se se iterasse sobre todo o \textit{set} à procura do elemento em questão (dependendo também do número e da qualidade das funções de \textit{hashing} utilizadas).
 
-No entanto, é um método probabilístico, e tem um erro associado. Na criação de um \{Bloom-filter} define-se sempre um erro máximo esperado, erro esse que apenas ocorre na "inclusão", isto é, um membro que à partida já se saiba que pertença ao conjunto nunca será considerado não pertencente, mas alguns membros que, à partida, se saiba que não estão no \textit{set}, podem ser considerados como pertencentes ao conjunto.
+No entanto, é um método probabilístico, e tem um erro associado. Na criação de um \textit{Bloom-filter} define-se sempre um erro máximo esperado, erro esse que apenas ocorre na "inclusão", isto é, um membro que à partida já se saiba que pertença ao conjunto nunca será considerado não pertencente, mas alguns membros que, à partida, se saiba que não estão no \textit{set}, podem ser considerados como pertencentes ao conjunto.
 
 Para diminuir esse erro, por norma, para além de aumentar o tamanho do \textit{set}, usa-se um número variado de funções de \textit{hashing} descorrelacionadas entre si, em vez de utilizar apenas uma. Isto permite que os resultados do \textit{hashing} estejam mais dispersos por todo o vetor. Neste caso, em vez de utilizarmos k funções diferentes, utilizaremos, para uma mesma \textit{string} "s", várias que variarão entre "s1", "s12", ..., "s12...k".
 
@@ -93,22 +93,22 @@ Tamanho do conjunto que se pretende adicionar do vetor.
 
 No construtor da classe, são calculados os valores do tamanho do vetor (\texttt{arraySize}) e do número de funções de \textit{hash} necessárias, consoante os valores passados como argumentos do próprio construtor, a probabilidade de falsos positivos, isto é, o erro esperado (\texttt{falsePositiveProbability}) e o tamanho do conjunto que se pretende adicionar ao vetor (\texttt{expectedMaxSize}). 
 
-Assumindo que a probabilidade de falsos positivos (p) é
+Assumindo que a probabilidade de falsos positivos $p$ é
 
-$$ p =  (1 - e^\frac{-km}{n})^k $$
+$$ p =  \left(1 - e^{-\frac{km}{n}}\right)^k $$
 
-e, usando o tamanho do vetor de \textit{bits} (n) e o tamanho do conjunto que queremos adicionar ao filtro (m),
+e, usando o tamanho do vetor de \textit{bits} $n$ e o tamanho do conjunto que queremos adicionar ao filtro $m$,
 
-$$ a = (1 - \frac{1}{n})^m $$
+$$ a = \left(1 - \frac{1}{n}\right)^m $$
 
-para determinar o número (k) ótimo de funções de \textit{hashing} que se devem utilizar, deduz-se que
+para determinar o número $k$ ótimo de funções de \textit{hashing} que se devem utilizar, deduz-se que
 
-$$ \ln p = k * \ln (1 - a^k) \\
-\leftrightarrow k =  \frac{n * \ln 2}{m}$$
+$$ \ln p = k * \ln \left(1 - a^k\right) \\
+\Leftrightarrow k =  \frac{n * \ln 2}{m}$$
 
 A partir das fórmulas acima encontradas, também se deduz que
 
-$$ n = m * \ln (1 / p) / (\ln 2) ^ 2  $$
+$$ n = \frac{m * \ln \left(\frac{1}{p}\right)}{\left(\ln 2\right) ^ 2} $$
 
 Para além do construtor, existem também métodos para adicionar e verificar a existência de elementos no filtro.
 
@@ -141,7 +141,7 @@ No entanto, também foram realizados outros testes relativamente às funções d
 \subsection{Distribuição de funções de \textit{hashing}}
 \label{subsec.hashdist}
 
-Este módulo (\textit{test_hashFunction_distribution.m}) tem como principalmente objetivo provar que as funções de \textit{hashing} têm uma distribuição uniforme, para diversos valores de \texttt{k} (neste caso, irá variar entre 1 e 10).
+Este módulo (\textit{test\_hashFunction\_distribution.m}) tem como principalmente objetivo provar que as funções de \textit{hashing} têm uma distribuição uniforme, para diversos valores de \texttt{k} (neste caso, irá variar entre 1 e 10).
 
 A função de \textit{hashing} base usada tanto no filtro como nos testes é designada por \textit{FarmHash}, desenvolvida pela Google. Foi apenas criada uma interface em C++ para que pudesse ser usada em Matlab.
 
@@ -151,7 +151,7 @@ As distribuições para cada valor de \texttt{k} deverão ser o mais uniformes p
 
 \begin{figure}[ht]	
 \center
-\fbox{\includegraphics[height=7cm]{img/test_HashFunction_distribution}}
+\fbox{\includegraphics[height=5cm]{img/test_HashFunction_distribution}}
 \caption{Resultados das distribuições das \texttt{k} funções de \textit{hashing}}
 \label{fig:hashdist}
 \end{figure}
@@ -161,13 +161,13 @@ As distribuições para cada valor de \texttt{k} deverão ser o mais uniformes p
 
 Para que se possa utilizar as várias funções de \textit{hashing}, é necessário que as mesmas sejam descorrelacionadas, isto é, que o coeficiente de correlação seja 0. No entanto, neste caso, vamos considerar um erro de 0.01.
 
-Este módulo encontra-se no ficheiro \textit{test_hashFunction_correlation.m} e, tal como noutros testes, gerar-se-á um \textit{set} de \textit{strings} aleatórias e os respetivos valores de \textit{hashing} para diferentes valores de \texttt{k}. Foi também criada uma matriz de dimensões \texttt{k} por \texttt{numTests}, isto é, cada linha terá diferentes valores de \textit{hashing} para um mesmo valor de \texttt{k}. De seguida, calcular-se-á os coeficientes de correlação entre cada linha desses mesmos valores com o auxílio da função \texttt{corrcoef} (calcula o coeficiente de correlação entre dois conjuntos, neste caso, duas linhas distintas).
+Este módulo encontra-se no ficheiro \textit{test\_hashFunction\_correlation.m} e, tal como noutros testes, gerar-se-á um \textit{set} de \textit{strings} aleatórias e os respetivos valores de \textit{hashing} para diferentes valores de \texttt{k}. Foi também criada uma matriz de dimensões \texttt{k} por \texttt{numTests}, isto é, cada linha terá diferentes valores de \textit{hashing} para um mesmo valor de \texttt{k}. De seguida, calcular-se-á os coeficientes de correlação entre cada linha desses mesmos valores com o auxílio da função \texttt{corrcoef} (calcula o coeficiente de correlação entre dois conjuntos, neste caso, duas linhas distintas).
 
 Por mim, é gerado um gráfico recorrendo á função \texttt{surf} para mostrar os valores de correlação resultantes. Como verificamos, todos os valores situam-se abaixo do erro assumido (á exceção dos valores em que comparamos a mesma linha, sendo que, nesse caso, o valor será 1), daí podermos considerar que as funções de \texttt{hashing} são descorrelacionadas, tal como pretendíamos.
 
 \begin{figure}[ht]	
 \center
-\fbox{\includegraphics[height=7cm]{img/test_HashFunction_decorrelation}}
+\fbox{\includegraphics[height=5cm]{img/test_HashFunction_decorrelation}}
 \caption{Resultados do teste de correlação de \texttt{k} funções de \textit{hashing}}
 \label{fig:hashcorr}
 \end{figure}
@@ -175,7 +175,7 @@ Por mim, é gerado um gráfico recorrendo á função \texttt{surf} para mostrar
 \subsection{Número ideal de funções de \textit{hashing}}
 \label{subsec.optimalk}
 
-O programa de teste para o valor de \texttt{k} ideal encontra-se com o nome \textit{test_optimalK.m}.
+O programa de teste para o valor de \texttt{k} ideal encontra-se com o nome \textit{test\_optimalK.m}.
 
 Começa-se por criar uma instância da classe de \textit{Bloom-filter} anteriormente desenvolvida (com o campo \texttt{debug} inicializado a 1, para que se possam utilizar as funções de alteração de valores) e gerar dois conjuntos (um dos quais será adicionado ao filtro, outro não) distintos de cem mil (valor que pode ser alterado) \textit{strings} (como poderá haver \textit{strings} iguais nos \textit{sets}, o tamanho será sempre ligeiramente inferior ao definido anteriormente). De seguida, define-se o tamanho do vetor de \textit{bits} do filtro como oito vezes maior do que o tamanho dos conjuntos de \textit{strings} gerados.
 
@@ -183,21 +183,21 @@ Por fim, itera-se sobre um vetor de \texttt{k} que se definira anteriormente (ne
 
 \begin{figure}[ht]	
 \center
-\fbox{\includegraphics[height=7cm]{img/test_OptimalK}}
+\fbox{\includegraphics[height=5cm]{img/test_OptimalK}}
 \caption{Resultados do teste do valor ideal de funções de \textit{hashing} (\texttt{k})}
 \label{fig:optimalk}
 \end{figure}
 
 De acordo com o gráfico da \ref{fig:optimalk}, usando a fórmula 
 
-$$ p =  (1 - e^\frac{-km}{n})^k $$
+$$ p =  \left(1 - e^{-\frac{km}{n}}\right)^k $$
 
 para determinar a probabilidade de falsos positivos (teórica) para diferentes valores de \texttt{k} e usando os valores do teste acima, verificamos que as diferenças entre o valor teórico e observado são mínimas (o que significa que a função de \textit{hashing} devolve excelentes resultados, mas isso será abordado mais abaixo), e que o valor ideal é 6, para a função de \textit{hashing} em questão. Para uma função diferente, os valores poderão diferir.
 
 \subsection{Número ideal do vetor de \textit{bits}}
 \label{subsec.optimaln}
 
-O módulo para o teste do valor ideal do tamanho do vetor \texttt{n} encontra-se no ficheiro \textit{test_optimalN.m}.
+O módulo para o teste do valor ideal do tamanho do vetor \texttt{n} encontra-se no ficheiro \textit{test\_optimalN.m}.
 
 Tal como no teste do \autoref{subsec.optimalk}, também são criados dois conjuntos de \texttt{strings} aleatórias com o mesmo propósito, um para ser adicionado ao filtro e o outro não. É também criado um vetor com diferentes valores de \texttt{n}, que vão desde o tamanho dos conjuntos de \textit{strings} até 10 vezes esse valor, com uma diferença de metade do mesmo valor entre cada.
 
@@ -205,7 +205,7 @@ De seguida, itera-se sobre os valores deste último vetor de valores e vai-se cr
 
 \begin{figure}[ht]	
 \center
-\fbox{\includegraphics[height=7cm]{img/test_OptimalN_img}}
+\fbox{\includegraphics[height=5cm]{img/test_OptimalN_img}}
 \caption{Resultados o teste do tamanho ideal do vetor de \textit{bits} (\texttt{arraySize} / \texttt{n})}
 \label{fig:optimalnimg}
 \end{figure}
@@ -216,7 +216,7 @@ Os valores ideias são os presentes na \ref{fig:optimalntext}
 
 \begin{figure}[ht]	
 \center
-\fbox{\includegraphics[height=7cm]{img/test_OptimalN_text}}
+\fbox{\includegraphics[height=5cm]{img/test_OptimalN_txt}}
 \caption{Resultados ideias do tamanho ideal do vetor de \textit{bits} (\texttt{arraySize} / \texttt{n})}
 \label{fig:optimalntext}
 \end{figure}
@@ -224,7 +224,7 @@ Os valores ideias são os presentes na \ref{fig:optimalntext}
 \subsection{Testes práticos do \textit{Bloom-filter}}
 \label{subsec.testebloom}
 
-Foram desenvolvidos dois módulos semelhantes para um teste mais direcionado ao uso real de um \textit{Bloom-filter}. Estão em dois ficheiros distintos, \textit{test_big_BloomFilter.m} e \textit{test_small_BloomFilter.m}.
+Foram desenvolvidos dois módulos semelhantes para um teste mais direcionado ao uso real de um \textit{Bloom-filter}. Estão em dois ficheiros distintos, \textit{test\_big\_BloomFilter.m} e \textit{test\_small\_BloomFilter.m}.
 
 O primeiro segue o modelo dos testes anteriores, em que se gera dois \textit{sets} de um certo tamanho (neste caso, cem mil elementos) de \textit{strings} aleatórias, cria-se uma instância de um \textit{Bloom-filter} com uma probabilidade de falsos positivos de 0.0001\%, adiciona-se um dos conjuntos ao filtro e verifica-se a existência de falsos positivos. Por fim, compara-se o resultado observado da probabilidade de falsos positivos com a que se definiu aquando a criação do filtro. O objetivo é que os resultados sejam o mais próximos possíveis, algo que se conseguiu atingir em ambos os testes.
 
@@ -232,8 +232,8 @@ No segundo teste (\textit{small}), contrariamente ao primeiro em que se geram os
 
 \begin{figure}[ht]	
 \center
-\fbox{\includegraphics[height=7cm]{img/test_big_BloomFilter}}
-\caption{Resultados da execução de \textit{test_big_BloomFilter.m}}
+\fbox{\includegraphics[height=5cm]{img/test_big_BloomFilter}}
+\caption{Resultados da execução de \textit{test\_big\_BloomFilter.m}}
 \label{fig:testbigbloom}
 \end{figure}
 
@@ -246,7 +246,7 @@ No segundo teste (\textit{small}), contrariamente ao primeiro em que se geram os
 
 
 
-
+\iffalse
 
 
 
@@ -354,13 +354,6 @@ Esta interface recebe pedidos das interfaces web e móveis, às quais dá respos
 
 Foi também utilizada uma base de dados \verb|SQLite| com o objetivo de guardar informações relativas às músicas e interpretações criadas, bem como votos registados por IP (de forma a se restringir votos múltiplos para um mesmo indivíduo). A estrutura utilizada é a exposta na figura \ref{fig:sr1}.
 
-\begin{figure}[ht]	
-\center
-\fbox{\includegraphics[height=7cm]{img/sr1}}
-\caption{Estrutura da base de dados utilizada. Na tabela \textbf{Songs} são registadas informações relativas às diferentes músicas criadas, na tabela \textbf{Interpretations} informações associadas às diferentes interpretações e por fim na tabela \textbf{Vots} são registados os IPs a partir dos quais já foram registados votos para interpretações.}
-\label{fig:sr1}
-\end{figure}
-
 Os diferentes serviços disponibilizados por esta aplicação são:
 
 \begin{description}
@@ -408,13 +401,6 @@ Basicamente, a função \verb|interpretation| é responsável por receber uma pa
 
 Por outro lado, este componente implementa outras funções que funcionam apenas de auxílio à função \verb|interpretation|. Por exemplo, a função \verb|plot| permite produzir uma representação gráfica das frequências das notas ao longo do tempo, onde a frequência fundamental (em Hertz) e a duração (em segundos) são as variáveis dependente e independente, respetivamente. Na Figura \ref{fig:sr3} é visível um gráfico exemplo gerado por esta função. De referir que esta função \verb|plot| só é utilizada para efeitos de visualização, sendo que o resultado obtido por ela não será reutilizado por outros elementos deste módulo.
 
-\begin{figure}[ht]	
-\center
-\fbox{\includegraphics[height=7cm]{img/sr3}}
-\caption{Gráfico gerado através da biblioteca \textit{matplotlib}, referente à música \textbf{The Simpsons}. São visíveis as frequências e durações das notas ao longo do tempo.}
-\label{fig:sr3}
-\end{figure}
-
 \section{Sintetizador}
 \label{sec:synthesizer}
 
@@ -455,53 +441,6 @@ De forma a serem aplicados todos os efeitos pretendidos, verifica-se se um deter
 \item[Envelope] Manipulação da amplitude do sinal de forma a simular o timbre natural de um orgão de Hammond. O resultado pretendido é o ilustrado na figura \ref{fig:sr2}.
 \end{description}
 
-\begin{figure}[ht]	
-\center
-\fbox{\includegraphics[height=7cm]{img/sr2}}
-\caption{Efeito de envelope aplicado. Gráfico obtido recorrendo-se ao \textit{software} GNU Octave, através do qual também se obtiveram as funções que aproximam o efeito.}
-\label{fig:sr2}
-\end{figure}
-
-\begin{figure}
-        \centering
-        \begin{subfigure}[b]{1\textwidth}
-                \includegraphics[width=\textwidth]{img/Echo}
-                \caption{Efeito Echo}
-                \label{fig:echo}
-        \end{subfigure}
-        
-        \begin{subfigure}[b]{1\textwidth}
-                \includegraphics[width=\textwidth]{img/Tremolo}
-                \caption{Efeito Tremolo}
-                \label{fig:tremolo}
-        \end{subfigure}
-        
-        \begin{subfigure}[b]{1\textwidth}
-                \includegraphics[width=\textwidth]{img/Distortion}
-                \caption{Efeito Distortion}
-                \label{fig:distortion}
-        \end{subfigure}
-        
-        \begin{subfigure}[b]{1\textwidth}
-                \includegraphics[width=\textwidth]{img/Percussion}
-                \caption{Efeito Percussion. É visível no início de cada nova nota um pequeno aumento na intensidade da música. Isto é causado por este efeito. O facto de ser pouco visível deve-se à implementação, tendo-se optado por fazer este efeito pouco notório}
-                \label{fig:percussion}
-        \end{subfigure}
-        
-        \begin{subfigure}[b]{1\textwidth}
-                \includegraphics[width=\textwidth]{img/Chorus}
-                \caption{Efeito Chorus. Toda a música parece exposta a um tremolo, no entanto isto deve-se ao facto de haver uma grande diferença entre a frequência fundamental da nota e a frequência do efeito}
-                \label{fig:chorus}
-        \end{subfigure}
-        
-        \begin{subfigure}[b]{1\textwidth}
-                \includegraphics[width=\textwidth]{img/Envelope}
-                \caption{Efeito Envelope, aplicado a cada nota quando a sua frequência é diferente da anterior}
-                \label{fig:envelope}
-        \end{subfigure}
-        \caption{Imagens obtidas recorrendo-se ao \textit{software} Audacity}\label{fig:effects}
-\end{figure}
-
 \section*{Membros Envolvidos}
 
 Neste módulo estiveram envolvidos Nelson Costa e Ricardo Jesus. O desenvolvimento do \textbf{Interpretador de Pautas \ref{sec:interpreter}} esteve ao encargo de Nelson Costa, enquanto que tanto o \textbf{Sintetizador \ref{sec:synthesizer}} como o \textbf{Processador de Efeitos \ref{sec:effects}} foram trabalho de Ricardo Jesus.
@@ -516,6 +455,8 @@ Em suma, consideramos que foi possível desenvolver a aplicação web como o pre
 No entanto, temos consciência de que vários pontos desta aplicação poderia ter sido melhor explorados e abordados. Por exemplo, tivesse sido implementado um sistema de autenticação de utilizadores e seria de facto possível garantir de forma muito mais correta que um único utilizador vota apenas uma vez numa interpretação. Outro exemplo poderá ser o da aplicação de efeitos, onde poderiam ter sido dadas outras opções de controlo aos utilizadores, por exemplo a intensidade com que se aplica o efeito de \verb|chorus| ou \verb|percussion|. No entanto, por falta de tempo e não nos tendo comprometido a implementar estas opções, elas foram postas de parte.
 
 Por fim, mesmo apesar de vários pontos poderem ser melhorados como frisado anteriormente, mantemo-nos satisfeitos com o nosso trabalho. Consideramos que a possibilidade de conviver com tantos conceitos diferentes em simultâneo contribuiu significativamente para a nossa aprendizagem, deixando-nos alertas e bastante mais à vontade para embarcar em projetos futuros.
+
+\fi
 
 \maketitle
 \nocite{*}
