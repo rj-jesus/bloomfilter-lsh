@@ -66,7 +66,7 @@ Na área da informática, muitas vezes é necessário saber se algo pertence a c
 
 Este filtros usam uma ou várias funções de \textit{hashing} para determinar a pertença de um elemento no \textit{set}. São muito utilizados em grandes conjuntos de dados e em diversas aplicações como o corretor ortográfico dos computadores, \textit{smartphones}, etc., análise textual, entre outras. Contudo, é um método probabilístico com um valor de erro associado.
 
-
+Neste trabalho, foi desenvolvido em Matlab um \textit{Bloom-filter} e desenhada uma interface para um função de \textit{hashing} desenhada em C++ para atingir este objetivo.
 
 \chapter{Bloom-Filter}
 \label{chap.bloom}
@@ -75,24 +75,29 @@ Os \texit{Bloom-filters} usam uma ou várias funções de \textit{hashing} para 
 
 No entanto, é um método probabilístico, e tem um erro associado. Na criação de um \{Bloom-filter} define-se sempre um erro máximo esperado, erro esse que apenas ocorre na "inclusão", isto é, um membro que à partida já se saiba que pertença ao conjunto nunca será considerado não pertencente, mas alguns membros que, à partida, se saiba que não estão no \textit{set}, podem ser considerados como pertencentes ao conjunto.
 
+Para diminuir esse erro, por norma, para além de aumentar o tamanho do \textit{set}, usa-se um número variado de funções de \textit{hashing} descorrelacionadas entre si, em vez de utilizar apenas uma. Isto permite que os resultados do \textit{hashing} estejam mais dispersos por todo o vetor. Neste caso, em vez de utilizarmos k funções diferentes, utilizaremos, para uma mesma \textit{string} "s", várias que variarão entre "s1", "s12", ..., "s12...k".
+
 Na implementação do filtro neste trabalho (\textit{BloomFilter.m}) foi desenvolvida uma classe, baseada num \textit{Counting Bloom-filter} (conta-se o número de vezes que cada elemento é adicionado ao filtro), com 5 atributos:
+\begin{description}
 \item[k]
 Número de funções de \textit{hashing} utilizadas.
 \item[byteArray]
 Limite de vezes que o contador de cada posição é incrementado (255).
 \item[arraySize]
-Tamanho do vetor de bits.
+Tamanho do vetor de \textit{bits}.
 \item[amountAdded]
 Número total de elementos adicionados ao \textit[array].
 \item[expectedMaxSize]
 Tamanho do conjunto que se pretende adicionar do vetor.
+\end{description}
 
 No construtor da classe, são calculados os valores do tamanho do vetor (\texttt{arraySize}) e do número de funções de \textit{hash} necessárias, consoante os valores passados como argumentos do próprio construtor, a probabilidade de falsos positivos, isto é, o erro esperado (\texttt{falsePositiveProbability}) e o tamanho do conjunto que se pretende adicionar ao vetor (\texttt{expectedMaxSize}). 
 
 Assumindo que a probabilidade de falsos positivos (p) é
+
 $$ p =  (1 - e^\frac{-km}{n})^k $$
 
-e, usando o tamanho do vetor de bits (n) e o tamanho do conjunto que queremos adicionar ao filtro (m),
+e, usando o tamanho do vetor de \textit{bits} (n) e o tamanho do conjunto que queremos adicionar ao filtro (m),
 
 $$ a = (1 - \frac{1}{n})^m $$
 
@@ -107,6 +112,7 @@ $$ n = m * \ln (1 / p) / (\ln 2) ^ 2  $$
 
 Para além do construtor, existem também métodos para adicionar e verificar a existência de elementos no filtro.
 
+\begin{description}
 \item[getIndexes]
 Devolve os vários índices para os quais a função de \textit{hashing} aplicada à \textit{string} passada como argumento aponta.
 \item[add]
@@ -123,8 +129,117 @@ Devolve o número máximo de vezes que um elemento foi adicionado ao vetor.
 O inverso da função \texttt{maxCount}.
 \item[Setters]
 Coleção de funções utilizadas para modificar os atributos do \textit{Bloom-filter}, caso o campo \texttt{debug} (argumento passado ao construtor) esteja com o valor 1.
+\end{description}
+
+\section{Testes}
+\label{sec.bloomtests}
+
+Para testar este módulo, foram desenvolvidos diversos, de entre os quais uns para verificar qual seria o número ideal de funções de \textit{hashing} (\texttt{k}) e outro para verificar o tamanho ideal do vetor de \textit{bits} (\texttt{n}).
+
+No entanto, também foram realizados outros testes relativamente às funções de \textit{hashing} utilizadas pelo \textit{Bloom-filter}.
+
+\subsection{Distribuição de funções de \textit{hashing}}
+\label{subsec.hashdist}
+
+Este módulo (\textit{test_hashFunction_distribution.m}) tem como principalmente objetivo provar que as funções de \textit{hashing} têm uma distribuição uniforme, para diversos valores de \texttt{k} (neste caso, irá variar entre 1 e 10).
+
+A função de \textit{hashing} base usada tanto no filtro como nos testes é designada por \textit{FarmHash}, desenvolvida pela Google. Foi apenas criada uma interface em C++ para que pudesse ser usada em Matlab.
+
+Neste teste, foi gerado um conjunto de \textit{strings} aleatórias, usando a função \texttt{generateStrings}, que aceita como argumentos o tamanho do conjunto que devolverá e o tamanho máximo das \textit{strings} que irá gerar (caso o terceiro argumento seja 0, elas terão tamanho fixo, caso contrário, será definido como tamanho máximo), e gerado diversos valores de \textit{hashing}, consoante os diversos elementos do conjunto e da \texttt{seed} correspondente (caso a \textit{string} seja "s12", a \texttt{seed} será "12"). Isto é, caso tenhamos \texttt{k = 2}, será aplicada a função para "s1" e "s12", para uma determinada \textit{string} "s".
+
+As distribuições para cada valor de \texttt{k} deverão ser o mais uniformes possíveis, e os resultados comprovam-no, tal como podemos ver nos histogramas da \ref{fig:hashdist}.
+
+\begin{figure}[ht]	
+\center
+\fbox{\includegraphics[height=7cm]{img/test_HashFunction_distribution}}
+\caption{Resultados das distribuições das \texttt{k} funções de \textit{hashing}}
+\label{fig:hashdist}
+\end{figure}
+
+\subsection{Correlação das funções de \textit{hashing}}
+\label{subsec.hashcorr}
+
+Para que se possa utilizar as várias funções de \textit{hashing}, é necessário que as mesmas sejam descorrelacionadas, isto é, que o coeficiente de correlação seja 0. No entanto, neste caso, vamos considerar um erro de 0.01.
+
+Este módulo encontra-se no ficheiro \textit{test_hashFunction_correlation.m} e, tal como noutros testes, gerar-se-á um \textit{set} de \textit{strings} aleatórias e os respetivos valores de \textit{hashing} para diferentes valores de \texttt{k}. Foi também criada uma matriz de dimensões \texttt{k} por \texttt{numTests}, isto é, cada linha terá diferentes valores de \textit{hashing} para um mesmo valor de \texttt{k}. De seguida, calcular-se-á os coeficientes de correlação entre cada linha desses mesmos valores com o auxílio da função \texttt{corrcoef} (calcula o coeficiente de correlação entre dois conjuntos, neste caso, duas linhas distintas).
+
+Por mim, é gerado um gráfico recorrendo á função \texttt{surf} para mostrar os valores de correlação resultantes. Como verificamos, todos os valores situam-se abaixo do erro assumido (á exceção dos valores em que comparamos a mesma linha, sendo que, nesse caso, o valor será 1), daí podermos considerar que as funções de \texttt{hashing} são descorrelacionadas, tal como pretendíamos.
+
+\begin{figure}[ht]	
+\center
+\fbox{\includegraphics[height=7cm]{img/test_HashFunction_decorrelation}}
+\caption{Resultados do teste de correlação de \texttt{k} funções de \textit{hashing}}
+\label{fig:hashcorr}
+\end{figure}
+
+\subsection{Número ideal de funções de \textit{hashing}}
+\label{subsec.optimalk}
+
+O programa de teste para o valor de \texttt{k} ideal encontra-se com o nome \textit{test_optimalK.m}.
+
+Começa-se por criar uma instância da classe de \textit{Bloom-filter} anteriormente desenvolvida (com o campo \texttt{debug} inicializado a 1, para que se possam utilizar as funções de alteração de valores) e gerar dois conjuntos (um dos quais será adicionado ao filtro, outro não) distintos de cem mil (valor que pode ser alterado) \textit{strings} (como poderá haver \textit{strings} iguais nos \textit{sets}, o tamanho será sempre ligeiramente inferior ao definido anteriormente). De seguida, define-se o tamanho do vetor de \textit{bits} do filtro como oito vezes maior do que o tamanho dos conjuntos de \textit{strings} gerados.
+
+Por fim, itera-se sobre um vetor de \texttt{k} que se definira anteriormente (neste caso, é um vetor com valores de 1 a 15) e, cada ciclo, define-se um \texttt{k} no \textit{Bloom-filter}, adiciona-se os elementos do vetor incialmente escolhido como aquele que se iria adicionar ao filtro e verifica-se se algum dos elementos do outro conjunto de \textit{strings} pertence ou não ao filtro. Caso pertença, é incrementado um contador, para, no final do ciclo, ser calculada a probabilidade de falsos positivos.
+
+\begin{figure}[ht]	
+\center
+\fbox{\includegraphics[height=7cm]{img/test_OptimalK}}
+\caption{Resultados do teste do valor ideal de funções de \textit{hashing} (\texttt{k})}
+\label{fig:optimalk}
+\end{figure}
+
+De acordo com o gráfico da \ref{fig:optimalk}, usando a fórmula 
+
+$$ p =  (1 - e^\frac{-km}{n})^k $$
+
+para determinar a probabilidade de falsos positivos (teórica) para diferentes valores de \texttt{k} e usando os valores do teste acima, verificamos que as diferenças entre o valor teórico e observado são mínimas (o que significa que a função de \textit{hashing} devolve excelentes resultados, mas isso será abordado mais abaixo), e que o valor ideal é 6, para a função de \textit{hashing} em questão. Para uma função diferente, os valores poderão diferir.
+
+\subsection{Número ideal do vetor de \textit{bits}}
+\label{subsec.optimaln}
+
+O módulo para o teste do valor ideal do tamanho do vetor \texttt{n} encontra-se no ficheiro \textit{test_optimalN.m}.
+
+Tal como no teste do \autoref{subsec.optimalk}, também são criados dois conjuntos de \texttt{strings} aleatórias com o mesmo propósito, um para ser adicionado ao filtro e o outro não. É também criado um vetor com diferentes valores de \texttt{n}, que vão desde o tamanho dos conjuntos de \textit{strings} até 10 vezes esse valor, com uma diferença de metade do mesmo valor entre cada.
+
+De seguida, itera-se sobre os valores deste último vetor de valores e vai-se criando uma instância de um \textit{Bloom-filter} com os valores de \texttt{n} (\texttt{arraySize}) e \texttt{k} (depende do tamanho do vetor) a cada passagem. Adiciona-se um dos conjuntos de \textit{strings}, verifica-se a existência dos elementos do outro que não foi adicionado e, por fim, calcula-se a probabilidade de falsos positivos, tal como no teste anterior.
+
+\begin{figure}[ht]	
+\center
+\fbox{\includegraphics[height=7cm]{img/test_OptimalN_img}}
+\caption{Resultados o teste do tamanho ideal do vetor de \textit{bits} (\texttt{arraySize} / \texttt{n})}
+\label{fig:optimalnimg}
+\end{figure}
+
+Como se verifica no gráfico da \ref{fig:optimalnimg}, à medida que o tamanho do \textit{array} aumenta, a probabilidade de falsos positivos diminui, isto é, são inversamente proporcionais.
+
+Os valores ideias são os presentes na \ref{fig:optimalntext}
+
+\begin{figure}[ht]	
+\center
+\fbox{\includegraphics[height=7cm]{img/test_OptimalN_text}}
+\caption{Resultados ideias do tamanho ideal do vetor de \textit{bits} (\texttt{arraySize} / \texttt{n})}
+\label{fig:optimalntext}
+\end{figure}
+
+\subsection{Testes práticos do \textit{Bloom-filter}}
+\label{subsec.testebloom}
+
+Foram desenvolvidos dois módulos semelhantes para um teste mais direcionado ao uso real de um \textit{Bloom-filter}. Estão em dois ficheiros distintos, \textit{test_big_BloomFilter.m} e \textit{test_small_BloomFilter.m}.
+
+O primeiro segue o modelo dos testes anteriores, em que se gera dois \textit{sets} de um certo tamanho (neste caso, cem mil elementos) de \textit{strings} aleatórias, cria-se uma instância de um \textit{Bloom-filter} com uma probabilidade de falsos positivos de 0.0001\%, adiciona-se um dos conjuntos ao filtro e verifica-se a existência de falsos positivos. Por fim, compara-se o resultado observado da probabilidade de falsos positivos com a que se definiu aquando a criação do filtro. O objetivo é que os resultados sejam o mais próximos possíveis, algo que se conseguiu atingir em ambos os testes.
+
+No segundo teste (\textit{small}), contrariamente ao primeiro em que se geram os conjuntos, definem-se conjuntos muito pequenos inicialmente e, depois, executa-se o mesmo processo que o anterior.
+
+\begin{figure}[ht]	
+\center
+\fbox{\includegraphics[height=7cm]{img/test_big_BloomFilter}}
+\caption{Resultados da execução de \textit{test_big_BloomFilter.m}}
+\label{fig:testbigbloom}
+\end{figure}
 
 
+\section{MinHash}
+\label{sec.minhash}
 
 
 
