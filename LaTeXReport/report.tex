@@ -16,7 +16,7 @@
 \usepackage{subcaption}
 \newcommand{\RNum}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
 
-\bibliography{SReport.bib}
+\bibliography{report.bib}
 
 \begin{document}
 
@@ -75,7 +75,7 @@ Os \textit{Bloom-filters} usam uma ou várias funções de \textit{hashing} para
 
 No entanto, é um método probabilístico, e tem um erro associado. Na criação de um \textit{Bloom-filter} define-se sempre um erro máximo esperado, erro esse que apenas ocorre na "inclusão", isto é, um membro que à partida já se saiba que pertença ao conjunto nunca será considerado não pertencente, mas alguns membros que, à partida, se saiba que não estão no \textit{set}, podem ser considerados como pertencentes ao conjunto.
 
-Para diminuir esse erro, por norma, para além de aumentar o tamanho do \textit{set}, usa-se um número variado de funções de \textit{hashing} descorrelacionadas entre si, em vez de utilizar apenas uma. Isto permite que os resultados do \textit{hashing} estejam mais dispersos por todo o vetor. Neste caso, em vez de utilizarmos k funções diferentes, utilizaremos, para uma mesma \textit{string} "s", várias que variarão entre "s1", "s12", ..., "s12...k".
+Para diminuir esse erro, por norma, para além de aumentar o tamanho do \textit{set}, usa-se um número variado de funções de \textit{hashing} descorrelacionadas entre si, em vez de utilizar apenas uma. Isto permite que os resultados do \textit{hashing} estejam mais dispersos por todo o vetor. Neste caso, em vez de utilizarmos k funções diferentes, utilizaremos a família de funções \textit{FarmHash}, desenvolvida pela Google, em que um dos argumentos, a \texttt{seed}, especifica cada uma das funções.
 
 Na implementação do filtro neste trabalho (\textit{BloomFilter.m}) foi desenvolvida uma classe, baseada num \textit{Counting Bloom-filter} (conta-se o número de vezes que cada elemento é adicionado ao filtro), com 5 atributos:
 \begin{description}
@@ -143,9 +143,9 @@ No entanto, também foram realizados outros testes relativamente às funções d
 
 Este módulo (\textit{test\_hashFunction\_distribution.m}) tem como principalmente objetivo provar que as funções de \textit{hashing} têm uma distribuição uniforme, para diversos valores de \texttt{k} (neste caso, irá variar entre 1 e 10).
 
-A função de \textit{hashing} base usada tanto no filtro como nos testes é designada por \textit{FarmHash}, desenvolvida pela Google. Foi apenas criada uma interface em C++ para que pudesse ser usada em Matlab.
+A família de funções de \textit{hashing} usada tanto no filtro como nos testes é designada por \textit{FarmHash}, desenvolvida pela Google. Foi apenas criada uma interface para que pudesse ser usada em Matlab.
 
-Neste teste, foi gerado um conjunto de \textit{strings} aleatórias, usando a função \texttt{generateStrings}, que aceita como argumentos o tamanho do conjunto que devolverá e o tamanho máximo das \textit{strings} que irá gerar (caso o terceiro argumento seja 0, elas terão tamanho fixo, caso contrário, será definido como tamanho máximo), e gerado diversos valores de \textit{hashing}, consoante os diversos elementos do conjunto e da \texttt{seed} correspondente (caso a \textit{string} seja "s12", a \texttt{seed} será "12"). Isto é, caso tenhamos \texttt{k = 2}, será aplicada a função para "s1" e "s12", para uma determinada \textit{string} "s".
+Neste teste, foi gerado um conjunto de \textit{strings} aleatórias, usando a função \texttt{generateStrings}, que aceita como argumentos o tamanho do conjunto que devolverá e o tamanho máximo das \textit{strings} que irá gerar (caso o terceiro argumento seja 0, elas terão tamanho fixo, caso contrário, será definido como tamanho máximo), e gerado diversos valores de \textit{hashing}, consoante os diversos elementos do conjunto e da \texttt{seed} correspondente.
 
 As distribuições para cada valor de \texttt{k} deverão ser o mais uniformes possíveis, e os resultados comprovam-no, tal como podemos ver nos histogramas da \ref{fig:hashdist}.
 
@@ -163,7 +163,7 @@ Para que se possa utilizar as várias funções de \textit{hashing}, é necessá
 
 Este módulo encontra-se no ficheiro \textit{test\_hashFunction\_correlation.m} e, tal como noutros testes, gerar-se-á um \textit{set} de \textit{strings} aleatórias e os respetivos valores de \textit{hashing} para diferentes valores de \texttt{k}. Foi também criada uma matriz de dimensões \texttt{k} por \texttt{numTests}, isto é, cada linha terá diferentes valores de \textit{hashing} para um mesmo valor de \texttt{k}. De seguida, calcular-se-á os coeficientes de correlação entre cada linha desses mesmos valores com o auxílio da função \texttt{corrcoef} (calcula o coeficiente de correlação entre dois conjuntos, neste caso, duas linhas distintas).
 
-Por mim, é gerado um gráfico recorrendo á função \texttt{surf} para mostrar os valores de correlação resultantes. Como verificamos, todos os valores situam-se abaixo do erro assumido (á exceção dos valores em que comparamos a mesma linha, sendo que, nesse caso, o valor será 1), daí podermos considerar que as funções de \texttt{hashing} são descorrelacionadas, tal como pretendíamos.
+Por fim, é gerado um gráfico recorrendo á função \texttt{surf} para mostrar os valores de correlação resultantes. Como verificamos, todos os valores situam-se abaixo do erro assumido (á exceção dos valores em que comparamos a mesma linha, sendo que, nesse caso, o valor será 1), daí podermos considerar que as funções de \texttt{hashing} são descorrelacionadas, tal como pretendíamos.
 
 \begin{figure}[ht]	
 \center
