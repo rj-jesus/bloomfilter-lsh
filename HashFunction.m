@@ -78,7 +78,7 @@ classdef HashFunction < handle
         % - Assumptions for key -
         %   1) key(i) is alphanumeric char: {[0...9], [a...z], [A...Z]}
         %
-        function hk = HashCode(self, key, seed)
+        function hk = HashCode(self, key)
             % Convert character array to integer array
             ll = length(key);
             if ~ischar(key)
@@ -93,7 +93,7 @@ classdef HashFunction < handle
             %            Sections: Hashing integers
             %                      Hashing strings
             %
-            hk = key(1) * seed;
+            hk = key(1);
             for i = 2:ll
                 % Could be implemented more efficiently in practice via bit
                 % shifts (see reference)
