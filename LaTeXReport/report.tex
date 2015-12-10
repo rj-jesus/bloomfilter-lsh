@@ -145,9 +145,9 @@ Este módulo (\textit{test\_hashFunction\_distribution.m}) tem como principalmen
 
 A família de funções de \textit{hashing} usada tanto no filtro como nos testes é designada por \textit{FarmHash}, desenvolvida pela Google. Foi apenas criada uma interface para que pudesse ser usada em Matlab.
 
-Neste teste, foi gerado um conjunto de \textit{strings} aleatórias, usando a função \texttt{generateStrings}, que aceita como argumentos o tamanho do conjunto que devolverá e o tamanho máximo das \textit{strings} que irá gerar (caso o terceiro argumento seja 0, elas terão tamanho fixo, caso contrário, será definido como tamanho máximo), e gerado diversos valores de \textit{hashing}, consoante os diversos elementos do conjunto e da \texttt{seed} correspondente.
+Neste teste, foi gerado um conjunto de \textit{strings} aleatórias, usando a função \texttt{generateStrings}, que aceita como argumentos o tamanho do conjunto que devolverá e o tamanho máximo das \textit{strings} que irá gerar (caso o terceiro argumento seja 0, elas terão tamanho fixo, caso contrário, será definido como tamanho máximo), e gerados diversos valores de \textit{hashing}, consoante os diversos elementos do conjunto e da \texttt{seed} correspondente.
 
-As distribuições para cada valor de \texttt{k} deverão ser o mais uniformes possíveis, e os resultados comprovam-no, tal como podemos ver nos histogramas da \ref{fig:hashdist}.
+As distribuições para cada valor de \texttt{k} deverão ser o mais uniformes possíveis, e os resultados comprovam-no, tal como se pode ver nos histogramas da \autoref{fig:hashdist}.
 
 \begin{figure}[ht]	
 \center
@@ -159,11 +159,11 @@ As distribuições para cada valor de \texttt{k} deverão ser o mais uniformes p
 \subsection{Correlação das funções de \textit{hashing}}
 \label{subsec.hashcorr}
 
-Para que se possa utilizar as várias funções de \textit{hashing}, é necessário que as mesmas sejam descorrelacionadas, isto é, que o coeficiente de correlação seja 0. No entanto, neste caso, vamos considerar um erro de 0.01.
+Para que se possam ser utilizar as várias funções de \textit{hashing}, é necessário que as mesmas sejam descorrelacionadas, isto é, que o coeficiente de correlação seja 0. No entanto, neste caso, considerar-se-á um erro de 0.01 (é quase impossível que os valores sejam iguais a zero, portanto, aceita-se esta ligeira variação).
 
-Este módulo encontra-se no ficheiro \textit{test\_hashFunction\_correlation.m} e, tal como noutros testes, gerar-se-á um \textit{set} de \textit{strings} aleatórias e os respetivos valores de \textit{hashing} para diferentes valores de \texttt{k}. Foi também criada uma matriz de dimensões \texttt{k} por \texttt{numTests}, isto é, cada linha terá diferentes valores de \textit{hashing} para um mesmo valor de \texttt{k}. De seguida, calcular-se-á os coeficientes de correlação entre cada linha desses mesmos valores com o auxílio da função \texttt{corrcoef} (calcula o coeficiente de correlação entre dois conjuntos, neste caso, duas linhas distintas).
+Este módulo encontra-se no ficheiro \textit{test\_hashFunction\_correlation.m} e, tal como noutros testes, gerar-se-á um \textit{set} de \textit{strings} aleatórias e os respetivos valores de \textit{hashing} para diferentes valores de \texttt{k}, a variar entre 1 e 10. Foi também criada uma matriz de dimensões \texttt{k} por \texttt{numTests}, isto é, cada linha terá diferentes valores de \textit{hashing} para um mesmo valor de \texttt{k}. De seguida, calcular-se-ão os coeficientes de correlação entre de cada conjunto de \textit{hash codes} (linha) desses mesmos valores com o auxílio da função \texttt{corrcoef} (calcula o coeficiente de correlação entre dois conjuntos, neste caso, duas linhas distintas).
 
-Por fim, é gerado um gráfico recorrendo á função \texttt{surf} para mostrar os valores de correlação resultantes. Como verificamos, todos os valores situam-se abaixo do erro assumido (á exceção dos valores em que comparamos a mesma linha, sendo que, nesse caso, o valor será 1), daí podermos considerar que as funções de \texttt{hashing} são descorrelacionadas, tal como pretendíamos.
+Por fim, é gerado um gráfico recorrendo à função \texttt{surf} para mostrar os valores de correlação resultantes. Como verificamos, todos os valores situam-se abaixo do erro assumido (à exceção dos valores em que assumimos o mesmo valor de \texttt{k}, isto é, compararmos a mesma linha, sendo que, nesse caso, o valor será 1), daí se poder considerar que as funções de \texttt{hashing} são descorrelacionadas, tal como se pretendia.
 
 \begin{figure}[ht]	
 \center
@@ -171,6 +171,24 @@ Por fim, é gerado um gráfico recorrendo á função \texttt{surf} para mostrar
 \caption{Resultados do teste de correlação de \texttt{k} funções de \textit{hashing}}
 \label{fig:hashcorr}
 \end{figure}
+
+\subsection{Independência das funções de \textit{hashing}}
+\label{subsec.hashindep}
+
+Para além do teste de correlação, foi também efetuado um teste de independência das funções de \textit{hashing} (\textit{test\_hashFunction\_independence.m}), adaptado da implementação do professor António Teixeira. A independência implica descorrelação, e com isto, pode-se provar com qualquer um dos testes que as funções são descorrelacionadas. O objetivo é provar que cada par de colunas é independente entre si.
+
+Primeiramente, é criado um \textit{set} de cem mil \textit{strings} aleatórias e, seguidamente, outra matriz dos respetivos \textit{hash codes} com \texttt{k} (neste teste, \texttt{k = 10}) diferentes \textit{seeds}, utilizando a família de funções \textit{FarmHash}, de tamanho \texttt{k} (número de funções de \textit{hashing} que se pretende aplicar) por \texttt{N} (número de testes que se pretendem executar). De seguida, é gerado um vetor de 10 elementos linearmente espaçados (\texttt{x}) entre 0 e \texttt{N}, e, para cada par de colunas, é criada uma matriz (\texttt{pmf}) de dimensão \texttt{length(x) - 1 / length(x) - 1}. Depois, guarda-se em cada elemento da matriz o número de elementos das colunas de \textit{hash codes} que se situam num mesmo intervalo (esse intervalo é definido pelo vetor \texttt{x} já criado).
+
+Por fim, é calculada a matriz de probabilidade conjunta de duas colunas (\textit{PMF - Probability Mass Function}), e, a partir da mesma, são calculados os vetores de probabilidade individuais de cada uma das colunas. Finalmente, é calculado o resultado da multiplicação destes dois últimos vetores (dois acontecimentos A e B são independentes se $P(A\&B) = P(A) * P(B)$), e compara-se com a matriz de probabilidade conjunta.
+
+\begin{figure}[ht]	
+\center
+\fbox{\includegraphics[height=7cm]{img/test_hashFunction_independence}}
+\caption{Resultados do teste de independência de \texttt{k} funções de \textit{hashing}}
+\label{fig:hashindep}
+\end{figure}
+
+Como os valores da variação de resultados são mínimos (como se observa na \autoref{fig:hashindep} todos os valores rondam os $10^-4$), podemos considerar que a família de funções é independente, o que nos leva a concluir que são descorrelacionadas.
 
 \subsection{Número ideal de funções de \textit{hashing}}
 \label{subsec.optimalk}
@@ -188,7 +206,7 @@ Por fim, itera-se sobre um vetor de \texttt{k} que se definira anteriormente (ne
 \label{fig:optimalk}
 \end{figure}
 
-De acordo com o gráfico da \ref{fig:optimalk}, usando a fórmula 
+De acordo com o gráfico da \autoref{fig:optimalk}, usando a fórmula 
 
 $$ p =  \left(1 - e^{-\frac{km}{n}}\right)^k $$
 
@@ -210,9 +228,9 @@ De seguida, itera-se sobre os valores deste último vetor de valores e vai-se cr
 \label{fig:optimalnimg}
 \end{figure}
 
-Como se verifica no gráfico da \ref{fig:optimalnimg}, à medida que o tamanho do \textit{array} aumenta, a probabilidade de falsos positivos diminui, isto é, são inversamente proporcionais.
+Como se verifica no gráfico da \autoref{fig:optimalnimg}, à medida que o tamanho do \textit{array} aumenta, a probabilidade de falsos positivos diminui, isto é, são inversamente proporcionais.
 
-Os valores ideias são os presentes na \ref{fig:optimalntext}
+Os valores ideias são os presentes na \autoref{fig:optimalntext}
 
 \begin{figure}[ht]	
 \center
@@ -348,7 +366,7 @@ As interfaces Web foi desenvolvida por Pedro Santos e Pedro Martins. Por um lado
 \chapter{Aplicação Principal}
 \label{chap.mainapp}
 
-Recorreu-se à \textit{framework} \verb|CherryPy| para implementar um servidor capaz de disponibilizar os diferentes serviços suportados pela aplicação, recebendo pedidos das \textbf{Interfaces Web \ref{sec.web} e Móvel \ref{sec.mobile}} e dando-lhes resposta, para isso interagindo com uma base de dados \verb|SQLite| e/ou com o módulo \textbf{Hammond \ref{chap.hammond}}. O código deste módulo está escrito na linguagem \verb|Python| e pode ser consultado em \href{../../MainApp/VirtualHammond.py}{\textbf{VirtualHammond.py}}. Este servidor está associado à porta 4506 e correndo nos servidores \textit{xcoa} em \url{http://xcoa.av.it.pt/cherry/p5g6/}.
+Recorreu-se à \textit{framework} \verb|CherryPy| para implementar um servidor capaz de disponibilizar os diferentes serviços suportados pela aplicação, recebendo pedidos das \textbf{Interfaces Web \autoref{sec.web} e Móvel \ref{sec.mobile}} e dando-lhes resposta, para isso interagindo com uma base de dados \verb|SQLite| e/ou com o módulo \textbf{Hammond \ref{chap.hammond}}. O código deste módulo está escrito na linguagem \verb|Python| e pode ser consultado em \href{../../MainApp/VirtualHammond.py}{\textbf{VirtualHammond.py}}. Este servidor está associado à porta 4506 e correndo nos servidores \textit{xcoa} em \url{http://xcoa.av.it.pt/cherry/p5g6/}.
 
 Esta interface recebe pedidos das interfaces web e móveis, às quais dá respostas que constrói recorrendo a informações presentes na base de dados da aplicação, ou a processos levados a cabo pelo módulo de Hammond (\ref{chap.hammond}). Efetivamente, de grosso modo este módulo foca-se em construir respostas admissíveis às interfaces que expõem toda a aplicação e com que comunica. Por outro lado estas respostas tanto podem ser por exemplo texto no formato \verb|HTML| que deve ser interpretado pelo browser utilizado pelo utilizador, de forma a expor a página de rosto da aplicação, ou texto no formato \verb|JSON| utilizado pelo \verb|JavaScript| do lado dos clientes, que por sua vez pode permitir listar todas as músicas existentes na base de dados, com o número das suas interpretações e visualização das suas notas.
 
