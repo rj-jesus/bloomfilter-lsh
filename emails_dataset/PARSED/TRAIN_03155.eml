@@ -1,0 +1,29 @@
+FROM: cobaco <cobaco@linux.be>
+TO: debian-kde@lists.debian.org
+SUBJECT: Re: Kde 3.5 ...
+
+On Thursday 06 May 2010, Richard Hartmann wrote:
+> On Thu, May 6, 2010 at 23:08, Mark Purcell  wrote:
+> > This is free software, nobody is forced to do anything.
+> 
+> Not 100% true. A plain user who wants to keep on using KDE 3
+> will not be able to do so forever. A year or two are certainly possible
+> even though people will need a different browser for security &
+> HTML 5 & CSS reasons.
+> But realistically speaking, KDE 3's days are numbered and there
+> are a lot of people who can do nothing about it.
+
+If there's such a mass of users wanting to keep kde3 going, it is 
+theoretically possible to collectively fund a developper to do the work you 
+want done. 
+
+quanta and freenet are 2 examples of programs for whom such a thing has been 
+done
+
+That ofc assumes that:
+a) theres's a sufficient mass of users that want to keep kd3 going in at 
+least maintenance mode
+b) they care enough to chip in a little bit 
+
+-- 
+Cheers, Cobaco (aka Bart Cornelis)

@@ -1,0 +1,14 @@
+FROM: Jon Dowland <jmtd@debian.org>
+TO: debian-user@lists.debian.org
+SUBJECT: Re: Boot / LVM best practices
+
+On 14/04/10 Ron Johnson wrote:
+> That is correct.  No RAID protects against user stupidity. 
+
+In my personal experience, user stupidity (even my own) is as common a
+cause of data loss as hardware failure.
+
+
+-- 
+Jon Dowland
+

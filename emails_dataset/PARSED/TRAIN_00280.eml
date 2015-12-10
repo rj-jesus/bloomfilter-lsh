@@ -1,0 +1,53 @@
+FROM: Liviu Andronic <landronimirc@csmining.org>
+TO: "Boyd Stephen Smith Jr." <bss@iguanasuicide.net>
+SUBJECT: Re: backup apt tree?
+
+On Tue, Apr 20, 2010 at 8:01 PM, Boyd Stephen Smith Jr.
+ wrote:
+> Restoring those files would not actually cause a downgrade to occur.  They
+> would just cause the state of the package manager to not accurately reflect
+> the state of the system.
+>
+Yes, this is what I would like to achieve. I would like the package
+manager to switch back to the previous state. Then, I would open
+aptitude and it will automatically propose the necessary downgrades (I
+think). Thus I could quickly and painlessly restore the system (in
+case it was broken by the upgrade) and then hunt down the offending
+package when time permits.
+
+What would be the concerned files?
+
+
+> -- Unless I'm misunderstanding what you mean by "apt
+> tree".
+>
+> If you need an old package, snapshot.debian.org should have it.  You can then
+> you pinning to avoid upgrading it -- either to a specific version or at all.
+>
+Looks interesting, I'll look into that. Thanks
+Liviu
+
+
+> --
+> Boyd Stephen Smith Jr.                   ,= ,-_-. =.
+> bss@iguanasuicide.net                   ((_/)o o(\_))
+> ICQ: 514984 YM/AIM: DaTwinkDaddy         `-'(. .)`-'
+> http://iguanasuicide.net/                    \_/
+>
+
+
+
+-- 
+Do you know how to read?
+http://www.alienetworks.com/srtest.cfm
+http://goodies.xfce.org/projects/applications/xfce4-dict#speed-reader
+Do you know how to write?
+http://garbl.home.comcast.net/~garbl/stylemanual/e.htm#e-mail
+
+
+-- 
+To UNSUBSCRIBE, email to debian-user-REQUEST@lists.debian.org 
+with a subject of "unsubscribe". Trouble? Contact listmaster@lists.debian.org
+Archive: http://lists.debian.org/r2z68b1e2611004201238g903f97c0jda85d928045510e9@mail.csmining.org
+
+

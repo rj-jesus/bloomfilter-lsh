@@ -1,0 +1,25 @@
+FROM: "Boyd Stephen Smith Jr." <bss@iguanasuicide.net>
+TO: debian-user@lists.debian.org
+SUBJECT: Re: apt-get dist-update failure - can't boot
+
+On Monday 03 May 2010 13:36:07 Jimmy Johnson wrote:
+> Boyd Stephen Smith Jr. wrote:
+> > From you output it looks like your 'perl-base' is scheduled to be
+> > upgraded. You should try installing the new version of that package with
+> > dpkg and then retrying your apt-get/aptitude run.
+> 
+> It's worth a shot, depending of if dpkg has not been borked, 'dpkg -i
+> perl-base'
+> 
+His screen shot seems to have a working dpkg.  It attempts to invoke the prerm 
+scripts of a perl module.  That fails due to not being able to find 
+'File/Basename.pm', which causes dpkg to fail the --remove action with error 
+code 1.  apt-get then stops the install run.
+
+Aptitude might get further than apt-get, but the prerm of the perl module is 
+going to keep failing until perl is fixed.
+-- 
+Boyd Stephen Smith Jr.           	 ,= ,-_-. =.
+bss@iguanasuicide.net            	((_/)o o(\_))
+ICQ: 514984 YM/AIM: DaTwinkDaddy 	 `-'(. .)`-'
+http://iguanasuicide.net/        	     \_/

@@ -1,0 +1,27 @@
+FROM: "Damian O' Sullivan" <Damian.OSullivan@bcs.ie>
+TO: "'Anders Holm'" <anders.holm@elivefree.net>,
+	"Damian O' Sullivan" <Damian.OSullivan@bcs.ie>,
+	"'Albert White - SUN Ireland'" <albert.white@ireland.sun.com>,
+	ilug@linux.ie
+SUBJECT: RE: [ILUG] Sparc Solaris (was: Dell GX260 V Redhat 7.3)
+
+Was the Ultra 5 the sunray server? What images did you serve to the sunrays
+to boot them over tftp/dhcp? 
+
+
+> 
+> Hi Damian.
+> 
+> SuSe has a Sparc version I previously been running on a Sun 
+> Ultra 5 at 
+> least. Worked fine, albeit a bit slow... ;)
+> 
+> //Anders
+> 
+
+-- 
+Irish Linux Users' Group: ilug@linux.ie
+http://www.linux.ie/mailman/listinfo/ilug for (un)subscription information.
+List maintainer: listmaster@linux.ie
+
+

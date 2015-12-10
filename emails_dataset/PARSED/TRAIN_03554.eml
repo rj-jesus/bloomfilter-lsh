@@ -1,0 +1,19 @@
+FROM: iiu-admin@taint.org
+TO: iiu-admin@taint.org
+SUBJECT: IIU post from emailharvest@email.com requires approval
+
+As list administrator, your authorization is requested for the
+following mailing list posting:
+
+    List:    IIU@iiu.taint.org
+    From:    emailharvest@email.com
+    Subject: Harvest lots of E-mail addresses quickly !
+    Reason:  Post by non-member to a members-only list
+
+At your convenience, visit:
+
+    http://iiu.taint.org/mailman/admindb/iiu
+        
+to approve or deny the request.
+
+

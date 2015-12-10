@@ -1,0 +1,63 @@
+FROM: websrvr <websrvr@macftphttp.serverbox.org>
+TO: filesystem-dev@lists.apple.com
+SUBJECT: Re: mount information from DA framework.
+
+
+On May 18, 2010, at 18:41 PM, Daniel Markarian wrote:
+
+> Hey Dale,
+>
+> You have to use BSD.  eg.
+>
+>     1. DADiskCopyDescription()
+>     2. CFDictionaryGetValue() with kDADiskDescriptionVolumePathKey
+>     3. CFURLGetFileSystemRepresentation()
+>     4. statfs()
+>     5. f_flags with MNT_DONTBROWSE
+
+Sample code would have been helpful but I guess I can try and figure  
+it out.
+
+> I have a suggestion though.  It seems to me that the mount can be  
+> made without the assistance of an I/O Kit extension and a Disk  
+> Arbitration daemon.  You can mount a diskXs3 partition directly  
+> with BSD, through your application, agent, or whatnot, without any  
+> requirement to expose diskXs3s1 in I/O Kit.  eg.
+>
+>     /sbin/mount -t hfs -o nobrowse /dev/diskXs3 /var/tmp/ 
+> com.MyCompany.MyProduct.X
+
+Fails cause the directory does not exist so I would have to not only  
+create the directory I would have to remove it upon a dismount and  
+create code to manage multiple drives.
+
+> You can use posix_spawn() to invoke such a command.
+>
+> Dan
+>
+> PS:  Disk Arbitration 1 is deprecated, thus the sample code that  
+> uses Disk Arbitration 1 is deprecated.  It is not useful in modern  
+> code, but if you must insist, look at disktool.c in the Disk  
+> Arbitration project.
+
+This code did not display the nobrowse option.
+
+OK, how can I do it using DA 2?
+
+> Le 2010-05-16 à 14:24, websrvr a écrit :
+>
+>> Does anyone know how I can find out if a partition is mounted  
+>> nobrowse using the DA framework?
+>>
+>> -- Dale
+>
+>
+
+ _______________________________________________
+Do not post admin requests to the list. They will be ignored.
+Filesystem-dev mailing list      (Filesystem-dev@lists.apple.com)
+Help/Unsubscribe/Update your Subscription:
+http://lists.apple.com/mailman/options/filesystem-dev/mlsubscriber.tech%40csmining.org
+
+This email sent to mlsubscriber.tech@csmining.org
+

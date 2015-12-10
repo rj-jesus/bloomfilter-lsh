@@ -1,0 +1,20 @@
+FROM: "Boyd Stephen Smith Jr." <bss@iguanasuicide.net>
+TO: debian-kde@lists.debian.org
+SUBJECT: Re: KDE 4.4.3 upgrade eats 141 MB of /home
+
+On Wednesday 12 May 2010 17:22:21 Alejandro Exojo wrote:
+> El Miércoles, 12 de Mayo de 2010, Frederik Schwarzer escribió:
+> > If you want to have these images there in case they are needed, keep the
+> > folder, if disk space is more important than loading speed, remove it
+> > regularily.
+> 
+> Of course, that's what I do. But a plain user should not be asked to
+>  regularly remove it, should he? It probably should be handled like the
+>  trash folder, which IIRC has a size/time limit.
+
+I think "sweeper" (?) from kdeutils is supposed to handle this, right?
+-- 
+Boyd Stephen Smith Jr.           	 ,= ,-_-. =.
+bss@iguanasuicide.net            	((_/)o o(\_))
+ICQ: 514984 YM/AIM: DaTwinkDaddy 	 `-'(. .)`-'
+http://iguanasuicide.net/        	     \_/

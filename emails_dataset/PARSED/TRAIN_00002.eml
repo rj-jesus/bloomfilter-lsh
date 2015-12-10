@@ -1,0 +1,58 @@
+FROM: Andrei Popescu <andreimpopescu@csmining.org>
+TO: debian-user@lists.debian.org
+SUBJECT: Re: How to manage multiple Internet connections?
+
+On Sat,15.May.10, 16:47:07, Merciadri Luca wrote:
+> >
+> > But will probably not work in you case, as it was meant to combine two 
+> > (or more?) network ports from the same computer connected to the same 
+> > switch.
+> >   
+> The description says
+> 
+> ==
+> The Linux bonding driver provides a method for aggregating
+> multiple network interfaces into a single logical
+> bonded  interface.
+> ==
+> 
+> Strictly speaking, this is what I want. Now, your interpretation seems
+> to be based on the definition of a link aggregation, which I am not
+> really familiar with. Basically, I want to merge connections into one,
+> or at least divide and use them separately, in an easy way. This is not
+> a so-rare situation, is it? E.g. you might be wandering in some zone
+> where you can use the WiFi, but where it is sometimes unavailable, say
+> at specific regions. If you manage to use another connection, for
+> example the one that is given by your mobile phone/smartphone /via/
+> Bluetooth (which is then connected to the internet through other
+> protocols), it should be possible to switch between these two
+> connections, or to use them simultaneously, if, say, WiFi 's range is
+> too small or WiFi's bandwidth too small compared to the smartphone's
+> one. (Okay, this is not a really realistic example.)
+> 
+> You might also share an internet connection with your neighbour,
+> legally, and use it a lot when he does not need it. Then, if you already
+> use ethernet, you can use both connections. But how?
+
+Bonding is not suitable for you because it works too low-level (it is 
+layer 2), unless you have two links from the same provider, using some 
+technology that can be bonded (like ADSL).
+
+AFAIU what you need is BGP[1], but I can't give you any tips as this is 
+way out of my league ;)
+
+Probably a good start (whatever technology you end up using) is a 
+GNU/Linux (preferably Debian) machine connected to both internet links 
+and your internal network since consumer gateways don't even have more 
+than one WAN port[2].
+
+[1] http://en.wikipedia.org/wiki/Border_Gateway_Protocol
+[2] some of them could be used for this with custom firmware, but this 
+is off-topic
+
+Regards,
+Andrei
+P.S. There is no need to CC me as I am subscribed to the list ;)
+-- 
+Offtopic discussions among Debian users and developers:
+http://lists.alioth.debian.org/mailman/listinfo/d-community-offtopic

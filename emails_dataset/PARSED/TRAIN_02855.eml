@@ -1,0 +1,39 @@
+FROM: "Boyd Stephen Smith Jr." <bss@iguanasuicide.net>
+TO: debian-kde@lists.debian.org
+SUBJECT: Re: KDE 4.4.3 in unstable
+
+On Wednesday 05 May 2010 17:58:09 Modestas Vainius wrote:
+> Hello,
+> 
+> On ketvirtadienis 06 Gegužė 2010 01:54:06 Boyd Stephen Smith Jr. wrote:
+> > I'm still using kmail/kontact/etc. (basically kdepim) from 4.3 since I
+> > have no desire to run yet another RDBMS on my system.  (I already run
+> > PostgreSQL, and have a number of apps that use SQLite installed.)
+> 
+> ...
+> 
+> > Okay, ending this email here, because thinking about a stable Debian that
+> > includes KDEPIM 4.4 angers and saddens me.
+> 
+> How many users have postgres installed on their desktop? Do you complain
+>  just because `ps aux | grep mysqld` returns something and you can't stand
+>  it or you have any real issues with it?
+
+I have real issues with having to spare the disk space and RAM on my laptop 
+for it.  PostgreSQL is for work; I don't get much choice about running that.
+
+I also have a history with MySQL and I *do* *not* *trust* it with my data.  
+UPS or not.  My email is fairly important for me -- I am probably in KMail 
+only slightly less than I am in a source code editor.  When I'm testing or 
+deploying updates, I spend *more* time in KMail.
+
+Yes.  I agree.  The kmail -> mysql-server dependency is not actually an "RC" 
+bug, for Debian.
+
+It is for me, but I run an exotic mixed system anyway, so I'll figure 
+*something* out.
+-- 
+Boyd Stephen Smith Jr.           	 ,= ,-_-. =.
+bss@iguanasuicide.net            	((_/)o o(\_))
+ICQ: 514984 YM/AIM: DaTwinkDaddy 	 `-'(. .)`-'
+http://iguanasuicide.net/        	     \_/

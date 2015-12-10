@@ -1,0 +1,24 @@
+FROM: Jari Fredriksson <jarif@iki.fi>
+TO: debian-user@lists.debian.org
+SUBJECT: Re: help for a new user
+
+On 9.5.2010 0:13, Alexander Batischev wrote:
+> On Sat, May 08, 2010 at 02:02:01PM -0700, Robert Holtzman wrote:
+>> What is an internet key and did you mean to publish it for all the world  
+>> to read?
+> Internet key is modern kind of modem. It uses mobile phone network to access.
+> Key looks just like usual USB pendrive, but it have place for SIM card (which
+> is similar to your mobile phone's card). I think you can find more detailed
+> (and professional) explanation on the Internet.
+> 
+
+Yes. You can even exchange Internet Keys with a special protocol
+designed for that: http://en.wikipedia.org/wiki/Internet_Key_Exchange
+
+-- 
+http://www.iki.fi/jarif/
+
+Q:	What do you call the money you pay to the government when
+	you ride into the country on the back of an elephant?
+A:	A howdah duty.
+

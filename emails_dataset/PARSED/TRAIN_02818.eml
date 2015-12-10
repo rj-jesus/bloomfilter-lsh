@@ -1,0 +1,111 @@
+FROM: Tom H <tomh0665@csmining.org>
+TO: debian-user@lists.debian.org
+SUBJECT: Re: nslookup from Windows resolves domain and pdc correctly but still 
+	gets cannot contact on samba 3.2.5-4 on lenny
+
+On Wed, Apr 28, 2010 at 7:50 AM, Siju George  wrote:
+>
+> I have installed
+> ii  samba                                 2:3.2.5-4lenny9            a
+> ii  samba-common                          2:3.2.5-4lenny9
+> On Debian Lenny and i am sharing directories to Windows Users successfully.
+>
+> I configured it as a PDC with the following configuration.
+> [global]
+>        workgroup = HIFXNX
+>        netbios name = HIFXNXDC
+>        server string = HIFXNX Domain Controller, PHP Development
+> Server, Subversion Server, DNS Server
+>        interfaces = 172.16.2.0/255.255.255.255
+>        bind interfaces only = Yes
+>        obey pam restrictions = Yes
+>        passdb backend = tdbsam
+>        pam password change = Yes
+>        passwd program = /usr/bin/passwd %u
+>        passwd chat = *Enter\snew\s*\spassword:* %n\n
+> *Retype\snew\s*\spassword:* %n\n *password\supdated\ssuccessfully* .
+>        unix password sync = Yes
+>        syslog = 0
+>        log file = /var/log/samba/log.%m
+>        max log size = 1000
+>        name resolve order = lmhosts host wins bcast
+>        add user script = /usr/sbin/adduser --quiet
+> --disabled-password --gecos "" %u
+>        add group script = /usr/sbin/addgroup --force-badname %g
+>        add machine script = /usr/sbin/useradd -g machines -c "%u
+> machine account" -d /var/lib/samba -s /bin/false %u
+>        domain logons = Yes
+>        os level = 33
+>        preferred master = Auto
+>        domain master = Yes
+>        dns proxy = No
+>        panic action = /usr/share/samba/panic-action %d
+> [homes]
+>        comment = Home Directories
+>        valid users = %S
+>        create mask = 0700
+>        directory mask = 0700
+>        browseable = No
+> [netlogon]
+>        comment = Network Logon Service
+>        path = /home/samba/netlogon
+>        guest ok = Yes
+>        share modes = No
+>
+> I can get the domain & domain controller resolved using DNS from the
+> Windows XP machine.
+> But when I try to join the domain from the Windows XP machine.
+> I get the error
+> "A Domain Controller for the domain hifxnx.local could not be contacted"
+> and the debug log file dcdiag.txt contains these details.
+> The following error occurred when DNS was queried for the service
+> location (SRV) resource record used to locate a domain controller for
+> domain hifxnx.local:
+> The error was: "DNS name does not exist."
+> (error code 0x0000232B RCODE_NAME_ERROR)
+> The query was for the SRV record for _ldap._tcp.dc._msdcs.hifxnx.local
+> Common causes of this error include the following:
+> - The DNS SRV record is not registered in DNS.
+> - One or more of the following zones do not include delegation to its
+> child zone:
+> hifxnx.local
+> local
+> . (the root zone)
+
+My Domain SMB knowledge is slightly rusty but here goes...
+
+1. Your Samba server's ip address ends with a 0, which, AFAIK, is
+reserved for network addresses (unless it has some special purpose
+like the the /32 netmask). What is the output of "ifconfig -a"?
+
+2. In your smb.conf:
+
+2.a The following are missing (although they may be the default
+settings for these variables):
+security = user
+local master = yes
+
+2.b I have forgotten why, but AFAIK "127.0.0.1" should be listed in
+"interfaces =".
+
+2.c What does "share modes = No" do?
+
+3. If you have not yet created a computer account for the Windows box,
+you have to log on to the domain as root (or as a user with the right
+to add a machine account) the first time that you do so from a Samba
+client for the "add machine script =" variable to do its magic.
+
+4. The "_ldap._tcp...." DNS SRV records are needed for an AD domain
+(IIRC there are 6 +-1). I have never set up an AD Samba PDC but your
+smb.conf settings look like those of an NT4 Samba PDC so it may just
+be a misleading error/failure message. Your Windows box seems to be an
+XP VM but just in case the netbios name is misleading, see
+http://wiki.samba.org/index.php/Windows7
+
+
+-- 
+To UNSUBSCRIBE, email to debian-user-REQUEST@lists.debian.org 
+with a subject of "unsubscribe". Trouble? Contact listmaster@lists.debian.org
+Archive: http://lists.debian.org/i2x6d4219cc1004291502n9c747e56ra1b0d48c7ddf2ede@mail.csmining.org
+
+

@@ -1,0 +1,52 @@
+FROM: i.vida@ivida.name
+TO: debian-user@lists.debian.org
+SUBJECT: Re: syslog-ng log output corrupted
+
+On Tue, May 04, 2010 at 11:08:12AM +0200, Imre Vida wrote:
+> 
+> a few days ago syslog-ng stopped working properly on my 
+> laptop.
+> 
+> Its output consists only of error report lines such as the following:
+> May  3 06:35:16 sharp syslog-ng[4361]: Log statistics; processed='destination(d_error)=249', processed='cent er(received)=0', processed='src.internal(s_src#1)=206', stamp='src.internal(s_src#1)=1272860716', processed= 'destination(d_syslog)=206', processed='destination(d_xconsole)=268', processed='destination(d_newscrit)=0', processed='destination(d_auth)=74', processed='destination(d_daemon)=77', processed='global(payload_realloc s)=0', processed='global(msg_clones)=0', processed='destination(d_mail)=1354', processed='destination(d_cron)=36', processed='destination(d_kern)=243', processed='destination(d_uucp)=0', processed='destination(d_debu g)=36', processed='destination(d_lpr)=0', processed='destination(d_user)=16', processed='center(queued)=0', processed='global(sdata_updates)=0', processed='destination(d_newsnotice)=0', processed='destination(d_conso le_all)=268', processed='destination(d_console)=1', processed='source(s_src)=2042', processed='destination(d _newserr)=0'
+>  
+> This started when the /var partition filled up due to an 
+> update (without cleaning up old debs before). In an 'emergency'
+> clean up i deleted also old, compressed log files (as i usually do).
+> 
+> This has happened before without an consequences, but now what ever 
+> i try (de/reinstall, pure/reinstall) the problem persists.
+> 
+> I switched to sysklogd which work absolutely fine.
+> 
+> I wonder if anybody could give me a hint what went wrong 
+> and how could i fix this.
+> 
+> Many thanks 
+> 
+> imre
+> 
+> running:
+> Debian testing
+> kernel 2.6.31.6
+> (compiled from source)
+> 
+
+-- 
+Imre Vida, M.D., Ph.D.
+Neuroscience and Molecular Pharmacology
+FBLS, University of Glasgow 
+West Medical Building 
+Glasgow, G12 8QQ, U.K.
+Tel.: 0044 141 330 5143
+Fax.: 0044 141 330 5481
+eMail: i.vida@bio.gla.ac.uk
+--
+
+
+-- 
+To UNSUBSCRIBE, email to debian-user-REQUEST@lists.debian.org 
+with a subject of "unsubscribe". Trouble? Contact listmaster@lists.debian.org
+Archive: http://lists.debian.org/20100504095002.GA25888@bio.gla.ac.uk
+
+

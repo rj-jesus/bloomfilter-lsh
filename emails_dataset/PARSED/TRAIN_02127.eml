@@ -1,0 +1,23 @@
+FROM: "Adam D. Barratt" <adam@adam-barratt.org.uk>
+TO: debian-release@lists.debian.org
+SUBJECT: Upcoming etch point release
+
+Hi,
+
+The next point release for the "etch" oldstable distribution, 4.0r9, is
+scheduled for Saturday, 22nd May.
+
+This will be the final point release for etch, which will be moved to
+archive.debian.org in the near future.
+
+Regards,
+
+Adam
+
+
+-- 
+To UNSUBSCRIBE, email to debian-security-REQUEST@lists.debian.org
+with a subject of "unsubscribe". Trouble? Contact listmaster@lists.debian.org
+Archive: http://lists.debian.org/1273775215.6385.453.camel@kaa.jungle.aubergine.my-net-space.net
+
+

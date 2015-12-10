@@ -1,0 +1,20 @@
+FROM: che <che666@uni.de>
+TO: rpm-zzzlist@freshrpms.net
+SUBJECT: gaim official rpm repository
+
+gaim official apt-rpm repositorys :)
+
+#gaim
+rpm http://gaim.sourceforge.net/apt redhat/7.3/en/i386 release
+rpm-src http://gaim.sourceforge.net/apt redhat/7.3/en/i386 release
+
+thought i should post that one too just fell over it :)
+
+bye,
+che
+
+_______________________________________________
+RPM-List mailing list 
+http://lists.freshrpms.net/mailman/listinfo/rpm-list
+
+

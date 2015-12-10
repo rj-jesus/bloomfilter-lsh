@@ -1,0 +1,18 @@
+FROM: "Boyd Stephen Smith Jr." <bss@iguanasuicide.net>
+TO: debian-user@lists.debian.org
+SUBJECT: Re: Ever make your own fstab from scratch?
+
+On Tuesday 27 April 2010 02:44:20 Thomas Pomber wrote:
+> You really gotta know your hardware!
+
+I don't find that to be true at all.  For non-removable media except / you can 
+simply use UUIDs everything should be fine.  For / you can generally use a 
+UUID, too.  Removable media can be handled in a variety of ways.  I prefer 
+using udev to fill in any gaps; writing udev rules doesn't really require 
+familiarity with hardware (udev will tell you everything useful) and there are 
+some descent guides available.
+-- 
+Boyd Stephen Smith Jr.           	 ,= ,-_-. =.
+bss@iguanasuicide.net            	((_/)o o(\_))
+ICQ: 514984 YM/AIM: DaTwinkDaddy 	 `-'(. .)`-'
+http://iguanasuicide.net/        	     \_/

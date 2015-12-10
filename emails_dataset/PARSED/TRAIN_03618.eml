@@ -1,0 +1,17 @@
+FROM: Adrian von Bidder <avbidder@fortytwo.ch>
+TO: "Debian-KDE Mailingliste" <debian-kde@lists.debian.org>
+SUBJECT: KWebkitPart dependency
+
+Heyho!
+
+Short note to the KDE packagers since kdenetwork now depends on 
+libkwebkitpart-dev: don't hesitate to NMU (even with zero delay) if it helps 
+to get KDE into squeeze faster.  (In any case, and if no bug reports come 
+in, I'll just wait with the next upload until kwebkitpart is in testing.)
+
+cheers
+-- vbi
+
+
+-- 
+No wonder you're tired!  You understood so much today.

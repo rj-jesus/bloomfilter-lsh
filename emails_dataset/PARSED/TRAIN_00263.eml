@@ -1,0 +1,24 @@
+FROM: Andrei Popescu <andreimpopescu@csmining.org>
+TO: debian-user@lists.debian.org
+SUBJECT: Re: Chromium in Sid
+
+[sorry for replying to myself]
+
+On Fri,21.May.10, 18:53:34, Andrei Popescu wrote:
+> On Fri,21.May.10, 11:42:57, Steve Fishpaste wrote:
+> 
+> >                                              but the question is why
+> > is it so old when Ubuntu is keeping up-to-date daily?!
+> 
+> Wasn't there some automatic download/recompile going on in PPA? Or maybe 
+> the Ubuntu maintainer just has more time...
+
+And one more thing: if the package in sid/unstable is updated too often 
+it will never migrate to testing, because it has to be at least 10 days 
+old (assuming no bugs are found and there are no dependency problems).
+
+Regards,
+Andrei
+-- 
+Offtopic discussions among Debian users and developers:
+http://lists.alioth.debian.org/mailman/listinfo/d-community-offtopic
