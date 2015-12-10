@@ -34,7 +34,7 @@ classdef LSH < handle
     methods
         %% Constructor
         function self = LSH(expectedError, debug)
-            % the result bellow for k is given by Chernoff Bounds. See
+            % the result bellow for k is given by the Chernoff Bounds. See
             %   https://en.wikipedia.org/wiki/MinHash
             % or more specifically
             % 	https://en.wikipedia.org/wiki/Chernoff_bound
@@ -62,6 +62,24 @@ classdef LSH < handle
         end
         
         %% Similarities
+        function [Similars] = similars_to(self, Signature_A, ...
+                 Candidates, Signatures, threshold)
+            Similars = zeros(length(Candidates), 2);
+            idx = 1;
+            for j = 1:length(Candidates)
+                Candidate = Candidates(j);
+                Signature_B = Signatures(:, Candidate);
+                sim = length(intersect(Signature_A, Signature_B)) ...
+                    / self.k;
+                if sim >= threshold
+                    Similars(idx, :) = [Candidate sim];
+                    idx = idx + 1;
+                end
+            end
+            Similars = Similars(1:idx-1, :);
+        end
+        
+        %% Similarities
         function [Similars] = similars(self, Candidates, Signatures, ...
                 threshold)
             Similars = zeros(length(Candidates), 3);
@@ -83,7 +101,9 @@ classdef LSH < handle
             Similars = Similars(1:idx-1, :);
         end
         
-        function [Candidates] = candidates_of(self, Signature, Signatures, threshold)
+        %%
+        function [Candidates] = candidates_to(self, Signature_A, ...
+                Signatures, threshold)
             % #Rows
             r = 1;
             while (r / self.k) ^ (1 / r) < threshold
@@ -98,20 +118,9 @@ classdef LSH < handle
             % ...              ...
             % DocN            [DocX DocY DocZ ...] }
             Candidates = cell(1);
-%             for i = 1:b
-%                 % Strip this band from the Signatures' matrix
-%                 Band = Signatures(1 + (i-1)*r:i*r, :);
-%                 for j = 1:length(Signatures)-1
-%                     % Get Doc{Y...} which 'match' this Doc{X}
-%                     [~, cols] = find(sum(ismember(Band(:, j+1:end), ...
-%                         Band(:, j))) == r);
-%                     cols = j + unique(cols(:))';
-%                     Candidates{j} = unique([Candidates{j} cols]);
-%                 end
-%             end
             for i = 1:b
                 % Strip this band from the Signatures' matrix
-                Band_sig = Signature(1 + (i-1)*r:i*r);
+                Band_sig = Signature_A(1 + (i-1)*r:i*r);
                 Band_sigs = Signatures(1 + (i-1)*r:i*r, :);
                 % Get Doc{Y...} which 'match' this Doc{X}
                 [~, cols] = find(sum(ismember(Band_sigs, ...

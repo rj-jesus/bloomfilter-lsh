@@ -33,9 +33,13 @@ for i = 1:n_files
         Bf.add(address);                % This is spam. Filter it next time
         
         shingles = LSH.shingleWords(strsplit(text));
+        fprintf('Learning set of %d shingles... ',...
+            length(shingles));
         if isempty(shingles)
+            fprintf('Skipped.\n');
             continue
         end
+        fprintf('Done.\n');
         signature = LSH.signature(shingles);
         signatures(:, k) = signature;
         k = k + 1;
@@ -43,8 +47,9 @@ for i = 1:n_files
 end
 delete(h);
 
-signatures = signatures(:, 1:k-1);      % keep only relevant the portion
+signatures = signatures(:, 1:k-1);      % keep only the relevant portion
 save('spam.signature.mat', 'signatures');
+load('spam.signature.mat', 'signatures');
 
 %% Obtain the testing set
 % Path for testing directory
@@ -54,7 +59,8 @@ n_files = length(files);
 
 %% Test it
 k = 1;
-Candidates = cell(n_files, 1);
+Spam = cell(n_files, 1);
+threshold = 0.3;
 
 h = waitbar(0, 'Generating testing candidates...');
 for i = 1:n_files
@@ -68,24 +74,40 @@ for i = 1:n_files
 
     [~, address] = strtok(from, '<>');
     if Bf.contains(address)             % This is spam. Filter it
-        Candidates{k} = sprintf('%s - %d', files(i).name, NaN);
+        fprintf('%s is a spam address. Filtered.\n', address);
+        Spam{k} = sprintf('%s - %d', files(i).name, NaN);
         k = k + 1;
         continue
     end
 
     shingles = LSH.shingleWords(strsplit(text));
-    if isempty(shingles)
-        Candidates{k} = sprintf('%s - %d', files(i).name, NaN);
+    if isempty(shingles)                % Filter 'empty' messages
+        fprintf('No shingles could be made. Filtered.\n');
+        Spam{k} = sprintf('%s - %d', files(i).name, NaN);
         k = k + 1;
         continue
     end
     signature = LSH.signature(shingles);
     
-    candidates = LSH.candidates_of(signature, signatures, 0.75);
+    candidates = LSH.candidates_to(signature, signatures, threshold);
     if ~isempty(candidates{1})
-        Candidates{k} = candidates{1};
-        k = k + 1;
-        % add the sender to the Bloom-filter
+        fprintf('Got %d candidates. Analyzing... ', length(candidates{1}));
+        candidates = candidates{1};
+        similars = LSH.similars_to(signature, candidates, signatures, ...
+            threshold);
+        fprintf('Done.\n');
+        if ~isempty(similars)
+            m = max(similars(:, 2));
+            fprintf('Got a similarity of %f TO A SPAM email. Filtered.\n', m);
+            Spam{k} = sprintf('%s - %d', files(i).name, m);
+            k = k + 1;
+        else
+            fprintf('This was considered NOT TO BE SPAM. Skipped.\n');
+        end
     end
 end
 delete(h);
+
+Spam = Spam(1:k-1);                     % keep only the relevant portion
+save('spam.spam.mat', 'Spam');
+load('spam.spam.mat', 'Spam');
