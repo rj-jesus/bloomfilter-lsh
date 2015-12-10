@@ -1,0 +1,18 @@
+FROM: Sjoerd Hardeman <sjoerd@lorentz.leidenuniv.nl>
+TO: debian-user@lists.debian.org
+SUBJECT: Re: Omit 32-bit Packages From Install
+
+Carlos Mennens schreef:
+> On Wed, Apr 14, 2010 at 12:50 PM, Sjoerd Hardeman
+>  wrote:
+>> Everything in the 64 bit section is 64 bit, except the ia32 compability
+>> libraries. If you make sure you haven't installed those (which should be the
+>> case on a base system that doesn't need those), then you have a fully 64 bit
+>> system.
+> 
+> OK - I omit the 'base' system when I install the O.S. so I think I
+> should be fine.
+The base system is 64 bit. 32 bit is available for some proprietary 
+stuff that needs 32 bit libraries (not so many nowadays). But usually, a 
+base install pulls no 32 bit libraries.
+Sjoerd

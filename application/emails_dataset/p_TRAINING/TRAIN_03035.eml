@@ -1,0 +1,68 @@
+FROM: Modestas Vainius <modestas@vainius.eu>
+TO: debian-kde@lists.debian.org
+SUBJECT: Re: KDE 4.4.3 in unstable
+
+Hello,
+On penktadienis 07 GeguÅ¾Ä 2010 01:59:39 Boyd Stephen Smith Jr. wrote:
+> I should have some time to pitch in and help before and after the freeze
+> date. What can I do to make sure KMail doesn't need Akonadi when Squeeze
+> is released?  I've been told that back-porting the Akonadi/PostgreSQL
+> patches is unlikely to help.
+> 
+> I'm not averse to helping, but I don't have lots of time -- a few evenings
+> a week at most.  I'm not "unable" to help, but I'm not too familiar with
+> Debian packging of the KDE SC 4.x code case -- I can read/write all the
+> computer languages involved, though.
+Supporting and testing unreleased or beta software is the biggest problem. If 
+you want your pet issue fixed, you have to get akonadi from trunk, build it, 
+test whole Debian's KDE 4.4.x *extensively* with it including third party 
+akonadi plugins like googledata one. Finally severe regressions should be 
+fixed. For packaging, README.Debian needs to be written on how to switch DB 
+backends since there won't be GUI for it. And when this is done, that akonadi 
+could be considered for stable.
+In other words, you have to do part of upstream release management work 
+without knowing the code well. You can be sure that upstream won't be pleased 
+with Debian releasing unreleased version of akonadi. But maybe you can 
+convince them otherwise to release earlier to accommodate Debian needs. There 
+is lots of work to be done.
+Initial akonadi trunk packaging is at [1]. I have been using it with SQLite 
+for over a month now. Yet I don't use akonadi features extensively (not even 
+addressbook or korganizer) so I can't tell much about quality of the code. But 
+I can tell you that if you don't step up, this plan probably won't make it.
+1. http://svn.debian.org/wsvn/pkg-kde/branches/akonadi-
+trunk/#_branches_akonadi-trunk_
+> >  You started this off on a wrong foot by demanding to accommodate to your
+> >  needs.
+> 
+> "Please" is not a demand last time I checked.
+> 
+> I think that KMail requiring MySQL to function in Debian stable is a
+> problem. I request that the Qt/KDE packaging team take steps to ensure
+> that Debian stable users are not stranded with that situation for the
+> lifetime of stable.
+It might be a problem for some people (short on RAM on their machines), not a 
+problem for others. Generally, you need to stop talking and generalizing what 
+you don't know (like keep claiming that releasing with different versions 
+wasn't considered despite obvious proof on the contrary).
+> > > There are a number of solutions to this.  Newer Akonadi should run on
+> > > non- MySQL data stores.  Older KMail doesn't talk to Akonadi.  Patches
+> > > could be applied to either.  Stable could include software from
+> > > multiple KDE releases, as has been done before.
+> > 
+> > What I tried to say to you all this time, if Akonadi renders Kmail
+> > unusable
+> > 
+> >  to you, switch the client! Akonadi by itself is not a bug, it is not
+> >  going away! Take it or switch to something else, simple as that.
+> 
+> I'm not saying to get rid of Akonadi-tied KMail.  I'm certainly not saying
+> "Akonadi by itself is a bug".  I'd be perfectly happy with
+> Akonadi/PostgreSQL making it into stable, in fact I'd be excited to play
+> with Akonadi!
+PostgreSQL/SQLite is a FEATURE, it is not a bug which has to be fixed no 
+matter what. If you want it in, stop ranting and start working on it. Give 
+fewer lessons how Debian works and actually do something useful towards your 
+goal. Especially since the lack of technical knowledge or background should 
+not be the problem for you.
+-- 
+Modestas Vainius

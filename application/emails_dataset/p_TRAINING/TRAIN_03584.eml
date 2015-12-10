@@ -1,0 +1,41 @@
+FROM: Dotan Cohen <dotancohen@csmining.org>
+TO: debian-kde@lists.debian.org
+SUBJECT: Re: What needs to improve in KDE 4?
+
+On 12 May 2010 09:58, Ferdinand Thommes  wrote:
+>> > Nepomuk / Strigi need to improve a *lot*.
+> yes, for sure
+It has, it's down to 2 MB of memory in KDE 4.5.
+>> What version? Strigi in 4.4 seems rather usable, those issues sound
+>> like familiar 4.3 issues.
+>
+> The whole virtuoso/strigi ensemble needs a lot of polishing. It is not ready
+> for simple usage yet.
+> I have spent some days fiddling with that stuff based on my own experience and
+> feedback i got from users at sidux.
+> The best way i found to have a usable index is:
+> Â - stop nepomuk and strigi in systemsettings
+> Â - move away or delete everything in:
+> ~/.kde/share/apps/nepomuk/repository/main/data/virtuosobackend
+> (there might be incompatible database from virtuoso 5.x in there)
+> Â - out and back in to your account
+> Â - start nepomuk andv strigi
+> Â - let it do the indexing
+> Â - test (in dolphin, krunner is unreliable atm) your index
+> Â - see if e.g. files under kmail got indexed
+>
+> for me to have a complete index i had to do 5 runs of strigi.
+> in the first 3 runs it would not even touch any dot files under .kde
+> in the end it works fine now but popular searches use a lot of ram.
+>
+Please test Strigi and Nepomuk in KDE Trunk / 4.5, and if you have
+problems let me know or file issues. It's all been heavily reworked
+and should really be usable now.
+-- 
+Dotan Cohen
+http://bido.com
+http://what-is-what.com
+-- 
+To UNSUBSCRIBE, email to debian-kde-REQUEST@lists.debian.org
+with a subject of "unsubscribe". Trouble? Contact listmaster@lists.debian.org
+Archive: http://lists.debian.org/AANLkTikfcRd13r2HRal2uIWS1ochLzwijVKcMG_KEY_B@mail.csmining.org

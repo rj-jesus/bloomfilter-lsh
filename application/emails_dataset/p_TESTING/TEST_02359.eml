@@ -1,0 +1,14 @@
+FROM: Tom H <tomh0665@csmining.org>
+TO: debian-user@lists.debian.org
+SUBJECT: Re: just fetch .debs without installing
+
+On Thu, May 13, 2010 at 4:10 AM, Mihamina Rakotomandimby
+ wrote:
+>
+> What is the optoin to pass to apt-get in order to make it just fetch
+> the .debs without installing them?
+"--download-only"
+-- 
+To UNSUBSCRIBE, email to debian-user-REQUEST@lists.debian.org 
+with a subject of "unsubscribe". Trouble? Contact listmaster@lists.debian.org
+Archive: http://lists.debian.org/AANLkTikevPBStHfj213DFpxNhBJMSkwhKKaRngWcDq50@mail.csmining.org

@@ -1,0 +1,8 @@
+FROM: Denny Schierz <linuxmail@4lin.net>
+TO: debian-user@lists.debian.org
+SUBJECT: Re: NIS: /etc/nsswitch seems (a bit) ignored from /usr/bin/passwd
+ *solved*
+
+hi,
+nscd was the problem. He cached the local passwd ...
+cu denny

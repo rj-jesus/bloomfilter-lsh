@@ -1,0 +1,10 @@
+FROM: Andrew Malcolmson <andmalc@csmining.org>
+TO: debian-user@lists.debian.org
+SUBJECT: Re: Suspend to Disk + blacklisted module = still trouble
+
+This site has great resources on fixing suspend problems:
+http://hal.freedesktop.org/quirk/quirk-suspend-index.html
+-- 
+To UNSUBSCRIBE, email to debian-user-REQUEST@lists.debian.org 
+with a subject of "unsubscribe". Trouble? Contact listmaster@lists.debian.org
+Archive: http://lists.debian.org/h2tae6dd7d31004241314y5cfeb696l2bf269a90f994191@mail.csmining.org

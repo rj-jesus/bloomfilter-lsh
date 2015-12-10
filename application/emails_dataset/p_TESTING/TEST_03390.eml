@@ -1,0 +1,158 @@
+FROM: "Brad Shelton" <carment3y@verizonmail.com>
+TO: achieve@netnoteinc.com
+SUBJECT: All Your Life #4C55
+
+This is a MIME Message
+------=_NextPart_000_007F_01BDF6C7.FABAC1B0
+Content-Type: multipart/alternative; boundary="----=_NextPart_001_0080_01BDF6C7.FABAC1B0"
+------=_NextPart_001_0080_01BDF6C7.FABAC1B0
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+***** This is an HTML Message ! *****
+------=_NextPart_001_0080_01BDF6C7.FABAC1B0
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Executive Guild Membership
+ ApplicationResponse-O-Matic Form
+Dear Candidate,=A0
+ You have been selected as a potential candidate for a free listing in=A0<=
+br>
+ the  2001 Edition of the International Executive Guild Registry=2E=A0=
+ 
+ Please accept our congratulations for this coveted honor=2E=A0
+ As this edition is so important in view of the new millennium, the=A0=
+ International Executive Guild Registry will be published in two different=
+=A0
+ formats; the searchable CD-ROM and the Online Registry=2E=A0
+ Since inclusion can be considered recognition of your career position=A0<=
+br>
+ and professionalism, each candidate is evaluated in keeping with high=A0<=
+br>
+ standards of individual achievement=2E In light of this, the Internationa=
+l Executive
+ Guild thinks that you may make an interesting biographical subject=2E=A0<=
+br>
+ 
+ We look forward to your inclusion and appearance in the International=A0<=
+br>
+ Executive Guild's Registry=2E Best wishes for your continued success=2E=A0=
+ International Executive Guild=A0
+ Listing Dept=2E=A0
+If you
+ wish to be removed from our list, please submit
+ your request
+at the
+ bottom of this email=2E
+ 
+ <!--
+ function validate_form() {
+   validity =3D true; // assume valid
+   if (!check_empty(document=2Eform=2Ebusphone=2Evalue))
+         { validity =3D false; alert('Day Time
+ Phone field is empty!'); }
+     if (validity)
+         alert ("Thank you for your registration!
+ "
+                 + "Your form is now being passed
+ to your browser's "
+                 + "Mail Delivery Sub-System for
+ NORMAL"
+                 + " NON-ENCRYPTED email
+ delivery=2E"
+                 + "  All email addresses are
+ removed from our system"
+                 + " upon registration=2E  Please
+ click OK to proceed");
+   return validity;
+ }
+ function check_empty(text) {
+   return (text=2Elength > 0); // returns false if
+ empty
+ }
+ 
+ // -->
+ 
+ 
+International Executive Guild
+Registration Form
+(US and Canada
+ Only)
+Please
+ fill out this form if you would like to be
+ included on The International
+ Executive Guild, For accuracy and
+ publication purposes, please
+ complete and send this form at the earliest
+ opportunity=2E There is no
+ charge or obligation to be listed
+ on The International Executive Guild=2E
+Your
+ Name
+Your
+ Company
+Title
+Address
+City
+State
+ or Province
+Country
+USACanada
+ZIP/Postal
+ Code
+Day
+ Time Telephone
+Home
+ Phone
+(Not
+ To Be Published)
+Email
+TO
+ HELP US IN CONSIDERING YOUR APPLICATION, PLEASE
+ TELL US A LITTLE ABOUT
+ YOURSELF=2E=2E=2E
+Your
+ Business
+(Financial
+ Svcs, Banking, Computer Hardware, Software, Professional Svcs,
+ Chemicals,
+ Apparel, Aerospace, Food, Government, Utility,
+ etc=2E)
+Type
+ of Organization
+(M=
+fg,
+ Dist/Wholesaler, Retailer, Law Firm,
+Investment
+ Bank, Commercial Bank, University,
+Financial
+ Consultants, Ad Agency, Contractor, Broker,
+ etc=2E)
+Your
+ Business Expertise
+(Corp=2EMgmt,
+ Marketing, Civil Engineering,
+Tax
+ 
+ Law, Nuclear Physics, Database Development, Operations, Pathologist,
+ Mortgage
+ Banking, etc=2E)
+Major
+ Product Line
+(Integrated
+ Circuits, Commercial Aircraft, Adhesives, Cosmetics, Plastic Components,
+ 
+ Snack Foods, etc=2E)
+Note: Submitting this form=
+ will
+ be made by email, not by use ofÂ  www=2EÂ  Confirmation of its de=
+livery
+ is made by browsing your outgoing mail=2E
+Thank
+ you for filling in this form, we will contact you with more
+ information=2E
+List
+ Removal
+Click
+ Here
+------=_NextPart_001_0080_01BDF6C7.FABAC1B0--
+------=_NextPart_000_007F_01BDF6C7.FABAC1B0--

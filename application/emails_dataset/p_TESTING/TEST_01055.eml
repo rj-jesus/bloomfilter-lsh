@@ -1,0 +1,12 @@
+FROM: Nick Douma <n.douma@nekoconeko.nl>
+TO: debian-user@lists.debian.org
+SUBJECT: Re: Sharing Iceweasel's bookmarks through LAN
+
+On Sat, Apr 24, 2010 at 10:57:07PM +0200, Merciadri Luca wrote:
+> Hi,
+> 
+> I am using UNISON to share files between two computers in my LAN. I
+> share my documents, etc., but I would like to share bookmarks too.
+> However, I don't know if Iceweasel puts them in some place. Where could
+> I reach them?
+I would rather use X-Marks or something similar to share bookmarks between multiple workstations. It seems a bit more robust to me than just copying the file.

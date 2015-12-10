@@ -1,0 +1,6 @@
+FROM: =?UTF-8?Q?Nuno_Magalh=C3=A3es?= <nunomagalhaes@eu.ipp.pt>
+TO: debian-user <Debian-User@lists.debian.org>
+SUBJECT: Re: creating tables...html
+
+1. you have overlapping tags:  begins before  ends;
+2.

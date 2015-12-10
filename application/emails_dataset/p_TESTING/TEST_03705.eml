@@ -1,0 +1,218 @@
+FROM: Lockergnome Tech Specialist <subscriptions@lockergnome.com>
+TO: qqqqqqqqqq-lg@example.com
+SUBJECT: [Lockergnome Tech Specialist]  Frequent Format
+
+<!--
+ body      { BACKGROUND-IMAGE: url(http://images.lockergnome.com/images/issue/top-right.gif); color: #331F30 }
+ a:link    { COLOR: #331F30; TEXT-DECORATION: underline; font-weight: normal }
+ a:visited { COLOR: #331F30; TEXT-DECORATION: underline; font-weight: normal }
+ a:active  { COLOR: GRAY; text-decoration: none }
+ a:hover   { color: GRAY; TEXT-DECORATION: none }
+ p.title   { BACKGROUND: #C69EBF; BORDER-BOTTOM: #4F2F4A 4px solid; BORDER-LEFT: #E7D5E4 4px solid; BORDER-RIGHT: #4F2F4A 4px solid; BORDER-TOP: #E7D5E4 4px solid; COLOR: #331F30; FONT-FAMILY: Comic Sans MS, Trebuchet MS, Helvetica, Arial; FONT-SIZE: 14pt; FONT-WEIGHT: normal }
+ p.sidebar { BACKGROUND: #E7D5E4; BORDER-BOTTOM: #C69EBF 3px solid; BORDER-LEFT: #FFFFFF 3px solid; BORDER-RIGHT: #C69EBF 3px solid; BORDER-TOP: #FFFFFF 3px solid; COLOR: #331F30; FONT-FAMILY: Comic Sans MS, Trebuchet MS, Helvetica, Arial; FONT-SIZE: 10pt; FONT-WEIGHT: bold; TEXT-ALIGN: center } 
+ .url      { font-size: 8pt; font-family: Verdana, Tahoma, Arial }
+-->
+20020716 Lockergnome Tech Specialist
+Â  07.16.2002 GnomeREPORT 
+"A network administrators tool kit" 
+OpalisRobot automates a broad range of admin tasks 
+including system monitoring, corrective action and 
+job scheduling. It detects and corrects system errors 
+& automates jobs, enabling proactive management of 
+business-critical servers. 
+Download & test-drive OpalisRobot today! 
+Being that I have a print subscription to PocketPC Magazine, 
+I haven't been by their website in quite some time, so when 
+Hal Goldstein informed me of a new electronic delivery 
+method that they've employed, I felt obligated to give it a 
+spin. You can check out the September 2002 Issue of the Digital 
+Edition and see if you like reading the mag in that 
+format better than the print variety. A Software and 
+Accessories Encyclopedia is also new to the site since my 
+last belated visit.
+I've also been using my PocketPC quite a bit lately, but 
+not for data. It's found a more frequent home on my belt as 
+an MP3 player ever since Diana's dad gave us a bicycle. 
+Going out for a morning ride has been quite pleasurable, and 
+it's nice to bring along some tunes. I've tried both the 
+Compaq iPaq 3870 and HP Jornada 565, and have been more 
+pleased with the audio ability of the iPaq, due in part to 
+the sound utility Compaq provides to adjust treble and bass 
+levels. It's just a more full-sounding device, in my 
+opinion. 
+See You in August,Â Â Â Â Â Â Â Â Â Â Â Â Â Â Randy NielandÂ Â Â Â Â Â Â 
+Â GnomeNETWORK
+LDAP Whodunit
+Pondered by Warren Dugas
+"Randy, a little question for you: Do you know what LDAP is and how important it is to the world of technology? I'm sure you do - but where did it come from? Hmm, let's put our thinking caps on and try to figure it out. Did Microsoft create it? Hmm - No, how about Novell? Nope. Well, who then?"
+History of LDAP 
+http://www.microsoft.com/TechNet/prodtechnol/winntas/evaluate/featfunc/ldapcmr.asp
+X.500, the OSI directory standard, defines a 
+comprehensive Directory Service, including an information 
+model, namespace, functional model, and authentication 
+framework. X.500 also defines the Directory Access Protocol 
+(DAP) used by clients to access the directory. DAP is a full 
+OSI protocol that contains extensive functionality, much of 
+which is not used by most applications. 
+DAP is significantly more complicated than the more 
+prevalent TCP/IP stack implementations and requires more 
+code and computing horsepower to run. The size and 
+complexity of DAP makes it difficult to run on thin clients, 
+such as the PC and Macintosh where TCP/IP functionality 
+often comes with the machine. DAP stack implementations are 
+cumbersome to administer, thus limiting the acceptance of 
+X.500. Hence in 1993, the folks at University of Michigan, 
+with help from the ISODE Consortium, designed and developed 
+a protocol that would work over TCP/IP and was small enough 
+when implemented to run on a thin client like PC's running 
+the WindowsÃ operating system or the Macintosh. 
+The LDAP version 1 Specification was published in March 
+of 1994. The LDAP version 2 Specification was published as 
+rfc 1777 by the Access Searching and Indexing of Directories 
+(ASID) working group in the IETF in March of 1995. In April 
+of 1996, 40 companies including Microsoft, Netscape, and 
+Novell separately announced support for LDAP protocol in 
+their Directory Services products in order that they may in 
+turn operate with each other and integrate with the 
+Internet. LDAP version 3.0 has gone through several drafts 
+but at this time is not finished. 
+Â GnomeSYSTEM
+Looking for Sound
+Suggested by Corey Hollett
+http://www.turtlebeach.com/site/products/santacruz/whatdoineed.asp
+http://www.3dsoundsurge.com/reviews/earlyimpressions/ProMedia51.html
+"I've just gone on an extensive hunt for the best 
+sound card and speaker set combination for 5.1 sound. My 
+criteria were that it be excellent for games, music, and dvd 
+playback. A price under $500.00 was also a strong 
+point."
+Corey came to the same conclusion that others have in two 
+respects. Creative has long maintained a healthy share of 
+the sound card market with a solid name and decent products. 
+Audiophiles know of other brands as well, such as Turtle 
+Beach and Philips, which also produce quality sound cards 
+and at attractive price points. Corey decided on the Turtle 
+Beach Santa Cruz card, a great choice. 
+His choice of speaker systems reinforced my own feelings 
+on the subject. I own two Klipsch speaker sets, the ProMedia 
+2.400 and most recently the ProMedia 5.1. The 2.400 system 
+was the subject of many positive reviews, and believe me 
+when I say that the ProMedia 5.1 leaves the 2.400 in the 
+dust. The above review that Corey pointed out hits the high 
+points, and is actually quite in-depth for an "initial" 
+review. I'm itching to see if they eventually do write up a 
+more complete version, as mentioned in the article. 
+Â GnomeALERTZ
+Today's Top 5 kbAlertz
+Q269272 - Mail Client Address List Truncated Using "Mailto:" Link If Tag Exceeds 260 Characters (Q269272)
+Q313043 - FIX: Creation of Local Cube Fails (Q313043)
+Q320273 - Subfolders of a Web Folder Are Not Enumerated in the Folders Pane in Windows XP (Q320273)
+Q241210 - Drive List Shows Only Program Drive in 16-Bit and 32-Bit Programs (Q241210)
+Q241189 - SNMP Memory Leak in Windows NT4.0 Peer-to-Peer Network (Q241189)
+GET HIGH-SPEED ACCESS: Verizon Online DSL is an affordable, 
+high-speed Internet connection.  
+Click here 
+to see if Verizon Online DSL is available in your area.
+Recommend It!
+Â GnomeASSISTANT
+QuickTime 6 Released
+http://www.apple.com/quicktime/download/
+With the debut of QuickTime 6, we can assume that the 
+licensing haggles over MPEG-4 have been resolved, making way 
+for the long-awaited release. MPEG-4 isn't the only 
+addition, joining a new AAC audio codec that is a favorite 
+among professionals. Streaming media skip protection, Flash 
+5 support and better AppleScript functionality also tag 
+along. As always, there is a standard free version available 
+for download, but the Pro edition adds additional features, 
+such as full screen video playback, the ability to create 
+MPEG-4 content and editing features not present in the free 
+player.
+Â GnomeSTUFF
+Microtel & WalMart Love Linux
+http://www.theregister.co.uk/content/4/26192.html
+WalMart is selling Microtel PCs, but with a slight twist. 
+They were one of the first manufacturers to preinstall 
+LindowsOS and offer systems to the retail market through 
+WalMart.com, and now Mandrake is being offered as a pre-
+installed choice in operating systems. These options give 
+potential Linux users an easier way to get started without 
+having to build their own system from scratch or deal with 
+driver issues, while still maintaining a low overall cost. A 
+Pentium 4 2GHz system with a CD-RW drive goes for as little 
+as $648 with Mandrake Linux, so not too shabby at all.
+Recommend It!
+http://www.lockergnome.com/issues/techspecialist/20020716.html
+Your subscribed e-mail address is: [qqqqqqqqqq-lg@example.com] - To unsubscribe or change your delivery address, please visit the subscription management page. For further information, please refer to the GnomeCREDITS in the sidebar.
+LOOK OVER HERE
+Â Download Tip eBooks
+Â Latest Windows Daily
+Â Latest Digital Media
+Â Latest Tech Specialist
+Â Latest Penguin Shell
+Â Latest Apple Core
+Â Latest Web Weekly
+Â Latest Bits & Bytes
+Â Latest Audio Show
+Â Low Price Search
+Â Our Tech Conference
+Â Microsoft Office Tips
+Â PC Productivity Tips
+Â Cool Internet Tips
+Â Windows 2000 Tips
+Â Windows XP Tips
+Â Tell a Friend About Us!
+Â Suggest a Feature
+Â Advertise With Us
+Â High-Tech Job Search
+Â Chat With Gnomies
+Â Watch The Webcams
+Â Computer Power User
+Â Read Past Issues
+Â Download X-Setup
+Â About Lockergnome
+Â Our Privacy Policy
+Â View More Options
+Â Our XML / RSS Feed
+Â Syndicate Our Tips
+Â Link To Lockergnome
+Â Get Chris's Book
+Â E-mail a Suggestion
+Â Your Rant / Rave
+Â General Feedback
+Â The Editor's Blog
+Â E-mail the Editor
+Â SOUND SYSTEMS
+Yamaha RX-V1200
+Sony DAVC900
+Harman Kardon	AVR520
+Denon	AVR5803
+Pioneer VSXD811S
+Pioneer Elite	VSX49TX
+Sony HTDDW840
+Yamaha HTR5560
+BOSE LS122BK
+Sony DAVC450
+Â GNOMESPECIALS
+Â Manage Your Workgroup
+Â Form Pilot
+Â Say the Time 5.0
+Â Boomer - Stream Now
+Â Create Web/CD catalog
+Â Easy Web Editor
+Â Kleptomania
+Â Tag&Rename
+Â Pretty Good Solitaire
+Â Visualize Color Combos
+Â FirstStop WebSearch
+Â Ecobuilder
+Â Book Collector
+Get Listed Here
+Question: which group is 250,000+ strong and always looking for stuff to make their personal and professional lives run smoother? 
+Â 
+CLICK HERE TO ZOOM
+Â 
+LOOK IT UP
+Â 
+BYTE ME NOW
+Â©2002, Lockergnome LLC. ISSN: 1095-3965. All Rights Reserved. Please read our Terms of Service. Our Web site is hosted by DigitalDaze. Domain registered at DNS Central.

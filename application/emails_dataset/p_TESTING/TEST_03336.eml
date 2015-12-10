@@ -1,0 +1,19 @@
+FROM: Mike Viau <viaum@sheridanc.on.ca>
+TO: <debian-user@lists.debian.org>
+SUBJECT: Any file details on an executable binary file?
+
+Hello list,
+I was wondering if anyone could suggest a package or means to look at any or all of the information from a given executable binary file:
+- What compiler compiled it
+- What (source) language was it compiled from
+- What computer architecture the file was compiled for
+- How many hardware bits was the file intended for (eg. 32-bit or 64-bit encoding)
+- Endianness
+If any of the above a simply not possible because of the nature all binary files, it would be helpful to know that too.
+Thanks.
+ 
+-M
+ 		 	   		  
+_________________________________________________________________
+MSN Dating: Find someone special. Start now.
+http://go.microsoft.com/?linkid=9729707

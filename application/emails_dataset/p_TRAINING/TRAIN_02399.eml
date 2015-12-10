@@ -1,0 +1,42 @@
+FROM: Nick Verhaegen <nick@permflux.org>
+TO: rpm-zzzlist@freshrpms.net
+SUBJECT: Re: Fluxbox
+
+Summary: Blackbox derived window manager
+Name: fluxbox
+Version: 0.1.10
+Release: nv1
+License: other
+Group: User Interface/Desktops
+Source: http://prdownloads.sourceforge.net/fluxbox/%{name}-%{version}.tar.gz
+URL: http://fluxbox.sourceforge.net
+BuildRoot: %{_tmppath}/%{name}-root
+BuildRequires: XFree86-devel, libstdc++-devel
+%description
+Fluxbox is yet another windowmanager for X.
+It's based on the Blackbox 0.61.1 code. Fluxbox looks like blackbox and 
+handles styles, colors, window placement and similar thing exactly like 
+blackbox (100% theme/style compability).
+Many changes and improvements have been made to the code, such as window tabs, 
+iconbar, native keygrabber, gnome and kde support etc.
+%prep
+%setup -q
+%build
+%configure --enable-xinerama --enable-gnome --enable-kde
+make
+%install
+rm -rf %{buildroot}
+%makeinstall
+%clean
+rm -rf %{buildroot}
+%files
+%defattr(-, root, root)
+%doc README NEWS COPYING AUTHORS INSTALL TODO doc/Coding_style
+%{_bindir}/*
+%{_datadir}/%{name}
+%{_mandir}/man1/*
+%changelog
+* Thu Jul 19 2002 Nick Verhaegen
+- Update to 0.1.10
+* Tue Jul 9 2002 Nick Verhaegen
+- Initial RPM release.

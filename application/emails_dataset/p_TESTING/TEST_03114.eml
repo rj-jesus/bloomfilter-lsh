@@ -1,0 +1,17 @@
+FROM: "Boyd Stephen Smith Jr." <bss@iguanasuicide.net>
+TO: debian-kde@lists.debian.org
+SUBJECT: Re: KDE 4.4.3 in unstable
+
+On Thursday 06 May 2010 04:59:35 Martin Steigerwald wrote:
+> Am Donnerstag 06 Mai 2010 schrieb Boyd Stephen Smith Jr.:
+> > Heck, just stop kmail from migrating.  Korganizer and KAddressBook
+> > have  required Akonadi since 4.2 or earlier.
+> 
+> Again, AFAIK, kmail does not use Akonadi in KDE 4.4.
+Have you installed and tried it?  I have.  It does require Akonadi in KDE 
+4.4.3.
+-- 
+Boyd Stephen Smith Jr.           	 ,= ,-_-. =.
+bss@iguanasuicide.net            	((_/)o o(\_))
+ICQ: 514984 YM/AIM: DaTwinkDaddy 	 `-'(. .)`-'
+http://iguanasuicide.net/        	     \_/

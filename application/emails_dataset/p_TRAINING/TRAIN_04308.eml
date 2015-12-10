@@ -1,0 +1,20 @@
+FROM: Sjoerd Hardeman <sjoerd@lorentz.leidenuniv.nl>
+TO: debian-user@lists.debian.org
+SUBJECT: Re: Exim4 Administration
+
+Mihamina Rakotomandimby schreef:
+>> David Baron  :
+>> Is there any other way?
+> 
+> Yes.
+Of course it's list policy to ask smart questions, but it's also list 
+policy not to give useless answers (well, not policy, but it's certainly 
+recommended).
+@David: read 
+http://www.exim.org/exim-html-current/doc/html/spec_html/index.html for 
+the full documentation.
+exim has a cli interface to remove frozen messages, man exim for 
+details. Eg. to show frozen messages:
+  exim -bp
+And read
+Sjoerd

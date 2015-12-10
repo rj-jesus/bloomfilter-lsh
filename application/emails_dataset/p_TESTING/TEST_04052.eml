@@ -1,0 +1,92 @@
+FROM: "Rosann Michon" <lgolagny1999@unterentersbach-online.de>
+TO: hibody@csmining.org
+SUBJECT: [SPAM]  Professionals' meeting
+
+Very HOT eNews
+body {
+	width: 600px;
+	font-family: Verdana,Arial,sans-serif;
+	font-size: 11px;
+}
+td { font-size: 11px; font-family: Verdana,Arial,sans-serif; }
+div,p,ul,li { font-size: 11px; font-family: Verdana,Arial,sans-serif; }
+p {margin-bottom: 14px;}
+h1 { font-size: 15px; padding-bottom: 6px; border-bottom: 1px solid #92aa84; }
+h2 { color: #007887; font-size: 14px; margin: 3px 0; }
+h2 a { color: #007887; font-size: 14px; margin: 3px 0; }
+h3 {
+	font-weight: bold;
+	letter-spacing: 1px;
+	color: #999169;
+	border-bottom: 1px solid #819c72;
+	text-transform: uppercase;
+	line-height: 1.6em;
+	font-size: 10px !important;
+	padding: 0 0 5px 0;
+}
+a, .link {
+	color: #184d49;
+	font-weight: bold;
+	text-decoration: none;
+	font-family: Verdana,Arial,sans-serif;
+}
+a:hover { text-decoration: underline; }
+a.small { font-size: 9px; }
+grey { color: #777777; }
+/* HEADER */
+forward { font-size: 9px; float: right; margin: 0; padding: 0; font-family: Verdana,Arial,sans-serif; }
+content { padding: 10px 0 10px 10px; }
+/* LEFT COL */
+leftcol { width: 330px; float: left; }
+subtitle { font-size: 13px; }
+leadin {
+	text-transform: uppercase;
+	color: #5f5f5f;
+	font-size: 10px;
+	letter-spacing:1px;
+}
+pad { padding: 1px 0; }
+rpad { padding-right: 9px; }
+bpad { padding-bottom: 9px; }
+rmargin { margin-right: 9px; }
+border { border: 1px solid #c8d1c2; }
+small,
+a.small { font-size: 10px; }
+copyright { color: #888; }
+/* RIGHT COL */
+rightcol {
+	width: 214px;
+	float: left;
+	padding: 15px;
+	margin: 0 0 0 17px;
+	background: #d7e1d1;
+}
+rightcol a:hover { text-decoration:underline; }
+/* FOOTER */
+footer {
+	margin: 15px 0 0 0;
+	clear: both;
+	padding: 10px;
+	color: #888;
+}
+footer strong,
+footer a { color: #727272; }
+clear { clear: both; margin: 20px 0; }
+item { float: left; width: 160px; margin: 0 5px 0 0; }
+item h2,
+item.description { width: 155px; }
+number {
+	background: #f47718;
+	padding: 0 3px;
+	color: #fff;
+	font-weight: bold;
+}
+FORWARD TO A FRIEND Â»
+					FEATURES: July 19, 2009
+		You have received this newsletter because you submitted your email address at
+		
+		our web site.
+		You may unsubscribe or 
+change your newsletter subscription preferences at any time.
+Copyright Â© 2009
+		Yzotajuroe Foundation

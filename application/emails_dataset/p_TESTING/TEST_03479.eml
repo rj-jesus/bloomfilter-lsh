@@ -1,0 +1,18 @@
+FROM: Andrei Popescu <andreimpopescu@csmining.org>
+TO: debian-user@lists.debian.org
+SUBJECT: Re: How to keep debian current??
+
+On Sat,15.May.10, 00:33:47, Jimmy Johnson wrote:
+> 
+> Yes, start with a testing netinst
+> www.debian.org/devel/debian-installer/ and install the base and then
+> add the sid repos and do an aptitude full-upgrade to the base, after
+> that you can start to build your testing/unstable system the way you
+> want it.
+Or use the business-card image with boot option 'priority=medium' and 
+install unstable directly ;)
+Regards,
+Andrei
+-- 
+Offtopic discussions among Debian users and developers:
+http://lists.alioth.debian.org/mailman/listinfo/d-community-offtopic

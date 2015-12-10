@@ -1,0 +1,19 @@
+FROM: Matthias Haase <matthias_haase@bennewitz.com>
+TO: rpm-zzzlist@freshrpms.net
+SUBJECT: Re: RedHat 8.0 and his own freetype
+
+On Fri, 04 Oct 2002 16:07:12 -0700
+Ben Liblit  wrote:
+> So if your fonts look ugly, lack of bytecode hinting is *not* the cause.
+Well you are right, sorry, I didn't have any better idea yesterday late in
+the evening.
+The fonts are ugly only inside of gnome2 and clean for gnome1 apps, if
+antialiasing is disabled. 
+This is difficult to understand for me.
+--
+regards from Germany
+                   Matthias
+      
+_______________________________________________
+RPM-List mailing list 
+http://lists.freshrpms.net/mailman/listinfo/rpm-list

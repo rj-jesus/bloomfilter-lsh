@@ -49,7 +49,7 @@ classdef LSH < handle
         
         
         %% Minhash Signatures
-        function [S] = singnature(self, Shingles)
+        function [S] = signature(self, Shingles)
             S = ones(self.k, 1, 'uint64') * intmax('uint64');
 %             for i = 1:length(Shingles)
 %                 for seed = 1:self.k
@@ -81,6 +81,44 @@ classdef LSH < handle
                 end
             end
             Similars = Similars(1:idx-1, :);
+        end
+        
+        function [Candidates] = candidates_of(self, Signature, Signatures, threshold)
+            % #Rows
+            r = 1;
+            while (r / self.k) ^ (1 / r) < threshold
+                r = r + 1;
+            end
+            % #Bands
+            b = floor(self.k / r);
+            % Candidates' structure is as follows
+            % this --sim--> that
+            % Doc1          { [DocA DocB DocC ...]
+            % Doc2            [DocI DocJ DocK ...]
+            % ...              ...
+            % DocN            [DocX DocY DocZ ...] }
+            Candidates = cell(1);
+%             for i = 1:b
+%                 % Strip this band from the Signatures' matrix
+%                 Band = Signatures(1 + (i-1)*r:i*r, :);
+%                 for j = 1:length(Signatures)-1
+%                     % Get Doc{Y...} which 'match' this Doc{X}
+%                     [~, cols] = find(sum(ismember(Band(:, j+1:end), ...
+%                         Band(:, j))) == r);
+%                     cols = j + unique(cols(:))';
+%                     Candidates{j} = unique([Candidates{j} cols]);
+%                 end
+%             end
+            for i = 1:b
+                % Strip this band from the Signatures' matrix
+                Band_sig = Signature(1 + (i-1)*r:i*r);
+                Band_sigs = Signatures(1 + (i-1)*r:i*r, :);
+                % Get Doc{Y...} which 'match' this Doc{X}
+                [~, cols] = find(sum(ismember(Band_sigs, ...
+                    Band_sig)) == r);
+                cols = unique(cols(:))';
+                Candidates{1} = unique([Candidates{1} cols]);
+            end
         end
         
         %% Banding

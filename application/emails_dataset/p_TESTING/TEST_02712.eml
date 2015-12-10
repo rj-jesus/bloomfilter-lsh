@@ -1,0 +1,23 @@
+FROM: "Boyd Stephen Smith Jr." <bss@iguanasuicide.net>
+TO: debian-user@lists.debian.org
+SUBJECT: Re: OO.writer can't its file.
+
+On Friday 14 May 2010 03:20:47 Sthu Deus wrote:
+> Good day.
+> 
+> 
+> I can not open a file in 'oowriter' by 'edit' user, the program says,
+>  "Write error. The file could not be written." Running from console gives
+>  no additional info. The version is 3.2.0-4.
+> 
+> ls -l 1.odt
+> returns:
+> -rw-r--r-- 1 edit we 64145 2010-03-29 10:39 1.odt
+> 
+> Therefore I see that the problem does not lay in permissions.
+Whoa, there.  What are the permissions on the directory containing that file?
+-- 
+Boyd Stephen Smith Jr.           	 ,= ,-_-. =.
+bss@iguanasuicide.net            	((_/)o o(\_))
+ICQ: 514984 YM/AIM: DaTwinkDaddy 	 `-'(. .)`-'
+http://iguanasuicide.net/        	     \_/

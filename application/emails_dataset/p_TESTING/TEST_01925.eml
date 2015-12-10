@@ -1,0 +1,16 @@
+FROM: Jan Hetges <tran@ms20.net>
+TO: debian-laptop@lists.debian.org
+SUBJECT: Re: synaptics touchpad stopped working in gnome
+
+On Tue, May 04, 2010 at 10:37:54AM +0100, ael wrote:
+> On Mon, May 03, 2010 at 07:43:46PM -0700, Jan Hetges wrote:
+> > i'm running sid on a msi wind 100 with synaptics touchpad. 
+> > since my last dist-upgrade yesterday, the touchpad is not working in
+> > gnome anymore, but still works fine in gdm-greeter, lxde and on console.
+> 
+> 
+> Does http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=547001 help?
+> Scroll to the end.
+nope, it doesn't. and as i already mentioned, it generally works in X, just not
+in gnome.
+  --Jan

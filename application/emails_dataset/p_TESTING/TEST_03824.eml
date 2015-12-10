@@ -1,0 +1,20 @@
+FROM: Merciadri Luca <Luca.Merciadri@student.ulg.ac.be>
+TO: debian-user@lists.debian.org
+SUBJECT: ldconfig: /usr/lib/libwins.so is not an ELF file - it has the wrong
+ magic bytes at the start
+
+Hi,
+When upgrading with apt-get, I sometimes encounter
+==
+ldconfig: /usr/lib/libwins.so is not an ELF file - it has the wrong
+magic bytes at the start
+==
+How can I solve this problem?
+Thanks.
+-- 
+Merciadri Luca
+See http://www.student.montefiore.ulg.ac.be/~merciadri/
+I use PGP. If there is an incompatibility problem with your mail
+client, please contact me.
+Live as if you were to die tomorrow; learn as if you were to live
+forever. (Mahatma Gandhi)

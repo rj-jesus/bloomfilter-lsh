@@ -1,0 +1,95 @@
+FROM: "Tommie Ottaway" <hibody@csmining.org>
+TO: hibody@csmining.org
+SUBJECT: [SPAM]  Why did we break?
+
+body
+{
+	background: #aaaaaa;
+	color: #ffffff;
+	margin: 0;
+	padding: 0;
+}
+h1, h2, h3, p, li, table, tr, td { font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; }
+table, tr, td { background: #ffffff; color: #000000; font-size: 12px;
+	text-align: center;
+}
+p, li { font-size: 12px; }
+p
+{
+	line-height: 130%;
+}
+p.note { font-size: 12px; }
+h1 { font-size: 22px; font-weight: 400; }
+h2 { font-size: 20px; font-weight: 400; }
+h3
+{
+	font-size: 14px;
+	font-weight: 700;
+	font-family: Arial, Helvetica, sans-serif;
+	margin-bottom: 2px;
+	color: #cc0033;
+}
+h3.america
+{
+  color: #7ea1b5;
+  background-color: #ffffff;
+}
+form
+{
+	margin: 0;
+	padding: 0;
+}
+a { text-decoration: none; }
+a:link    { color: #cc0033; background-color: #ffffff; }
+a:visited { color: #cc0033; background-color: #ffffff; }
+a:hover { color: #cc0033; background-color: #ffffff; text-decoration: underline; }
+table#main
+{
+	border-left: 1px solid #000000;
+	border-right: 1px solid #000000;
+}
+gray tr, .gray td, .gray a:link, .gray a:visited, .gray a:hover
+{
+	background-color: #ececec;
+}
+bigfont {
+	font-size:2em; color:#0099CC; text-decoration:underline;
+}
+hr
+{
+	border: 0;
+	margin: 0;
+	padding: 0;
+	height: 1px;
+	color: #000000;
+	background-color: #000000;
+}
+p#jumpLinks
+{
+	margin: 2px 2px 0px 8px;
+}
+{
+	font-family: Arial, sans-serif;
+	font-size: 10px;
+}
+{
+	color: #666666;
+}
+{
+	color: #cccccc;
+	background-color: #000000;
+}
+Hot Topics - What's New in Specialty Glass & Framing
+	  View this newsletter as a web page.
+Forward this newsletter to a friend!
+            	Your Name: Â Â 
+				Friend's Email:  
+(c) Qanybocylenie Products Inc
+						8107 Bracken Place SE
+						Snoqualmie, WA 98065
+If you have received this newsletter in error, or to
+						remove your name from future mailings, 
+						click here to unsubscribe.
+					Privacy
+					Contact Us
+					Newsletter Archives

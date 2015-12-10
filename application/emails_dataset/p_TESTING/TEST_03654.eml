@@ -1,0 +1,66 @@
+FROM: "seminarembedded" <seminar@embeddedact.com>
+TO: <debian-user@lists.debian.org>
+SUBJECT: =?windows-1252?Q?Realtime_Programming_for_ES_&__C_Programming_for_Embedded_&_System_Engineers_Programming_workshop_-_Jun_14th-15th_,16-18th_2010_-_KL_Sentral?=
+
+http://www.eact-tech.com/Mailer/rtp_c.jpg
+Â 
+http://www.eact-tech.com/Mailer/embdlogo.png
+5 Days Workshop from APR 5th to 9th 2010
+Â 
+Real Time Programming for Embedded Systems:
+This course is ideal for engineers who are new to the field of real-time. It is also applicable to both managers and engineers who are considering the use of Real-Time Operating Systems on future projects.
+Objective:
+Â Â Â Â Â Â Â Â  Appreciate the use of multitasking techniques in real-time systems.Â 
+Â Â Â Â Â Â Â Â  Understand the fundamental concepts of real-time operating systems.Â 
+Â Â Â Â Â Â Â Â  Understand the features and structures of practical implementations.Â 
+Â Â Â Â Â Â Â Â  Appreciate how application areas (e.g. safety-critical, desktop, etc.) impact on RTOS facilities.Â 
+Â Â Â Â Â Â Â Â  Be competent to progress to vendor-specific detailed training.
+Suitable for:
+This course is ideal for engineers who are new to the field of real-time. It is also applicable to both managers and engineers who are considering the use of Real-Time Operating Systems on future projects.
+Pre-requisites:
+Â Â Â Â Â Â Â Â  Knowledge of a high level language (e.g. C, C++, etc.)Â 
+Â Â Â Â Â Â Â Â  An understanding of the fundamentals of computer-based systems
+Embedded C for System Developers:
+In this course you'll learn advanced programming techniques using dynamic data structures and algorithms. Finite state machines and statecharts and their uses are covered in depth. You'll also learn techniques specific to embedded systems, such as structured interrupt handling, implementation of simple schedulers, and how to work with embedded operating systems. You'll learn the standard inter-process communication mechanisms and their uses. In addition the course overviews various advanced algorithms and discusses research oriented approaches for learning more about these algorithms and their implementation. The course will also show you how to design modules with clean interfaces to achieve disciplined and well structured code.
+The course emphasizes the implementation of disciplined and well structured code and the design of modules with clean interfaces. Lab exercises are used to consolidate key concepts.
+Prerequisites
+Attendees should have some experience of embedded systems programming and a sound basic knowledge of the C languageDelivery
+Â 
+Course Highlights
+Â 
+Real Time Programming
+Embedded C
+Introduction to Embedded Systems
+An overview on Embedded Software Life Cycle DevelopmentÂ 
+Introduction to Real time system
+Choosing a right mixÂ 
+Types of OS under Embedded SystemsÂ 
+Introducction to Real Time Operating Systems (RTOS).Â 
+Components of RTOS
+Task and ThreadÂ 
+Introduction to various scheduling policies
+Memory managementÂ Â Â Â Â Â Â Â Â 
+Inter Process CommunicationÂ Â Â Â Â Â Â Â 
+Introduction to Interrupts and Timer
+Â 
+Â Click HereÂ to see the Details in Topics
+Introduction to Embedded System and language Generic embedded features
+A brief on C past, present, and futureÂ Features Highlighted
+C basic program structure and tools
+Hands on GNU tool chain for C build process
+Making the most out of C [ coding w.r.t processor and compilerÂ ]Â Using Bit wise Expressions, Controls, loops effectively
+Portability and problemsÂ Â Endeanâs
+Function, Structures and Union
+Gotcha under C: Writing portable codes that are not compiler dependent
+Pointers and effective use w.r.t Architecture
+Doâs and donât under Câs Memory Handling
+Hands on to GNU - X tool-chain
+Using tools to build image
+Hands on building PowerPC toolchain image
+Hands on Configuring the DJGPP toolchainÂ 
+Understanding the X86 hardware support needed for running C
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  Click HereÂ to see the Details in Topics
+Â 
+http://www.eact-tech.com/Mailer/footer_rtpc.jpg
+Â 
+To remove your name from our mailing list, please reply toÂ seminar@eact-tech.comÂ mentioningÂ "REMOVE"Â in the subject line. If your email is an alias or forward email, please specify the primary email that may be deleted.

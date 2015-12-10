@@ -1,0 +1,14 @@
+FROM: "Boyd Stephen Smith Jr." <bss@iguanasuicide.net>
+TO: debian-user@lists.debian.org
+SUBJECT: Aptitude From Testing
+
+Does it annoy anyone else that the 'aptitude' package no longer provides an 
+'aptitude' binary?
+Typing 'aptitude-curses' is a little annoying.  I'm assuming the rename is 
+because of work on aptitude-gtk and aptitude-qt.  If so, wouldn't using the 
+alternatives system for an 'aptitude' symlink make sense?
+-- 
+Boyd Stephen Smith Jr.           	 ,= ,-_-. =.
+bss@iguanasuicide.net            	((_/)o o(\_))
+ICQ: 514984 YM/AIM: DaTwinkDaddy 	 `-'(. .)`-'
+http://iguanasuicide.net/        	     \_/

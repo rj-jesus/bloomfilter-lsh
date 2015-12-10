@@ -1,0 +1,13 @@
+FROM: Dominik Schulz <lkml@ds.gauner.org>
+TO: debian-kde@lists.debian.org
+SUBJECT: Re: akonadi first time start bugs with KDE 4.4.3
+
+Am Donnerstag, 6. Mai 2010, 12:14:41 schrieb Martin Steigerwald:
+> My current work-around is just to close Kontact completely again and start
+> it another time. This will work for now.
+The same here. The same problems, the same "work-around" and the same "I don't 
+wan't workarounds but bug fixes".
+Hopefully this'll get fixed soon.
+-- 
+Mit freundlichen GrÃ¼Ãen / Best Regards
+Dominik

@@ -1,0 +1,11 @@
+FROM: julio <julher@escomposlinux.org>
+TO: debian-user@lists.debian.org
+SUBJECT: Re: automate apt-get update
+
+El jue, 08-04-2010 a las 09:02 +0200, Jozsi Vadkan escribiÃ³:
+> apt-get update
+> 
+> ? Is there a program for it? [e.g.: update-manager under GUI?] that
+> randomly runs apt-get update?
+apt-watch - Applet that monitors apt sources for upgrades 
+JulHer

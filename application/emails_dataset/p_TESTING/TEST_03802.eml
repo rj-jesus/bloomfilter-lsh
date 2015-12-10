@@ -1,0 +1,24 @@
+FROM: Dotan Cohen <dotancohen@csmining.org>
+TO: =?UTF-8?Q?Tim_R=C3=BChsen?= <tim.ruehsen@openmediasystem.de>
+SUBJECT: Re: What needs to improve in KDE 4?
+
+On 11 May 2010 16:47, Tim RÃ¼hsen  wrote:
+> KMail
+> Â - click on 'New Message'
+> Â - click into message body (i am using a custom template for new messages)
+> Â - ctrl-f, type something not findable into the search window and press return
+> Â - click OK in window 'no matches found'
+> Â - move the mouse cursor over the kmail menu / toolbar - it is INVISIBLE while
+> over there
+>
+Please comment:
+https://bugs.kde.org/show_bug.cgi?id=237294
+You might recognise the text!
+-- 
+Dotan Cohen
+http://bido.com
+http://what-is-what.com
+-- 
+To UNSUBSCRIBE, email to debian-kde-REQUEST@lists.debian.org
+with a subject of "unsubscribe". Trouble? Contact listmaster@lists.debian.org
+Archive: http://lists.debian.org/AANLkTimQ7Y4CkD9QmsWWwDjbRuj668vYyN0WENHVugOv@mail.csmining.org

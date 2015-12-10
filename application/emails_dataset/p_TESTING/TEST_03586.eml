@@ -1,0 +1,22 @@
+FROM: "Boyd Stephen Smith Jr." <bss@iguanasuicide.net>
+TO: debian-kde@lists.debian.org
+SUBJECT: Re: KDE 4.4.3 upgrade eats 141 MB of /home
+
+On Friday 14 May 2010 11:37:19 Allan Sandfeld Jensen wrote:
+> On Thursday 13 May 2010, Nicolas Alvarez wrote:
+> > There *has* to be a better way to clean an HTTP cache than to stat every
+> > single file in the cache to then delete a tiny fraction of them. Someone
+> > told me 4.4 improved in this area, but I don't know specifics, and remain
+> > skeptical.
+> 
+> If stat updates the files' atime, you may get a lot better performance by
+> simply mounting the relevant partition with relatime or noatime (which for
+> some reason is still not default).
+noatime "breaks" a few applications.  I recommend against it.
+I've not seen similar issues with relatime, although it is theoretically 
+possible.  I mount using relatime, normally.
+-- 
+Boyd Stephen Smith Jr.           	 ,= ,-_-. =.
+bss@iguanasuicide.net            	((_/)o o(\_))
+ICQ: 514984 YM/AIM: DaTwinkDaddy 	 `-'(. .)`-'
+http://iguanasuicide.net/        	     \_/

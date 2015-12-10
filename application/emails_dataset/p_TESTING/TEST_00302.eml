@@ -1,0 +1,12 @@
+FROM: Mark Purcell <msp@debian.org>
+TO: Diederik de Haas <didi.debian@cknow.org>
+SUBJECT: Re: KMyMoney questions
+
+On Saturday 22 May 2010 03:42:45 Diederik de Haas wrote:
+> - What's a good place to ask questions wrt KMyMoney? I found a mailing
+> list, kmymoney-devel, but  that really looks like a mailing list for the
+> developers, not for users like me.
+Diederik,
+There is an upstream user list or IRC is always a quick turn around:
+http://kmymoney2.sourceforge.net/mailinglist.html
+Mark

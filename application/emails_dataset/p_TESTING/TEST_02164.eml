@@ -1,0 +1,23 @@
+FROM: Merciadri Luca <Luca.Merciadri@student.ulg.ac.be>
+TO: Alexander Batischev <eual.jp@csmining.org>
+SUBJECT: Re: Aliases with `-'
+
+Alexander Batischev wrote:
+> Small note about highlighting â if you add quotes, emacs (and vim, and
+> any other editor with syntax highlighting as well) thinks that it's a
+> string and highlight it. If alias name isn't highlighted that doesn't
+> mean that it won't work. So don't think about highlighting â
+> everything works ;)
+>   
+Thanks for all your answers. It actually finally works. I had to
+re-source the file twice to make it work. Weird! I was expecting more
+than that of emacs, because it normally comes into a mode which depends
+on the extension and/or the name of the edited file (e.g. if you edit a
+Makefile, it knows that it's a Makefile).
+Thanks again.
+-- 
+Merciadri Luca
+See http://www.student.montefiore.ulg.ac.be/~merciadri/
+I use PGP. If there is an incompatibility problem with your mail
+client, please contact me.
+Bad news travels fast.

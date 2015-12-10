@@ -1,0 +1,15 @@
+FROM: "postmaster@jpci.net" <postmaster@jpci.net>
+TO: "spamassassin-talk-admin@example.sourceforge.net" <spamassassin-talk-admin@example.sourceforge.net>
+SUBJECT: Failed mail: Banned or potentially offensive material
+
+Odhiambo Washington wrote:
+> After being bitten by bugs in 2.41, I've downgraded to 2.31 but now spamd
+> spews errors like I've never seen before:
+Delete the contents of /usr/local/share/spamassassin and reinstall.  There
+are some files that were new to v2.4x, so they won't be overwritten when you
+downgrade.
+rOD.
+--
+"Fast!  Fast!  Faster!  Bring the beef, you bastard,"
+cries Paula Abdul, "and don't forget the pasta!"
+Doing the blogging thang again at http://www.groovymother.com/ <<

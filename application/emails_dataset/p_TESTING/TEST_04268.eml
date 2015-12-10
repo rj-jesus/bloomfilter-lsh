@@ -1,0 +1,106 @@
+FROM: Kevin Krammer <kevin.krammer@gmx.at>
+TO: debian-kde@lists.debian.org
+SUBJECT: Re: KDE 4.4.3 upgrade eats 141 MB of /home
+
+On Wednesday, 2010-05-12, Mike Kasick wrote:
+> On Wed, May 12, 2010 at 10:41:35AM +0200, Kevin Krammer wrote:
+> > Since you are writing a bit down that you think it is caused by
+> > kres-migrator, where did you get it from (here it seems to be part of
+> > the kdepim-runtime package).
+> 
+> Yes, kres-migrator is part of kdepim-runtime.  I do have that package
+> installed, as it seems to be indirectly depended upon by kde-minimal.  It's
+> kdepim itself, and its application dependencies (kaddresbook, kalarm, kmail
+> knode, knotes, kontact, korganizer, etc.) I don't have installed.  Maybe
+> the kdepim-runtime dependency itself is a bug--can't say.
+It depends.
+One possible way would be to check every single application (and potentially 
+their plugins) for PIM related functionality.
+I guess it is just easier to depend on runtime. These processes are run on-
+demand only anyway, so in the worst case they consume disk space if nothing is 
+actually using PIM functionality.
+> > kres-migrator is called when an application accesses the KResource
+> > framework, e.g. some app accessing the old addressbook API.
+> > Not using KDEPIM apps does not necessarily mean non of your other
+> > applications access PIM data.
+> 
+> Looks like the culprit here is libkabc.  There's a "Default Addressboook"
+> created by the library, that's presumably empty.  I'm not sure what's
+> loading libkabc in the first place.  I do know that I didn't even have kabc
+> database files (.kde/share/apps/kabc/std.vcf*) until upgrading to 4.4.
+> Maybe it's an explicit part of the migration?  Or I suppose one of the
+> panel widgets I'm using might depend on it now, but I don't believe that's
+> the case.
+Ah, right. Probably a KRunner plugin for actions on contacts.
+> Looked into this a bit.  The InnoDB documentation itself is a little
+> lacking on describing its particular architecture, but there's an InnoDB
+> tuning tutorial [1] that's rather helpful.
+> 
+> These files serve as InnoDB's REDO logs.  They serve two purposes.  First,
+> committed transactions are written to the REDO logs sequentially, so that
+> table updates (with possible random seeks) can be done in a write-back mode
+> "at leisure."
+> 
+> Second, REDO logs serve as a durability mesaure.  Each time the database is
+> restarted, the REDO logs are replayed to ensure that recent transactions
+> have been properly commited--say if either the database is "kill -9ed" or
+> there's other table corruption.  They may also be used in recovery, whereby
+> if table corruption is found and old tables can be reloaded from backup,
+> then the REDO logs can be replayed to bring the tables up to date.  You can
+> also forward REDO logs to standby (fail-over) servers to ensure their
+> database tables are up to date.
+> 
+> The REDO logs themselves contain row updates from insert/update statements.
+> So for a given row length, the REDO logs contain the last
+> LOG_SIZE/ROW_LENGTH transactions.  They're not used in selects or other
+> non-mutating accesses.
+> 
+> REDO log size is not an issue of correctness.  A small log size might
+> result in decreased performance by forcing a burst of inserts/updates to be
+> committed to table before completing a transaction.  A larger log size may
+> also be of benefit in data recovery if database corruption is found, and a
+> recent enough table backup is maintained so that the REDO log still
+> contains all non-backed up transactions.
+Ah, good research, thank you!
+> Let's try to quantify this a bit.  I'm not exactly sure what kind of
+> database workloads Akonadi is targetting, but for PIM applications we're
+> looking at managing (1) contacts, (2) calendar entries, (3) "TODO" tasks,
+> (4) notes-to-self, etc.  It seems to me that each of these things results
+> in:
+Just for the context, this is for KDE 4.4
+4.5 potentially adds (5) emails
+> - Table row length on order of 1 kB.
+I think the preconfigured threshold for database cached parts is 4KB, though 
+there can be several such parts per item (depends on the data type).
+> - Total number of rows < 10,000 (how many people do you know?)
+> - Largely read-only data sets, grows over period of years.
+> - A working set (actively updated rows) < 1,000 per day.  Probably < 100.
+Right, again in in the 4.4 context.
+With emails these can easily be surpassed, especially on update rate (mails 
+come in, get marked read, moved, deleted, etc)
+> The part that bothers me is that the Akonadi folks are basically aware of
+> the situation, and feel justified in claiming [2] that 100+ MB of disk is
+> reasonable.  Franlky, if you ask even an arm-chair DBA if using InnoDB with
+> these parameters are appropriate for per-user PIM management, they'll look
+> at you like your crazy--which is, from what I can tell, the underlying
+> reason for so much of the dislike with KDE 4.4.
+My take is that there is quite some room for optimizations through input by 
+people with good knowledge of database systems.
+As far as I know the developers had help from some MySQL expert on the initial 
+configuration, but since MySQL evolves over time the chosen settings might not 
+be that good anymore.
+> I can't imagine that SQLite was really _so bad_ of a target for low-usage
+> PIM workloads that the Akonadi folks couldn't have just written a plugin
+> for it some time ago and filed some bugs.  Afterall, Firefox uses it rather
+> extensively, seems like it would've been a perfect fit.  But that's another
+> story, and we just have to make do with what we have right now.
+SQLite wasn't viable until very recently due to deadlocking when transactions 
+were being using in a multithreading environment.
+My most up-to-date information on that is that it mostly works now with a 
+development version of SQLite and some additional changes elsewhere.
+IIRC there is only one deadlock case left.
+Performance wise it might be a viable solution for people with low 
+requirements on PIM, e.g. not for people like myself with several hundret 
+thousand mails, tens of quite active mailinglist, etc. :)
+Cheers,
+Kevin

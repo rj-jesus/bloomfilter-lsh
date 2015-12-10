@@ -1,0 +1,54 @@
+FROM: Israel Garcia <igalvarez@csmining.org>
+TO: Stephen Powell <zlinuxman@wowway.com>
+SUBJECT: Re: debian lenny support time
+
+On Wed, Apr 28, 2010 at 3:50 PM, Stephen Powell  wrote:
+> On Wed, 28 Apr 2010 09:38:37 -0400 (EDT), Israel Garcia wrote:
+>>
+>> Do you know the support time for debian lenny?
+>
+> I'm not exactly sure what you mean by that. Â First of all, you need
+> to define what "support" means. Â It will receive support for security
+> fixes as long as it remains the stable release, and probably for some
+> time after it becomes oldstable.
+Hi Stephen
+Yes, I meant security support... thanks
+regards,
+Israel.
+Usually, the security team drops
+> support for oldstable shortly before the current testing release
+> becomes the stable release. Â There is no announced timetable for this,
+> but historically the mean time between releases has been about two
+> years, give or take a few months.
+>
+> If what you mean is a commercial support contract, Debian itself,
+> as an organization, does not offer commercial support. Â Commercial
+> support is sometimes available from third parties, such as a hardware
+> vendor which pre-installs Debian. Â One can also negotiate a support
+> contract from an independent consultant.
+>
+> If what you mean is informal support, from mailing lists such as this,
+> it has no official start or end. Â If you can find someone on the
+> list who is willing and able to answer your question, you have support.
+> If you can't, then you don't.
+>
+> --
+> Â .''`. Â  Â  Stephen Powell
+> Â : :' Â :
+> Â `. `'`
+> Â  `-
+>
+>
+> --
+> To UNSUBSCRIBE, email to debian-user-REQUEST@lists.debian.org
+> with a subject of "unsubscribe". Trouble? Contact listmaster@lists.debian.org
+> Archive: http://lists.debian.org/1259806833.51430.1272462615419.JavaMail.root@md01.wow.synacor.com
+>
+>
+-- 
+Regards;
+Israel Garcia
+-- 
+To UNSUBSCRIBE, email to debian-user-REQUEST@lists.debian.org 
+with a subject of "unsubscribe". Trouble? Contact listmaster@lists.debian.org
+Archive: http://lists.debian.org/j2i194a2c241004280700tc22f8d71y58e0214fbdbc9e8d@mail.csmining.org

@@ -1,0 +1,24 @@
+FROM: "Boyd Stephen Smith Jr." <bss@iguanasuicide.net>
+TO: debian-user@lists.debian.org
+SUBJECT: Re: downloaded .jnlp won't open
+
+On Tuesday 27 April 2010 11:51:35 John O Laoi wrote:
+> > cat /proc/sys/net/ipv6/bindv6only
+> > if output is 1 then:
+> > echo 0 > /proc/sys/net/ipv6/bindv6only
+> 
+> That fixed it.
+> 
+> Anybody know what was the problem?
+Default kernel settings where changed.  Java applications and some other 
+applications are now binding to IPv6 only, instead of IPv4 and IPv6.  There's 
+an open bug about it, IIRC.
+I think it was changed in order to allow communication to/from IPv4-embedded-
+in-IPv6 addresses over IPv6, which might be required from some environments to 
+function correctly / optimally.  I'm very sketchy on the details because I 
+haven't hit the bug myself.
+-- 
+Boyd Stephen Smith Jr.           	 ,= ,-_-. =.
+bss@iguanasuicide.net            	((_/)o o(\_))
+ICQ: 514984 YM/AIM: DaTwinkDaddy 	 `-'(. .)`-'
+http://iguanasuicide.net/        	     \_/

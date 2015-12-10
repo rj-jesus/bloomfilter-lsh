@@ -1,0 +1,17 @@
+FROM: Sjoerd Hardeman <sjoerd@lorentz.leidenuniv.nl>
+TO: debian-user@lists.debian.org
+SUBJECT: Re: Umont ownership?
+
+jeremy jozwik schreef:
+> On Tue, Apr 6, 2010 at 7:23 AM, CamaleÃ³n  wrote:
+>> Were you running that command as "root" (or sudo) user?
+> 
+> does not work in regular user mode. which is what i think causes the
+> issue in GNOME right click.
+> 
+>> Uh? So it works fine for root user...
+For a regular user, you need to be in the plugdev group to mount and 
+unmount. I believe the mounting is done via dbus, which checks for this 
+group (or any other group you have configured it for). So, first check 
+if your user is a member of the plugdev group.
+Sjoerd

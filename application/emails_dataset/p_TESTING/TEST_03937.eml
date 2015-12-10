@@ -1,0 +1,13 @@
+FROM: Hal DeVore <haldevore@acm.org>
+TO: Brent Welch <welch@panasas.com>
+SUBJECT: Re: cvs access working?
+
+I just successfully did a cvs update via ssh.
+My CVS root looks a little different than yours.
+cat CVS/Root 
+:ext:haldevore@cvs.exmh.sourceforge.net:/cvsroot/exmh
+--Hal
+_______________________________________________
+Exmh-workers mailing list
+Exmh-workers@redhat.com
+https://listman.redhat.com/mailman/listinfo/exmh-workers

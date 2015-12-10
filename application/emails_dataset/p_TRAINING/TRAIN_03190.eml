@@ -1,0 +1,16 @@
+FROM: "Boyd Stephen Smith Jr." <bss@iguanasuicide.net>
+TO: debian-user@lists.debian.org
+SUBJECT: Re: Chromium in Sid
+
+On Friday 21 May 2010 10:23:15 Steve Fishpaste wrote:
+> In my opinion we should keep up with the new releases at least weekly.
+> Is this on the agenda to do?
+You volunteering?  Contact the maintainer(s).
+If not, you'll just have to wait for the other volunteers to get around to it.
+IIRC, the policy is actually to open a wishlist bug about 2 weeks after the 
+upstream release.
+-- 
+Boyd Stephen Smith Jr.           	 ,= ,-_-. =.
+bss@iguanasuicide.net            	((_/)o o(\_))
+ICQ: 514984 YM/AIM: DaTwinkDaddy 	 `-'(. .)`-'
+http://iguanasuicide.net/        	     \_/

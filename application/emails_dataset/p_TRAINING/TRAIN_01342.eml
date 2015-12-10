@@ -1,0 +1,47 @@
+FROM: Jeremy Huddleston <jeremyhu@apple.com>
+TO: Michael McCracken <michael.mccracken@csmining.org>
+SUBJECT: Re: cycle through windows causes freeze
+
+Leopard will see limited development releases.  You will need to wait for rc1.
+--Jeremy
+On Apr 23, 2010, at 09:21, Michael McCracken wrote:
+> It looks like 2.5.1_beta series is only up for 10.6 -- is a release
+> for 10.5 planned or was 2.5.0 the last 10.5 release?
+> 
+> Sorry if this was discussed already, I did a quick search but didn't
+> see anything obvious.
+> 
+> -mike
+> 
+> On Thu, Apr 22, 2010 at 6:21 PM, Jeremy Huddleston  wrote:
+>> http://xquartz.macosforge.org/trac/wiki/Releases#AutomaticUpdatesforBetaVersions
+>> 
+>> On Apr 22, 2010, at 16:01, Jon Markle wrote:
+>> 
+>>> Link please.
+>>> 
+>>> Thanks,
+>>> 
+>>> Jon
+>>> 
+>>> On Apr 22, 2010, at 4:45 PM, Jeremy Huddleston wrote:
+>>> 
+>>>> 
+>>>> 
+>>>> This was fixed in 2.5.1_beta1 3 weeks ago.  2.5.1_beta2 was just released a few minutes ago which also contains this (and other) fixes.
+>>>> 
+>>>> --Jeremy
+>>> 
+>> 
+>>  _______________________________________________
+>> Do not post admin requests to the list. They will be ignored.
+>> X11-users mailing list      (X11-users@lists.apple.com)
+>> Help/Unsubscribe/Update your Subscription: http://lists.apple.com/mailman/options/x11-users/michael.mccracken%40gmail.com
+>> 
+>> This email sent to michael.mccracken@csmining.org
+>> 
+ _______________________________________________
+Do not post admin requests to the list. They will be ignored.
+X11-users mailing list      (X11-users@lists.apple.com)
+Help/Unsubscribe/Update your Subscription: http://lists.apple.com/mailman/options/x11-users/mlsubscriber.tech%40csmining.org
+This email sent to mlsubscriber.tech@csmining.org

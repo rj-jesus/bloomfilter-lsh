@@ -1,7 +1,0 @@
-FROM: "Sven" <sven@dmv.com>
-TO: <razor-users@example.sourceforge.net>
-SUBJECT: [Razor-users] unable to connect to ubik or apt
-
-"connection refused" .... currently I am only able to connect to honor[.cloudmark.com] and am suffering a high rate of timeouts as a result. Is there a problem with the other two servers?????
-
-Sven

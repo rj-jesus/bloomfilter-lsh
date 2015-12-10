@@ -1,0 +1,10 @@
+FROM: Ben Liblit <liblit@eecs.berkeley.edu>
+TO: rpm-zzzlist@freshrpms.net
+SUBJECT: Re: alsa:bass and treble
+
+Nova Nova wrote:
+> bass and treble settings do not seem to have any affect on the sound.
+Look around for a "Tone" toggle.  Toggle it.
+_______________________________________________
+RPM-List mailing list 
+http://lists.freshrpms.net/mailman/listinfo/rpm-list

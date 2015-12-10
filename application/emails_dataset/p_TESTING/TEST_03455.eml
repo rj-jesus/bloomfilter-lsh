@@ -1,0 +1,6 @@
+FROM: nobody@sonic.spamtraps.taint.org (Nobody)
+TO: undisclosed-recipients: ;
+SUBJECT: None
+
+Problem with spamtrap
+Could not lock /home/yyyy/lib/spamtrap/spam.mbox: File exists at lib/Mail/SpamAssassin/NoMailAudit.pm line 484,  line 207.

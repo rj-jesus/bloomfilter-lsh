@@ -1,0 +1,19 @@
+FROM: Merciadri Luca <Luca.Merciadri@student.ulg.ac.be>
+TO: Xavier Vello <xavier.vello@csmining.org>
+SUBJECT: Re: PDF is blocked for printing, etc. OK for acroread (it behaves
+ as expected), but KPDF allows me to print it, even if it is protected! Why?
+
+Xavier Vello wrote:
+> Le Tuesday 20 April 2010 01:33:37, Russ Allbery a Ã©crit :
+>   
+>
+> There's a configuration option in KPDF (and okular, its KDE4 version) saying 
+> "obey DRM limitations" (unchecked by default). You can activate it, and a tool 
+> like kiosk might help to configure the default for a corporation.
+>   
+Thanks for this info.
+-- 
+Merciadri Luca
+See http://www.student.montefiore.ulg.ac.be/~merciadri/
+I use PGP. If there is an incompatibility problem with your mail
+client, please contact me.

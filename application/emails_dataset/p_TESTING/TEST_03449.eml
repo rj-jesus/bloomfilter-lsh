@@ -1,0 +1,25 @@
+FROM: Andrei Popescu <andreimpopescu@csmining.org>
+TO: debian-user@lists.debian.org
+SUBJECT: Re: Unable to connect to my home wireless
+
+On Sun,23.May.10, 14:53:04, Celejar wrote:
+ 
+> > Both are excelent examples :) But even if you disagree with the 
+> > maintainer, in the end Debian is a do-ocracy.  That is, the one who does 
+> > the job usually gets to decide how it's done ;)
+> 
+> Of course.  I was just suggesting that a more precise and consistent
+> definition of 'recommends' would be helpful.
+IMHO, I doubt it would help. There will always be cases where it is very 
+difficult to draw the line between Depends: vs Recommends: (see the not 
+very long ago flames about making xorg depend on hal) and also 
+Recommends: vs Suggests:
+An interesting proposal a while ago was to be able to add some more 
+information to Suggests:, something like:
+Package: acpi-support
+Suggests: radeontool (backlight control for ATI Radeon based laptops)
+Regards,
+Andrei
+-- 
+Offtopic discussions among Debian users and developers:
+http://lists.alioth.debian.org/mailman/listinfo/d-community-offtopic

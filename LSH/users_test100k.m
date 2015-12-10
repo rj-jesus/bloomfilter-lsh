@@ -16,7 +16,7 @@ for n = 1:Nu,                           % for-each user
     ind = find(u(:, 1) == users(n));    % Get his movies
     Shingles{n} = u(ind, 2);            % Save them
         Signatures(:, n) = ...          % Compute this user's signature
-            LSH.singnature(cellstr(num2str(Shingles{n})));
+            LSH.signature(cellstr(num2str(Shingles{n})));
 end
 save('u.data.shingles.mat', ...         % Save matrix of shingles
     'Shingles');

@@ -1,0 +1,14 @@
+FROM: Daragh Mc Grath <daragh.ilug@eircom.net>
+TO: "Smith, Graham - Computing Technician" <Graham.Smith@it-tallaght.ie>
+SUBJECT: Re: [ILUG] Time sync on dialup
+
+Smith, Graham - Computing Technician wrote:
+> 
+> ntp.cs.tcd.ie  (thats a strata 2 isnt it? are there any other publically
+> accessible NTP servers in Ireland?)
+tick.indigo.ie
+tock.indigo.ie
+-- 
+Irish Linux Users' Group: ilug@linux.ie
+http://www.linux.ie/mailman/listinfo/ilug for (un)subscription information.
+List maintainer: listmaster@linux.ie

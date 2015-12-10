@@ -1,0 +1,16 @@
+FROM: martin f krafft <madduck@debian.org>
+TO: Jozsi Vadkan <jozsi.avadkan@csmining.org>
+SUBJECT: Re: usb raid1 pendrive boot
+
+also sprach Jozsi Vadkan  [2010.05.07.1538 +0200]:
+> rootdelay=15 worked!!!!!!!!!!!!!!!
+http://git.debian.org/?p=pkg-mdadm/mdadm.git;a=blob;f=debian/FAQ;hb=HEAD#l560
+-- 
+ .''`.   martin f. krafft       Related projects:
+: :'  :  proud Debian developer               http://debiansystem.info
+`. `'`   http://people.debian.org/~madduck    http://vcs-pkg.org
+  `-  Debian - when you have better things to do than fixing systems
+ 
+"everyone has a little secret he keeps,
+ i like the fires when the city sleeps."
+                                                  -- mc 900 ft jesus

@@ -1,0 +1,44 @@
+FROM: Martin Steigerwald <Martin@lichtvoll.de>
+TO: debian-kde@lists.debian.org
+SUBJECT: Re: KDE 4.4.3 in unstable
+
+Am Donnerstag 06 Mai 2010 schrieb Mike Bird:
+> On Wed May 5 2010 15:53:05 Frederik Schwarzer wrote:
+> > How does having a kdepim that depends on mysql declare kde as
+> > "broken"? Sure, many oppose to that dependency, but it works,
+> > doesn't it?
+> 
+> (1) It reportedly breaks home directories stored on NFS servers.
+> (2) It's such a bad idea that KDE is rushing to remove it.
+> (3) Does Debian really want to implement robust migration both
+> to MySQL (for Squeeze) and then out of MySQL (for Squeeze+1)?
+Whether Akonadi works or not appears to be a game of roulette to me. 
+Freshly since upgrading from KDE 4.4.3:
+Bug 236535 -  sometimes can't open and log timezone and privilege tables
+https://bugs.kde.org/236535
+Bug 236538 -  often does not find resource agents on first start of Kontact
+https://bugs.kde.org/236538
+Bug 236539 -  dbus session bus not available on first start of Kontact - 
+race condition?
+https://bugs.kde.org/236539
+I already grepped in ~/.local/share/contacts for contact information as 
+Akonadi was not available and I didn't now it would be there when I start 
+kontact again.
+My address book as to be accessible *all of the time* without bombarding 
+me with more and less cryptic error messages. There are about 15 self 
+tests that might fail. I think Akonadi from KDE 4.4 depends on too many 
+external factors that it just can't control fully.
+But nonetheless: I think these issues should be fixed upstream. And I also 
+don't what else Debian developers could do then to use KDEPIM from KDE 4.4 
+if the freeze will really happen this summer. Shipping KDEPIM 4.3 with KDE 
+4.4 might not be an option for Debian KDE developers, cause it abandoned 
+by upstream already and all security fixes needs to be backported. Sure 
+when KDE 4.5 is out the same happens to KDE 4.4, but at least it will 
+contain the security and other fixes upto then. 
+So either KDE project decides to fix any Akonadi related issues for KDE 4.4 
+series or Debian extends freeze. Other options would be: Shipping a KDE 
+4.5 backport or even Squeeze + 1 shortly afterwards.
+Ciao,
+-- 
+Martin 'Helios' Steigerwald - http://www.Lichtvoll.de
+GPG: 03B0 0D6C 0040 0710 4AFA  B82F 991B EAAC A599 84C7

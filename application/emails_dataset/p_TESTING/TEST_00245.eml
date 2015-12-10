@@ -1,0 +1,25 @@
+FROM: Ron Johnson <ron.l.johnson@cox.net>
+TO: debian-user@lists.debian.org
+SUBJECT: Re: 64 bit-flash failing sites
+
+On 05/11/2010 09:23 AM, deloptes wrote:
+> Jordan Metzmeier wrote:
+>
+>>> --
+>>> CamaleÃ³n
+>>>
+>>
+>> http://hulu.com is an example. AFAIK its only available to people with
+>> U.S. IPs.
+>>
+>
+> I'm in europe and it's working fine, though it said that it can not show
+> video because of 64bit limitation on linux.
+>
+"Unable to stream videos" isn't actually what "it's working fine" means.
+-- 
+Dissent is patriotic, remember?
+-- 
+To UNSUBSCRIBE, email to debian-user-REQUEST@lists.debian.org 
+with a subject of "unsubscribe". Trouble? Contact listmaster@lists.debian.org
+Archive: http://lists.debian.org/4BE96E72.2020301@cox.net

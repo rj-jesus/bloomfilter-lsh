@@ -1,0 +1,14 @@
+FROM: "Boyd Stephen Smith Jr." <bss@iguanasuicide.net>
+TO: debian-user@lists.debian.org
+SUBJECT: Re: who initiates mounting in debian?
+
+On Tuesday 04 May 2010 14:46:56 Jonas Stein wrote:
+> Should i use /media to mount the USB device, or is /media reserved for
+> the system?
+You should use /media/$persistent_device_name, if it is a device you will 
+likely use in the future.  For one-off mounts, just use /mnt.
+-- 
+Boyd Stephen Smith Jr.           	 ,= ,-_-. =.
+bss@iguanasuicide.net            	((_/)o o(\_))
+ICQ: 514984 YM/AIM: DaTwinkDaddy 	 `-'(. .)`-'
+http://iguanasuicide.net/        	     \_/

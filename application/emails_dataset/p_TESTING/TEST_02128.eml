@@ -1,0 +1,19 @@
+FROM: "Boyd Stephen Smith Jr." <bss@iguanasuicide.net>
+TO: debian-user@lists.debian.org
+SUBJECT: Re: backup apt tree?
+
+On Tuesday 20 April 2010 13:49:32 Liviu Andronic wrote:
+> What files contain the information on the current ("now") apt tree? I
+> would like to perform backups of these files so that I could restore
+> the tree if some package upgrade messed up my Debian testing.
+Restoring those files would not actually cause a downgrade to occur.  They 
+would just cause the state of the package manager to not accurately reflect 
+the state of the system. -- Unless I'm misunderstanding what you mean by "apt 
+tree".
+If you need an old package, snapshot.debian.org should have it.  You can then 
+you pinning to avoid upgrading it -- either to a specific version or at all.
+-- 
+Boyd Stephen Smith Jr.           	 ,= ,-_-. =.
+bss@iguanasuicide.net            	((_/)o o(\_))
+ICQ: 514984 YM/AIM: DaTwinkDaddy 	 `-'(. .)`-'
+http://iguanasuicide.net/        	     \_/

@@ -1,0 +1,5 @@
+FROM: MAILER-DAEMON@mx1.yipes.com
+TO: <spamassassin-talk-admin@example.sourceforge.net>
+SUBJECT: WARNING. Mail Delayed: Re: [SAtalk] [OT] Perl problem and 2.40
+    released
+

@@ -1,0 +1,11 @@
+FROM: Roi Dayan <dejavo@punkass.com>
+TO: rpm-zzzlist@freshrpms.net
+SUBJECT: xine src package
+
+Same as in mplayer src package
+the --with and --without not working correctly
+I do --without arts and it still want to install with arts
+Roi
+_______________________________________________
+RPM-List mailing list 
+http://lists.freshrpms.net/mailman/listinfo/rpm-list

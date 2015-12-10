@@ -1,7 +1,0 @@
-FROM: Alexander Zangerl <az@snafu.priv.at>
-TO: exmh-users@spamassassin.taint.org
-SUBJECT: exmh and pgp: support for external passphrase cache (+patch)
-
--- 
-+ Alexander Zangerl + az@snafu.priv.at + DSA 42BD645D + (RSA 5B586291)
-Kind of like my 404K fund, "wealth not found." -- shrox

@@ -1,0 +1,19 @@
+FROM: Martin Steigerwald <Martin@lichtvoll.de>
+TO: debian-kde@lists.debian.org
+SUBJECT: X.org crashes reproducably when mouse hovers over last opened file menu entry in KWrite
+
+Hi!
+Just as a warning cause I lost a mail I took over one hour to write. I 
+copied it to kwrite to preserve the mail text without the hard linefeeds 
+that KMail usually added when sending the mail. On trying to hover on save 
+menu entry I also hovered on recent files => kaboom and mail lost.
+https://bugs.freedesktop.org/show_bug.cgi?id=27416
+While I think its a DRI issue I also reported it with Debian and KDE, as I 
+think Debian should block on it and KDE project should be aware of the 
+issue as well
+https://bugs.kde.org/show_bug.cgi?id=233940
+No bug number for Debian yet known to me.
+Ciao,
+-- 
+Martin 'Helios' Steigerwald - http://www.Lichtvoll.de
+GPG: 03B0 0D6C 0040 0710 4AFA  B82F 991B EAAC A599 84C7

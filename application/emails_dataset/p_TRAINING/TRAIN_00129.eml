@@ -1,0 +1,14 @@
+FROM: Antonio Diaz Sanchez <adiazsanchez@yahoo.es>
+TO: debian-user@lists.debian.org
+SUBJECT: debian installer ISO: customizing with new packages
+
+Hi,
+ I would like to add two packages to the netiso installer. I have found this link, but I think I need more detailed instructions:
+http://wiki.debian.org/DebianInstaller/Modify/CD
+ Do you know a web resource that describes the necessary steps to create a new debian installer ISO including new packages?
+ Regards,
+      
+-- 
+To UNSUBSCRIBE, email to debian-user-REQUEST@lists.debian.org 
+with a subject of "unsubscribe". Trouble? Contact listmaster@lists.debian.org
+Archive: http://lists.debian.org/893812.89466.qm@web28411.mail.ukl.yahoo.com

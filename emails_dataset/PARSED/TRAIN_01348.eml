@@ -1,9 +1,0 @@
-FROM: mailman-owner@lists.boxhost.net
-TO: yyyy@spamassassin.taint.org, alex@evilal.com, thomas@wibble.to
-SUBJECT: Irish Internet Users subscription notification
-
-billy@billyglynn.com has been successfully subscribed to Irish
-Internet Users.
-
-
-

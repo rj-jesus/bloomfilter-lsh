@@ -1,0 +1,14 @@
+FROM: Ralf Ertzinger <ralf@camperquake.de>
+TO: rpm-zzzlist@freshrpms.net
+SUBJECT: apt 0.5.7 on RH 7.x
+
+Hi.
+Are there any reasons _not_ to use the new apt releases on RH 7.x?
+-- 
+reiserfsck ist bekannt dafÃ¼r, daÃ es leere Dateisysteme zurÃ¼cklÃ¤Ãt.
+Gut, formaljuristisch hat er das Dateisystem in einen wohldefinierten
+Zustand versetzt, aber ... nunja.  Man erwartet schon irgendwie, daÃ
+noch ein paar Daten drauf sind danach.      -- Felix v. Leitner, dasr
+_______________________________________________
+RPM-List mailing list 
+http://lists.freshrpms.net/mailman/listinfo/rpm-list

@@ -1,0 +1,15 @@
+FROM: Ville =?ISO-8859-1?Q?Skytt=E4?= <ville.skytta@iki.fi>
+TO: rpm-zzzlist@freshrpms.net
+SUBJECT: Re: New testing packages
+
+On Wed, 2002-09-18 at 17:50, Matthias Saou wrote:
+> I think I'll use this "--with " switch more and more where
+> possible.
+Nifty, I've been thinking about that too.  Any good ideas how to
+document those targets?  %description?
+-- 
+\/ille SkyttÃ¤
+ville.skytta at iki.fi
+_______________________________________________
+RPM-List mailing list 
+http://lists.freshrpms.net/mailman/listinfo/rpm-list

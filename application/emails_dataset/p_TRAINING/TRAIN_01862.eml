@@ -1,0 +1,18 @@
+FROM: Merciadri Luca <Luca.Merciadri@student.ulg.ac.be>
+TO: debian-user@lists.debian.org
+SUBJECT: `Battery is now fully charged:' why do I receive this after having
+ unplugged the cable?
+
+Hi,
+I receive the message `Battery is now fully charged' on my Asus EEE
+1000HE under Debian Lenny 5 w. kernel 2.26-2-686, but only once I have
+unplugged the cable? For example, the PC might be on AC power for 15
+hours, and say nothing. If I then unplug the cable, it tells me that the
+battery is _now_ fully charged. Is it normal? Does someone else
+experience this?
+Thanks,
+-- 
+Merciadri Luca
+See http://www.student.montefiore.ulg.ac.be/~merciadri/
+I use PGP. If there is an incompatibility problem with your mail
+client, please contact me.

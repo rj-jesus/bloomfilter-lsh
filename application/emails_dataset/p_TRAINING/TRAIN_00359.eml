@@ -1,0 +1,23 @@
+FROM: "Boyd Stephen Smith Jr." <bss@iguanasuicide.net>
+TO: debian-user@lists.debian.org
+SUBJECT: Re: libc6 upgrade lenny to squeeze failed, now dpkg is broken
+
+On Tuesday 11 May 2010 16:05:04 Jordan Metzmeier wrote:
+> > How can this be fixed?  And shouldn't there be a big warning that trying
+> > to upgrade libc6 can break dpkg, on the Debian website page for libc6?
+> >
+> > Best regards,
+> > Chris Austin.
+> 
+> What should really be the "big warning" is mixing releases.
+Bah! WFM.
+That said, I definitely think twice about any proposal from apt(itude) that 
+includes updating the system C or Perl runtime.  I don't like having to 
+recover from a broken apt (or worse dpkg) -- but that hasn't happened since I 
+moved to Debian full time.
+(Pro Tip: A .deb is an "ar" archive.)
+-- 
+Boyd Stephen Smith Jr.           	 ,= ,-_-. =.
+bss@iguanasuicide.net            	((_/)o o(\_))
+ICQ: 514984 YM/AIM: DaTwinkDaddy 	 `-'(. .)`-'
+http://iguanasuicide.net/        	     \_/

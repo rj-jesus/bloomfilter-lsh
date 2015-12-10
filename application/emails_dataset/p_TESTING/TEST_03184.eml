@@ -1,0 +1,19 @@
+FROM: Sascha Silbe <sascha-ml-debian-user@silbe.org>
+TO: Stefan Monnier <monnier@iro.umontreal.ca>
+SUBJECT: Re: Installing Sugar in testing
+
+On Sat, Apr 03, 2010 at 03:55:20PM -0400, Stefan Monnier wrote:
+> Is there some way to install Sugar in Debian testing?
+> I tried the "aptitude --with-recommends install sugar" but it 
+> basically
+> forces me to downgrade most of Gnome to stable.
+Please see [1]. You probably want sucrose-0.86 for now; sucrose-0.88 
+still has a few problems [2,3] (the fixes got delayed by the recent 
+ries.debian.org outage).
+[1] https://wiki.debian.org/Sugar
+[2] http://bugs.debian.org/576205
+[3] http://bugs.debian.org/576270
+CU Sascha
+-- 
+http://sascha.silbe.org/
+http://www.infra-silbe.de/

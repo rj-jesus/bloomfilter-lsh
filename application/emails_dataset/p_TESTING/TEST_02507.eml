@@ -1,0 +1,19 @@
+FROM: Mike Viau <viaum@sheridanc.on.ca>
+TO: <debian-user@lists.debian.org>
+SUBJECT: RE: Aptitude Error
+
+> On Fri, Apr 30, 2010 at 01:26:45PM -0400, Tom H  was heard to say:
+> > On Fri, Apr 30, 2010 at 1:18 PM, Anand Sivaram  wrote:
+> > >
+> > > You could find what all packages from sid are installed in your system by
+> > > apt-show-versions |  grep unstable
+> > 
+> > Or "aptitude search ~Aunstable"
+> 
+"aptitude search ~Aunstable" seems to show all packages from sid (wheather installed or not)
+try " aptitude search ~Aunstable | grep '^i' "
+-M
+ 		 	   		  
+_________________________________________________________________
+Hotmail & Messenger are available on your phone. Try now.
+http://go.microsoft.com/?linkid=9724461

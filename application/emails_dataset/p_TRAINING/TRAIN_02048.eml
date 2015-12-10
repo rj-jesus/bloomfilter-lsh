@@ -1,0 +1,9 @@
+FROM: Modestas Vainius <modestas@vainius.eu>
+TO: debian-kde@lists.debian.org
+SUBJECT: ANN: libktorrent 1.0rc1 && ktorrent 4.0rc1
+
+Hello,
+Till libktorrent waits in NEW, both libktorrent 1.0rc1 && ktorrent 4.0rc1 are 
+available in experimental-snapshots repository on http://qt-kde.debian.net/
+-- 
+Modestas Vainius

@@ -1,0 +1,15 @@
+FROM: Andrei Popescu <andreimpopescu@csmining.org>
+TO: debian-user@lists.debian.org
+SUBJECT: Re: kvm disk read error
+
+On Sat,22.May.10, 17:16:22, briand@aracnet.com wrote:
+> trying to install windows xp pro
+> 
+> the installation goes just fine but when I try to run the vm I get
+For what purpose do you want to run Windows? Maybe we can suggest better 
+alternatives (like VirtualBox, package virtualbox-ose).
+Regards,
+Andrei
+-- 
+Offtopic discussions among Debian users and developers:
+http://lists.alioth.debian.org/mailman/listinfo/d-community-offtopic
