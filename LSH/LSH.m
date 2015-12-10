@@ -150,6 +150,7 @@ classdef LSH < handle
             end
         end
         
+        %% Getters
         function k = getK(self)
             k = self.k;
         end
