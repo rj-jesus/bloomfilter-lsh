@@ -259,10 +259,49 @@ No segundo teste (\textit{small}), contrariamente ao primeiro em que se geram os
 \section{Locality-Sensitive Hashing}
 \label{sec.lsh}
 
+O \textit{Locality-Sensitive Hashing} é particularmente útil quando se têm grandes conjuntos de documentos e se pretendem achar semelhantes entre si, como, por exemplo, achar notícias semelhantes em diversos \textit{websites}. No entanto, pequenos trechos dos documentos podem aparecer noutros não necessarimente na mesma ordem. Para além do mais, se tivermos \textit{sets} na ordem dos milhões e milhares de milhão, são tantas comparações que são necessárias fazer que excedem a memória disponível.
 
+Portanto, para podermos comparar documentos, são necessários 3 passos:
 
+\begin{description}
+\item[Shingling]
+Converter documentos para conjuntos.
+\item[Min-Hashing]
+Converter grandes conjuntos para pequenas assinaturas (por norma, de inteiros), preservando a similariedade.
+\item[Locality-Sensitive Hashing]
+Forcar-se apenas nos pares de assinaturas que possivelmente pertençam a documentos semelhantes, e mais tarde testar realmente a sua similariedade.
+\end{description}
 
+O módulo de \textit{LSH} está no ficheiro \textit{LSH.m} e cada função será explicada consoante o processo de exposto anteriormente.
 
+O único construtor do módulo aceita apenas um argumento, que é o erro esperado (\texttt{expectedError}). Este erro será utilizado para calcular o número \texttt{k} de \textit{hash functions} necessárias, que é também o único atributo que o módulo possui, segundo a fórmula:
+
+$$ k = 1 / expectedError^2 $$
+
+\subsection{Shingling}
+\label{subsec.shingling}
+
+Uma \textit{k-shingle} de um documento é uma sequência de k \textit{tokens} (palavras, caracteres, etc.) que aparecem no documento. Documentos que tenham muitas \textit{shingles} em comum, possuem texto parecido, mesmo que o mesmo não apareça na mesma ordem.
+
+A similariedade entre dois documentos ($D1, D2$) pode ser calculada através da Similariedade de Jaccard:
+
+$$ sim(D1, D2) = \frac{|C1\cap C2|}{|C1\cup C2|} $$
+
+sendo $C1$ e $C2$ os conjuntos de \textit{singles} de $D1$ e $D2$, respetivamente.
+
+A Distância de Jaccard, por outro lado, pode ser dada por:
+
+$$ d(D1, D2) = 1 - sim(D1, D2) $$
+
+Para gerar um \textit{set} de \textit{singles} é utilizada a função \texttt{singleWords}, que recebe como argumento um \textit{cell array}, neste caso, de \textit{strings} (considere-se o mesmo \texttt{Doc}). Para gerar esse conjunto, é necessário selecionar quais as sequências de palavras mais importantes de \texttt{Doc}. Para tal, é necessária que seja criado um \textit{set} de \textit{stop words}, logo, foram guardadas num \textit{cell array} \texttt{stop_words} as cem palavras mais comuns da língua inglesa. Quando o programa encontra uma \textit{stop word}, ele guarda a sequência \textit{stop\_word next\_word1 next\_word2} num outro \textit{cell array}, que será o retorno da função.
+
+\subsection{Min-Hashing}
+\label{subsec.minhash}
+
+Para contornar as demoras que as comparações de excertos de textos provocariam, os \textit{shingles} são convertidos em assinaturas de inteiros, no entanto, a similariedade tem de ser conservada.
+
+%Neste caso, a similariedade é dada \textit{bit} a \textit{bit}, isto é, utilizando \textit{bitwise AND} como interseção e \textit{bitwise OR} como união.
+Para tal, apenas se cria um vetor em que o seu valor inicial é o valor máximo de \textit{double} (auxilia no cálculo dos valores mínimos). Seguidamente, para cada valor de \texttt{k} (calculado no construtor do módulo), é gerado um vetor de assinaturas, dos quais é extraído o valor mínimo e guardado no \textit{array} previamente criado.
 
 \iffalse
 
