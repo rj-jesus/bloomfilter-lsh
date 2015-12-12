@@ -1,0 +1,21 @@
+from: noreply@alpharacks.com
+dear pedro martins,
+
+this is a notification that your service has now been suspended. the details of this suspension are below:
+
+product/service: 256mb year
+domain: acrpv
+amount: $10.00 usd
+due date: 07/20/2016
+suspension reason: spamming
+
+please contact us as soon as possible to get your service reactivated.
+
+--
+www.alpharacks.com
+alpharacks hosting - defining superior service
+web hosting, linux and windows vps, dedicated servers
+
+
+
+

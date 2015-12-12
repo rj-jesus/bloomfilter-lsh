@@ -1,0 +1,5 @@
+from: oreilly@post.oreilly.com
+extend your php skills to php 7, web services, and security
+after 11 long years, we're seeing the release of php 7, the first major version since php 5.0.
+with this learning path—a logical, well-crafted sequence of video training from people who really know what they're talking about—you'll get up to speed quickly with php 7, as you explore the new language features, important fixes, and more. then, you'll take your skills even further as you master php web services and security. this learning path is what you need to bring your php sites and apps current with the modern web.
+until january 4, buy this learning path—10 hours of video training—for just $99. it's a crazy good deal. it's yours forever, to learn at your own pace.

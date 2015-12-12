@@ -1,0 +1,9 @@
+from: support@alpharacks.com
+hello,
+
+it is possible your vps was compromised. i've unsuspended it now, please change all your passwords and make sure it is secure.
+
+--
+julian j. (jj)
+www.alpharacks.com
+alpharacks hosting - defining superior service

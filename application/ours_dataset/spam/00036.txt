@@ -1,0 +1,15 @@
+from: salman@khanacademy.org
+what is the hour of code?
+the hour of code is an hour-long introduction to computer programming that’s both fun and free. at khan academy, we’ve crafted several tutorials that require no prior experience. try one or try them all and earn badges for each tutorial you complete!
+hour of drawing with code: learn to program drawings using javascript, one of the world's most popular programming languages, via two great options:
+
+typing: keyboard-based coding (ages 10+).
+drag-and-drop: block-based coding for those with less typing experience or on ipads/tablets (ages 8+).
+hour of webpages: learn to make your own webpages using the basics of html and css (ages 10+).
+
+hour of databases: learn the fundamentals of databases using sql to create tables and query the data (ages 12+).
+
+we’ve created these tutorials to show you how fun coding and building things can be. now you’ll be part of creating technology, not just using it. ready to start your hour of code?
+
+sal
+founder of khan academy and lover of code

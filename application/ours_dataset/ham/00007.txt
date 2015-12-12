@@ -1,0 +1,4 @@
+from: support@alpharacks.com
+hello,
+
+your vps has been suspended for spamming. perhaps it was compromised. please reply to this ticket/email to get the suspension removed when you are ready to investigate this.
