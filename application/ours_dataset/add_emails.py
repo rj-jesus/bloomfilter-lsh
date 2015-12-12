@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import os
+import sys
 
 
 def add_files(s_dir):
@@ -12,7 +13,8 @@ def add_files(s_dir):
     while True:
         f_name += 1
         s_from = ('FROM: ' + raw_input('From: ')).lower()
-        s_body = raw_input('Body: ').lower()
+        print('Body: '),
+        s_body = sys.stdin.read().lower()
         with open(os.path.join(s_dir, str(f_name).zfill(5) + '.txt'), 'w') as f_out:
             f_out.write(s_from + '\n')
             f_out.write(s_body)
