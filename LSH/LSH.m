@@ -198,16 +198,16 @@ classdef LSH < handle
                 'want', 'because', 'any', 'these', 'give', 'day', ...
                 'most', 'us'};
             % Counter for S{k}
-            k = 1;
+            j = 1;
             % Pre-allocate memory
             S = cell(length(Doc), 1);
             for i = 1:length(Doc)-2
                 if any(strcmpi(stop_words, Doc{i}))
-                    S{k} = strjoin(Doc(:, i:i+2));
-                    k = k + 1;
+                    S{j} = strjoin(Doc(:, i:i+2));
+                    j = j + 1;
                 end
             end
-            S = unique(S(1:k-1));
+            S = unique(S(1:j-1));
         end
         
     end
