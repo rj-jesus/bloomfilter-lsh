@@ -373,7 +373,17 @@ A \autoref{fig:test100ko} mostra que os resultados de ambos os testes foram os m
 \chapter{SPAM Filter}
 \label{chap.spamfilter}
 
-SPAM Filter.
+A filtragem de \textit{email}  é uma maneira de o organizar segundo um certo critério; é largamente utilizado para filtrar \textit{spam} e vírus eletrónico a caixa de entrada de uma conta de email.
+
+Uma maneira de filtrar o \textit{spam} de uma caixa de entrada é comparar o conteúdo de \textit{emails} previamente consideramos como tal e ver se são semelhantes. Outro método é verificar se o endereço de \textit{email} da nova mensagem já enviara algum mail de \textit{spam} anteriormente.
+
+Um \textit{Bloom-filter} e o \textit{Locality-Sensitive Hashing} são particularmente úteis nesta matéria.
+
+O \textit{Bloom-filter} servirá como armazenamento de endereços de \textit{email} que previamente tinham enviado lixo, enquanto que o \textit{Locality-Sensitive Hashing} servirá para comparar o conteúdo de novas mensagens com antigas mensagens de \textit{spam}.
+
+Primeiro é necessário que o programa "aprenda" que \texit{emails} deve filtrar. Para tal, foi utilizado dois \textit{datasets}, CSMining e Enron, em que se insere uma série de mensagens de \textit{spam} e \texit{ham} (\texit{non-spam}) devidamente identificados. A função \texttt{create\_generic} aceita um diretório onde vai procurar pelos ficheiros da extensão que também lhe é passada como argumento, para guardar num ficheiro (o caminho também é passado como argumento) o \textit{Bloom-filter} com os endereços de email que enviaram \textit{spam}, as assinaturas do conteúdo dos mesmos e o módulo de \textit{LSH} usado (para salvaguardar o número de funções de \textit{hashing} utilizadas).
+
+Por outro lado, a função \texttt{test\_generic} testa o filtro de \textit{spam} com base no ficheiro previamente guardado. Os dados desse mesmo ficheiro são carregados para o programa e todos os \textit{emails} contidos na pasta que é passada como argumento da função são analisados.
 
 \chapter{Conclusões}
 \label{chap.conclusões}
