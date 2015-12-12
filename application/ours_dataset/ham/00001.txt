@@ -1,0 +1,90 @@
+from: security@slackware.com
+-----begin pgp signed message-----
+hash: sha1
+
+[slackware-security]  mozilla-thunderbird (ssa:2015-337-02)
+
+new mozilla-thunderbird packages are available for slackware 14.1 and -current
+to fix security issues.
+
+
+here are the details from the slackware 14.1 changelog:
++--------------------------+
+patches/packages/mozilla-thunderbird-38.4.0-i486-1_slack14.1.txz:  upgraded.
+  this release contains security fixes and improvements.
+  for more information, see:
+    http://www.mozilla.org/security/known-vulnerabilities/thunderbird.html
+  (* security fix *)
++--------------------------+
+
+
+where to find the new packages:
++-----------------------------+
+
+thanks to the friendly folks at the osu open source lab
+(http://osuosl.org) for donating ftp and rsync hosting
+to the slackware project!  :-)
+
+also see the "get slack" section on http://slackware.com for
+additional mirror sites near you.
+
+updated package for slackware 14.1:
+ftp://ftp.slackware.com/pub/slackware/slackware-14.1/patches/packages/mozilla-thunderbird-38.4.0-i486-1_slack14.1.txz
+
+updated package for slackware x86_64 14.1:
+ftp://ftp.slackware.com/pub/slackware/slackware64-14.1/patches/packages/mozilla-thunderbird-38.4.0-x86_64-1_slack14.1.txz
+
+updated package for slackware -current:
+ftp://ftp.slackware.com/pub/slackware/slackware-current/slackware/xap/mozilla-thunderbird-38.4.0-i586-1.txz
+
+updated package for slackware x86_64 -current:
+ftp://ftp.slackware.com/pub/slackware/slackware64-current/slackware64/xap/mozilla-thunderbird-38.4.0-x86_64-1.txz
+
+
+md5 signatures:
++-------------+
+
+slackware 14.1 package:
+4d13f012e6b5142ce49034e9f69b3979  mozilla-thunderbird-38.4.0-i486-1_slack14.1.txz
+
+slackware x86_64 14.1 package:
+5625007215517cf1819be09757e8aec7  mozilla-thunderbird-38.4.0-x86_64-1_slack14.1.txz
+
+slackware -current package:
+01540ce24c4e6b9a548966981f2b4789  xap/mozilla-thunderbird-38.4.0-i586-1.txz
+
+slackware x86_64 -current package:
+e22f3356239da6feb8243cd5e8a03bac  xap/mozilla-thunderbird-38.4.0-x86_64-1.txz
+
+
+installation instructions:
++------------------------+
+
+upgrade the package as root:
+# upgradepkg mozilla-thunderbird-38.4.0-i486-1_slack14.1.txz
+
+
++-----+
+
+slackware linux security team
+http://slackware.com/gpg-key
+security@slackware.com
+
++------------------------------------------------------------------------+
+| to leave the slackware-security mailing list:                          |
++------------------------------------------------------------------------+
+| send an email to majordomo@slackware.com with this text in the body of |
+| the email message:                                                     |
+|                                                                        |
+|   unsubscribe slackware-security                                       |
+|                                                                        |
+| you will get a confirmation message back containing instructions to    |
+| complete the process.  please do not reply to this email address.      |
++------------------------------------------------------------------------+
+-----begin pgp signature-----
+version: gnupg v1
+
+ieyearecaayfalzf8puacgkqakrjweaqijodhacgj3rlrgznftothchzfqju7axs
+nr4an3f0jx46+8juppadzijaespogas6
+=4i+p
+-----end pgp signature-----

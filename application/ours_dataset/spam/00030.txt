@@ -1,0 +1,7 @@
+from: mathworks@go.mathworks.com
+your matlab trial resources
+there are many ways to get started with your matlab trial. check out a few of the resources available to help you along the way.
+
+toolbox resources
+don't forget to take advantage of information specific to the toolboxes that are a part of your trial. click on the link(s) below to access your resources:
+data analytics

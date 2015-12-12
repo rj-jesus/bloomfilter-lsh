@@ -1,0 +1,6 @@
+from: contact@codecademy.com
+codecademy just launched a new course on git, the industry standard for version control.
+
+git lets you track changes to any project, so that you have a clean history of your code. it also functions like an "undo" button, letting you roll back changes if they cause problems. it's an essential tool for every developer - especially those working in groups.
+
+our new course will teach you git's basic workflow and cover important areas like backtracking, branching and collaboration.

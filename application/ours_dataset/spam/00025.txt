@@ -1,0 +1,6 @@
+from: no-reply@topcoder.com
+hello data science members,
+
+it's hard to believe that november is almost over, which means that it's almost the end of another amazing topcoder year. but, before we close out 2015, we plan to fit in a couple more fun filled challenges and matches just for you. stay tuned to the ds calendar as final launch dates get locked in. good luck to all and have fun!
+
+also, it's not too late to get more involved with the topcoder community! we are currently searching for our 2016 community advisory board (cab) representatives for the data science track and the application and nomination deadline is fast approaching on december 7th. read more about it here and if you have any questions don't hesitate to contact jen odess.

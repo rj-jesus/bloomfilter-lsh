@@ -1,0 +1,14 @@
+from: no-reply@topcoder.com
+hello december,
+
+as we kick off the last month of the year, december is proving to be one of our busiest months with fantastic prize opportunities for data science members. continue reading for the latest news on the exciting and challenging matches we'll be launching this month!
+
+in addition to the prize-paying marathon matches (again, see below) we have more great opportunities for you to sharpen your skills. all are welcome, doesn't matter how inexperienced you are! join the fun, participate in the forums, no question is a bad question, and may the best competitors win.
+
+    fun marathon match #90
+    fun series challenge - learning data science - forecasting
+
+wondering how a marathon match works, check it out here.
+wondering what a fun series learning challenge is, check out this video.
+
+lastly, it's not too late to get more involved with the topcoder community! we are currently searching for our 2016 community advisory board (cab) representatives for the data science track and the application and nomination deadline is fast approaching on december 7th. read more about it here and if you have any questions don't hesitate to contact jen odess.

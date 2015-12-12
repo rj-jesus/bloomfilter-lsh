@@ -1,0 +1,6 @@
+from: no-reply@topcoder.com
+reminder that topcoder srm 674 is starting in 24 hours. you will be able to register for the srm in the arena 4 hours prior to the start of the match. registration closes 5 minutes before the match begins, so make sure that you are all ready to go.
+
+best of luck!
+
+- the topcoder team

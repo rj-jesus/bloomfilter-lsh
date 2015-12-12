@@ -1,0 +1,16 @@
+from: oreilly@post.oreilly.com
+save 50-60% on all ebooks & video training
+just a friendly reminder: our cyber monday sale ends in 24 hours. there's no better time to see what's on our radar, decide what to learn next, and get even better at what you do.
+shop 12,000+ titles from o'reilly, as well as over 30 of the world's most trusted publishers, including 100s of new releases and bestselling titles such as:
+
+    data science from scratch
+    fluent python
+    building microservices
+    docker cookbook
+    debugging teams
+    articulating design decisions
+    and much, much more.
+
+start browsing titles >
+ps: as part of our sale, get all learning paths for just $99--and 50% off safari subscriptions, for unlimited access to the largest technical, business, and design library on the web. (both are crazy good deals).
+use discount code cyber15 - deal expires december 1, 2015 at 5:00am pt, and cannot be combined with other offers. offer does not apply to print, "print & ebook" bundle pricing, or learning paths.

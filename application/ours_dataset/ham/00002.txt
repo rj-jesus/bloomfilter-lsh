@@ -1,0 +1,91 @@
+from: security@slackware.com
+-----begin pgp signed message-----
+hash: sha1
+
+[slackware-security]  pcre (ssa:2015-328-01)
+
+new pcre packages are available for slackware 14.1 and -current to
+fix security issues.
+
+
+here are the details from the slackware 14.1 changelog:
++--------------------------+
+patches/packages/pcre-8.38-i486-1_slack14.1.txz:  upgraded.
+  fixed overflows that could lead to a denial of service or the execution
+  of arbitrary code.
+  for more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=cve-2015-3210
+  (* security fix *)
++--------------------------+
+
+
+where to find the new packages:
++-----------------------------+
+
+thanks to the friendly folks at the osu open source lab
+(http://osuosl.org) for donating ftp and rsync hosting
+to the slackware project!  :-)
+
+also see the "get slack" section on http://slackware.com for
+additional mirror sites near you.
+
+updated package for slackware 14.1:
+ftp://ftp.slackware.com/pub/slackware/slackware-14.1/patches/packages/pcre-8.38-i486-1_slack14.1.txz
+
+updated package for slackware x86_64 14.1:
+ftp://ftp.slackware.com/pub/slackware/slackware64-14.1/patches/packages/pcre-8.38-x86_64-1_slack14.1.txz
+
+updated package for slackware -current:
+ftp://ftp.slackware.com/pub/slackware/slackware-current/slackware/l/pcre-8.38-i586-1.txz
+
+updated package for slackware x86_64 -current:
+ftp://ftp.slackware.com/pub/slackware/slackware64-current/slackware64/l/pcre-8.38-x86_64-1.txz
+
+
+md5 signatures:
++-------------+
+
+slackware 14.1 package:
+17909756f0f0a655fcd5a6bdfe1dc9ca  pcre-8.38-i486-1_slack14.1.txz
+
+slackware x86_64 14.1 package:
+a8b556fbac184a59b280711fe135b2ef  pcre-8.38-x86_64-1_slack14.1.txz
+
+slackware -current package:
+6782e3065495afd3aa1c34513869121a  l/pcre-8.38-i586-1.txz
+
+slackware x86_64 -current package:
+a60952dff3bcb66f69e0b0d9d6a8f93e  l/pcre-8.38-x86_64-1.txz
+
+
+installation instructions:
++------------------------+
+
+upgrade the package as root:
+# upgradepkg pcre-8.38-i486-1_slack14.1.txz
+
+
++-----+
+
+slackware linux security team
+http://slackware.com/gpg-key
+security@slackware.com
+
++------------------------------------------------------------------------+
+| to leave the slackware-security mailing list:                          |
++------------------------------------------------------------------------+
+| send an email to majordomo@slackware.com with this text in the body of |
+| the email message:                                                     |
+|                                                                        |
+|   unsubscribe slackware-security                                       |
+|                                                                        |
+| you will get a confirmation message back containing instructions to    |
+| complete the process.  please do not reply to this email address.      |
++------------------------------------------------------------------------+
+-----begin pgp signature-----
+version: gnupg v1
+
+ieyearecaayfalzvo4gacgkqakrjweaqijpvwqcfcpwbhf6v4b5ejmjtcrsj+8cu
+joiaoizbqvd6ahmdb9bef+/ds0hnxixs
+=mzqv
+-----end pgp signature-----

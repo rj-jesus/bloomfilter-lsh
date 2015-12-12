@@ -1,0 +1,11 @@
+from: noreply@mailer.atlassian.com
+welcome to atlassian!
+hi ricardo,
+we've created a new atlassian id for you using this email address:
+rj.bcjesus@gmail.com
+atlassian id is your key to all things atlassian. click here to learn more about what you can access with your atlassian id.
+please click below to activate your account:
+activate my account
+cheers,
+the atlassians
+ps: if you believe that you shouldn't have been signed up, please contact us.

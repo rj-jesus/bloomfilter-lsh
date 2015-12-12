@@ -1,0 +1,14 @@
+from: newsletter@bitnami.com
+introducing bitnami stacksmith
+
+last week we proudly launched our newest product, stacksmith.
+with stacksmith you can:
+
+    quickly generate dockerfiles for your custom applications with just a few clicks save yourself time and energy instead of building your containerized application from scratch
+    instantly provision a set of high-quality, updated, and curated application components
+    sleep peacefully with automatic notifications of patches and updates
+
+
+in just one week, we've had over 1,000 custom dockerfiles created with stacksmith!
+
+try now »

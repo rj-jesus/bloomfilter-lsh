@@ -1,0 +1,18 @@
+from: no-reply@000webhost.com
+hello,
+
+recently we have witnessed a data breach. in an effort to protect our users, we had temporarily blocked access to few systems, but now we are back and we're stronger and safer than ever!
+we have been audited by external security experts and we have implemented extra security measures. you can safely use 000webhost for free.
+
+connection to your members area is now encrypted with ssl certificate (sha-256 with rsa 2048 bits key). your passwords are stored securely hashed with bcrypt algorithm with a cost factor of 12. passwords are now immune to brute force attacks. cracking a password, which has more than 4 randomly generated symbols, would take years.
+
+at 000webhost our top priority remains the same - to provide free high quality web hosting for everyone.
+
+thank you for supporting and being with us. use an exclusive coupon code back75 for up to 75% lifetime discount at www.hosting24.com. try our premium hosting services with unlimited disk space, unlimited traffic, free domain name and much more.  the coupon is valid until 2015.12.01, so act quickly.
+
+this works out to be less than $0.07/day, which is fantastic value for money. remember we also give you a 30-day money back guarantee, a 99.9% uptime guarantee and 24/7 support via ticket and live chat, to show how confident we are.
+
+thank you for being our client and using our services
+
+sincerely,
+000webhost

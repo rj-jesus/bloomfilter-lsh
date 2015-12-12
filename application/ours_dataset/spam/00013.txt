@@ -1,0 +1,18 @@
+from: sebastian@email.udacity.com
+hi ricardo,
+
+last week was a truly special week for some of our top udacity students. they went to see google!
+
+as we announced a while back, google created the joint google career summit to bring the very best android developer nanodegree program graduates to their campus. from a large pool of applicants, 50 students were chosen for this all-expense-paid trip to google's headquarters in mountain view.
+
+in addition to a tour of campus, the students engaged in a hackathon. ten teams of five students each developed android apps, with the theme being "do something good for people." i eagerly served as a judge for the final competition, and i have to admit i was blown away. in only three days, the student teams developed some unbelievably awesome android apps. there was one for photographing what you eat, and having your friends judge whether your food is healthy or not. another helped blind people navigate and find obstacles in their way using the android camera. yet another focused on chain-letter-like initiatives to give money to good causes. the students integrated phones, tablets, and even watches. all in just three days!
+
+i am absolutely amazed by the talent we are finding and the skills that these students exhibited. everyone in the room--including the google judges--was blown away by the results. every one of the participants was as good as top google/udacity engineers; i hear that specific individuals are now being quietly recruited by google and other partner companies in silicon valley.
+
+in january, we will invite another group of 75 students to intersect, an event in which attendees will get to engage with many leading silicon valley companies. i can't wait to meet this new group of udacity students! there is so much opportunity here in silicon valley and so much talent in the world. for me, bringing our students together with top companies is very, very special.
+
+every time a udacity student finds a new job is a very happy day in my life. this is why i do what i do!
+
+sincerely,
+sebastian thrun
+co-founder & ceo of udacity
