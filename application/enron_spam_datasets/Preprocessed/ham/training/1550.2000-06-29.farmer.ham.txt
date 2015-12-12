@@ -1,0 +1,3 @@
+FROM: veronica.valdez@enron.com
+teco tap 120 . 000 / hpl gas daily
+ls hpl katy 30 . 000 / enron

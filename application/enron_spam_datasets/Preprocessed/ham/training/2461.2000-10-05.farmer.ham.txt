@@ -1,0 +1,3 @@
+FROM: gary.taylor@enron.com
+( see attached file : hpll 006 . xls )
+- hpll 006 . xls

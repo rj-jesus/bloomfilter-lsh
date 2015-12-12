@@ -1,0 +1,3 @@
+FROM: donna.consemiu@enron.com
+cc : hillis , kimberly ; melodick , kim ; slone , jeanie ; davies , neil
+subject : ena associates , analysts & interns

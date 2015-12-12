@@ -1,0 +1,27 @@
+FROM: danielpavel@myrealbox.com
+6a7,17
+>
+> %define withoss               yes
+> %{?_without_oss:%define withoss no}
+>
+> %define withisapnp    auto
+> %{?_without_isapnp:%define withisapnp no}
+>
+> %define kernsrc       1
+> %{?_without_kernsrc:%define kernsrc 0}
+>
+>
+20a32
+> %if %{kernsrc}
+21a34,36
+> %else
+> BuildRequires: MAKEDEV
+> %endif
+64c79
+< %configure
+---
+> %configure --with-oss=%{withoss} --with-isapnp=%{withisapnp}
+119a135,137
+> * Thu Aug 29 2002 Daniel Pavel 
+> - Added OSS and ISA-PNP build-time flags.
+> - Added kernel-source requirement flag.

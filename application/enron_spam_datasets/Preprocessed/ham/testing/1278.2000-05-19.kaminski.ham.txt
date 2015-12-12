@@ -1,0 +1,3 @@
+FROM: adrianne.engler@enron.com
+when you install this , you need to change the xmim server from " xmimhost " to
+" limbo " ( port is still 0 )

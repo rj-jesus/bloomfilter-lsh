@@ -1,0 +1,2 @@
+FROM: mjones7@txu.com
+trade counts , by region for north america :

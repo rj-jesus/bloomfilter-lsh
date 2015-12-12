@@ -1,0 +1,2 @@
+FROM: jean.mrha@enron.com
+as mentioned , we ' ll drop in the revised commercial expense numbers

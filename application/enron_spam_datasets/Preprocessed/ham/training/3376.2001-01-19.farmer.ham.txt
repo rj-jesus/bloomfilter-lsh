@@ -1,0 +1,3 @@
+FROM: brian.redmond@enron.com
+( see attached file : hplnol 20 . xls )
+- hplnol 20 . xls

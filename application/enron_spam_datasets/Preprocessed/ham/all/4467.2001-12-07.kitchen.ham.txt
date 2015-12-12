@@ -1,0 +1,4 @@
+FROM: geoff.storey@enron.com
+so that we can verify payroll status , please send us the master list with any changes you have made this afternoon .
+thanks ,
+anne and sarah

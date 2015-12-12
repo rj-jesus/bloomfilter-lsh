@@ -1,0 +1,4 @@
+FROM: brenda.flores-cuellar@enron.com
+teco tap 110 . 000 / hpl iferc
+teco tap 33 . 750 / enron
+ls hpl - katy ic 22 . 500 / enron

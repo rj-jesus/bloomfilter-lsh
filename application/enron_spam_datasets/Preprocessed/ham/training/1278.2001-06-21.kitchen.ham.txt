@@ -1,0 +1,2 @@
+FROM: stuart.zisman@enron.com
+the following is the weekly deal report covering 6 / 14 - 6 / 20 .

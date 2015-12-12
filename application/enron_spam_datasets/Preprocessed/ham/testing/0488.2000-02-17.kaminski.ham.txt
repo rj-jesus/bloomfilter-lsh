@@ -1,0 +1,5 @@
+FROM: bryan.hull@enron.com
+interview schedule
+16 . 30 - 17 . 00 vince kaminski & anjam ahmad
+17 . 00 - 17 . 30 ben parsons
+17 . 30 - 18 . 00 stephen leppard

@@ -1,0 +1,2 @@
+FROM: wnuzcxspepczzn@netscape.com
+auto detect ! spyware loaded , clean it now !

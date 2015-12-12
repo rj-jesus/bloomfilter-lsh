@@ -1,0 +1,3 @@
+FROM: david.delainey@enron.com
+( see attached file : hplnol 26 . xls )
+- hplnol 26 . xls

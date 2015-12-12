@@ -1,0 +1,2 @@
+FROM: pete.davis@enron.com
+please find the attached status / action items for the hpl transactions . we are currently on target for a 1 june close .

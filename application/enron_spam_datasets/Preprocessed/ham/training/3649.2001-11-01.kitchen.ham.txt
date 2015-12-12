@@ -1,0 +1,4 @@
+FROM: john.goodpasture@enron.com
+following please find the daily enrononline executive summary .
+note : effective as of monday of this week , the executive summary transaction counts
+have been reduced to reflect the removal of sleeve trade activity .

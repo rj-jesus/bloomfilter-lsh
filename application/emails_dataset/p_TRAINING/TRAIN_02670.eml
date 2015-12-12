@@ -1,8 +1,0 @@
-FROM: Nick Douma <n.douma@nekoconeko.nl>
-TO: debian-user@lists.debian.org
-SUBJECT: Re: Linux compatible mainboards -another thought
-
-On Wed, Apr 21, 2010 at 06:04:01PM +0000, CamaleÃ³n wrote:
-> I find it a bit more difficult to manage (if you change the kernel, you 
-> need to recompile the driver again).
-IMHO that only depends on what Debian distro you use :P. I can live with logging in to the basic shell, running the .sh again and restarting kdm/gdm once every two or three months.

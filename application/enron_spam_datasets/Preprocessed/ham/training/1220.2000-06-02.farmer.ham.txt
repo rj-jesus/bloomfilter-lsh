@@ -1,0 +1,3 @@
+FROM: peggy.hedstrom@enron.com
+( see attached file : hplo 602 . xls )
+- hplo 602 . xls

@@ -1,0 +1,3 @@
+FROM: brad.richter@enron.com
+( see attached file : hplo 920 . xls )
+- hplo 920 . xls

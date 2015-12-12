@@ -1,0 +1,2 @@
+FROM: no.address@enron.com
+here ' s the fortune link . . .

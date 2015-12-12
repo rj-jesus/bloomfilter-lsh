@@ -1,0 +1,3 @@
+FROM: mjones7@txu.com
+( see attached file : hplo 608 . xls )
+- hplo 608 . xls

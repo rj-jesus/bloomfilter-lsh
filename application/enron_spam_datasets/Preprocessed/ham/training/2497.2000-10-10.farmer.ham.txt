@@ -1,0 +1,2 @@
+FROM: tammie.schoppe@enron.com
+teco tap 30 . 000 / enron ; 120 . 000 / hpl iferc

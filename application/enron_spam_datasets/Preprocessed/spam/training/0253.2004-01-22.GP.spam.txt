@@ -1,0 +1,10 @@
+FROM: gamer@games.savquest.com
+html
+body
+center
+a href = http : / / dutyfreediscount . com / shopaff . asp ? affid = 357
+img src = http : / / www . dutyfreediscount . com / adv / 2 - 357 . jpg border = 0
+/ a
+/ center
+/ body
+/ html

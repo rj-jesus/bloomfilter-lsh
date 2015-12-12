@@ -1,0 +1,3 @@
+FROM: pete.davis@enron.com
+teco tap 60 . 000 / enron ; 40 . 000 / hpl iferc
+ls hpl lsk ic 15 . 000 / hpl iferc

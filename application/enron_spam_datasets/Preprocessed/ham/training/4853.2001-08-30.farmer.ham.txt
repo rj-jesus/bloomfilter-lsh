@@ -1,0 +1,2 @@
+FROM: hector.mcloughlin@enron.com
+this is the file with our city temperature weights .

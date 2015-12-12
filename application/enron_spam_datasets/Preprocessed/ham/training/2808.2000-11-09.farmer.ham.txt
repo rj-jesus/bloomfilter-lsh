@@ -1,0 +1,3 @@
+FROM: kristin.walsh@enron.com
+( see attached file : hplnl 110 . xls )
+- hplnl 110 . xls

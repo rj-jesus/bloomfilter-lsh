@@ -1,0 +1,2 @@
+FROM: althea.gordon@enron.com
+start date : 1 / 24 / 02 ; hourahead hour : 9 ; hourahead schedule download failed . manual intervention required .

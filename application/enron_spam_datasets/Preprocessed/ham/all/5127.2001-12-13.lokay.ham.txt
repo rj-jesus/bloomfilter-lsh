@@ -1,0 +1,3 @@
+FROM: veronica.espinoza@enron.com
+darrell
+this report shows the williams balance that has accrued in december .

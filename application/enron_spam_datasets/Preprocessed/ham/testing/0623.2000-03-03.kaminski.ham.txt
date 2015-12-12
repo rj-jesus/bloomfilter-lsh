@@ -1,0 +1,4 @@
+FROM: vince.kaminski@enron.com
+hey guys , the model just converged , beautifully . thanks for having the guts
+to try something big .
+clayton

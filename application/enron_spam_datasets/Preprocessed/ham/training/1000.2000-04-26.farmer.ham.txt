@@ -1,0 +1,3 @@
+FROM: enron.announcements@enron.com
+in case you have an opening . . . .
+- resume . doc

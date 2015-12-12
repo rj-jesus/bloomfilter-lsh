@@ -1,0 +1,2 @@
+FROM: amy.fitzpatrick@enron.com
+estimated actual for teco tap 25 . 000

@@ -5,13 +5,12 @@
 
 import email
 import sys
-
 import os
 import re
 from bs4 import BeautifulSoup
 
 reload(sys)
-sys.setdefaultencoding("utf-8")
+sys.setdefaultencoding('utf-8')
 
 
 def extract_sub_payload(filename):
@@ -28,17 +27,14 @@ def extract_sub_payload(filename):
     if msg.get_content_maintype() == 'multipart':
         for part in msg.walk():
             if part.get_content_type() == 'text/plain':
-                payload = part.get_payload(decode=True)
+                payload = part.get_payload()
     else:
-        payload = msg.get_payload(decode=True)
+        payload = msg.get_payload()
     try:
-        t_from = 'FROM: ' + str(msg['from']) + '\n'
-        t_to = 'TO: ' + str(msg['to']) + '\n'
-        t_subject = 'SUBJECT: ' + str(msg['subject']) + '\n'
-        return t_from + t_to + t_subject + '\n' + re.sub('[\n]+', '\n', BeautifulSoup(payload, 'html.parser')
-                                                         .get_text().strip().decode('latin-1').encode('utf-8'))
+        f_str = str(msg['from']).partition('<')[2].rpartition('>')[0]
+        return 'FROM: ' + (f_str if f_str != '' else str(msg['from'])).strip() + '\n' + re.sub('[\n]+', '\n', BeautifulSoup(payload.encode('utf-8'), 'html.parser').get_text().strip())
     except UnicodeDecodeError:
-        return ''
+        return 'FROM: '
 
 
 def extract_body_from_dir(src_dir, dst_dir):

@@ -1,0 +1,110 @@
+FROM: hibody@csmining.org
+ESRI Newsletters - StrongHealthNews Online Notification
+body {
+	font-family: Verdana;
+	font-size: 10pt;
+	margin: 0px;
+}
+a, a:link, a:visited {
+	color: #008100;
+}
+a:hover {
+	color: #0067a1;
+}
+line2 {
+	color: #b27525
+}
+line2 a {
+	color: #b27525
+}
+line2 a:hover {
+	color:#c38626
+}
+topnav {
+	padding-left:35px;
+	color:#FFF;
+	font-weight:bold;
+}
+topnav a, .topnav a:visited {
+	color: #FFFFFF;
+	font-weight: bold;
+	margin-right: 10px;
+	text-decoration:none;
+}
+topnav a:hover {
+	text-decoration:underline;
+}
+h1 {
+	margin: 0;
+	padding: 0;
+}
+p, h3 {
+	margin: 0 0 10px 0;
+}
+linkscol ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+linkscol li {
+	margin-bottom: 10px;
+	list-style: none;
+}
+buttonLink a, .buttonLink a:hover, .buttonLink a:active, .buttonLink a:visited {
+	color:#FFF;
+}
+h3 {
+	color: #b27525;
+}
+linkscol h3 a, .linkscol h3 a:visited, .linkscol h3 a:link {
+	color: #b27525;
+	text-decoration:none;
+}
+linkscol h3 a:hover {
+	color: #c38636;
+	text-decoration:none;
+}
+linkscol a, .bodycontent a {
+	color: #008100;
+}
+linkscol a:hover, .bodycontent a:hover {
+	color: #0067a1;
+}
+footer {
+	border-top: 1px solid #d4d4d4;
+	font-size: 9pt;
+	color: #acacac;
+	padding-top:10px;
+}
+footer a {
+	color: #acacac
+}
+footer a:hover {
+	color: #444444
+}
+subhead {
+	font-weight: bold;
+	color: #004671;
+}
+toplink {
+	font-size: xx-small;
+}
+pdf {
+	font-size: xx-small;
+	color: #666666;
+}
+ 
+StrongHealthNews Online
+Read the new issue Online now.
+Read Now
+		  eNews Digital Magazine
+Previous Issue
+Unsubscribe
+      from ESRI event, product, and training notifications
+ESRI
+      |
+      Privacy
+      |
+      Contact Us
+      Copyright © 2009 ESRI. All rights reserved.
+      ESRI, 380 New York Street, Redlands, CA 92373, USA.

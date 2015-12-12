@@ -1,0 +1,2 @@
+FROM: lhandli1@txu.com
+start date : 1 / 31 / 02 ; hourahead hour : 5 ; hourahead schedule download failed . manual intervention required .

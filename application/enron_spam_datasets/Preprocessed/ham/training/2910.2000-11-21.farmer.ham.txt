@@ -1,0 +1,2 @@
+FROM: castro@rice.edu
+teco tap 30 . 000 / enron ; 68 . 542 / hpl gas daily

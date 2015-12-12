@@ -1,0 +1,3 @@
+FROM: jez.peters@enron.com
+( see attached file : hplnl 103 . xls )
+- hplnl 103 . xls

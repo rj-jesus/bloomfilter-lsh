@@ -1,0 +1,3 @@
+FROM: lexi.elliott@enron.com
+( see attached file : hplo 607 . xls )
+- hplo 607 . xls

@@ -1,0 +1,3 @@
+FROM: juliann.kemp@enron.com
+( see attached file : hplnol 05 . xls )
+- hplnol 05 . xls

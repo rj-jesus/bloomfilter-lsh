@@ -1,0 +1,263 @@
+FROM: subscriptions@lockergnome.com
+<!--
+ body      { BACKGROUND-IMAGE: 
+url(http://www.lockergnome.com/images/issue/top-right.gif); 
+scrollbar-3dlight-color: #DADADA; scrollbar-arrow-color: #17514B; 
+scrollbar-base-color: #007C7A; scrollbar-darkshadow-color: #808080; 
+scrollbar-face-color: #C0C0C0; scrollbar-highlight-color: #DADADA; 
+scrollbar-shadow-color: #808080 }
+ a:link    { COLOR: RED; TEXT-DECORATION: underline }
+ a:visited { COLOR: #FF8080; TEXT-DECORATION: underline }
+ a:active  { color: #000000; TEXT-DECORATION: none }
+ a:hover   { color: #820000; TEXT-DECORATION: none }
+ p.title   { BACKGROUND: #C0C0C0; BORDER-BOTTOM: #808080 4px solid; BORDER-LEFT: 
+#DADADA 4px solid; BORDER-RIGHT: #808080 4px solid; BORDER-TOP: #DADADA 4px 
+solid; COLOR: #000000; FONT-FAMILY: Comic Sans MS, Trebuchet MS, Helvetica, 
+Arial; FONT-SIZE: 14pt; FONT-WEIGHT: normal }
+ p.news    { BACKGROUND: #C0C0C0; BORDER-BOTTOM: #808080 4px solid; BORDER-LEFT: 
+#DADADA 4px solid; BORDER-RIGHT: #808080 4px solid; BORDER-TOP: #DADADA 4px 
+solid; COLOR: #000000; FONT-FAMILY: Comic Sans MS, Trebuchet MS, Helvetica, 
+Arial; FONT-SIZE: 18pt; FONT-WEIGHT: normal }
+ p.sidebar { BACKGROUND: #DADADA; BORDER-BOTTOM: #C0C0C0 3px solid; BORDER-LEFT: 
+#FFFFFF 3px solid; BORDER-RIGHT: #C0C0C0 3px solid; BORDER-TOP: #FFFFFF 3px 
+solid; COLOR: #000000; FONT-FAMILY: Comic Sans MS, Trebuchet MS, Helvetica, 
+Arial; FONT-SIZE: 10pt; FONT-WEIGHT: bold; TEXT-ALIGN: center }
+ .link     { BACKGROUND: #DADADA; BORDER-BOTTOM: #C0C0C0 3px solid; BORDER-LEFT: 
+#FFFFFF 3px solid; BORDER-RIGHT: #C0C0C0 3px solid; BORDER-TOP: #FFFFFF 3px 
+solid; COLOR: #808080; font-size: 9pt; font-family: Verdana; font-weight: bold; 
+padding: 3px; width: 100% }
+ .url      { font-size: 8pt; font-family: Verdana, Tahoma, Arial }
+ .fixed    { font-family: courier, courier new; font-size: 10px }
+-->
+20020717 Lockergnome Penguin Shell
+  07.17.2002 PenguinREPORT
+CAREER SERVICES FROM LOCKERGNOME AND DICE.COM: We've teamed up with
+Dice.com to bring you a full service I.T. career enhancement solution.
+Whether you are looking for your
+dream 
+job
+or trying to
+hire 
+talented people,
+the full-featured career resource center is the place to start. Find your
+IT talent 
+solution
+today!
+I've very excited about the in-planning Penguin Shell volunteer project. 
+Apparently, you are too. I've received more than 100 emails from readers volunteering a wide range of IT skills for charitable organizations. 
+Linux users, Windows users, even a few Mac users are ready, willing and able to 
+spend their own precious off time providing qualified technical skills for a 
+good cause. I've also gotten more than two dozen suggestions for organizations that might be in need of such skills. And, I've 
+seen some very interesting suggestions for names for our project. Feel free to click through on any of the 
+above links to join the ever-growing bandwagon. Do me a favor, though. keep the 
+subject lines intact. It's the only way your messages will filter and sort 
+through my email system.
+It looks like Apple may have crossed a line of irritation with its users. 
+According to this article on The Register, Apple has tacked a $100 annual fee on its
+previously free mac.com email service. It's also set the price for an OS 10.2
+upgrade at $129.
+I won't question Apple's decision too much. Instead, it really proves how 
+difficult things have become in the tech world in the past few years. Revenues, 
+by and large, are still decreasing from the pie-in-the-sky late 90s and early 
+2000. That's left companies to scramble for new sources of income, some of which 
+were previously free. Even we at Lockergnome have felt the pinch in the past few 
+years. Never fear, though. Chris has assured us that the newsletters will remain 
+free. We have, however, begun to explore alternative income sources.
+On a brighter note, it looks like Mandrake has found a sweet spot. According to their most 
+recent shareholder's report, the third quarter was the strongest in the 
+company's
+history, with 1.6 million Euro (1.61 million US) in revenue. That doesn't put
+them in the black, though. According to MandrakeSoft, the strong quarter will
+only decrease operating losses. I have to wonder how much of this revenue was
+the result of the Mandrake Linux User's
+Club.
+The news also makes me want to pay a bit more attention to Mandrake's newest
+partnership venture, an agreement with Microtel to provide Mandrake-loaded computers for sale on WalMart.com.
+I would never have guessed that WalMart would lead the consumer Linux machine
+charge. They've had Mandrake boxes available for several months. Now, with the 
+addition of both Lindows 
+and Mandrake-equipped computers, they seem surprisingly ahead of the retail 
+computer pack. Let's hope for the best for all involved.
+Have a great Wednesday.
+Tony
+Steidler-Dennison       
+ GnomeTWEAK
+Lockergnome readers, SAVE 50% on the Computing Encyclopedia!
+Are you looking for the ultimate computing resource? Discover the
+Computing Encyclopedia from Smart Computing.  Regular price $59,
+SPECIAL OFFER for Lockergnome readers,
+get 
+your set TODAY, ONLY $29.95!
+Checking Mail With KMail
+I've recently become a KDE convert - impressed enough with KDE-3 to move me from 
+my longtime desktop friend Gnome. While I use a combination of fetchmail, 
+procmail and pine for reading and filtering my email, KMail is a strong 
+contender in the email race. As you'd guess, it's fully integrated into the KDE 
+desktop, ready for a quick setup and easy use.
+There's one drawback to KMail, though, in my opionion. That's that it doesn't 
+automatically check your email by default when the program is opened. As much 
+time as I spend talking about saving key and mouse strokes, you knew the 
+additional step to check your email after opening the program would be an 
+irritation to this Penguin. However, changing the problem is a quick and simple 
+configuration issue.
+To force KMail to check your email when opened, right-click on the KMail icon in 
+your KDE panel. Select "Preferences" and the "Execute" tab. In the Execute 
+window, change the command line to read:
+    kmail --check -caption "%c" %i %m
+The addition of the --check option will force KMail to bring you your mail when 
+you open the program.
+Fewer keystrokes make a happy geek, right? 
+Recommend It!
+Send us a 
+GnomeTWEAK
+ GnomeCORE
+Kernel Configuration - Part XIII
+As you well know, Linux is simply the most robust operating system for 
+networking around. With its roots squarely in the network, Linux has managed to 
+stay ahead of the pack in virtually every respect related to networks. It should 
+come as little suprise, then, that the network section of your Linux kernel 
+configuration is dense with details and options.
+I will say that I warned you on Monday - there are going to be some sections of 
+the kernel configuration series where I just can't give you a stock 
+configuration that will work in every case. Networking is one of those areas. 
+You're going to have to give some thought as to how your network is or will be 
+used and the level of security you want to provide (both internal and external). 
+Then, it's a matter of finding the solutions to those options.
+For security issues, I can recommend several good articles and HowTos:
+The Linux Security Quickstart HowTo
+  covers security on a high level, with a good discussion of kernel 
+configuration issues
+Linux Network Security from Linux Planet
+  a nice tutorial on network security
+Network Security with /proc/sys/net/ipv4
+  other approaches to network security
+These should get you started. Tomorrow, we'll cover telephony support in your 
+Linux kernel.
+Recommend It!
+Send us a GnomeCORE 
+tip
+ GnomeFILE
+PyMP3Cut
+http://www.librelogiciel.com/software/PyMP3Cut/
+"PyMP3Cut is a Python commandline tool designed to cut huge (> 100MB) MP3 files 
+at high speed without requiring the extra disk space and processing time usually 
+needed by visual audio editing tools, which convert the MP3 format to more 
+easily manageable formats like WAV before doing anything. It reads and cuts 
+simultaneously according to the autodetected MP3 frame rate and a timeline 
+passed as a commandline argument."
+Recommend It!
+Send us a GnomeFILE 
+suggestion
+ GnomeVOICE
+More Windows for Linux
+Scribbled by Ken Knull
+"I'm reading your Codeweavers/CrossOver project stuff, and have comments
+on another option I use.
+"I have been using Win4Lin ( http://www.netraverse.com/ ) for several
+months now, on an i686 boxen which runs RH 7.2, and now also
+most windoze (nonXP / NTFS apps).
+"I love it, and highly recommend it, and if you'd like more details /
+data let me know."
+Recommend It!
+Speak your 
+GnomeVOICE
+ GnomeCLICK
+Linux PR
+http://linuxpr.com/
+If the daily Linux news sites are starting to get you down, maybe it's time for 
+a change. Linux PR is an up-to-the-minute listing of events and developments in 
+the Linux world. The layout is attractive, with all the most recent articles in 
+descending order on the front page. It makes quick scans easy. The only real 
+downside to the news on the site is that some of it is very, very 
+company-oriented - clearly the work of PR firms cranking out press releases. 
+Other than that, Linux PR is a useful site for checking in and keeping up on 
+your favorite OS.
+Recommend It!
+Suggest a 
+GnomeCLICK
+http://www.lockergnome.com/issues/penguinshell/20020717.html
+Your subscribed e-mail address is: [qqqqqqqqqq-lg@example.com] - To unsubscribe or 
+change your delivery address, please 
+visit the subscription 
+management
+page. Use of the Gnome moniker by Penguin Shell does not imply endorsement of 
+the Gnome Desktop Environment. Penguin 
+Shell is an equal-opportunity desktop employer. For further information, please 
+refer to the GnomeCREDITS in the 
+sidebar.
+LOOK OVER HERE
+ Download Tip eBooks
+ Latest Windows 
+Daily
+ Latest Digital
+Media
+ Latest Tech 
+Specialist
+ Latest Penguin 
+Shell
+ Latest Apple Core
+ Latest Web 
+Weekly
+ Latest Bits & Bytes
+ Latest Audio Show
+ Low Price Search
+ Our Tech Conference
+ Microsoft Office Tips
+ PC 
+Productivity Tips
+ Cool 
+Internet Tips
+ Windows 2000 Tips
+ Windows XP Tips
+ Tell a Friend About 
+Us!
+ Advertise With 
+Us
+ High-Tech Job 
+Search
+ Chat With Gnomies
+ Watch The Webcams
+ Computer Power User
+ Read Past Issues
+ Download X-Setup
+ About Lockergnome
+ Our Privacy 
+Policy
+ View More 
+Options
+ Our XML / RSS 
+Feed
+ Syndicate Our 
+Tips
+ Link To 
+Lockergnome
+ Get Chris's Book
+ Win a Digital Camera
+ General Feedback
+ Chris's Blog
+ E-mail the Editor
+ GNOMESPECIALS
+ Manage Your Workgroup
+ Form Pilot
+ Say the Time 5.0
+ Boomer - Stream Now
+ Create Web/CD 
+catalog
+ Easy Web 
+Editor
+ Kleptomania
+ Tag&Rename
+ Pretty 
+Good Solitaire
+ Visualize Color Combos
+ Ecobuilder
+ Book Collector
+Get Listed Here
+Question: which group is 250,000+ strong and always looking for stuff to make their personal and professional lives run smoother? 
+ 
+CLICK HERE TO ZOOM
+ 
+LOOK IT UP
+ 
+BYTE ME NOW
+©2002, Lockergnome LLC. ISSN: 1095-3965. All Rights Reserved. Please read our Terms of Service. Our Web site is hosted by DigitalDaze. Domain registered at DNS Central.

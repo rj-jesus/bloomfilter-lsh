@@ -1,0 +1,4 @@
+FROM: darin.talley@enron.com
+george ,
+this is the presentation i promised .
+vince

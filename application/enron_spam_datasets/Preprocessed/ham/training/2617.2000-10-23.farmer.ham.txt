@@ -1,0 +1,3 @@
+FROM: f..calger@enron.com
+( see attached file : hplnl 024 . xls )
+- hplnl 024 . xls

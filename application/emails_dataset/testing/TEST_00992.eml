@@ -1,0 +1,12 @@
+FROM: andreimpopescu@csmining.org
+On Thu,13.May.10, 23:40:51, Merciadri Luca wrote:
+>=20
+> Note that, under Windows, I remember that acrord32.exe always blocked
+> the file for writing, even if it was only being read by acrord32.exe.
+> Okay, it's Windows. Bad memories.
+I thought that was a limitation of the OS (Windows).
+Regards,
+Andrei
+--=20
+Offtopic discussions among Debian users and developers:
+http://lists.alioth.debian.org/mailman/listinfo/d-community-offtopic

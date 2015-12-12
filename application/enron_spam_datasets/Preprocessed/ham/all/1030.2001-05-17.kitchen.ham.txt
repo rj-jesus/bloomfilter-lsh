@@ -1,0 +1,2 @@
+FROM: castro@rice.edu
+the following is the weekly deal report covering 5 / 10 - 5 / 16 .

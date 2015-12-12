@@ -1,0 +1,3 @@
+FROM: tony.pryor@enron.com
+( see attached file : hplnol 23 . xls )
+- hplnol 23 . xls

@@ -1,0 +1,5 @@
+FROM: bmcmills@duke-energy.com
+the book " power economics " can be downloaded from
+http : / / www . stoft . com /
+best ,
+alex

@@ -1,0 +1,2 @@
+FROM: brenda.herod@enron.com
+teco tap 30 . 000 / enron ; 70 . 000 / hpl gas daily

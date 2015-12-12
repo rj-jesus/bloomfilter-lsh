@@ -1,0 +1,2 @@
+FROM: purepostcards@qznet.biz
+find local movie times and trailers on yahoo ! movies .

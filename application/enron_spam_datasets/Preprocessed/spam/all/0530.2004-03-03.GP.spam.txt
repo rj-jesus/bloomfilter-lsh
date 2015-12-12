@@ -1,0 +1,2 @@
+FROM: khatun@emirates.net.ae
+please read the attached file .

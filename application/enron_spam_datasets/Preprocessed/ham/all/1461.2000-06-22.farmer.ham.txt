@@ -1,0 +1,5 @@
+FROM: kalmeida@caiso.com
+revision for texoma .
+thanks .
+( see attached file : hplo 623 . xls )
+- hplo 623 . xls

@@ -1,0 +1,3 @@
+FROM: jpainter@igservice.com
+( see attached file : hplo 601 . xls )
+- hplo 601 . xls

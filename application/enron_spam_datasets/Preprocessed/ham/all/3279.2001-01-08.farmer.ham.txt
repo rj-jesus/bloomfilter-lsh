@@ -1,0 +1,7 @@
+FROM: chip.schneider@enron.com
+january 5 , 2001
+teco tap 60 . 000 / enron
+january 6 , 2001
+no flow
+january 7 , 2001
+teco tap 60 . 000 / enron

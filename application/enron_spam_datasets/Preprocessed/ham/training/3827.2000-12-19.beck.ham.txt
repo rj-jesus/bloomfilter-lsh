@@ -1,0 +1,3 @@
+FROM: deng@isye.gatech.edu
+as this is the first few days of runing the flash dpr , if you have any
+questions or thoughts on improvements pls call michael kass ex 32321

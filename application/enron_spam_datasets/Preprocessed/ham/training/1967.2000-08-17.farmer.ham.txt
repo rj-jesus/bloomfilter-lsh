@@ -1,0 +1,3 @@
+FROM: kstalker@risklimited.com
+( see attached file : hplo 818 . xls )
+- hplo 818 . xls

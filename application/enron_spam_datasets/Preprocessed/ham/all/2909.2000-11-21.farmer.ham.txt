@@ -1,0 +1,3 @@
+FROM: shona.wilson@enron.com
+( see attached file : hplnl 122 . xls )
+- hplnl 122 . xls

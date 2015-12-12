@@ -1,0 +1,3 @@
+FROM: amy.fitzpatrick@enron.com
+yes , i sent a reply to gillian .
+- - stinson

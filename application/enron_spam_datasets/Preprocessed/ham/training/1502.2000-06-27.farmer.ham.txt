@@ -1,0 +1,5 @@
+FROM: mariano.gomez@enron.com
+june 25 , 2000
+teco tap 50 . 000 / enron ; 59 . 917 / hpl iferc
+should have been :
+teco tap 50 . 000 / enron ; 60 . 417 / hpl iferc

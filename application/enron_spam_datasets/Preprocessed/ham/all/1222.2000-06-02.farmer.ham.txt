@@ -1,0 +1,3 @@
+FROM: m..schmidt@enron.com
+( see attached file : hplo 603 . xls )
+- hplo 603 . xls

@@ -1,0 +1,3 @@
+FROM: michael.eiben@enron.com
+the wellhead volumes have been adjusted to the avg . column on the attached spreadsheet effective 5 / 8 / 01 .
+bob

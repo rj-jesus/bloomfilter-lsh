@@ -1,0 +1,2 @@
+FROM: david.dupre@enron.com
+teco tap 80 . 000 / hpl gas daily

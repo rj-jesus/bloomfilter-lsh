@@ -1,0 +1,3 @@
+FROM: jay.webb@enron.com
+( see attached file : hplnol 12 . xls )
+- hplnol 12 . xls

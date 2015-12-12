@@ -1,0 +1,7 @@
+FROM: thomas.kral@centrum.cz
+Not with a different server, but I have tested it with a different
+client - command line FTP - , it works in text and binary mode and I can
+upload files to the server. I cannot figure why in GUI mode it does not
+work while in command line it does.
+-- 
+Tomas Kral

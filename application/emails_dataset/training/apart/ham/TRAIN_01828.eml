@@ -1,0 +1,16 @@
+FROM: kchrist@lsil.com
+It appears that the binding for SeditBeautify applies to
+more than just the sedit window. Since SeditBeautify assumes
+we are in a sedit window the routine fails. (Try typing
+ctrl-l over the main window to see what I mean).
+The quick fix for this is to make the ^l more restrictive. However, I'd
+suggest keeping things the way the are and extending ^l to be a
+highlight toggle. If the window is currently highlighted (sedit or msg)
+re-display without highlighting and vice versa.
+While I can hack tcl, hacking tk is another story. Translation: I can't 
+fix this bug myself. Any volunteers?
+Kevin
+_______________________________________________
+Exmh-workers mailing list
+Exmh-workers@redhat.com
+https://listman.redhat.com/mailman/listinfo/exmh-workers

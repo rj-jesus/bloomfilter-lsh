@@ -1,0 +1,5 @@
+FROM: tracy.cummins@nesanet.org
+intervew schedule
+17 . 30 - 18 . 00 vince kaminski & anjam ahmad
+18 . 00 - 18 . 30 ben parsons
+18 . 30 - 19 . 00 stephen leppard

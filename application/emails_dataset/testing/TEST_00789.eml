@@ -1,0 +1,17 @@
+FROM: mfrench42@yahoo.co.uk
+Brian O'Donoghue wrote a code fragment:
+> For(a=0;a {
+>  some_thing_goes_here();
+>
+>  if(b=strlen(somestring)-4)
+> do_something;
+>
+> };
+Unfortunately strlen is a relatively expensive operation. If you are using
+C++ this is not such a big issue as string.length() can be declared const.
+So long as you do not modify the string object, the compiler can do the
+caching for you.
+I do not think this is possible in C, though?
+You could write the same code fragment as:
+============================
+for(a=0,l=strlen(somestring);a

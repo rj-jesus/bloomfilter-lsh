@@ -1,0 +1,3 @@
+FROM: lexi.elliott@enron.com
+attached is the prudency report for 3 / 31 / 00 . please contact me if you have
+any questions .

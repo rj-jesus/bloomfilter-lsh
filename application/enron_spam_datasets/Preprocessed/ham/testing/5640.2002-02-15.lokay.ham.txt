@@ -1,0 +1,4 @@
+FROM: brian.redmond@enron.com
+recognizing this is a difficult time for us all , the enron employee assistance program is available 24 hours a day , seven days a week . please call 713 . 853 . 6057 , or 1 . 800 . 345 . 1391 for assistance .
+additional information about the program is also available via the enron intranet site at :
+stan

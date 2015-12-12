@@ -1,0 +1,2 @@
+FROM: david.forster@enron.com
+teco tap 60 . 000 / enron ; 90 . 000 . hpl gas daily

@@ -1,0 +1,455 @@
+FROM: grace@zygma7.com
+Affordable Infrastructure
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:=E6=96=B0=E7=B4=B0=E6=98=8E=E9=AB=94;
+	panose-1:2 2 3 0 0 0 0 0 0 0;
+	mso-font-alt:PMingLiU;
+	mso-font-charset:136;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:3 137232384 22 0 1048577 0;}
+@font-face
+	{font-family:"\@=E6=96=B0=E7=B4=B0=E6=98=8E=E9=AB=94";
+	panose-1:2 2 3 0 0 0 0 0 0 0;
+	mso-font-charset:136;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:3 137232384 22 0 1048577 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:=E6=96=B0=E7=B4=B0=E6=98=8E=E9=AB=94;
+	mso-bidi-font-family:=E6=96=B0=E7=B4=B0=E6=98=8E=E9=AB=94;}
+p
+	{mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:=E6=96=B0=E7=B4=B0=E6=98=8E=E9=AB=94;
+	mso-bidi-font-family:=E6=96=B0=E7=B4=B0=E6=98=8E=E9=AB=94;}
+p.style2, li.style2, div.style2
+	{mso-style-name:style2;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:9.0pt;
+	font-family:=E6=96=B0=E7=B4=B0=E6=98=8E=E9=AB=94;
+	mso-bidi-font-family:=E6=96=B0=E7=B4=B0=E6=98=8E=E9=AB=94;
+	color:white;}
+p.style4, li.style4, div.style4
+	{mso-style-name:style4;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	line-height:200%;
+	mso-pagination:widow-orphan;
+	font-size:9.0pt;
+	font-family:=E6=96=B0=E7=B4=B0=E6=98=8E=E9=AB=94;
+	mso-bidi-font-family:=E6=96=B0=E7=B4=B0=E6=98=8E=E9=AB=94;
+	color:#B52021;}
+p.unnamed4, li.unnamed4, div.unnamed4
+	{mso-style-name:unnamed4;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	line-height:170%;
+	mso-pagination:widow-orphan;
+	font-size:9.0pt;
+	font-family:=E6=96=B0=E7=B4=B0=E6=98=8E=E9=AB=94;
+	mso-bidi-font-family:=E6=96=B0=E7=B4=B0=E6=98=8E=E9=AB=94;
+	color:#666666;}
+p.unnamed2, li.unnamed2, div.unnamed2
+	{mso-style-name:unnamed2;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	line-height:18.0pt;
+	mso-pagination:widow-orphan;
+	font-size:8.5pt;
+	font-family:=E6=96=B0=E7=B4=B0=E6=98=8E=E9=AB=94;
+	mso-bidi-font-family:=E6=96=B0=E7=B4=B0=E6=98=8E=E9=AB=94;
+	color:#666666;}
+p.unnamed5, li.unnamed5, div.unnamed5
+	{mso-style-name:unnamed5;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	line-height:18.0pt;
+	mso-pagination:widow-orphan;
+	font-size:9.0pt;
+	font-family:=E6=96=B0=E7=B4=B0=E6=98=8E=E9=AB=94;
+	mso-bidi-font-family:=E6=96=B0=E7=B4=B0=E6=98=8E=E9=AB=94;
+	color:#FF6600;}
+p.style27, li.style27, div.style27
+	{mso-style-name:style27;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:=E6=96=B0=E7=B4=B0=E6=98=8E=E9=AB=94;
+	mso-bidi-font-family:=E6=96=B0=E7=B4=B0=E6=98=8E=E9=AB=94;
+	color:red;}
+p.style30, li.style30, div.style30
+	{mso-style-name:style30;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:8.5pt;
+	font-family:=E6=96=B0=E7=B4=B0=E6=98=8E=E9=AB=94;
+	mso-bidi-font-family:=E6=96=B0=E7=B4=B0=E6=98=8E=E9=AB=94;}
+p.style5, li.style5, div.style5
+	{mso-style-name:style5;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	line-height:170%;
+	mso-pagination:widow-orphan;
+	font-size:8.5pt;
+	font-family:=E6=96=B0=E7=B4=B0=E6=98=8E=E9=AB=94;
+	mso-bidi-font-family:=E6=96=B0=E7=B4=B0=E6=98=8E=E9=AB=94;
+	color:#FF1E73;
+	font-weight:bold;}
+p.style14, li.style14, div.style14
+	{mso-style-name:style14;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:=E6=96=B0=E7=B4=B0=E6=98=8E=E9=AB=94;
+	mso-bidi-font-family:=E6=96=B0=E7=B4=B0=E6=98=8E=E9=AB=94;
+	color:white;
+	font-weight:bold;}
+p.style8, li.style8, div.style8
+	{mso-style-name:style8;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:8.5pt;
+	font-family:=E6=96=B0=E7=B4=B0=E6=98=8E=E9=AB=94;
+	mso-bidi-font-family:=E6=96=B0=E7=B4=B0=E6=98=8E=E9=AB=94;
+	color:red;}
+p.style12, li.style12, div.style12
+	{mso-style-name:style12;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:=E6=96=B0=E7=B4=B0=E6=98=8E=E9=AB=94;
+	mso-bidi-font-family:=E6=96=B0=E7=B4=B0=E6=98=8E=E9=AB=94;
+	color:#0081C6;
+	font-weight:bold;}
+p.style34, li.style34, div.style34
+	{mso-style-name:style34;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:=E6=96=B0=E7=B4=B0=E6=98=8E=E9=AB=94;
+	mso-bidi-font-family:=E6=96=B0=E7=B4=B0=E6=98=8E=E9=AB=94;
+	color:red;
+	font-weight:bold;}
+span.style271
+	{mso-style-name:style271;
+	color:red;}
+span.style301
+	{mso-style-name:style301;
+	mso-ansi-font-size:8.5pt;
+	mso-bidi-font-size:8.5pt;}
+span.style141
+	{mso-style-name:style141;
+	color:white;
+	font-weight:bold;}
+span.style341
+	{mso-style-name:style341;
+	color:red;
+	font-weight:bold;}
+span.style51
+	{mso-style-name:style51;
+	mso-ansi-font-size:8.5pt;
+	mso-bidi-font-size:8.5pt;
+	color:#FF1E73;
+	font-weight:bold;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	mso-header-margin:42.55pt;
+	mso-footer-margin:49.6pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+.style1 {
+	color: #FFFFFF;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 12px;
+}
+.style10 {color: #FF0000}
+div.MsoNormal1 {mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:=E6=96=B0=E7=B4=B0=E6=98=8E=E9=AB=94;
+	mso-bidi-font-family:=E6=96=B0=E7=B4=B0=E6=98=8E=E9=AB=94;}
+li.MsoNormal1 {mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:=E6=96=B0=E7=B4=B0=E6=98=8E=E9=AB=94;
+	mso-bidi-font-family:=E6=96=B0=E7=B4=B0=E6=98=8E=E9=AB=94;}
+p.MsoNormal1 {mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:=E6=96=B0=E7=B4=B0=E6=98=8E=E9=AB=94;
+	mso-bidi-font-family:=E6=96=B0=E7=B4=B0=E6=98=8E=E9=AB=94;}
+p.MsoNormal11 {mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:=E6=96=B0=E7=B4=B0=E6=98=8E=E9=AB=94;
+	mso-bidi-font-family:=E6=96=B0=E7=B4=B0=E6=98=8E=E9=AB=94;}
+.style15 {font-size: 14px}
+.style18 {color: #000000}
+.style25 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+.style26 {font-size: 14px; font-family: Arial, Helvetica, sans-s=
+erif; }
+.style27 {font-weight: bold; color: #000001;}
+.style35 {LINE-HEIGHT: 16px; font-size: 12; }
+.style104 {font-weight: bold; color: #FF0000; font-size: 18px; f=
+ont-family: "Times New Roman", Times, serif; }
+.style104nounderline {text-decoration: none}
+.style107 {font-size: 12px; font-family: Arial, Helvetica, sans-=
+serif; color: #000000;}
+.style108 {font-size: 24px}
+.style109 {
+	color: #DC0000;
+	font-weight: bold;
+}
+.style111 {
+	font-weight: bold;
+	color: #FF0000;
+	font-size: 24px;
+	font-family: "Times New Roman", Times, serif;
+}
+.style112 {font-size: 18px}
+.style113 {font-size: 12px}
+-->
+<!--
+function MM_preloadImages() { //v3.0
+  var d=3Ddocument; if(d.images){ if(!d.MM_p) d.MM_p=3Dnew Array(=
+);
+    var i,j=3Dd.MM_p.length,a=3DMM_preloadImages.arguments; for(i=
+=3D0; i<a.length; i++)
+    if (a[i].indexOf("#")!=3D0){ d.MM_p[j]=3Dnew Image; d.MM_p[j+=
++].src=3Da[i];}}
+}
+//-->
+=
+  Affordable Infrastructure    &=
+nbsp;      FTTx: Fiber-to-the-Build=
+ing/Home         &nb;=
+sp;  10G iSCSI Target Server
+ 
+ 
+PoE Scenario 1: IP Phone 
+ 
+Network Desig=
+n NoticeIP Phone deployment is=20=
+a typical example for half-PoE application.Power Cons=
+umption Estimation: The IP Phone is a low-power device w=
+hich does not consume too much currency. Normally, its power cons=
+umption is less than 7.5W, so, the half-PoE is good for the IP Ph=
+one deployment, and it saves money for customers. Cos=
+t-saving: Furthermore, the PoE technology saves the powe=
+r adapter for each IP Phone, saves the power socket space, and re=
+duces the wiring complexity, makes the desktop more clean and tid=
+y. 
+ 
+Bandwidth=
+ Calculation: By using the Z3526C2PL24W(24-Port FE with=20=
+Half-PoE + 2GbE Uplink) as the PoE switch to connect the IP Phone=
+s, the bandwidth is big enough for each voice link, and the uplin=
+k is fast enough even all IP phones are in use. Manag=
+ement Features: In the web-based management features of=20=
+the PoE switch, you can easily find a function to enable/disable=20=
+each port. It makes the administrator easier to control each phon=
+e. He/she can even use the Remote Power Control feature of the Po=
+E switch to control the power ON/OFF physically to each IP Phone.=
+ 
+Network Scalability: The IP=20=
+Phones connect to PoE switches, and the PoE switches, in turn, co=
+nnect to the central Gigabit switchdes, and then to the ISP. By u=
+sing the 2-layer connection scheme, we can deploy hundreds or tho=
+usands of IP Phones. The structure is very scalable. Besides, The=
+ phone management can be converged to the same network management=
+ systems.
+ 
+ 
+ 
+PoE Scenario 2: IP CAM & Wireless AP 
+ 
+Network Desig=
+n NoticeIn hotels, dormitories=20=
+or institutional buildings, there are some embeded service device=
+s (such as wireless AP), security devices (such as IP Camera) or=20=
+some IP devices of the Building Management System(for entrance co=
+ntrol or fingerprint recognition). Network & Power Ca=
+bling Convergence: All of the devices and systems are gr=
+adually convergent into the IP infrastructure. These heterogeneou=
+s devices will benefit from connecting to the PoE switches. Both=20=
+the IP traffic and the electric power are distributed by the same=
+ cabling systems. 
+ 
+Cost-saving in l=
+ifecycle: It saves the set-up and installation costs, as=
+ well as the troubleshooting, maintenance, backup, and management=
+-staff cost. It will be a great saving.No more power line wiring everywhere !Network=
+ Design: Should we connect different devices to differen=
+t PoE switches or should we connect them to share the same PoE sw=
+itch? It depends. If the network traffic for some devices is very=
+ critical, then we may suggest to use dedicated PoE switches for=20=
+the critical devices.
+ 
+Distance coverage consider=
+ation: The PoE switch can support the PoE devices within=
+ 100-meter radius. For large building or multi-building deploymen=
+t, we should group the PoE devices into several areas, connecting=
+ the devices in the same area to the same PoE switch, and then co=
+nnecting the PoE switches to the central switch.In some cases=
+, the PoE switch will be in a few locations, far away from the ce=
+ntral switch. The Z3624FL2P is a 24-port SFP & UTP Combo switch,=20=
+with Layer 2+ management feature. By using the fiber switch as th=
+e central switch, we can easily connect all the PoE switches toge=
+ther.
+ 
+ 
+ 
+PoE Scenario 3: High-Wattage Devices 
+ 
+New Standard: PoE+For some=
+ high power-consumption PoE devices, such as SpeedDome, a new sta=
+ndard, 802.3at (also known as PoE+), is finalized to provide more=
+ power to drive the devices.It may takes a while to get more=20=
+popular about this standard because the PoE devices have to be re=
+designed to adapt to the new standard. 
+Before configuring the PoE install=
+ation, you are suggested to check the electrical specification ca=
+refully, such as the volage, the currency, the power consumption,=
+ the pin-assignment, etc, to avoid any mismatch. <=
+/FONT>
+ZyG=
+MA7 provides 8 PoE+ switch models for the PoE+ market. Please ref=
+er to the details....Contac=
+t for Product & PricingIf you are interested in getting the Product & Pricing informat=
+ion about PoE, please contact with ZyGMA7
+ 
+SFP Price List (=
+Click to Enlarge) 
+W=
+e provide SFPDirect™ service,=
+ Help to save 15% to 25% buying cost for you !SFP is a=
+ contiously-evolving device. But now is a critical moment for its=
+ growth. All of us have no way to be out of it. It become more an=
+d more important !!SFP is gainin=
+g positions: SFP is on the way to replace the me=
+dia converters. Meanwhile, SFP is on the way to have mor=
+e standardized form-factor than ever. For exampl=
+e, SFP+ consumes less power (i.e. it generates less heat) than XF=
+P, XENPAK and X2, having the same physical form factor as SFP, bu=
+t running as fast as 10G speed. The SFP has better compli=
+ance or compatibility (eg. MSA, Multi-Source Agreement).=
+ The SFP has better-than-ever diagnostics features (eg. DDMI, Digital Diagnostics Monitoring Interface). As a res=
+ult, the SFP is getting more and more popular, in all market segm=
+ents, including the telecom, the Fibre Channel storage, and the E=
+thernet networking markets.ZyGMA7 provides a broad range=20=
+of SFP products, conntecting to Multi-mode-fiber or Single-mode-f=
+iber, with different distance range, Bi-Di type, CWDM type, Cisco=
+ compatible, MSA compliance, 10Gbps XFP or SFP+, Gigabit Ethernet=
+, Fast Ethernet, Fiber Channel, in Commercial-grade or Industrial=
+-grade, etc. (see SFP Product Overview)=
+The SFPDirect™ ser=
+vice will save your buying cost 15% to 25%, depending on items.
+<=
+IMG border=3D0 alt=3D"SFP Diagram" width=3D209 height=3D204 src=3D=
+"http://www.zygma7.com/product/SFP,%20AD.jpg">
+Indus=
+trial Ethernet 
+Serve=
+r & Storagefor VMWare 
+Fiber=
+ Switch 
+PoE S=
+witch 
+Stora=
+ge for Enterprise 
+A Nice Feature for PoE Remote=20=
+Power Control
+<=
+/A>From the web management screen, use=
+rs can control the ON/OFF of each port remotely. It is a great ad=
+vantage than the non-PoE powering system to the remote devices. T=
+he flexibility is very useful when the remote devices need to be=20=
+rebooted. By connecting the switch to the internet, administrator=
+s can even control the power remotely from the internet.PoE Technology Dict=
+ionary802.3af:=
+ PoE standard, finalized at June 12, 2003, providing up to 15.4W=20=
+DC power in which 12.95W is assured to be available to the Powere=
+d Device other than the power dissipated in the cable.802.3at: PoE+ standard, finalized at Sep 11, 2009,=20=
+providing up to 25.5W power.ZyGMA7 PoE Strategy: Focus & Differentiation
+PoE Switch is a different market segment other than the netwo=
+rk switch because:The cost of Power Supply is higher=20=
+than the cost of Switch, it makes the PoE distribution channel be=
+haves differently than the network switch channel. The PoE ma=
+rket is highly related to the project application. It indeed save=
+s cost to the integrators or customers. But the customer applicat=
+ion stratifies the PoE products to many sub-segments, it in turn=20=
+makes the distribution channel behaves differently.ZyGMA7=
+ is endeavoured to develop the PoE products with differen=
+tiations, providing our business partners what they need=
+ in their specific application domain. 
+Affordable Infrastructure   
+Business Contact to ZyGMA7  &n;=
+bsp;  Mail to=20=
+Unsubscribe =E9=83=B5=E4=BB=B6=E9=80=80=E8=A8=82 from our new=
+sletter list.     ZyGMA7 Communications Corp ©=
+; 2010 All Rights Reserved

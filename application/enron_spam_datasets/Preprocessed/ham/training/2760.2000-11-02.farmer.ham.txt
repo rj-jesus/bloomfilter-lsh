@@ -1,0 +1,2 @@
+FROM: fraisy.george@enron.com
+teco tap 20 . 000 / enron ; 80 . 000 / hpl gas daily

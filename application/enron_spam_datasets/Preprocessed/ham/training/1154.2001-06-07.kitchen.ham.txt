@@ -1,0 +1,2 @@
+FROM: pete.davis@enron.com
+the following is the weekly deal report covering 5 / 31 - 6 / 6 .

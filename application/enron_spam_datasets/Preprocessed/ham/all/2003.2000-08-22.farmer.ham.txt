@@ -1,0 +1,3 @@
+FROM: susan.mayher@elpaso.com
+( see attached file : hplo 823 . xls )
+- hplo 823 . xls

@@ -1,0 +1,3 @@
+FROM: shirley.crenshaw@enron.com
+( see attached file : hplnol 13 . xls )
+- hplnol 13 . xls

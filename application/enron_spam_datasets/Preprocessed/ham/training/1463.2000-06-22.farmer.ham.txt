@@ -1,0 +1,3 @@
+FROM: john.lavorato@enron.com
+teco tap 120 . 000 / hpl iferc
+ls hpl haty 30 . 000 / enron

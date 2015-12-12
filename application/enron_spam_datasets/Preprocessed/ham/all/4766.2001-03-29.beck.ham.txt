@@ -1,0 +1,4 @@
+FROM: enron.announcements@enron.com
+please find the attached status update .
+regards ,
+brian

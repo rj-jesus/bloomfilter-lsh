@@ -1,9 +1,0 @@
-FROM: Nick Douma <n.douma@nekoconeko.nl>
-TO: debian-user@lists.debian.org
-SUBJECT: Re: Sudden reboots with Firefox and Flash
-
-On Tue, Apr 20, 2010 at 09:43:18PM +0200, Thierry Chatelet wrote:
-> +1
-> I  had the same problem. The fan control was not working well. A BIOS upgrade 
-> solved the problem.
-Did you also experience this problem with this motherboard, or a similar one?

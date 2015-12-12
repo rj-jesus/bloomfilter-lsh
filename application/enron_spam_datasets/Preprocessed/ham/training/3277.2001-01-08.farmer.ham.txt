@@ -1,0 +1,3 @@
+FROM: van.ngo@enron.com
+( see attached file : hplnol 09 . xls )
+- hplnol 09 . xls

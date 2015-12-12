@@ -1,0 +1,4 @@
+FROM: oleomargarineairlifticosahedron@netaddress.com
+exit
+list instructions
+pmoney

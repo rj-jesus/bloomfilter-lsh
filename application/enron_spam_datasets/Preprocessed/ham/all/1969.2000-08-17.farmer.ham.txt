@@ -1,0 +1,3 @@
+FROM: denise.furey@enron.com
+teco tap 120 . 000 / hpl iferc ; 20 . 000 / enron
+ls hpl lsk ic 20 . 000 / enron

@@ -1,0 +1,9 @@
+FROM: justin.armstrong@acm.org
+//this function should print all numbers up to 100...
+void print_nums()
+{
+  int i;
+  for(i = 0; i < 10l; i++) {
+    printf("%d\n",i);
+  }
+}

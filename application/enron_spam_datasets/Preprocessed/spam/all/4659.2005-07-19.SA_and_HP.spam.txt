@@ -1,0 +1,4 @@
+FROM: drenchce@arcada.fi
+this is an automatically generated delivery status notification .
+delivery to the following recipients failed .
+noumanb @ multinet . com . pk

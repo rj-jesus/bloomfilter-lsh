@@ -1,27 +1,0 @@
-FROM: "John P. Looney" <valen@tuatha.org>
-TO: Irish LUG list <ilug@linux.ie>
-SUBJECT: [ILUG] serial console question
-
-I've found a decrepit raq3 that I'm going to resurrect, as soon as I work
-out what's up with the console.
- I'm using 115200 8n1 with minicom, and I'm getting wierd stuff like:
-S+#_+ÃÂ± INET __+_: 
-S+#_+ÃÂ± ÃÂ°_Â°_ MÃ+Ã+ÃÂ± _+Ã+ Â°+_<_++_.
-S+#_+ÃÂ± #+__+ S+#_+ÃÂ± #+Ã + __+_: 
-IÃ+#+ _+Â°#+_ Â°Ã_ +#Ã _+ -- NÃ+ _+#_+ÃÂ± SSL
-/+__/_Ã/++Ã
-S++ÃÂ± +Ã PÃ_+Â±_SQL: FATAL: S+_#+S_+_PÃ_+: Ã() Â°#+: A___ #+_#< Ã +_
-        I_ #ÃÃ+_ ÃÃ_++#_+_ #+_#< _+ÃÃÃÂ± ÃÃ +#+ ÃÃ_+?
-        IÂ° ÃÃ+, _+Ã+ _Ã++ ÃÃ (/++Ã/._.PGSQL.5583) #Ã _+_<.
-/+__/Ã/ÃÃ_++#_+_: #ÃÃÃ+ _#+ UNIX _+_#+ ÃÃ_+
- [616]
-S+#_+ÃÂ± ++Ã S++ÃÂ± +Ã W S_+: 
- So it looks like some sort of setting mismatch. Various places on the web
-say that cobalts are setup with 115200 8n1 serial ports, but someone could
-have changed it on this particular box.
- Anyone care to guess what's up ?
-John
--- 
-Irish Linux Users' Group: ilug@linux.ie
-http://www.linux.ie/mailman/listinfo/ilug for (un)subscription information.
-List maintainer: listmaster@linux.ie

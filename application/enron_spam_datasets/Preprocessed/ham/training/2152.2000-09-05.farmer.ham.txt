@@ -1,0 +1,4 @@
+FROM: pete.davis@enron.com
+changed cell formula to correctly sum column of spot sales .
+( see attached file : hplo 906 . xls )
+- hplo 906 . xls

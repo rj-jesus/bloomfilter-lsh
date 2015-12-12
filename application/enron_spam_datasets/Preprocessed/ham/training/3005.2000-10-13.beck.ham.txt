@@ -1,0 +1,6 @@
+FROM: lorna.brennan@enron.com
+this is the draft copy of the global standards report , primarily for ena , for
+september 2000 .
+please review and provide comments .
+thanks ,
+mike

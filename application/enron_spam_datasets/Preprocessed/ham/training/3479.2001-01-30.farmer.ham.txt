@@ -1,0 +1,3 @@
+FROM: jean.mrha@enron.com
+( see attached file : hplnol 31 . xls )
+- hplnol 31 . xls

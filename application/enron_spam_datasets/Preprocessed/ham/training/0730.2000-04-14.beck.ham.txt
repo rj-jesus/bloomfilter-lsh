@@ -1,0 +1,2 @@
+FROM: stanley.cocke@enron.com
+attached is a preliminary assessment of mariner based upon our april 6 review

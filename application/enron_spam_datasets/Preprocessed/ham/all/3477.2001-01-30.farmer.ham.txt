@@ -1,0 +1,2 @@
+FROM: jmccormack@sternstewart.com
+should we keep rolling this deal ?

@@ -1,0 +1,2 @@
+FROM: fqian@andrew.cmu.edu
+- calpine daily gas nomination 1 . doc

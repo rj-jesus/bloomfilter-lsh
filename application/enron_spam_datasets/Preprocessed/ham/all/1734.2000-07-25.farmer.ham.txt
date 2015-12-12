@@ -1,0 +1,3 @@
+FROM: vince.kaminski@enron.com
+( see attached file : hplo 725 . xls )
+- hplo 725 . xls

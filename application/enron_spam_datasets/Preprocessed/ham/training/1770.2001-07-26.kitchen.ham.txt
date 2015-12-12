@@ -1,0 +1,3 @@
+FROM: m..schmidt@enron.com
+thanks for the input .
+mike

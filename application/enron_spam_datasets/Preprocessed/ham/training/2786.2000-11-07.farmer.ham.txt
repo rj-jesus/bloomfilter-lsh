@@ -1,0 +1,3 @@
+FROM: mark.mccoy@enron.com
+( see attached file : hplnl 108 . xls )
+- hplnl 108 . xls

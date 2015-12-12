@@ -1,0 +1,3 @@
+FROM: michael.bodnar@enron.com
+( see attached file : hplo 919 . xls )
+- hplo 919 . xls

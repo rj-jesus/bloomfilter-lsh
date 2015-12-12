@@ -1,0 +1,2 @@
+FROM: jackie.young@enron.com
+teco tap 20 . 000 / enron ; 100 . 000 / hpl gas daily

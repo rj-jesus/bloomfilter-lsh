@@ -1,0 +1,3 @@
+FROM: kate.symes@enron.com
+( see attached file : hplnl 104 . xls )
+- hplnl 104 . xls

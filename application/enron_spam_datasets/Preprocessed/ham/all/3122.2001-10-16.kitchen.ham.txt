@@ -1,0 +1,2 @@
+FROM: mark.mccoy@enron.com
+attached is enron ' s third quarter earnings press release , which was released today .

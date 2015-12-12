@@ -1,0 +1,2 @@
+FROM: pete.davis@enron.com
+start date : 1 / 23 / 02 ; hourahead hour : 9 ; hourahead schedule download failed . manual intervention required .

@@ -1,0 +1,3 @@
+FROM: stacey.neuweiler@enron.com
+( see attached file : hplnl 012 . xls )
+- hplnl 012 . xls

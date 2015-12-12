@@ -1,0 +1,3 @@
+FROM: h..wallis@enron.com
+( see attached file : hplnl 111 . xls )
+- hplnl 111 . xls

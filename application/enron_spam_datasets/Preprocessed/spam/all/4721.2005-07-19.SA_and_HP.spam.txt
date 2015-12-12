@@ -1,0 +1,4 @@
+FROM: monopoly21scooter1@hotmail.com
+this is an automatically generated delivery status notification .
+delivery to the following recipients failed .
+antunes @ coppead . ufrj . br

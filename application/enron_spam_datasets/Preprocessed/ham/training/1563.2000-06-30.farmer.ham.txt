@@ -1,0 +1,5 @@
+FROM: amy.brock@halliburton.com
+as you are aware , the sap financial systems will be implemented for the enron
+north america
+companies on july 1 , 2000 . the attached file contains timelines for a
+transaction .

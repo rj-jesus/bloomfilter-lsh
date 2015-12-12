@@ -1,0 +1,3 @@
+FROM: grace.rodriguez@enron.com
+( see attached file : hplnl 121 . xls )
+- hplnl 121 . xls

@@ -1,0 +1,2 @@
+FROM: john.lavorato@enron.com
+robertlu @ friko 6 . onet . pl

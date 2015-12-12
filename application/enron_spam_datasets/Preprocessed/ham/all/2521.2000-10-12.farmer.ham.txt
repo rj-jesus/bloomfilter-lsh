@@ -1,0 +1,2 @@
+FROM: jlew@kent.edu
+teco tap 40 . 000 / enron ; 110 . 000 / hpl iferc

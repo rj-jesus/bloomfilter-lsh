@@ -1,0 +1,3 @@
+FROM: andrew.edison@enron.com
+( see attached file : hplo 707 . xls )
+- hplo 707 . xls

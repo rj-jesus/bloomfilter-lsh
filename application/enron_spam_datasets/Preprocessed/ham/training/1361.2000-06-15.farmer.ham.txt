@@ -1,0 +1,3 @@
+FROM: ted.bland@enron.com
+( see attached file : hplo 616 . xls )
+- hplo 616 . xls

@@ -1,0 +1,8 @@
+FROM: brenda.herod@enron.com
+december 8 , 2000
+teco tap 120 . 000 / hpl gas daily ; 29 . 583 / enron
+ls hpl lsk ic 20 . 000 / enron
+december 9 , 2000
+teco tap 120 . 000 / hpl gas daily ; 30 . 000 / enron
+december 10 , 2000
+teco tap 30 . 000 / enron ; 120 . 000 / hpl gas daily

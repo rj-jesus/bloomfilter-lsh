@@ -1,0 +1,2 @@
+FROM: pete.davis@enron.com
+rohm & haas has been added and the sale for union carbide for april has been added .

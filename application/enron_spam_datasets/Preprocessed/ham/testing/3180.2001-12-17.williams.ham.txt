@@ -1,0 +1,2 @@
+FROM: announcements.enron@enron.com
+start date : 12 / 17 / 01 ; hourahead hour : 16 ; hourahead schedule download failed . manual intervention required .

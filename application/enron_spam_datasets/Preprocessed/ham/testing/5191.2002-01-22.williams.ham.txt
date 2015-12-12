@@ -1,0 +1,2 @@
+FROM: teresa.knight@nesanet.org
+start date : 1 / 22 / 02 ; hourahead hour : 7 ; hourahead schedule download failed . manual intervention required .

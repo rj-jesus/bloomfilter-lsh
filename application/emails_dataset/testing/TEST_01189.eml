@@ -1,0 +1,277 @@
+FROM: subscriptions@lockergnome.com
+<!--
+ body      { BACKGROUND-IMAGE: url(http://images.lockergnome.com/images/issue/top-right.gif); color: #990000 }
+ a:link    { COLOR: #000000; TEXT-DECORATION: underline; font-weight: normal }
+ a:visited { COLOR: #C84200; TEXT-DECORATION: underline; font-weight: normal }
+ a:active  { COLOR: GRAY; text-decoration: none }
+ a:hover   { color: GRAY; TEXT-DECORATION: none }
+ p.title   { BACKGROUND: #FFCC99; BORDER-BOTTOM: #FF9966 4px solid; BORDER-LEFT: #FFEEDD 4px solid; BORDER-RIGHT: #FF9966 4px solid; BORDER-TOP: #FFEEDD 4px solid; COLOR: #990000; FONT-FAMILY: Comic Sans MS, Trebuchet MS, Helvetica, Arial; FONT-SIZE: 14pt; FONT-WEIGHT: normal }
+ p.sidebar { BACKGROUND: #FFEEDD; TEXT-ALIGN: center; BORDER-BOTTOM: #FFCC99 3px solid; BORDER-LEFT: #FFFFFF 3px solid; BORDER-RIGHT: #FFCC99 3px solid; BORDER-TOP: #FFFFFF 3px solid; COLOR: #990000; FONT-FAMILY: Comic Sans MS, Trebuchet MS, Helvetica, Arial; FONT-SIZE: 10pt; FONT-WEIGHT: bold } 
+ .url      { font-size: 8pt; font-family: Verdana, Tahoma, Arial }
+-->
+20020710 Lockergnome Windows Daily
+  07.10.2002 GnomeREPORT 
+WE NEED YOU TO BE AT GNOMEDEX! That's what your employer should be telling you. Microsoft Pocket PC experts will be sharing tips on improving workplace productivity with portable devices. Combined with Proxim's on location wireless networking solutions, the Pocket PC can keep you and your co-workers communicating no matter where you are in the building. Learn how to bring Wi-FI and PDA technologies together for the ultimate in portable computing. Register for Gnomedex today!
+Last week, Axialis Software
+released IconWorkshop v5.0 - arguably the most powerful icon
+editor / manager for the Windows platform. Ever the icon addict, I
+asked for your pixel-perfect creations. I have yet to receive one.
+Perhaps you've been waiting for the right motivation? How about a
+nice little contest involving some of the most powerful sites on
+the Internet? Here's the deal: you create five (or more) icons
+between now and the end of July 2002, upload them to your [FREE]
+DeviantArt account (under Contests / Axialis Icon Contest), and
+one of the five judges may pick it. The panel includes: myself,
+MattEO from DeviantArt,
+KarmaGirl from WinCustomize, Voodoo from
+Neowin, and Marc from
+Axialis. We'll each pick our favorite set. The winners will not
+only receive one copy of IconWorkshop Corporate Edition, but some
+of their icons will get bundled with a future version of the
+software! Ownership is retained by the original author, so don't
+hold back. Here's your chance at fame and fortune. Or, at least
+fame and free software.
+Ah, the life of a software junkie! Pieter just released the new
+(unofficial) Google SearchTool
+today. It's much more convenient than the official toolbar (sorry,
+I just don't like browser add-ons). I also gave
+Cacheman
+another go; I haven't used it since Windows 98. It's always been a
+great piece of shareware, but I didn't realize it was THIS good.
+The speed increase has been quite noticeable (even on Storm Shadow,
+my P4 2.5GHz machine). Outer Technologies is brilliant. And so is
+Repligator 9.0. It gives
+me access to instant special effects - a one-stop shop for digital
+photo fun. I'm still debating whether or not to install the latest
+Java runtimes. It seems to be unobtrusive on my test machine,
+which is good to see; I don't want browser integration, I just
+wanna run that awesome ASCII Art program. Oh, and "12 Mistakes
+Executives Make When Planning Web Strategy" is available for FREE
+with the purchase of ANY GnomeTome (including our 50
+freshly-released OS X tips). Go grab it if your boss doesn't know
+as much as s/he should.
+There's a little bit of Oingo Boingo on Emusic now. They inked a
+deal with Universal Music Group today - and I'm not paying any
+more to get access to even more MP3s. This is the ONLY
+way to go, and I hope and pray that more record labels will
+eventually catch on to the craze. The Internet is more than a
+place for a pseudo-interactive pamphlet; the Internet fosters
+knowledge; the Internet is still in its infancy; the Internet has
+encouraged creativity and commerce. The one thing the Internet is
+NOT: a fad. Its potential is limitless, as long as it remains
+flexible and not controlled by any one company. This
+Palladium
+thing has got me more than a little spooked. It, combined with the
+service-oriented OS, could very well be the thing that drives
+people away from the Windows platform in droves (as much as I hate
+to admit it). Software and music pirates unwittingly created DRM.
+I best not find out that you're part of the problem.
+See You in August,              Chris Pirillo       
+ GnomeDOWNLOADS
+Groone's Recipe Holder v1.1.0 [8.2M] W9x/2k/XP FREE
+http://www.groonesworld.com/rholder.htm
+{Recipe lister} The best thing about this recipe holder? The
+conversion calculator. I've always wondered how many teaspoons
+were in a gallon. There are a few delicious recipes already
+included, to help you start your collection of favorites.
+Everything is nicely divided into categories, too. Need a salad?
+Then click "Soups & Salads." (Easy!) You can also make shopping
+lists. The printing capability is nice too, since I'm assuming
+most of you don't keep your computer next to the stove. "If you
+have an up-to-date computer with Win2000, XP, or 98SE with the
+latest version of IE, then you can download the version with no
+runtime support since your computer has all the necessary files."
+SolarInfo v1.0 [1.1M] FREE
+http://www.sulaco.co.za/downloads.htm
+{Sun, moon, and planets} Why is it all the other planets have
+really cool names for their respective moon(s), but Earth's is
+simply referred to as "moon?" We should change it to something
+catchier, like "Joey Joe-Joe Junior Shabbadu." Don't mind me, I
+was just looking at this new application. It shows a graphical
+representation of every planet in our solar system (as opposed to
+every planet in the Hoth system) and its moons. It also provides
+detailed information such as the planet's distance from the sun,
+its volume, mass, and gravity in relation to Earth. What I found
+most interesting was how long a single "day" lasts on different
+planets. Did you know one day on Pluto is equal to six days on
+Earth? I guess he chased Chip and Dale around the Christmas tree
+for longer than we thought.
+Recommend It!
+ GnomeCLICKS
+ GnomeSYSTEM
+TightVNC v1.2.4 [660k] W9x/2k/XP FREE
+http://www.tightvnc.com/
+"VNC (an abbreviation for Virtual Network Computing) is a great
+client / server software package allowing remote network access to
+graphical desktops. With VNC, you may allow yourself to access
+your machine from everywhere provided that your machine is
+connected to the Internet. VNC is free (released under the GNU
+General Public License) and it's available on most platforms. The
+original VNC distribution can be obtained at the AT&T research
+labs site. Here you can find enhanced version of VNC, called
+TightVNC (grown from the VNC Tight Encoder project), which is
+optimized to work over slow network connections such as low-speed
+modem links. While original VNC may be very slow when your
+connection is not fast enough, with TightVNC you can work remotely
+almost in real time in most environments. Besides bandwidth
+optimizations, TightVNC also includes many other improvements,
+optimizations and bug fixes over VNC."
+Recommend It!
+ GnomeWILDCARD
+Full PDF Books
+Poor Richard's Web
+Internet Promotions
+E-Mail Publishing
+Web Site Makeover
+Websites Made Easy
+Online Communities
+Home Networking
+Internet Recruiting
+Online Branding
+Pop-Up Menu Navigation Software
+Scribbled by Pat Wong
+http://popup.jscentral.com/
+I found some really cool software to generate Web site navigation
+menus, and I thought you might be interested in learning about it.
+There are several examples on the company's site, as well as on my
+own. Here's a small write-up about it; perhaps you'd be interested
+in running this in a future Lockergnome issue? We've all seen a
+lot of really cool site navigation menus, with pop-up text, neat
+mouseover effects, and the like. Most of them require a
+combination of HTML and JavaScript to build, which is expertise
+that goes way beyond some of us. At last, it's possible to easily
+generate just such a menu with some very user-friendly screens to
+enter the data you want to use.
+Pop-Up Menu comes in a freeware version, or you can get a fully
+licensed version ($34.95 for a Home User license / $129.95 for the
+Web Designer license). The biggest difference? With the licensed
+version, you get the ability to save a menu you've generated so
+you can modify it later. Your only alternative, if you want to
+make even a simple change to a menu generated by the freeware
+version, is to create the whole menu again from scratch (or diving
+into the nuts and bolts of the code and modifying that). Be
+forewarned: The JavaScript reads like a novel, so modifying that
+could potentially be a nightmare. I decided to buy the fully
+licensed version and I'm really glad I did. Sorry if I sound like
+a commercial for the company; I don't work for them or stand to be
+compensated in any way for recommending them. I just think this
+menu system is the greatest thing to come along in a while.
+Submit Your Thoughts | Recommend It!
+Avoid intruders in your online space: Our choice to protect your privacy! Complete browsing security. Clear cache, cookies, history and more with the click of your mouse. Leave no telltale tracks behind!" Get a virtual Panic Button for your PC! Try it today!
+ GnomeFAVORITE
+Calculator
+Unearthed by a Gnomie
+http://www.calculator.com/
+{Calculate it} Calculators aren't just for adding and subtracting
+numbers or spelling silly phrases by turning the calculator upside
+down. How about figuring out the financing on your new car? What
+about the seeding rates for your wheat farm? Perhaps you
+programmers out there need a nice HEX calculator. And, of course,
+what football fan wouldn't like to calculate the passing rates for
+his or her favorite quarterback? If it seems like I'm all over the
+map here, it's because this site provides links to all kinds of
+calculator sites for all kinds of people. Trust me: it all adds up
+to a unique and useful site.
+Recommend It!
+ GnomeTIP
+Our Tip eBooks
+Microsoft Office Tips
+PC Productivity Tips
+Cool Internet Tips
+Windows 2000 Tips
+Windows XP Tips
+Top 50 Fun Sites
+Must-Know Terms
+Top 50 Useful Sites
+Top 75 Tech Sites
+Who knows how to thwart false charges? Lockergnomie Steve
+Lafferty: "In a recent article over the PayPal issue, it was
+stated that when using a credit card illegally, the owner of that
+card is responsible for the first $50.  However, sometging that
+very few people know about is that there is a US Federal provision
+in the banking industry called 'Reg E' (Regulation E / Electronic
+Funds Transfer). This stipulates that all transactions will err in
+favor of the customer (account holder). This means that if your
+'bank card' is used without your permission, you are not
+responsible for any of the charges. My suggestion is never to use
+a credit card - and only use your bank debit card. That way, if
+someone steals your number, you are not liable for any of the
+charges." For more information, please refer to Section 205 on
+FEDERALRESERVE.GOV. Obviously, this tip only applies to people
+living in the USA. If you haven't been watching your statements
+like a hawk lately, you'd be wise to start soon. Identity theft is
+a growing concern. When my wallet was stolen, I found
+IDENTITYTHEFT.ORG to be a godsend.
+Recommend It!
+http://www.lockergnome.com/issues/daily/20020710.html
+Your subscribed e-mail address is: [qqqqqqqqqq-lg@example.com] - To unsubscribe or change your delivery address, please visit the subscription management page. For further information, please refer to the GnomeCREDITS in the sidebar.
+LOOK OVER HERE
+ Download Our Tip Files
+ Latest Windows Daily
+ Latest Digital Media
+ Latest Tech Specialist
+ Latest Penguin Shell
+ Latest Apple Core
+ Latest Web Weekly
+ Latest Bits & Bytes
+ Latest Audio Show
+ Low Price Search
+ $99 Tech Conference
+ The GnomeSTORE
+ Tell a Friend About Us!
+ Suggest a Feature
+ Advertise With Us
+ High-Tech Job Search
+ Chat With Gnomies
+ Watch The Webcams
+ Computer Power User
+ Read Past Issues
+ Download X-Setup
+ About Lockergnome
+ Our Privacy Policy
+ View More Options
+ Our XML / RSS Feed
+ Syndicate Our Tips
+ Link To Lockergnome
+ Get Chris's Book
+ General Feedback
+ E-mail the Editor
+ The Editor's Blog
+ MP3 SOFTWARE
+Havas MP3 Pro
+Magix MP3 Maker
+Ejay MP3
+Audiostation 5.0
+Jack The MP3 Ripper
+Pearson MP3 Maker
+Steinberg My MP3
+MusicMatch Jukebox 7.0
+Hip Hop E-jay Record
+MP3-Wolf
+MP3 Maker Gold
+The MP3 Wizard
+ GNOMESPECIALS
+ Manage Your Workgroup
+ Form Pilot
+ Say the Time 5.0
+ Boomer - Stream Now
+ Create Web/CD catalog
+ Easy Web Editor
+ Kleptomania
+ Tag&Rename
+ Pretty Good Solitaire
+ Visualize Color Combos
+ FirstStop WebSearch
+ Ecobuilder
+ Book Collector
+Get Listed Here
+Question: which group is 250,000+ strong and always looking for stuff to make their personal and professional lives run smoother? 
+ HAPPY FUN STUFF
+And now, we see the story of the ugly shoe unfold before our very eyes. This footwear was outcast from the group weeks ago, and has been very depressed ever since. Pity my shoe.
+The Lone Shoe
+ 
+CLICK HERE TO ZOOM
+ 
+BYTE ME NOW
+©2002, Lockergnome LLC. ISSN: 1095-3965. All Rights Reserved. Please read our Terms of Service. Our Web site is hosted by DigitalDaze. Domain registered at DNS Central.
+Exercise extends your life by ten years, but you spend 15 of them doing it.

@@ -1,0 +1,3 @@
+FROM: enron.announcements@enron.com
+those deals have been manually entered into pops and reallocated . all is well .
+mark

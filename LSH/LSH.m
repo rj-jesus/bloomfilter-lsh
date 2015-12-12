@@ -113,10 +113,7 @@ classdef LSH < handle
             b = floor(self.k / r);
             % Candidates' structure is as follows
             % this --sim--> that
-            % Doc1          { [DocA DocB DocC ...]
-            % Doc2            [DocI DocJ DocK ...]
-            % ...              ...
-            % DocN            [DocX DocY DocZ ...] }
+            % Doc1          { [DocA DocB DocC ...] }
             Candidates = cell(1);
             for i = 1:b
                 % Strip this band from the Signatures' matrix

@@ -1,0 +1,17 @@
+FROM: Luca.Merciadri@student.ulg.ac.be
+Xavier Vello wrote:
+> Le Tuesday 20 April 2010 01:33:37, Russ Allbery a =E9crit :
+>  =20
+>
+> There's a configuration option in KPDF (and okular, its KDE4 version) s=
+aying=20
+> "obey DRM limitations" (unchecked by default). You can activate it, and=
+ a tool=20
+> like kiosk might help to configure the default for a corporation.
+>  =20
+Thanks for this info.
+--=20
+Merciadri Luca
+See http://www.student.montefiore.ulg.ac.be/~merciadri/
+I use PGP. If there is an incompatibility problem with your mail
+client, please contact me.

@@ -1,0 +1,22 @@
+FROM: hibody@csmining.org
+body,.backgroundTable{background-color:#FFFFCC;}#contentTable{border:5px double #d3d3d3;margin-top:10px;}
+headerTop{background-color:#e0ffff;border-top:0px none #000000;border-bottom:0px none #FFFFFF;text-align:center;padding:3px;}
+adminText{font-size:10px;color:#003366;line-height:200%;font-family:Verdana;text-decoration:none;}
+headerBar{background-color:#ffffff;border-top:0px none #333333;border-bottom:0px none #FFFFFF;padding:0px;}
+headerBarText{color:#333333;font-size:30px;font-family:Verdana;font-weight:normal;text-align:left;}
+title{font-size:24px;font-weight:bold;color:#8b0000;font-family:Georgia;line-height:110%;}
+subTitle{font-size:14px;font-weight:bold;color:#000000;font-style:normal;font-family:Georgia;}
+defaultText{font-size:12px;color:#000000;line-height:150%;font-family:Verdana;width:400px;background-color:#e0ffff;padding:20px;}
+sideColumn{background-color:#e0ffff;border-left:4px double #87cefa;text-align:left;width:200px;padding:20px;margin:0px;}
+sideColumnText{font-size:11px;font-weight:normal;color:#666666;font-family:Arial;line-height:150%;}
+sideColumnTitle{font-size:15px;font-weight:bold;color:#333333;font-family:Arial;line-height:150%;}
+footerRow{background-color:#87cefa;border-top:0px none #87ceeb;padding:8px;}.footerText{font-size:10px;color:#ffffff;line-height:100%;font-family:Verdana;}
+a,a:link,a:visited{color:#800000;text-decoration:underline;font-weight:normal;}.headerTop a{color:#003366;text-decoration:none;font-weight:normal;}
+footerRow a{color:#ffffff;text-decoration:underline;font-weight:normal;}body,.backgroundTable{background-color:#000000;}
+Email not displaying correctly? View it in your browser.
+Louisville
+	eHealth Center / 727 West Main Street / Louisville, KY 40202
+	Copyright (C) 2009 Louisville eHealth Center. All rights reserved
+        		Sent to hibody@csmining.org.  Unsubscribe |
+        Update Profile |
+        Forward to a Friend

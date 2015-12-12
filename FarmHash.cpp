@@ -1928,7 +1928,7 @@ void mexFunction(int nlhs, mxArray *plhs[],
 
     }
     else {
-        mexErrMsgIdAndTxt("MyToolbox:FarmHash:notString&&notCell",
+        mexErrMsgIdAndTxt("MyToolbox:FarmHash:notString",
                           "Input key must be a string or cell array of "
                                   "strings.");
     }

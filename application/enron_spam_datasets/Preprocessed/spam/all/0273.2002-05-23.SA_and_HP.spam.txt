@@ -1,0 +1,4 @@
+FROM: ft.com.specials_821@newsbyemail.ft.com
+to unsubscribe
+simply reply to this email with remove
+in the subject line

@@ -1,0 +1,2 @@
+FROM: kristin.gandy@enron.com
+teco tap 30 . 000 / enron ; 44 . 167 / hpl gas daily

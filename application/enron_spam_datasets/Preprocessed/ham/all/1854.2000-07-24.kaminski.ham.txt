@@ -1,0 +1,3 @@
+FROM: pete.davis@enron.com
+vince :
+is it ok to send the following out to the interns ?

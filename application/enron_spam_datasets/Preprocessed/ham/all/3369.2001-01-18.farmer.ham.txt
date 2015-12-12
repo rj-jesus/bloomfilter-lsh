@@ -1,0 +1,3 @@
+FROM: maureen.raymond@enron.com
+( see attached file : hplnol 19 . xls )
+- hplnol 19 . xls

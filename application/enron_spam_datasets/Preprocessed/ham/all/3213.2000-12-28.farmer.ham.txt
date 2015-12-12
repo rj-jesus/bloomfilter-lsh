@@ -1,0 +1,4 @@
+FROM: sheri.thomas@enron.com
+dec . 27 , 2000
+teco tap 30 . 000 / enron ; 120 . 000 / hpl gas daily
+lsp hpl katy i / c 30 . 000 / enron

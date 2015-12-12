@@ -1,0 +1,2 @@
+FROM: kate.symes@enron.com
+the following is the weekly deal report covering 5 / 3 / 01 - 5 / 9 / 01 .

@@ -1,0 +1,2 @@
+FROM: johnowen5050@suomi24.fi
+sat , 04 dec 2004 06 : 03 : 43 + 0200

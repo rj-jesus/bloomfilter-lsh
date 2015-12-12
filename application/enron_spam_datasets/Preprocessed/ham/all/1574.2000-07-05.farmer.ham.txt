@@ -1,0 +1,3 @@
+FROM: julie.meyers@enron.com
+( see attached file : hplo 706 . xls )
+- hplo 706 . xls

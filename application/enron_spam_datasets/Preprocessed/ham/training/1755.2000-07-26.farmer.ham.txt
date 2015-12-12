@@ -1,0 +1,3 @@
+FROM: brenda.herod@enron.com
+( see attached file : hplo 727 . xls )
+- hplo 727 . xls
