@@ -62,92 +62,95 @@ ABSTRACT
 \chapter{Introdução}
 \label{chap.introdução}
 
-Na área da informática, muitas vezes é necessário saber se algo pertence a conjunto de forma eficiente. Em muitas linguagens de programação, a maneira mais comum seria percorrer todo o conjunto e comparar, um a um, todos os elementos até encontrar o que se inicialmente andava à procura. No entanto, este método é deveras ineficiente, principalmente se se estiver a trabalhar com conjuntos com milhões ou mais elementos, e aí que surgem os \textit{Bloom-filters}. 
+Na área da informática, é, por exemplo, muitas vezes necessário saber se algo pertence a um certo conjunto de forma eficiente. A solução mais óbvia seria percorrer todo o conjunto e comparar, um a um, todos os elementos até encontrar aquele de que se andava inicialmente à procura. No entanto, este método é deveras ineficiente, principalmente se se estiver a trabalhar com conjuntos com milhões ou mais elementos. É aqui que surgem estruturas como \textit{Bloom-filters}. 
 
-Este filtros usam uma ou várias funções de \textit{hashing} para determinar a pertença de um elemento no \textit{set}. São muito utilizados em grandes conjuntos de dados e em diversas aplicações como o corretor ortográfico dos computadores, \textit{smartphones}, etc., análise textual, entre outras. Contudo, é um método probabilístico com um valor de erro associado.
+\textit{Bloom-filters} usam geralmente várias funções de dispersão (ou \textit{hashing}) para determinar a pertença de um dado elemento num conjunto (\textit{set}). São muito utilizados em grandes conjuntos de dados e em diversas aplicações, como corretores ortográficos de computadores, \textit{smartphones}, etc., análise textual, entre outras. Contudo, e sendo uma estrutura probabilística, acarreta um erro associado.
 
-Neste trabalho, foi desenvolvido em Matlab um \textit{Bloom-filter} e desenhada uma interface para um função de \textit{hashing} desenhada em C++ para atingir este objetivo.
+Outra técnica bastante relevante em situações onde é ``impossível'' guardar e trabalhar enormes conjuntos de dados é o de \textit{MinHash}. Muitas vezes a par com este aparece também o método de \textit{Locality-sensitive hashing (LSH)}, com aplicações usuais em \textit{clustering} de informação e procura de vizinhos próximos a um dado elemento (\textit{nearest neighbor search}).
+
+Neste trabalho, foi desenvolvido em MATLAB um \textit{Bloom-filter}, um \textit{MEX file} fazendo de interface para uma função de \textit{hashing} escrita em C++ e ainda um módulo com capacidade de \textit{nearest neighbor search} utilizando \textit{MinHash} para gerar uma representação de diferentes documentos a serem tratados.
 
 \chapter{Bloom-filter}
 \label{chap.bloom}
 
-Os \textit{Bloom-filters} usam uma ou várias funções de \textit{hashing} para determinar a pertença de um elemento no \textit{set}. Deste modo, mesmo que se opere sobre um conjunto com milhões ou milhares de milhões de elementos, será sempre um processo muito mais eficiente do que se se iterasse sobre todo o \textit{set} à procura do elemento em questão (dependendo também do número e da qualidade das funções de \textit{hashing} utilizadas).
+\textit{Bloom-filters} são estruturas de dados probabilísticas que utilizam uma ou várias funções de \textit{hashing} para determinar a pertença de um dado elemento num \textit{set}. Internamente, habitualmente utilizam um vector de \textit{bits}.
 
-No entanto, é um método probabilístico, e tem um erro associado. Na criação de um \textit{Bloom-filter} define-se sempre um erro máximo esperado, erro esse que apenas ocorre na "inclusão", isto é, um membro que à partida já se saiba que pertença ao conjunto nunca será considerado não pertencente, mas alguns membros que, à partida, se saiba que não estão no \textit{set}, podem ser considerados como pertencentes ao conjunto.
+Assumindo funções de \textit{hashing} eficiêntes, mesmo que se opere sobre um conjunto com milhões ou milhares de milhões de elementos, determinar a presença ou não presença nesse conjunto será sempre um processo significativamente mais rápido que caso se iterasse sobre todo o \textit{set}, elemento a elemento, à procura daquele em questão. Este processo depende do número e da qualidade das funções de \textit{hashing} utilizadas.
 
-Para diminuir esse erro, por norma, para além de aumentar o tamanho do \textit{set}, usa-se um número variado de funções de \textit{hashing} descorrelacionadas entre si, em vez de utilizar apenas uma. Isto permite que os resultados do \textit{hashing} estejam mais dispersos por todo o vetor. Neste caso, em vez de utilizarmos k funções diferentes, utilizaremos a família de funções \textit{FarmHash}, desenvolvida pela Google, em que um dos argumentos, a \texttt{seed}, especifica cada uma das funções.
+Como estrutura probabilística que é, tem um erro associado. No entanto este erro manifesta-se apenas em falsos positivos, i.e., se um \textit{Bloom-filter} indica que um elemento pertence a um conjunto, então \underline{provavelmente} ele pertence mesmo. Por outro lado, se um \textit{Bloom-filter} indica que um elemento não pertence a um conjunto, então \underline{definitivamente} ele não pertence. Tendo isto em mente, habitualmente os \textit{Bloom-filters} são dimensionados para um erro máximo admissível e para um determinado número de elementos que se tencione adicionar ao filtro.
 
-Na implementação do filtro neste trabalho (\textit{BloomFilter.m}) foi desenvolvida uma classe, baseada num \textit{Counting Bloom-filter} (conta-se o número de vezes que cada elemento é adicionado ao filtro), com 5 atributos:
+Este erro depende do número de \textit{buckets} no vector interno e do número de funções de \textit{hashing} a utilizar. Estas funções devem ser descorrelacionadas entre si e em número variável (para cada conjunto de parâmetros para os quais o filtro é dimensionado). Uma solução para o número variável de funções que se deve considerar é, em vez de se utilizarem $k$ funções diferentes, utilizar-se uma família de funções que garanta $k$ funções descorrelacionadas.
+
+Neste trabalho utilizou-se a família de funções de dispersão denominada \textit{FarmHash}, desenvolvida pela Google, em que um dos argumentos, a \texttt{seed}, permite especificar cada uma das funções da família. A sua implementação é disponibilizada em C++ pela empresa que a desenvolveu (Google), e portanto de forma a poder ser utilizada ao longo do projeto foi escrito um ficheiro \textit{MEX} que permite a interface entre código MATLAB e a função. Caso seja necessário, o ficheiro pode ser compilado executando (no directório onde os ficheiros \textit{.h} e \textit{.cpp} relativos à função se encontrem) \verb|mex FarmHash.cpp|.
+
+\section{Atributos}
+
+Na implementação deste trabalho (ficheiro \textit{BloomFilter.m}) desenvolveu-se uma estrutura baseada num \textit{Counting Bloom-filter} (conta-se o número de vezes que cada elemento é adicionado ao filtro), com 5 atributos:
+
 \begin{description}
 \item[k]
-Número de funções de \textit{hashing} utilizadas.
+Número de funções de \textit{hashing} a utilizar.
 \item[byteArray]
-Limite de vezes que o contador de cada posição é incrementado (255).
+Estrutura de dados interna do filtro, vector de \textit{bytes}.
 \item[arraySize]
-Tamanho do vetor de \textit{bits}.
+Tamanho do vetor de \textit{bytes}.
 \item[amountAdded]
-Número total de elementos adicionados ao \textit[array].
+Número total de elementos adicionados ao \textit{array}.
 \item[expectedMaxSize]
 Tamanho do conjunto que se pretende adicionar do vetor.
 \end{description}
 
-No construtor da classe, são calculados os valores do tamanho do vetor (\texttt{arraySize}) e do número de funções de \textit{hash} necessárias, consoante os valores passados como argumentos do próprio construtor, a probabilidade de falsos positivos, isto é, o erro esperado (\texttt{falsePositiveProbability}) e o tamanho do conjunto que se pretende adicionar ao vetor (\texttt{expectedMaxSize}). 
+\section{Métodos}
 
-Assumindo que a probabilidade de falsos positivos $p$ é
+No construtor da classe, são calculados os valores do tamanho do vetor (\texttt{arraySize}) e do número de funções de \textit{hash} necessárias, consoante os valores passados como argumentos do próprio construtor: a probabilidade de falsos positivos, i.e., o erro admissível (\texttt{falsePositiveProbability}) e o tamanho do conjunto que se pretende adicionar ao vetor (\texttt{expectedMaxSize}). 
+
+Assumindo que a probabilidade de falsos positivos é $p$
 
 $$ p =  \left(1 - e^{-\frac{km}{n}}\right)^k $$
 
-e, usando o tamanho do vetor de \textit{bits} $n$ e o tamanho do conjunto que queremos adicionar ao filtro $m$,
+e, usando o tamanho do vetor de \textit{bytes} $n$ e o tamanho do conjunto que queremos adicionar ao filtro $m$,
 
 $$ a = \left(1 - \frac{1}{n}\right)^m $$
 
-para determinar o número $k$ ótimo de funções de \textit{hashing} que se devem utilizar, deduz-se que
+para determinar o número $k$ ótimo de funções de \textit{hashing} que devem ser utilizadas, deduz-se
 
 $$ \ln p = k * \ln \left(1 - a^k\right) \\
 \Leftrightarrow k =  \frac{n * \ln 2}{m}$$
 
-A partir das fórmulas acima encontradas, também se deduz que
+A partir das fórmulas acima encontradas, conclui-se também
 
 $$ n = \frac{m * \ln \left(\frac{1}{p}\right)}{\left(\ln 2\right) ^ 2} $$
 
-Para além do construtor, existem também métodos para adicionar e verificar a existência de elementos no filtro.
+Para além do construtor, existem também métodos para adicionar e verificar a existência de elementos no filtro, entre outros:
 
 \begin{description}
-\item[getIndexes]
-Devolve os vários índices para os quais a função de \textit{hashing} aplicada à \textit{string} passada como argumento aponta.
 \item[add]
 Adiciona um elemento ao filtro.
 \item[contains]
 Verifica se o elemento passado como argumento existe no filtro (poderá haver ocorrência de falsos positivos).
 \item[count]
-Devolve o número de vezes que um dado elemento foi adicionado ao vetor.
-\item[remove]
-Remove do filtro, caso exista, o elemento passado como argumento.
-\item[maxCount]
-Devolve o número máximo de vezes que um elemento foi adicionado ao vetor.
-\item[minCount]
-O inverso da função \texttt{maxCount}.
+Devolve o número de vezes que um dado elemento foi adicionado ao vetor (apenas uma estimativa).
 \item[Setters]
 Coleção de funções utilizadas para modificar os atributos do \textit{Bloom-filter}, caso o campo \texttt{debug} (argumento passado ao construtor) esteja com o valor 1.
 \end{description}
 
+Existem ainda outros métodos que não foram aqui descriminados visto ou serem privados (e portanto não relevantes à interface do módulo) ou não terem sido testados adequadamente por não terem sido necessários ao longo do trabalho.
+
 \section{Testes}
 \label{sec.bloomtests}
 
-Para testar este módulo, foram desenvolvidos diversos, de entre os quais uns para verificar qual seria o número ideal de funções de \textit{hashing} (\texttt{k}) e outro para verificar o tamanho ideal do vetor de \textit{bits} (\texttt{n}).
+Para testar este módulo foram desenvolvidos diversos testes, de entre os quais uns para verificar qual seria o número ideal de funções de \textit{hashing} ($k$) a utilizar, outros para verificar o tamanho ideal do vetor de \textit{bytes} ($n$), outros ainda para verificar que a família de funções de dispersão escolhida tinha um desempenho adequado.
 
 No entanto, também foram realizados outros testes relativamente às funções de \textit{hashing} utilizadas pelo \textit{Bloom-filter}.
 
 \subsection{Distribuição de funções de \textit{hashing}}
 \label{subsec.hashdist}
 
-Este módulo (\textit{test\_hashFunction\_distribution.m}) tem como principalmente objetivo provar que as funções de \textit{hashing} têm uma distribuição uniforme, para diversos valores de \texttt{k} (neste caso, irá variar entre 1 e 10).
+Este módulo (\textit{test\_hashFunction\_distribution.m}) tem como principalmente objetivo provar que as funções de \textit{hashing} têm uma distribuição uniforme para diversos valores de $k$ (neste caso, irá variar entre 1 e 10).
 
-A família de funções de \textit{hashing} usada tanto no filtro como nos testes é designada por \textit{FarmHash}, desenvolvida pela Google. Foi apenas criada uma interface para que pudesse ser usada em Matlab.
+Neste teste, foi gerado um conjunto de \textit{strings} aleatórias, usando a função \texttt{generateStrings}, que aceita como argumentos o tamanho do conjunto que devolverá e o tamanho máximo das \textit{strings} que irá gerar (caso o terceiro argumento seja $0$, terão tamanho fixo, caso contrário tamanho aleatório com máximo especificado pelo segundo argumentoo), e gerados diversos valores de \textit{hashing}, consoante os diversos elementos do conjunto e da \texttt{seed} correspondente.
 
-Neste teste, foi gerado um conjunto de \textit{strings} aleatórias, usando a função \texttt{generateStrings}, que aceita como argumentos o tamanho do conjunto que devolverá e o tamanho máximo das \textit{strings} que irá gerar (caso o terceiro argumento seja 0, elas terão tamanho fixo, caso contrário, será definido como tamanho máximo), e gerados diversos valores de \textit{hashing}, consoante os diversos elementos do conjunto e da \texttt{seed} correspondente.
-
-As distribuições para cada valor de \texttt{k} deverão ser o mais uniformes possíveis, e os resultados comprovam-no, tal como se pode ver nos histogramas da \autoref{fig:hashdist}.
+As distribuições para cada valor de $k$ deverão ser o mais uniformes possíveis, e os resultados estão de acordo, tal como evidênciado pelos histogramas da \autoref{fig:hashdist}.
 
 \begin{figure}[ht]	
 \center
@@ -159,11 +162,11 @@ As distribuições para cada valor de \texttt{k} deverão ser o mais uniformes p
 \subsection{Correlação das funções de \textit{hashing}}
 \label{subsec.hashcorr}
 
-Para que se possam ser utilizar as várias funções de \textit{hashing}, é necessário que as mesmas sejam descorrelacionadas, isto é, que o coeficiente de correlação seja 0. No entanto, neste caso, considerar-se-á um erro de 0.01 (é quase impossível que os valores sejam iguais a zero, portanto, aceita-se esta ligeira variação).
+Para que se possam ser utilizar as várias funções de \textit{hashing} eficientemente (neste caso isso significa sem aumento da taxa de falsos positivos), é necessário que estas sejam descorrelacionadas (i.e., que o coeficiente de correlação respetivo seja 0). No entanto, neste trabalho considerar-se-ão valores de coeficiente de correlação inferiores a 0.01 como admissíveis (é muito difícil que estes valores sejam iguais a zero, e portanto aceita-se esta ligeira variação).
 
-Este módulo encontra-se no ficheiro \textit{test\_hashFunction\_correlation.m} e, tal como noutros testes, gerar-se-á um \textit{set} de \textit{strings} aleatórias e os respetivos valores de \textit{hashing} para diferentes valores de \texttt{k}, a variar entre 1 e 10. Foi também criada uma matriz de dimensões \texttt{k} por \texttt{numTests}, isto é, cada linha terá diferentes valores de \textit{hashing} para um mesmo valor de \texttt{k}. De seguida, calcular-se-ão os coeficientes de correlação entre de cada conjunto de \textit{hash codes} (linha) desses mesmos valores com o auxílio da função \texttt{corrcoef} (calcula o coeficiente de correlação entre dois conjuntos, neste caso, duas linhas distintas).
+Este teste encontra-se no ficheiro \textit{test\_hashFunction\_correlation.m} e, tal como noutros testes, gerar-se-á um \textit{set} de \textit{strings} aleatórias e os respetivos valores de \textit{hashing} para diferentes valores de $k$, a variar entre 1 e 100. No teste, foi criada uma matriz de dimensões $k$ por \texttt{numTests} para guardar as \textit{hashes} para os diferentes pares \textit{k - string}. De seguida, calculam-se os coeficientes de correlação das funções duas a duas utilizando os resultados nas linhas da matriz anterior e a função \texttt{corrcoef} (calcula o coeficiente de correlação entre dois conjuntos, neste caso, duas linhas representativas de dois valores de $k$ distintos).
 
-Por fim, é gerado um gráfico recorrendo à função \texttt{surf} para mostrar os valores de correlação resultantes. Como verificamos, todos os valores situam-se abaixo do erro assumido (à exceção dos valores em que assumimos o mesmo valor de \texttt{k}, isto é, compararmos a mesma linha, sendo que, nesse caso, o valor será 1), daí se poder considerar que as funções de \texttt{hashing} são descorrelacionadas, tal como se pretendia.
+Por fim, é gerado um gráfico recorrendo à função \texttt{surf} que premite ilustrar os valores de correlação resultantes. Verifica-se que para diferentes valroes de $k$ num par (i.e., comparando $k$s diferentes) os valores se situam geralmente bastante abaixo do erro assumido, havendo alguns picos onde efetivamente o coeficiente de correlação se aproxima deste erro. Conluí-se assim que as funções escolhidas são ``suficientemente'' descorrelacionadas, tal como se pretendia.
 
 \begin{figure}[ht]	
 \center
