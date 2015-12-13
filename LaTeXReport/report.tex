@@ -321,28 +321,38 @@ Para gerar um \textit{set} de \textit{shingles} é utilizada a função \texttt{
 \subsection{Minhashing}
 \label{subsec.minhash}
 
-Para contornar as demoras que as comparações de excertos de textos provocariam, os \textit{shingles} são convertidos em assinaturas de inteiros, no entanto, a sua similariedade deve ser conservada.
+Para contornar as demoras que as comparações de excertos de textos provocariam, os \textit{shingles} são convertidos em assinaturas de inteiros, no entanto, a similariedade entre documentos deve manifestar-se também nestas assinaturas.
 
-Para a criação das respetivas assinaturas é usada a função \texttt{signature}; começa-se por se criar um vetor em que o seu valor inicial é o valor máximo do tipo \textit{double} (auxilia no cálculo dos valores mínimos) e, de seguida, para cada valor de \texttt{k} (número de \textit{hash functions}), é gerado um vetor das assinaturas do \textit{cell array} de \textit{shingles} que é passado como argumento, dos quais é extraído o valor mínimo e guardado no \textit{array} mais tarde devolvido pela função.
+Para sua criação é usada a função \texttt{signature}: começa-se por se criar um vetor com tamanho \texttt{k} tal como definido no construtor do módulo, em que os seus valores iniciais são o valor máximo do tipo \textit{unsigned integer 64-bits} (considerado como $+\infty$ no cálculo dos valores mínimos) e, de seguida, para cada valor \textit{seed} inicialmente igual a $1$ e variando até \texttt{k} (número de \textit{hash functions}), é gerado um vetor das \textit{hash codes} para o \textit{cell array} de \textit{shingles} passado como argumento, e para esse valor de \textit{seed}. É depois calculado o mínimo desse vetor, guardando-se o resultado na posição \textit{seed} do vetor assinatura que será no final devolvido pela função.
 
-\subsection{Locality-Sensitive Hashing}
+\subsection{Locality-sensitive hashing}
 \label{subsec.lsh}
 
-Por fim, depois de gerados os vetores de assinaturas dos documentos, basta compará-los e ver quais aqueles que mais se assemelham.
+Por fim, depois de geradosgeradas as assinaturas dos documentos, estas podem ser comparadas para se determinar os documentos que mais se assemelham.
 
-Primeiramente, começa-se por definir uma lista de candidatos possíveis (onde é provável a ocorrência de falsos positivos), para, por fim, verificar quais são mesmo os documentos que são realmente semelhantes (segundo um coeficiente de Similariedade - \textit{threshold}).
+Para isso inicialmente começa-se por se definir uma lista de candidatos possíveis (onde é ``provável'' a ocorrência de falsos positivos), para, mais tarde, se verificar quais aqueles que são realmente semelhantes. É por isso necessário definir um valor de \textit{threshold} que deverá indicar quão semelhantes dois documentos devem ser para poderem ser considerados similares, no contexto do problema considerado.
 
-A função \texttt{candidates}, definida no módulo \texttt{LSH}, serve para definir a lista de candidatos possíveis. Consideremos a matriz de assinaturas \textit{M}, em que cada coluna corresponde à assinatura de um documento, isto é, o resultante do processo de \textit{min-hashing} dos \textit{shingles} obtidos.
+A função \texttt{candidates} definida no módulo \texttt{LSH} serve para calcular a lista de candidatos possíveis. Consideremos a matriz de assinaturas \textit{S}, onde cada coluna corresponde à assinatura de um documento (i.e., o resultado do processo de \textit{Minhhashing} dos \textit{shingles} obtidos).
 
-% Explicar o processo de encontrar r rows e b bands
+Esta matriz é dividida em \texttt{b} bandas (\textir{bands}) de \texttt{r} linhas (\textit{rows}) cada. Então, para cada banda verificam-se quais as colunas (da banda) iguais - estes elementos serão considerados candidatos e serão portanto adicionados ao \textit{cell array} de candidados que será devolvido.
 
-Cria-se também um \textit{cell array} onde serão armazenados os pares candidatos a serem semelhantes, numa estrutura em que a linha \textit{i} corresponde ao documento \textit{i} e em que cada coluna corresponde ao índice \textit{j} de um documento possível candidato semelhante ao documento \textit{i}.
+Tendo em conta que
 
-De seguida, itera-se sobre cada uma das bandas que se extraem da matriz de assinaturas e compara-se com todas as outras bandas existentes (verica-se se a soma do número de assinaturas que as bandas têm em comum é igual ao número de \textit{rows}).
+$$ br = k,\ k\ \text{tamanho de cada assinatura} $$
 
-Por fim, a função \texttt{similars} trata de finalizar o processo e devolver os documentos que são realmente semelhantes e o seu coeficiente de similariedade.
+e
 
-Itera-se sobre a matriz de candidatos e compara-se, uma a uma, se a Similariedade de Jaccard entre as assinaturas é maior que o \textit{threshold} definido (usando a função \texttt{intersect}, que devolve os elementos em comum entre dois conjuntos). Se a condição se verifica, adiciona-se ao vetor de retorno os índices na matriz de assinaturas dos documentos em questão e o valor da sua similariedade.
+$$ t \approx \left(\frac{1}{b}\right) ^ {\frac{1}{r}} $$
+
+onde $t$ é o \textit{threshold} escolhido, pode aproximar-se \texttt{b} ou \texttt{r} e em função do valor calculado, obter o outro.
+
+A estrutura da matriz de retorno (\textit{cell array} de candidatos) é tal que cada linha \textit{i} corresponde ao documento \textit{i} e cada elemento dessa linha corresponde ao documento \textit{j}, significando que esse par \textit{(Docs{i}, Docs{j})} constitui um par de candidatos (i.e., o documento \textit{i} poderá ser semelhante ao documento \textit{j}).
+
+No final da execução da função deverá obter-se um \textit{cell array} com todos os pares de candidatos a serem semelhantes. É de notar que na abordagem seguida tenta-se eliminar entradas irrelevantes, ou seja, se a matriz de candidatos indica que poderá haver semelhança entre \textit{Docs{i}} e \textit{Docs{j}}, então não deverá indicar o equivalente \textit{Docs{j}} ``semelhante a'' \textit{Docs{i}}.
+
+Por fim, a função \texttt{similars} trata de finalizar o processo e devolver os pares de documentos que são realmente semelhantes, incluindo o respetivo coeficiente de similariedade.
+
+Para isso itera-se sobre a matriz de candidatos e compara-se, um a um, se a similariedade de Jaccard entre as assinaturas é maior ou igual ao \textit{threshold} definido (usando a função \texttt{intersect}, que devolve os elementos em comum entre dois conjuntos). Se a condição se verificar, adiciona-se ao vetor de retorno os índices na matriz de assinaturas dos documentos em questão e o valor da sua similariedade.
 
 \subsection{Testes}
 \label{subsec.lshtests}
