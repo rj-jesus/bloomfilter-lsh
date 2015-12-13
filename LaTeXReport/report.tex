@@ -356,17 +356,18 @@ Para isso itera-se sobre a matriz de candidatos e compara-se, um a um, se a simi
 
 \subsection{Testes}
 \label{subsec.lshtests}
+
 Para os testes deste módulo, foram adaptados os \textit{scripts} do Guião Prático-Laboratorial 07 da disciplina, mas, para além de ser usado o \textit{dataset} de cem mil utilizadores da MovieLens, foi também utilizado o que contém um milhão de utilizadores.
 
-A única diferença entre os testes é apenas o \textit{dataset} utilizado, pois o processo tem de obrigatoriamente ser o mesmo, apenas se muda o tamanho do conjunto de dados.
+A única diferença entre os testes é apenas o \textit{dataset} utilizado, pois o processo tem obrigatoriamente de ser o mesmo, apenas variando o tamanho do conjunto de dados.
 
-Inicia-se o teste obtendo um vetor com todos os utilizadores a partir do \textit{dataset}. De seguida, para cada utilizador, constrói-se o conjunto de \textit{shingles} (neste caso, não é usada a função \texttt{shingleWords} do módulo \texttt{LSH}, visto que não é documento de texto, mas sim um vetor de de índices de filmes que cada utilizador avaliou) e respetivas assinaturas, usando a função \texttt{signature}. 
+Inicia-se o teste obtendo um vetor com todos os utilizadores a partir do \textit{dataset}. De seguida, para cada utilizador, constrói-se o conjunto de \textit{shingles} (neste caso, não é usada a função \texttt{shingleWords} do módulo \texttt{LSH}, visto que não é um documento de texto, mas sim o vetor de índices de filmes, que são convertidos para \textit{strings} para poderem ser utilizados diretamente, que cada utilizador avaliou) e respetivas assinaturas, usando a função \texttt{signature}. 
 
-Primeiro, vai ser calculada a Similariedade de Jaccard esperada (teórica), simplesmente iterando sobre o conjunto de assinaturas e, usando a fórmula 
+Primeiro é calculada a similariedade de Jaccard esperada (teórica), simplesmente iterando sobre o conjunto de assinaturas e utilizando a expressão 
 
 $$ sim(D1, D2) = \frac{|C1\cap C2|}{|C1\cup C2|} $$
 
-e as funções de Matlab \texttt{intersection} (devolve os elementos que dois conjuntos têm em comum) e \texttt{union} (devolve a união de dois conjuntos). Por fim, verifica-se, quais destes valores estão a acima do \textit{threshold} assumido (nestes teste, assumiu-se 0.6). Os resultados mostram que existem apenas 3 documentos com uma similariedade acima dos 0.6, como se verifica na \autoref{fig:test100ke}.
+e as funções de MATLAB \textit{intersec} (devolve os elementos que dois conjuntos têm em comum) e \texttt{union} (devolve a união de dois conjuntos) (é ainda utilizada a função \textit{length} pois apenas importa o tamanho dos conjuntos que as duas funções anteriores devolvem). Por fim, verifica-se, quais destes valores estão acima do \textit{threshold} assumido (nestes teste, assumiu-se 0.6). Os resultados mostram que existem apenas 3 documentos com similariedade acima dos 0.6, como se verifica na \autoref{fig:test100ke}.
 
 \begin{figure}[ht]	
 \center
@@ -375,11 +376,11 @@ e as funções de Matlab \texttt{intersection} (devolve os elementos que dois co
 \label{fig:test100ke}
 \end{figure}
 
-Finalmente, para calcular a Similariedade de Jaccard observada (experimental), gera-se a lista de candidatos usando a função \texttt{candidates} do módulo \texttt{LSH} e a matriz com os documentos similares usando a função \texttt{similars}, também do mesmo módulo.
+Finalmente, para calcular a similariedade de Jaccard observada (experimental), gera-se a lista de candidatos usando a função \texttt{candidates} do módulo \texttt{LSH} e a matriz com os documentos similares usando a função \texttt{similars}, também do mesmo módulo.
 
-A \autoref{fig:test100ko} mostra que os resultados de ambos os testes foram os mesmos, havendo apenas uma pequeníssima variação dos valores de similariedade (à volta de 0.2).
+A \autoref{fig:test100ko} mostra que os resultados de ambos os testes foram os mesmos, havendo apenas uma pequena variação dos valores de similariedade (à volta de 0.02). Note-se que a instancia de \textit{LSH} utilizada foi inicializada para um erro de 0.05, e portanto como $0.02 < 0.05$ os resultados estão de acordo com o esperado.
 
-\begin{figure}[ht]	
+\begin{figure}[ht]
 \center
 \fbox{\includegraphics[height=2cm]{img/test_LSH_100k_Obs}}
 \caption{Resultados (valores observados) do teste com 100 mil utilizadores}
