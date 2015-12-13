@@ -222,38 +222,38 @@ Usando os valores do teste acima, verificamos (\autoref{fig:optimalk}) que as di
 \subsection{Tamanho ideal do vetor de \textit{bytes}}
 \label{subsec.optimaln}
 
-O módulo para o teste do valor ideal do tamanho do vetor $n$ encontra-se no ficheiro \textit{test\_optimalN.m}.
+O módulo para o teste do valor ideal do tamanho \texttt{n} do vetor encontra-se no ficheiro \textit{test\_optimalN.m}.
 
-Tal como no teste do \autoref{subsec.optimalk}, também são criados dois conjuntos de \texttt{strings} aleatórias com o mesmo propósito, um para ser adicionado ao filtro e o outro não. É também criado um vetor com diferentes valores de \texttt{n}, que vão desde o tamanho dos conjuntos de \textit{strings} até 10 vezes esse valor, com uma diferença de metade do mesmo valor entre cada.
+Tal como no teste do \autoref{subsec.optimalk}, também são criados dois conjuntos de \textit{strings} aleatórias com o mesmo propósito, um para ser adicionado ao filtro e o outro não. É também criado um vetor com diferentes valores de \texttt{n}, que vão desde o tamanho do conjunto de \textit{strings} a adicionar até 10 vezes esse valor, com um incremento de metade do tamanho do conjunto entre cada.
 
-De seguida, itera-se sobre os valores deste último vetor de valores e vai-se criando uma instância de um \textit{Bloom-filter} com os valores de \texttt{n} (\texttt{arraySize}) e \texttt{k} (depende do tamanho do vetor) a cada passagem. Adiciona-se um dos conjuntos de \textit{strings}, verifica-se a existência dos elementos do outro que não foi adicionado e, por fim, calcula-se a probabilidade de falsos positivos, tal como no teste anterior.
+De seguida, itera-se sobre os valores deste último vetor, criando-se uma instância de um \textit{Bloom-filter} com os valores de \texttt{n} (atributo \texttt{arraySize} do módulo) e \texttt{k} (que depende do tamanho do vetor) a cada passagem. Adiciona-se um dos conjuntos de \textit{strings}, verifica-se a existência dos elementos do outro que não foi adicionado e, por fim, calcula-se a probabilidade de falsos positivos, de maneira semelhante ao que foi feito no teste anterior. Vai sendo também calculado para cada valor de \texttt{n} o valor teórico correspondente da probabilidade de falsos positivos, e guardando estes valores num segundo vetor.
+
+Como se verifica no gráfico da \autoref{fig:optimalnimg}, à medida que o tamanho do \textit{array} aumenta, a probabilidade de falsos positivos diminui, i.e., são inversamente proporcionais (o que está de acordo com o esperado). No entanto o mais importante com este teste é verificar que os valores experimentais são semelhantes aos teóricos, já que o importante será para um dado valor de erro admissível, dimensionar o \textit{array} interno eficientemente (pois caso contrário ou se vai ocupar memória desnecessária, ou o número de falsos positivos real será acima do admissível). Como os valores obtidos (experimentais e teóricos) são bastante semelhantes, conlui-se que a dedução teórica que é utilizada no construtor do filtro permite um bom dimensionamento da estrutura de dados interna deste.
 
 \begin{figure}[ht]	
 \center
 \fbox{\includegraphics[height=5cm]{img/test_OptimalN_img}}
-\caption{Resultados o teste do tamanho ideal do vetor de \textit{bits} (\texttt{arraySize} / \texttt{n})}
+\caption{Resultados do teste do tamanho ideal do vetor de \textit{bytes} (\texttt{arraySize} ou \texttt{n})}
 \label{fig:optimalnimg}
 \end{figure}
 
-Como se verifica no gráfico da \autoref{fig:optimalnimg}, à medida que o tamanho do \textit{array} aumenta, a probabilidade de falsos positivos diminui, isto é, são inversamente proporcionais.
-
-Os valores ideias são os presentes na \autoref{fig:optimalntext}
+Os valores ideias são os presentes na \autoref{fig:optimalntext}.
 
 \begin{figure}[ht]	
 \center
 \fbox{\includegraphics[height=5cm]{img/test_OptimalN_txt}}
-\caption{Resultados ideias do tamanho ideal do vetor de \textit{bits} (\texttt{arraySize} / \texttt{n})}
+\caption{Resultados ideias do tamanho ideal do vetor de \textit{bits} (\texttt{arraySize} ou \texttt{n})}
 \label{fig:optimalntext}
 \end{figure}
 
 \subsection{Testes práticos do \textit{Bloom-filter}}
 \label{subsec.testebloom}
 
-Foram desenvolvidos dois módulos semelhantes para um teste mais direcionado ao uso real de um \textit{Bloom-filter}. Estão em dois ficheiros distintos, \textit{test\_big\_BloomFilter.m} e \textit{test\_small\_BloomFilter.m}.
+Foram desenvolvidos dois módulos semelhantes para testeS mais direcionadoS ao uso real de um \textit{Bloom-filter}. Estão em dois ficheiros distintos, \textit{test\_big\_BloomFilter.m} e \textit{test\_small\_BloomFilter.m}.
 
-O primeiro segue o modelo dos testes anteriores, em que se gera dois \textit{sets} de um certo tamanho (neste caso, cem mil elementos) de \textit{strings} aleatórias, cria-se uma instância de um \textit{Bloom-filter} com uma probabilidade de falsos positivos de 0.0001\%, adiciona-se um dos conjuntos ao filtro e verifica-se a existência de falsos positivos. Por fim, compara-se o resultado observado da probabilidade de falsos positivos com a que se definiu aquando a criação do filtro. O objetivo é que os resultados sejam o mais próximos possíveis, algo que se conseguiu atingir em ambos os testes.
+O primeiro segue o modelo dos testes anteriores, em que se gera dois \textit{sets} de um certo tamanho (neste caso, cem mil elementos) de \textit{strings} aleatórias, cria-se uma instância de um \textit{Bloom-filter} com uma probabilidade de falsos positivos de 0.0001\%, adiciona-se um dos conjuntos ao filtro e verifica-se a ocurrência de falsos positivos com o outro. Por fim, compara-se o resultado observado da probabilidade de falsos positivos com a que se definiu aquando a criação do filtro. O objetivo é que os resultados sejam o mais próximos possíveis, o que se verificou em ambos os testes.
 
-No segundo teste (\textit{small}), contrariamente ao primeiro em que se geram os conjuntos, definem-se conjuntos muito pequenos inicialmente e, depois, executa-se o mesmo processo que o anterior.
+No segundo teste (\textit{small}), contrariamente ao primeiro em que se geram os conjuntos, definem-se conjuntos muito pequenos inicialmente e, depois, executa-se o mesmo processo que anteriormente.
 
 \begin{figure}[ht]	
 \center
@@ -262,62 +262,63 @@ No segundo teste (\textit{small}), contrariamente ao primeiro em que se geram os
 \label{fig:testbigbloom}
 \end{figure}
 
-
 \chapter{Locality-Sensitive Hashing}
 \label{chap.lsh}
 
-O \textit{Locality-Sensitive Hashing} é particularmente útil quando se têm grandes conjuntos de documentos e se pretende achar semelhantes entre si, como, por exemplo, achar notícias semelhantes em diversos \textit{websites}. No entanto, pequenos trechos dos documentos podem aparecer noutros não necessarimente na mesma ordem. Para além do mais, se tivermos \textit{sets} na ordem dos milhões e milhares de milhão, são tantas as comparações que são necessárias fazer que excedem a memória disponível.
+\textit{Locality-Sensitive Hashing (LSH)} é particularmente útil quando se têm por exemplo grandes conjuntos de documentos e se pretende encontrar aqueles semelhantes entre si, como, por exemplo, encontrar notícias semelhantes (em conteúdo) em diversos \textit{websites}. Muitas das vezes com conjuntos com tamanho na ordem dos milhões, são tantas as comparações necessárias a fazer e a memória necessária para guardar os documentos, que se torna inviável a utilização de métodos ``clássicos'', por exemplo comparando os documentos no seu todo um a um.
 
-Portanto, para podermos comparar documentos, são necessários 3 passos:
+Com o objetivo de implementar um módulo capaz de efetuar a procura pelos vizinhos mais próximos (\textit{nearest neighbor search}), guardando representações de documentos mais facilmente comparáveis e que ocupam geralmente menos espaço, seguiram-se três passos:
 
 \begin{description}
 \item[Shingling]
-Converter documentos para conjuntos.
-\item[Min-Hashing]
-Converter grandes conjuntos para pequenas assinaturas (por norma, de inteiros), preservando a similariedade.
-\item[Locality-Sensitive Hashing]
-Forcar-se apenas nos pares de assinaturas que possivelmente pertençam a documentos semelhantes e, mais tarde, testar realmente a sua similariedade.
+Converter documentos para conjuntos de elementos (habitualmente pequenas \textit{strings}) denominados \textit{shingles}, o que permite uma melhor representação do conteúdo de um documento. Neste trabalho escolheu-se uma técnica de extração de \textit{shingles} sugerida em \cite{book1}, se procura por \textit{stopping words} e, para cada palavra encontrada, forma-se um \textit{shingle} constituído pela palavra e pelas duas palavras seguintes.
+\item[Minhashing]
+Converter grandes conjuntos (usualmente de \textit{shingles}) para uma pequena assinatura (por norma, vetor de \textit{hash codes}), preservando o conceito de similariedade entre diferentes documentos (neste caso, conjuntos de \textif{shingles}).
+\item[Locality-sensitive hashing]
+Reduzir o conjunto de elementos a candidatos de forma eficiênte, testando mais tarde a sua ``real'' similariedade.
 \end{description}
 
-O módulo de \textit{LSH} está no ficheiro \textit{LSH.m} e dispõe dos seguintes métodos:
+O módulo de \textit{LSH} está escrito no ficheiro \textit{LSH.m} e dispõe dos seguintes métodos:
 
 \begin{description}
 \item[shingleWords]
-Aceita um \textit{cell array} com o conteúdo de um documento e devolve \textit{shingles} relativos ao mesmo.
+Aceita um \textit{cell array} com as palavras (\textit{strings}) que constituem um documento e devolve um conjunto de \textit{shingles} relativos ao mesmo, construído tendo em conta um conjunto de \textit{stopping words}.
 \item[signature]
-Converte um vetor de \textit{shingles} num vetor de assinaturas, através do processo de \textit{min-hashing}.
+Converte um conjunto (mais precisamente \textit{cell array}) de \textit{shingles} numa assinatura (vetor de inteiros), recorrendo a um processo de \textit{minhashing}.
 \item[candidates]
-Devolve a lista de documentos candidatos a serem semelhantes a outros, consoante a matrix de assinaturas e o \textit{threshold} passados como argumentos.
+Devolve a lista de documentos candidatos a formarem conjuntos semelhantes, consoante a matriz de assinaturas e o \textit{threshold} passados como argumentos.
 \item[candidates\_to]
-Executa o mesmo processo que a função \texttt{candidates}, no entanto, em vez de aceitar apenas uma matriz de assinaturas, aceita também a assinatura de um documento, o qual pretendemos comparar com os restantes.
+Executa um processo smelhante ao da função \texttt{candidates}, no entanto em vez de formar conjuntos de candidatos pra uma dada matriz de assinaturas, forma uma lista de candidatos (representados numa matriz de assinaturas), face a um documento específico (representado pela sua assinatura e passada como argumento).
 \item[similars]
-Verifica quais são os documentos realmente semelhantes e a sua Similariedade de Jaccard, consoante a matriz de candidatos, assinaturas e o \textit{threshold} passados como argumentos.
+Verifica quais são os documentos de um conjunto de candidatos realmente semelhantes, consoante a matriz de candidatos, assinaturas e o \textit{threshold} passados como argumentos.
 \item[similiars\_to]
-Tem a mesma função que \texttt{similars}, no entanto, aplica-se ao caso em que pretendemos comparar um documento com os restantes.
+Semelhante à função \texttt{similars}, no entanto aplica-se ao caso em que pretendemos comparar os candidatos a similares entre um único documento e outro conjunto de documentos (sendo os documentos tal como habitualmente representados pelas suas assinaturas).
 \end{description}
 
-O único construtor do módulo aceita apenas um argumento, que é o erro esperado (\texttt{expectedError}). Este erro será utilizado para calcular o número \texttt{k} de \textit{hash functions} necessárias, que é também o único atributo que o módulo possui, segundo a fórmula:
+O construtor do módulo aceita apenas um argumento (\texttt{expectedError}) que é o erro esperado quando se calcula a similaridade entre dois conjuntos representados pelas suas assinaturas obtidas segundo o método de \textit{Minhash}, face à real similaridade de Jaccard entre esses conjuntos. Este valor é utilizado para calcular o tamanho \texttt{k} das assinaturas (e portanto o número de funções de dispersão necessárias). (\texttt{k}) é o único atributo que o módulo possui (não considerando o atributo \texttt{debug} utilizado em \textit{debugging}), e é calculado utilizando a fórmula
 
 $$ k = 1 / expectedError^2 $$
+
+Este resultado é obtido pelos limites de Chernoff (\href{https://en.wikipedia.org/wiki/Chernoff\_bound}{Chernoff bounds}), concluindo-se que o erro esperado para o cálculo da similaridade de dois conjuntos segundo o método de \textit{Minhash} é $\mathcal{O}(\frac{1}{\sqrt{k}}$.
 
 \subsection{Shingling}
 \label{subsec.shingling}
 
-Uma \textit{k-shingle} de um documento é uma sequência de k \textit{tokens} (palavras, caracteres, etc.) que aparecem no documento. Documentos que tenham muitas \textit{shingles} em comum, possuem texto parecido, mesmo que o mesmo não apareça na mesma ordem.
+Um \textit{k-shingle} de um documento é uma sequência de \textit{k tokens} (palavras, caracteres, etc.) que aparecem no documento. Documentos que tenham muitas \textit{shingles} em comum, possuem texto parecido, mesmo que este não apareça na mesma ordem. Este facto é importante pois permite determinar a semelhança entre diferentes documentos tendo em conta a ordem segundo a qual diferentes palavras aparecem (considere-se que facilmente se escrevem dois textos com paroximadamente as mesmas palavras mas em que, dada a ordem segundo a qual estas aparecem, o conteúdo destes documentos é bastante diferente).
 
-A similariedade entre dois documentos ($D1, D2$) pode ser calculada através da Similariedade de Jaccard:
+A similariedade entre dois documentos ($D1, D2$) pode ser calculada através da similariedade de Jaccard:
 
 $$ sim(D1, D2) = \frac{|C1\cap C2|}{|C1\cup C2|} $$
 
 sendo $C1$ e $C2$ os conjuntos de \textit{shingles} de $D1$ e $D2$, respetivamente.
 
-A Distância de Jaccard, por outro lado, pode ser dada por:
+A distância de Jaccard, por outro lado, pode ser dada por:
 
 $$ d(D1, D2) = 1 - sim(D1, D2) $$
 
-Para gerar um \textit{set} de \textit{shingles} é utilizada a função \texttt{shingleWords}, que recebe como argumento um \textit{cell array}, neste caso, de \textit{strings} (considere-se o mesmo \texttt{Doc}). Para gerar esse conjunto, é necessário selecionar quais as sequências de palavras mais importantes de \texttt{Doc}. Para tal, é necessária a criação de um \textit{set} de \textit{stop words}, logo, foram guardadas num \textit{cell array} \texttt{stop\_words} as cem palavras mais comuns da língua inglesa. Quando o programa encontra uma \textit{stop word}, ele guarda a sequência \textit{stop\_word next\_word1 next\_word2} num outro \textit{cell array}, que será o retorno da função.
+Para gerar um \textit{set} de \textit{shingles} é utilizada a função \texttt{shingleWords} do módulo escrito, que recebe como argumento um \textit{cell array}, neste caso, de \textit{strings} que contém as palavras do documento (considere-se \texttt{Doc}) para o qual se quer gerar o conjunto de \textit{shingles}. Para gerar esse conjunto, é necessário selecionar quais as sequências de palavras mais importantes de \texttt{Doc}. Para tal e seguindo o algoritmo sugerido em \cite{book1}, é necessária a criação de um \textit{set} de \textit{stop words}. Estas palavras devem ser palavras que apareçam com grande frequência na língua considerada e que geralmente aparecem próximas de palavras importantes no contexto de um documento. Assim e para este efeito, foram guardadas num \textit{cell array} as cem palavras mais comuns da língua inglesa. Quando o programa encontra uma \textit{stopping word}, guarda a sequência \textit{stop\_word next\_word1 next\_word2} num segundo \textit{cell array}, que será o retorno da função.
 
-\subsection{Min-Hashing}
+\subsection{Minhashing}
 \label{subsec.minhash}
 
 Para contornar as demoras que as comparações de excertos de textos provocariam, os \textit{shingles} são convertidos em assinaturas de inteiros, no entanto, a sua similariedade deve ser conservada.
