@@ -2,7 +2,7 @@ clear, clc
 
 %% Obtain the traning set
 
-threshold = 0.3;
+threshold = 0.1;
 
 %% Obtain the SPAM testing set
 
