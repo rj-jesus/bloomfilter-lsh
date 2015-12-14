@@ -422,9 +422,30 @@ Os passos necessários para a filtragem segundo este modelo serão:
 
 Note-se que nos dois pontos da descrição anterior, as duas funções utilizadas utilizam um valor de \textit{threshold}, passado como argumento, que deve ser definido tendo em conta dois fatores: um valor muito elevado, garantirá que muito poucas mensagens que não são \textit{spam} sejam detetadas como tal, por outro lado poderá estar-se a não filtrar mais mensagens que são efetivamente \textit{spam}. O contrário acontece para valores muito baixos de \textit{threshold}, onde quase todos os \textit{emails} de \textit{spam} serão filtrados, mas também mais mensagens com interesse podem ser filtradas.
 
-Assim, primeiro é necessário que o programa ``aprenda'' que \texit{emails} deve filtrar. Para tal, em dois testes foram utilizado dois \textit{datasets} diferentes, um do grupo \textit{CSMining}, outro do grupo \textit{Enron}. A função \texttt{create\_generic} permite a aprendizagem, aceitando um diretório onde vai procurar pelos ficheiros da extensão que também lhe é passada como argumento, para guardar num ficheiro (o caminho também é passado como argumento) as estruturas \textit{Bloom-filter} com os endereços de \textit{email} que enviaram \textit{spam} adicionados, as assinaturas do conteúdo dos mesmos e o módulo de \textit{LSH} usado (para salvaguardar o número de funções de \textit{hashing} utilizadas).
+Assim, primeiro é necessário que o programa ``aprenda'' que \texit{emails} deve filtrar. Para tal, em dois testes foram utilizado dois \textit{datasets} diferentes, um do grupo \textit{CSMining}\footnote{\url{http://csmining.org/index.php/spam-email-datasets-.html}}, outro do grupo \textit{Enron}\footnote{\url{http://csmining.org/index.php/enron-spam-datasets.html}}. A função \texttt{create\_generic} permite a aprendizagem, aceitando um diretório onde vai procurar pelos ficheiros da extensão que também lhe é passada como argumento, para guardar num ficheiro (o caminho também é passado como argumento) as estruturas \textit{Bloom-filter} com os endereços de \textit{email} que enviaram \textit{spam} adicionados, as assinaturas do conteúdo dos mesmos e o módulo de \textit{LSH} usado (para salvaguardar o número de funções de \textit{hashing} utilizadas).
 
 Por outro lado, a função \texttt{test\_generic} testa o filtro de \textit{spam} com base no ficheiro previamente guardado. Os dados desse mesmo ficheiro são carregados para o programa e todos os \textit{emails} contidos na pasta que lhe é passada como argumento são analisados.
+
+É de notar que o método descrito acima para filtragem de \textit{spam} pode ser facilmente utilizado para filtrar por tema, permitindo por exemplo categorizar \textit{emails} com três \textit{labels}, \textit{Primary}, \textit{Social} e \textit{Promotions} à semelhança do que o \textit{Gmail} da Google faz. Basta para isso fornecer um conjunto de aprendizagem adequado. O programa pode também aprender com a experiência a melhorar os seus resultados, bastando para isso que, quando falha a filtragem de uma mensagem e o utilizador o assinale, seja adicionado o endereço do remetente ao filtro de \textit{Bloom} em uso e a assinatura da mensagem à matriz de assianturas que já possui.
+
+\section{Testes}
+
+Os testes levados a cabo nesta fase foram os menos claros de todo o projeto, dada a falta de dados para testar eficientemente o programa...
+
+\section{Programa \textit{demo}}
+
+Foi desenvolvido ainda um programa \textit{demo} (\textit{proof\_of\_concept.m})  que pretende funcionar como \textit{proof of concept} do modelo. Para isso, foram testados \textit{emails} que recorrentemente são recebidos pelos autores deste projeto. Com um \textit{use case} específico pretende-se mostrar como funciona efetivamente o programa.
+
+Assim, começou-se por se juntar um conjunto de cerca de 40 \textit{emails} que são por nós considerados como lixo (no entanto poderão ser mensagens com interesse para outras pessoas e portanto não são filtradas por definição por serviços de \textit{email} como o \textit{Gmail}). Guardou-se depois um pequeno número de \textit{emails} que são consideradas com interesse e verificou-se se alguma destas mensagens era filtrada como \textit{spam} pelo programa. Posto isto e para efeitos demonstrativos, o programa entra num \textit{loop} onde permite a verificação de outras mensagens sem que estas tenham de ser previamente preprocessadas. O resultado é o ilustrado na \autoref{fig:poc1}.
+
+\begin{figure}[ht]	
+\center
+\fbox{\includegraphics[height=2cm]{img/proof_of_concept1}}
+\caption{Resultados da execução do programa \textit{demo} + janela para teste de novos \textit{emails}}
+\label{fig:poc1}
+\end{figure}
+
+Neste teste conseguiu-se filtrar as mensagens sem interesse, ao mesmo tempo que as relevantes não eram afetadas.
 
 \chapter{Conclusões}
 \label{chap.conclusões}
