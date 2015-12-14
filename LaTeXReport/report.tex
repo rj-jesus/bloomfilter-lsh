@@ -154,7 +154,7 @@ Neste teste, foi gerado um conjunto de \textit{strings} aleatórias, usando a fu
 
 As distribuições para cada valor de $k$ deverão ser o mais uniformes possíveis, e os resultados estão de acordo, tal como evidênciado pelos histogramas da \autoref{fig:hashdist}.
 
-\begin{figure}[ht]	
+\begin{figure}[ht]
 \center
 \fbox{\includegraphics[height=5cm]{img/test_HashFunction_distribution}}
 \caption{Resultados das distribuições das \texttt{k} funções de \textit{hashing}}
@@ -170,7 +170,7 @@ Este teste encontra-se no ficheiro \textit{test\_hashFunction\_correlation.m} e,
 
 Por fim, é gerado um gráfico recorrendo à função \texttt{surf} que premite ilustrar os valores de correlação resultantes. Verifica-se que para diferentes valroes de $k$ num par (i.e., comparando $k$s diferentes) os valores se situam geralmente bastante abaixo do erro assumido, havendo alguns picos onde efetivamente o coeficiente de correlação se aproxima deste erro. Conluí-se assim que as funções escolhidas são ``suficientemente'' descorrelacionadas, tal como se pretendia.
 
-\begin{figure}[ht]	
+\begin{figure}[ht]
 \center
 \fbox{\includegraphics[height=5cm]{img/test_HashFunction_decorrelation}}
 \caption{Resultados do teste de correlação de \texttt{k} funções de \textit{hashing}}
@@ -188,7 +188,7 @@ Por fim, é calculada a matriz de probabilidade conjunta de duas colunas (\texti
 
 Como os valores da variação dos resultados são mínimos (como se observa na \autoref{fig:hashindep}, onde todos os valores se encontram na casa dos $10^-4$), podemos considerar que a família de funções é independente dois a dois (pelo menos até ao valor de $k$ considerado), o que permite a concluir que estas funções são descorrelacionadas, tal como verificado anteriormente.
 
-\begin{figure}[ht]	
+\begin{figure}[ht]
 \center
 \fbox{\includegraphics[height=7cm]{img/test_hashFunction_independence}}
 \caption{Resultados do teste de independência de \texttt{k} funções de \textit{hashing}}
@@ -212,7 +212,7 @@ para determinar a probabilidade de falsos positivos (teórica) para os diferente
 
 Usando os valores do teste acima, verificamos (\autoref{fig:optimalk}) que as diferenças entre o valor teórico e o observado são mínimas, o que significa não só que é válido utilizar a expressão teórica para definir o valor de $k$ na instanciação de \textit{Bloom-filters} como também que as funções de \textit{hashing} usadas devolvem excelentes resultados (o que vem de acordo com os testes anteriores). Nas condições do iniciais deste teste vem que o valor de $k$ ideal obtido experimentalmente é 6, o que concorda com o valor que teria sido utilizado por definição aquando da instanciação do \textit{Bloom-filter}, através da dedução teórica.
 
-\begin{figure}[ht]	
+\begin{figure}[ht]
 \center
 \fbox{\includegraphics[height=5cm]{img/test_OptimalK}}
 \caption{Resultados do teste do número ideal de funções de \textit{hashing} (\texttt{k})}
@@ -230,7 +230,7 @@ De seguida, itera-se sobre os valores deste último vetor, criando-se uma instâ
 
 Como se verifica no gráfico da \autoref{fig:optimalnimg}, à medida que o tamanho do \textit{array} aumenta, a probabilidade de falsos positivos diminui, i.e., são inversamente proporcionais (o que está de acordo com o esperado). No entanto o mais importante com este teste é verificar que os valores experimentais são semelhantes aos teóricos, já que o importante será para um dado valor de erro admissível, dimensionar o \textit{array} interno eficientemente (pois caso contrário ou se vai ocupar memória desnecessária, ou o número de falsos positivos real será acima do admissível). Como os valores obtidos (experimentais e teóricos) são bastante semelhantes, conlui-se que a dedução teórica que é utilizada no construtor do filtro permite um bom dimensionamento da estrutura de dados interna deste.
 
-\begin{figure}[ht]	
+\begin{figure}[ht]
 \center
 \fbox{\includegraphics[height=5cm]{img/test_OptimalN_img}}
 \caption{Resultados do teste do tamanho ideal do vetor de \textit{bytes} (\texttt{arraySize} ou \texttt{n})}
@@ -239,7 +239,7 @@ Como se verifica no gráfico da \autoref{fig:optimalnimg}, à medida que o taman
 
 Os valores ideias são os presentes na \autoref{fig:optimalntext}.
 
-\begin{figure}[ht]	
+\begin{figure}[ht]
 \center
 \fbox{\includegraphics[height=5cm]{img/test_OptimalN_txt}}
 \caption{Resultados ideias do tamanho ideal do vetor de \textit{bits} (\texttt{arraySize} ou \texttt{n})}
@@ -255,7 +255,7 @@ O primeiro segue o modelo dos testes anteriores, em que se gera dois \textit{set
 
 No segundo teste (\textit{small}), contrariamente ao primeiro em que se geram os conjuntos, definem-se conjuntos muito pequenos inicialmente e, depois, executa-se o mesmo processo que anteriormente.
 
-\begin{figure}[ht]	
+\begin{figure}[ht]
 \center
 \fbox{\includegraphics[height=5cm]{img/test_big_BloomFilter}}
 \caption{Resultados da execução de \textit{test\_big\_BloomFilter.m}}
@@ -369,7 +369,7 @@ $$ sim(D1, D2) = \frac{|C1\cap C2|}{|C1\cup C2|} $$
 
 e as funções de MATLAB \textit{intersec} (devolve os elementos que dois conjuntos têm em comum) e \texttt{union} (devolve a união de dois conjuntos) (é ainda utilizada a função \textit{length} pois apenas importa o tamanho dos conjuntos que as duas funções anteriores devolvem). Por fim, verifica-se, quais destes valores estão acima do \textit{threshold} assumido (nestes teste, assumiu-se 0.6). Os resultados mostram que existem apenas 3 documentos com similariedade acima dos 0.6, como se verifica na \autoref{fig:test100ke}.
 
-\begin{figure}[ht]	
+\begin{figure}[ht]
 \center
 \fbox{\includegraphics[height=2cm]{img/test_LSH_100k_Exp}}
 \caption{Resultados (valores esperados) do teste com 100 mil utilizadores}
@@ -438,7 +438,7 @@ Foi desenvolvido ainda um programa \textit{demo} (\textit{proof\_of\_concept.m})
 
 Assim, começou-se por se juntar um conjunto de cerca de 40 \textit{emails} que são por nós considerados como lixo (no entanto poderão ser mensagens com interesse para outras pessoas e portanto não são filtradas por definição por serviços de \textit{email} como o \textit{Gmail}). Guardou-se depois um pequeno número de \textit{emails} que são consideradas com interesse e verificou-se se alguma destas mensagens era filtrada como \textit{spam} pelo programa. Posto isto e para efeitos demonstrativos, o programa entra num \textit{loop} onde permite a verificação de outras mensagens sem que estas tenham de ser previamente preprocessadas. O resultado é o ilustrado na \autoref{fig:poc1}.
 
-\begin{figure}[ht]	
+\begin{figure}[ht]
 \center
 \fbox{\includegraphics[height=2cm]{img/proof_of_concept1}}
 \caption{Resultados da execução do programa \textit{demo} + janela para teste de novos \textit{emails}}
