@@ -434,7 +434,9 @@ Por outro lado, a função \texttt{test\_generic} testa o filtro de \textit{spam
 
 Os testes levados a cabo nesta fase foram os menos claros de todo o projeto, dada a falta de dados para testar eficientemente o programa.
 
-Para este teste foi utilizado o \textit{dataset} do grupo \textit{Enron}, que continha cerca de 17 mil \textit{emails} de \textit{spam} e de 16 mil \textit{non-spam} (\textit{ham}). Antes de se executar o teste, deve-se correr o programa de aprendizagem da aplicação para este \textit{dataset} (\textit{enron\_training.m}). 
+Para este teste foi utilizado o \textit{dataset} do grupo \textit{Enron}, que continha cerca de 17 mil \textit{emails} de \textit{spam} e de 16 mil \textit{non-spam} (\textit{ham}). Antes de se executarem os testes, deve-se correr o programa de aprendizagem da aplicação para este \textit{dataset} (\textit{enron\_training.m}).
+
+No ficheiro \textit{test\_thresold.m} foram executados vários testes de deteção de \textit{spam} para diferentes valores de \textit{threshold} (entre 0.1 e 1, com espaçamento de 0.1 entre eles). Conclui-se que o melhor compromisso entre falsos positivos e falsos negativos é para um valor de \textit{threshold} de 0.1, o que assegura uma taxa de deteção de \textit{spam} de 83\% e uma de deteção de \textit{non-spam} de 3\%, dos quais mais de 2\% se devem a mensagens que não continham quaisquer \textit{shingles}.
 
 O teste em si encontra-se no ficheiro \textit{test\_enron.m} e, consoante os resultados obtidos da aprendizagem, chama a função \texttt{test\_generic} que devolverá as mensagens consideradas como \textit{spam} e \textit e o número de \textit{emails} analisados. Os resultados são os da \autoref{fig:enronspam} e da \autoref{fig:enronnonspam}.
 
@@ -445,7 +447,7 @@ O teste em si encontra-se no ficheiro \textit{test\_enron.m} e, consoante os res
 \label{fig:enronspam}
 \end{figure}
 
-Os resultados da análise a \textit{emails} com \textit{spam} resultou numa percentagem de deteção de ``lixo eletrónico'' de cerca de 77\%, o que se pode explicar por se ter tido de separar o \textit{dataset} em dois conjuntos (um para aprendizagem e outro para testes); isto leva a que a base de aprendizagem não seja tão grande e que alguns dos \textit{emails} com conteúdo de \textit{spam} não sejam detetados.
+Os resultados da análise a \textit{emails} com \textit{spam} resultou numa percentagem de deteção de ``lixo eletrónico'' de cerca de 83\%, o que se pode explicar por se ter tido de separar o \textit{dataset} em dois conjuntos (um para aprendizagem e outro para testes); isto leva a que a base de aprendizagem não seja tão grande e que alguns dos \textit{emails} com conteúdo de \textit{spam} não sejam detetados.
 
 \begin{figure}[ht]
 \center
@@ -454,7 +456,7 @@ Os resultados da análise a \textit{emails} com \textit{spam} resultou numa perc
 \label{fig:enronnonspam}
 \end{figure}
 
-Os resultados da filtragem de \textit{emails} \textit{ham} resultaram numa deteção de 0.2\% de \textit{spam}. No entanto, como se verifica, em apenas uma das mensagens o programa conseguiu gerar \textit{shingles} (depois da analisada esta mensagem em concreto, concluiu-se que foi considerada \textit{spam} pois os \textit{shingles} formados eram semelhantes a outros de mensagens consideradas \textit{spam}). As restantes foram consideradas ``lixo'' pois não foi possível gerar \textit{shingles} das mesmas, provavelmente, porque se tratavam de \textit{emails} com agradecimentos ou pequenas expressões (por exemplo, ``Ok'', ``Thank you'', ``Done''). 
+Os resultados da filtragem de \textit{emails} \textit{ham} resultaram numa deteção de 3\% de \textit{spam}. No entanto, como se verifica, em apenas uma das mensagens o programa conseguiu gerar \textit{shingles} (depois da analisada esta mensagem em concreto, concluiu-se que foi considerada \textit{spam} pois os \textit{shingles} formados eram semelhantes a outros de mensagens consideradas \textit{spam}). As restantes foram consideradas ``lixo'' pois não foi possível gerar \textit{shingles} das mesmas, provavelmente, porque se tratavam de \textit{emails} com agradecimentos ou pequenas expressões (por exemplo, ``Ok'', ``Thank you'', ``Done''). 
 
 \section{Programa \textit{demo}}
 
