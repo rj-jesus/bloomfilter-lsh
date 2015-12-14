@@ -23,7 +23,7 @@
 \begin{titlepage}
 \begin{center}
 
-{\vspace*{50mm}\textsc{\Huge\textbf{Bloom-filter + Locality-Sensitive Hashing}\\ \small{Métodos Probabilísticos para Engenharia Informática}}}\\[2cm]
+{\vspace*{50mm}\textsc{\Huge\textbf{Bloom-filter + Locality-sensitive hashing}\\ \small{Métodos Probabilísticos para Engenharia Informática}}}\\[2cm]
 {\textsc{\small\textbf{Universidade de Aveiro}}}\\[0.5cm]
 {\small Pedro Martins 76551\\Ricardo Jesus 76613}\\[0.5cm]
 {\small	17 de Dezembro de 2015}\\
@@ -38,7 +38,7 @@
 
 \end{titlepage}
 
-\title{\textbf{Bloom-filter + Locality-Sensitive Hashing}\\[1cm]\textsc{\small {Departamento de Electrónica, Telecomunicações e Informática} \\ \large {UNIVERSIDADE DE AVEIRO}}}
+\title{\textbf{Bloom-filter + Locality-sensitive hashing}\\[1cm]\textsc{\small {Departamento de Electrónica, Telecomunicações e Informática} \\ \large {UNIVERSIDADE DE AVEIRO}}}
 \author{Pedro Martins 76551, pbmartins@ua.pt\\Ricardo Jesus 76613, ricardojesus@ua.pt}
 \date{17 de Dezembro de 2015}
 
@@ -79,7 +79,7 @@ Assumindo funções de \textit{hashing} eficiêntes, mesmo que se opere sobre um
 
 Como estrutura probabilística que é tem um erro associado, neste caso manifestando-se apenas em falsos positivos, i.e., se um \textit{Bloom-filter} indica que um elemento pertence a um conjunto, então \underline{provavelmente} ele pertence mesmo. Por outro lado, se um \textit{Bloom-filter} indica que um elemento não pertence a um conjunto, então \underline{definitivamente} ele não pertence. Tendo isto em mente, habitualmente os \textit{Bloom-filters} são dimensionados para um erro máximo admissível e para um determinado número de elementos que se tencione adicionar ao filtro.
 
-Este erro depende do número de \textit{buckets} no vector interno e do número de funções de \textit{hashing} a utilizar. Estas funções devem ser descorrelacionadas entre si e em número variável (para cada conjunto de parâmetros para os quais o filtro é dimensionado). Uma solução para o número variável de funções que se deve considerar é, em vez de se utilizarem $k$ funções diferentes, utilizar-se uma família de funções que garanta $k$ funções descorrelacionadas.
+Este erro depende do número de \textit{buckets} no vector interno e do número de funções de \textit{hashing} a utilizar. Estas funções devem ser descorrelacionadas entre si e em número variável (para cada conjunto de parâmetros para os quais o filtro é dimensionado). Uma solução para o número variável de funções que se deve considerar é, em vez de se utilizarem \texttt{k} funções diferentes, utilizar-se uma família de funções que garanta \texttt{k} funções descorrelacionadas.
 
 Neste trabalho utilizou-se a família de funções de dispersão denominada \textit{FarmHash}, desenvolvida pela Google, em que um dos argumentos, a \textit{seed}, permite especificar cada uma das funções da família. A sua implementação é disponibilizada em C++ pela empresa que a desenvolveu, e portanto de forma a poder ser utilizada ao longo do projeto foi escrito um ficheiro \textit{MEX} que permite a interface entre código MATLAB e a função. Caso seja necessário, o ficheiro pode ser compilado executando (no directório onde os ficheiros \textit{.h} e \textit{.cpp} relativos à função se encontrem) \verb|mex FarmHash.cpp|.
 
@@ -141,18 +141,18 @@ Existem ainda outros métodos que não foram aqui descriminados visto ou serem p
 \section{Testes}
 \label{sec.bloomtests}
 
-Para testar este módulo foram desenvolvidos diversos testes, de entre os quais uns para verificar qual seria o número ideal de funções de \textit{hashing} ($k$) a utilizar, outros para verificar o tamanho ideal do vetor de \textit{bytes} ($n$), outros ainda para verificar que a família de funções de dispersão escolhida tinha um desempenho adequado.
+Para testar este módulo foram desenvolvidos diversos testes, de entre os quais uns para verificar qual seria o número ideal de funções de \textit{hashing} (\texttt{k}) a utilizar, outros para verificar o tamanho ideal do vetor de \textit{bytes} (\texttt{n}), outros ainda para verificar que a família de funções de dispersão escolhida tinha um desempenho adequado.
 
 No entanto, também foram realizados outros testes relativamente às funções de \textit{hashing} utilizadas pelo \textit{Bloom-filter}.
 
 \subsection{Distribuição de funções de \textit{hashing}}
 \label{subsec.hashdist}
 
-Este módulo (\textit{test\_hashFunction\_distribution.m}) tem como principalmente objetivo provar que as funções de \textit{hashing} têm uma distribuição uniforme para diversos valores de $k$ (neste caso, irá variar entre 1 e 10).
+Este módulo (\textit{test\_hashFunction\_distribution.m}) tem como principalmente objetivo provar que as funções de \textit{hashing} têm uma distribuição uniforme para diversos valores de \texttt{k} (neste caso, irá variar entre 1 e 10).
 
 Neste teste, foi gerado um conjunto de \textit{strings} aleatórias, usando a função \texttt{generateStrings}, que aceita como argumentos o tamanho do conjunto que devolverá e o tamanho máximo das \textit{strings} que irá gerar (caso o terceiro argumento seja $0$, terão tamanho fixo, caso contrário tamanho aleatório com máximo especificado pelo segundo argumentoo), e gerados diversos valores de \textit{hashing}, consoante os diversos elementos do conjunto e da \texttt{seed} correspondente.
 
-As distribuições para cada valor de $k$ deverão ser o mais uniformes possíveis, e os resultados estão de acordo, tal como evidênciado pelos histogramas da \autoref{fig:hashdist}.
+As distribuições para cada valor de \texttt{k} deverão ser o mais uniformes possíveis, e os resultados estão de acordo, tal como evidênciado pelos histogramas da \autoref{fig:hashdist}.
 
 \begin{figure}[ht]
 \center
@@ -166,9 +166,9 @@ As distribuições para cada valor de $k$ deverão ser o mais uniformes possíve
 
 Para que se possam ser utilizar as várias funções de \textit{hashing} eficientemente (neste caso isso significa sem aumento da taxa de falsos positivos), é necessário que estas sejam descorrelacionadas (i.e., que o coeficiente de correlação respetivo seja 0). No entanto, neste trabalho considerar-se-ão valores de coeficiente de correlação inferiores a 0.01 como admissíveis (é muito difícil que estes valores sejam iguais a zero, e portanto aceita-se esta ligeira variação).
 
-Este teste encontra-se no ficheiro \textit{test\_hashFunction\_correlation.m} e, tal como noutros testes, gerar-se-á um \textit{set} de \textit{strings} aleatórias e os respetivos valores de \textit{hashing} para diferentes valores de $k$, a variar entre 1 e 100. No teste, foi criada uma matriz de dimensões $k$ por \texttt{numTests} para guardar as \textit{hashes} para os diferentes pares \textit{k - string}. De seguida, calculam-se os coeficientes de correlação das funções duas a duas utilizando os resultados nas linhas da matriz anterior e a função \texttt{corrcoef} (calcula o coeficiente de correlação entre dois conjuntos, neste caso, duas linhas representativas de dois valores de $k$ distintos).
+Este teste encontra-se no ficheiro \textit{test\_hashFunction\_correlation.m} e, tal como noutros testes, gerar-se-á um \textit{set} de \textit{strings} aleatórias e os respetivos valores de \textit{hashing} para diferentes valores de \texttt{k}, a variar entre 1 e 100. No teste, foi criada uma matriz de dimensões \texttt{k} por \texttt{numTests} para guardar as \textit{hashes} para os diferentes pares \textit{k - string}. De seguida, calculam-se os coeficientes de correlação das funções duas a duas utilizando os resultados nas linhas da matriz anterior e a função \texttt{corrcoef} (calcula o coeficiente de correlação entre dois conjuntos, neste caso, duas linhas representativas de dois valores de \texttt{k} distintos).
 
-Por fim, é gerado um gráfico recorrendo à função \texttt{surf} que premite ilustrar os valores de correlação resultantes. Verifica-se que para diferentes valroes de $k$ num par (i.e., comparando $k$s diferentes) os valores se situam geralmente bastante abaixo do erro assumido, havendo alguns picos onde efetivamente o coeficiente de correlação se aproxima deste erro. Conluí-se assim que as funções escolhidas são ``suficientemente'' descorrelacionadas, tal como se pretendia.
+Por fim, é gerado um gráfico recorrendo à função \texttt{surf} que premite ilustrar os valores de correlação resultantes. Verifica-se que para diferentes valroes de \texttt{k} num par (i.e., comparando \texttt{k}s diferentes) os valores se situam geralmente bastante abaixo do erro assumido, havendo alguns picos onde efetivamente o coeficiente de correlação se aproxima deste erro. Conluí-se assim que as funções escolhidas são ``suficientemente'' descorrelacionadas, tal como se pretendia.
 
 \begin{figure}[ht]
 \center
@@ -182,11 +182,11 @@ Por fim, é gerado um gráfico recorrendo à função \texttt{surf} que premite 
 
 Para além do teste de correlação, foi também efetuado um teste de independência das funções de \textit{hashing} (\textit{test\_hashFunction\_independence.m}), adaptado de uma implementação disponibilizada pelo professor António Teixeira. Visto que independência implica descorrelação, este teste pode ser visto como uma versão mais forte do teste anterior. Analogamente a esse teste, estudou-se a independência das diferentes funções de \textit{hashing} duas a duas.
 
-Primeiramente é criado um \textit{set} de cem mil \textit{strings} aleatórias. De seguida constrói-se uma matriz $n$ (número de \textit{strings} geradas) por $k$ (número de funções de \textit{hashing} da família \textit{FarmHash} que se pretende aplicar, neste trabalho $k = 10$),  onde cada elemento da matriz simboliza o \textit{hash code} dum par (\textit{string}, $k$). Seguidamente, é gerado um vetor de 10 elementos linearmente espaçados (\texttt{x}) entre 0 e \texttt{N} (valor ao qual são limitados os \textit{hash codes}), e, para cada par de colunas, é criada uma matriz (\texttt{pmf}) de dimensão \verb|length(x) - 1| por \verb|length(x) - 1|. Guarda-se então em cada elemento da matriz o número de elementos das colunas de \textit{hash codes} que se situam num mesmo intervalo do vetor \texttt{x} já criado.
+Primeiramente é criado um \textit{set} de cem mil \textit{strings} aleatórias. De seguida constrói-se uma matriz \texttt{n} (número de \textit{strings} geradas) por \texttt{k} (número de funções de \textit{hashing} da família \textit{FarmHash} que se pretende aplicar, neste trabalho $k = 10$),  onde cada elemento da matriz simboliza o \textit{hash code} dum par (\textit{string}, \texttt{k}). Seguidamente, é gerado um vetor de 10 elementos linearmente espaçados (\texttt{x}) entre 0 e \texttt{N} (valor ao qual são limitados os \textit{hash codes}), e, para cada par de colunas, é criada uma matriz (\texttt{pmf}) de dimensão \verb|length(x) - 1| por \verb|length(x) - 1|. Guarda-se então em cada elemento da matriz o número de elementos das colunas de \textit{hash codes} que se situam num mesmo intervalo do vetor \texttt{x} já criado.
 
 Por fim, é calculada a matriz de probabilidade conjunta de duas colunas (\textit{pmf - probability mass function}) dividindo cada elemento da matriz \textit{pmf} anterior pelo número de \textit{strings} que tinham sido criadas. A partir desta, são calculados os vetores de probabilidades individuais correspondentes às linhas e colunas da matriz de probabilidades conjuntas. Finalmente, é calculado o resultado da multiplicação destes dois últimos vetores e verifica-se qual a diferença entre esses valores e os registados na matriz \textit{pmf} (dois acontecimentos $A$ e $B$ são independentes se $P(A\&B) = P(A) * P(B)$).
 
-Como os valores da variação dos resultados são mínimos (como se observa na \autoref{fig:hashindep}, onde todos os valores se encontram na casa dos $10^-4$), podemos considerar que a família de funções é independente dois a dois (pelo menos até ao valor de $k$ considerado), o que permite a concluir que estas funções são descorrelacionadas, tal como verificado anteriormente.
+Como os valores da variação dos resultados são mínimos (como se observa na \autoref{fig:hashindep}, onde todos os valores se encontram na casa dos $10^-4$), podemos considerar que a família de funções é independente dois a dois (pelo menos até ao valor de \texttt{k} considerado), o que permite a concluir que estas funções são descorrelacionadas, tal como verificado anteriormente.
 
 \begin{figure}[ht]
 \center
@@ -198,19 +198,19 @@ Como os valores da variação dos resultados são mínimos (como se observa na \
 \subsection{Número ideal de funções de \textit{hashing}}
 \label{subsec.optimalk}
 
-O programa de teste para o valor de $k$ ideal encontra-se com o nome \textit{test\_optimalK.m}.
+O programa de teste para o valor de \texttt{k} ideal encontra-se com o nome \textit{test\_optimalK.m}.
 
 Começa-se por se criar uma instância da classe de \textit{Bloom-filter} (módulo anteriormente desenvolvido), com o campo \texttt{debug} inicializado a 1, para que se possam utilizar as funções de atribuição de valores. Geram-se então dois conjuntos (um dos quais será adicionado ao filtro, outro não) distintos de cem mil (valor que pode ser alterado) \textit{strings} cada um. \textit{strings} repetidas são removidas para que se obtenham verdadeiros \textit{sets}, e portanto o tamanho dos dois conjuntos poderá (e deverá) ser sempre ligeiramente inferior ao definido inicialmente. De seguida, define-se o tamanho do vetor de \textit{bytes} do filtro como oito vezes o tamanho do conjunto de \textit{strings} gerado que se pretende adicionar.
 
-Por fim, itera-se sobre um vetor de $k$ que se definira anteriormente (neste caso, é um vetor com valores de 1 a 15, incrementado unidade a unidade) e, para cada ciclo, define-se o $k$ respetivo no objeto \textit{Bloom-filter} que está a ser utilizado. Adicionam-se então os elementos do vetor de \textit{strings} incialmente gerado e verifica-se se algum dos elementos do outro conjunto de \textit{strings} (não adicionadas) pertence ou não ao filtro. Caso pertença, é incrementado um contador, para, no final do ciclo, possa ser calculada a probabilidade de falsos positivos.
+Por fim, itera-se sobre um vetor de \texttt{k} que se definira anteriormente (neste caso, é um vetor com valores de 1 a 15, incrementado unidade a unidade) e, para cada ciclo, define-se o \texttt{k} respetivo no objeto \textit{Bloom-filter} que está a ser utilizado. Adicionam-se então os elementos do vetor de \textit{strings} incialmente gerado e verifica-se se algum dos elementos do outro conjunto de \textit{strings} (não adicionadas) pertence ou não ao filtro. Caso pertença, é incrementado um contador, para, no final do ciclo, possa ser calculada a probabilidade de falsos positivos.
 
 Utiliza-se também a fórmula
 
 $$ p =  \left(1 - e^{-\frac{km}{n}}\right)^k $$
 
-para determinar a probabilidade de falsos positivos (teórica) para os diferentes valores de $k$ considerados.
+para determinar a probabilidade de falsos positivos (teórica) para os diferentes valores de \texttt{k} considerados.
 
-Usando os valores do teste acima, verificamos (\autoref{fig:optimalk}) que as diferenças entre o valor teórico e o observado são mínimas, o que significa não só que é válido utilizar a expressão teórica para definir o valor de $k$ na instanciação de \textit{Bloom-filters} como também que as funções de \textit{hashing} usadas devolvem excelentes resultados (o que vem de acordo com os testes anteriores). Nas condições do iniciais deste teste vem que o valor de $k$ ideal obtido experimentalmente é 6, o que concorda com o valor que teria sido utilizado por definição aquando da instanciação do \textit{Bloom-filter}, através da dedução teórica.
+Usando os valores do teste acima, verificamos (\autoref{fig:optimalk}) que as diferenças entre o valor teórico e o observado são mínimas, o que significa não só que é válido utilizar a expressão teórica para definir o valor de \texttt{k} na instanciação de \textit{Bloom-filters} como também que as funções de \textit{hashing} usadas devolvem excelentes resultados (o que vem de acordo com os testes anteriores). Nas condições do iniciais deste teste vem que o valor de \texttt{k} ideal obtido experimentalmente é 6, o que concorda com o valor que teria sido utilizado por definição aquando da instanciação do \textit{Bloom-filter}, através da dedução teórica.
 
 \begin{figure}[ht]
 \center
@@ -452,6 +452,7 @@ Neste teste conseguiu-se filtrar as mensagens sem interesse, ao mesmo tempo que 
 
 \maketitle
 \nocite{*}
+
 \printbibliography[title={Referências}]
 
 \end{document}
