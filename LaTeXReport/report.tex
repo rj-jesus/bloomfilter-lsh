@@ -432,7 +432,29 @@ Por outro lado, a função \texttt{test\_generic} testa o filtro de \textit{spam
 
 \section{Testes}
 
-Os testes levados a cabo nesta fase foram os menos claros de todo o projeto, dada a falta de dados para testar eficientemente o programa...
+Os testes levados a cabo nesta fase foram os menos claros de todo o projeto, dada a falta de dados para testar eficientemente o programa.
+
+Para este teste foi utilizado o \textit{dataset} do grupo \textit{Enron}, que continha cerca de 17 mil \textit{emails} de \textit{spam} e de 16 mil \textit{non-spam} (\textit{ham}). Antes de se executar o teste, deve-se correr o programa de aprendizagem da aplicação para este \textit{dataset} (\textit{enron\_training.m}). 
+
+O teste em si encontra-se no ficheiro \textit{test\_enron.m} e, consoante os resultados obtidos da aprendizagem, chama a função \texttt{test\_generic} que devolverá as mensagens consideradas como \textit{spam} e \textit e o número de \textit{emails} analisados. Os resultados são os da \autoref{fig:enronspam} e da \autoref{fig:enronnonspam}.
+
+\begin{figure}[ht]
+\center
+\fbox{\includegraphics[height=7cm]{img/test_enron_spam}}
+\caption{Resultados do teste ao \textit{dataset} do grupo \textit{Enron}, fornecendo apenas mensagens de \textit{spam}}
+\label{fig:enronspam}
+\end{figure}
+
+Os resultados da análise a \textit{emails} com \textit{spam} resultou numa percentagem de deteção de ``lixo eletrónico'' de cerca de 77\%, o que se pode explicar por se ter tido de separar o \textit{dataset} em dois conjuntos (um para aprendizagem e outro para testes); isto leva a que a base de aprendizagem não seja tão grande e que alguns dos \textit{emails} com conteúdo de \textit{spam} não sejam detetados.
+
+\begin{figure}[ht]
+\center
+\fbox{\includegraphics[height=7cm]{img/test_enron_no_spam}}
+\caption{Resultados do teste ao \textit{dataset} do grupo \textit{Enron}, fornecendo apenas mensagens de \textit{non-spam}}
+\label{fig:enronnonspam}
+\end{figure}
+
+Os resultados da filtragem de \textit{emails} \textit{ham} resultaram numa deteção de 0.2\% de \textit{spam}. No entanto, como se verifica, em apenas uma das mensagens o programa conseguiu gerar \textit{shingles} (depois da analisada esta mensagem em concreto, concluiu-se que foi considerada \textit{spam} pois os \textit{shingles} formados eram semelhantes a outros de mensagens consideradas \textit{spam}). As restantes foram consideradas ``lixo'' pois não foi possível gerar \textit{shingles} das mesmas, provavelmente, porque se tratavam de \textit{emails} com agradecimentos ou pequenas expressões (por exemplo, ``Ok'', ``Thank you'', ``Done''). 
 
 \section{Programa \textit{demo}}
 
@@ -451,6 +473,12 @@ Neste teste conseguiu-se filtrar as mensagens sem interesse, ao mesmo tempo que 
 
 \chapter{Conclusões}
 \label{chap.conclusões}
+
+Quando se pretende confirmar a existência de um elemento num conjunto muito grande e se admite um pequeno erro (de falsos positivos), um \textit{Bloom-filter} poderá ser uma solução bastante apropriada; por outro lado, \textit{Locality-sensitive hashing} (aliado a técnicas de \textit{shingling} e \textit{minhashing}) é bastante eficiente em algoritmos de \textit{nearest-neighbour search} e \textit{clustering}.
+
+Todos os resultados de testes relativos ao módulo de \textit{Bloom-filter} e de \textit{Locality-sensitive hashing} foram bastante satisfatórios, resultando em desvios mínimos em relação aos valores teóricos.
+
+Juntando-se estes dois métodos, foi possível criar um filtro de \textit{spam} (ou de outros conteúdos, dependendo do \textit{traning set} que se apresente) em que se obteve resultados satisfatórios, tendo em conta os \textit{datasets} utilizados.
 
 \maketitle
 \nocite{*}
