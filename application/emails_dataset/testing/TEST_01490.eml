@@ -1,8 +1,0 @@
-FROM: pictux@csmining.org
-Hi all,
-it's possible to manage a SCSI tape library (IBM 3581) with ISCSI?
-I need to use that library attached to a server into another server...
-Thanks
-Regards
-M
-**

@@ -19,7 +19,7 @@ for i = 1:nfiles
     text = lower(deblank(char(fread(email)')));
     fclose(email);
 
-    if Bf.count(header) > 2             % This is spam. Filter it
+    if Bf.count(header) > 1             % This is spam. Filter it
         fprintf('%s is a spam header. Filtered.\n', header);
         Spam(k, :) = {files(i).name, 0};
         k = k + 1;

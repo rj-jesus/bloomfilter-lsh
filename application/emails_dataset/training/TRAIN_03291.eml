@@ -1,9 +1,0 @@
-FROM: dejavo@punkass.com
-When I try to use apt-get upgrade
-it wants to install libusb while I got it
-(same version)
-and all collapse because of this.
-Roi
-_______________________________________________
-RPM-List mailing list 
-http://lists.freshrpms.net/mailman/listinfo/rpm-list

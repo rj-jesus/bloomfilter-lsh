@@ -1,8 +1,0 @@
-FROM: n.douma@nekoconeko.nl
-On Wed, Apr 21, 2010 at 06:04:01PM +0000, Camale=F3n wrote:
-> I find it a bit more difficult to manage (if you change the kernel, you=
-=20
-> need to recompile the driver again).
-IMHO that only depends on what Debian distro you use :P. I can live with lo=
-gging in to the basic shell, running the .sh again and restarting kdm/gdm o=
-nce every two or three months.

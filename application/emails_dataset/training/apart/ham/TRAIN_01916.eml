@@ -1,4 +1,0 @@
-FROM: linuxmail@4lin.net
-hi,
-nscd was the problem. He cached the local passwd ...
-cu denny

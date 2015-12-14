@@ -1,8 +1,0 @@
-FROM: yyyy@spamassassin.taint.org (Justin Mason)
-Theo Van Dinter said:
-> Well, I have my users bounce me their spams (which means there's 2
-> users who do it), and I wrote this procmail bit just for the reason
-> you mentioned:
-urgh.  I guess fixing the spamtraps to strip the headers before
-writing them is the best thing to do...
---j.

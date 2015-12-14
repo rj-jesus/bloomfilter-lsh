@@ -1,8 +1,0 @@
-FROM: mark@talios.com
-On Mon, 2002-07-22 at 06:50, che wrote:
-> thats the correct lines to be added to sources.list for the repository
-> i just did a apt-get install gnome-session its still progressing :)
-Excellent - might give it a bash tonight :)
-_______________________________________________
-RPM-List mailing list 
-http://lists.freshrpms.net/mailman/listinfo/rpm-list

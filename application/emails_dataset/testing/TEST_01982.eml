@@ -1,8 +1,0 @@
-FROM: dejavo@punkass.com
-Same as in mplayer src package
-the --with and --without not working correctly
-I do --without arts and it still want to install with arts
-Roi
-_______________________________________________
-RPM-List mailing list 
-http://lists.freshrpms.net/mailman/listinfo/rpm-list

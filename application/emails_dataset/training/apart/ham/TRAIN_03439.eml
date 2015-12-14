@@ -1,3 +1,0 @@
-FROM: root@dogma.slashnull.org (Cron Daemon)
-/etc/rc.d/init.d/httpd: kill: (21982) - No such pid
-/etc/rc.d/init.d/httpd: kill: (21981) - No such pid
