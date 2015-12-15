@@ -66,24 +66,24 @@ Na área da informática, é, por exemplo, muitas vezes necessário saber se alg
 
 \textit{Bloom-filters} usam geralmente várias funções de dispersão (ou \textit{hashing}) para determinar a pertença de um dado elemento num conjunto (\textit{set}). São muito utilizados em grandes conjuntos de dados e em diversas aplicações, como corretores ortográficos de computadores, \textit{smartphones}, etc., análise textual, entre outras. Contudo, e sendo uma estrutura probabilística, acarreta um erro associado.
 
-Outra técnica bastante relevante em situações onde é ``impossível'' guardar e trabalhar enormes conjuntos de dados é o de \textit{MinHash}. Muitas vezes a par com este aparece também o método de \textit{Locality-sensitive hashing (LSH)}, com aplicações usuais em \textit{clustering} de informação e procura de vizinhos próximos a um dado elemento (\textit{nearest neighbor search}).
+Outra técnica bastante relevante em situações onde é ``impossível'' guardar e trabalhar enormes conjuntos de dados é o de \textit{MinHash}. Muitas vezes, a par com esta, aparece também o método de \textit{Locality-sensitive hashing (LSH)}, com aplicações usuais em \textit{clustering} de informação e procura de vizinhos próximos a um dado elemento (\textit{nearest neighbor search}).
 
-Neste trabalho, foi desenvolvido em MATLAB um \textit{Bloom-filter}, um \textit{MEX file} fazendo de interface para uma função de \textit{hashing} escrita em C++ e ainda um módulo com capacidade de \textit{nearest neighbor search} utilizando \textit{MinHash} para gerar uma representação de diferentes documentos a serem tratados.
+Neste trabalho, foi desenvolvido em MATLAB um \textit{Bloom-filter}, um \textit{MEX file} fazendo de interface para uma família de funções de \textit{hashing} escritas em C++ e ainda um módulo com capacidade de \textit{nearest neighbor search} utilizando \textit{MinHash} para gerar uma representação de diferentes documentos a serem tratados.
 
-A filtragem de \textit{emails} é largamente usada por diversas empresas nos dias de hoje, tanto para o separar por temas, mas também para filtrar \textit{spam}. Usando as técnicas acima, torna-se possível a implementação de um modelo probabilístico de categorização de correio eletrónico.
+Nesse contexto, considere-se a filtragem de \textit{emails}. É largamente usada por diversas empresas nos dias de hoje, tanto para o separar por temas, mas também para filtrar \textit{spam}. Usando as técnicas acima, torna-se possível a implementação de um modelo probabilístico de categorização de correio eletrónico.
 
 \chapter{Bloom-filter}
 \label{chap.bloom}
 
-\textit{Bloom-filters} são estruturas de dados probabilísticas que utilizam uma ou várias funções de \textit{hashing} para determinar a pertença de um dado elemento num \textit{set}. Internamente, habitualmente utilizam um vector de \textit{bits}. Neste trabalho utilizou-se um vetor de \textit{bytes} visto que a linguagem em que o módulo foi escrito (MATLAB) não suporta o tipo \textit{bit}. Para se tirar partido do espaço extra que se utilizou, o módulo foi implementado como um \textit{Counting filter}, onde portanto se mantém registo do número de elementos semelhantes que deverão ter sido adicionados ao filtro.
+\textit{Bloom-filters} são estruturas de dados probabilísticas que utilizam uma ou várias funções de \textit{hashing} para determinar a pertença de um dado elemento num \textit{set}. Internamente, habitualmente utilizam um vetor de \textit{bits}. Neste trabalho, utilizou-se um vetor de \textit{bytes} visto que a linguagem em que o módulo foi escrito (MATLAB) não suporta o tipo \textit{bit}. Para se tirar partido do espaço extra que se utilizou, o módulo foi implementado como um \textit{Counting filter}, onde, portanto, se mantém registo do número de elementos iguais que deverão ter sido adicionados ao filtro.
 
-Assumindo funções de \textit{hashing} eficiêntes, mesmo que se opere sobre um conjunto com milhões ou milhares de milhões de elementos, determinar a presença ou não presença nesse conjunto será sempre um processo significativamente mais rápido que caso se iterasse sobre todo o \textit{set}, elemento a elemento, à procura daquele em questão. Este processo depende do número e da qualidade das funções de \textit{hashing} utilizadas, bem como do tamanho do vetor interno..
+Assumindo funções de \textit{hashing} eficientes, mesmo que se opere sobre um conjunto com milhões ou milhares de milhões de elementos, determinar a presença ou não presença nesse conjunto será sempre um processo significativamente mais rápido do que caso se iterasse sobre todo o \textit{set}, elemento a elemento, à procura daquele em questão. Este processo depende do número e da qualidade das funções de \textit{hashing} utilizadas, bem como do tamanho do vetor interno.
 
-Como estrutura probabilística que é tem um erro associado, neste caso manifestando-se apenas em falsos positivos, i.e., se um \textit{Bloom-filter} indica que um elemento pertence a um conjunto, então \underline{provavelmente} ele pertence mesmo. Por outro lado, se um \textit{Bloom-filter} indica que um elemento não pertence a um conjunto, então \underline{definitivamente} ele não pertence. Tendo isto em mente, habitualmente os \textit{Bloom-filters} são dimensionados para um erro máximo admissível e para um determinado número de elementos que se tencione adicionar ao filtro.
+Como estrutura probabilística que é, tem um erro associado, neste caso manifestando-se apenas em falsos positivos, i.e., se um \textit{Bloom-filter} indica que um elemento pertence a um conjunto, então \underline{provavelmente} ele pertence mesmo. Por outro lado, se um \textit{Bloom-filter} indica que um elemento não pertence a um conjunto, então \underline{definitivamente} não pertence. Tendo isto em mente, habitualmente os \textit{Bloom-filters} são dimensionados para um erro máximo admissível e para um determinado número de elementos que se tencione adicionar ao filtro.
 
-Este erro depende do número de \textit{buckets} no vector interno e do número de funções de \textit{hashing} a utilizar. Estas funções devem ser descorrelacionadas entre si e em número variável (para cada conjunto de parâmetros para os quais o filtro é dimensionado). Uma solução para o número variável de funções que se deve considerar é, em vez de se utilizarem \texttt{k} funções diferentes, utilizar-se uma família de funções que garanta \texttt{k} funções descorrelacionadas.
+Este erro depende do número de \textit{buckets} no vetor interno e do número de funções de \textit{hashing} a utilizar. Estas funções devem ser descorrelacionadas entre si e em número variável (para cada conjunto de parâmetros para os quais o filtro é dimensionado). Uma solução para o número variável de funções que se deve considerar é, em vez de se utilizarem \texttt{k} funções diferentes, utilizar-se uma família de funções que garanta \texttt{k} funções descorrelacionadas.
 
-Neste trabalho utilizou-se a família de funções de dispersão denominada \textit{FarmHash}, desenvolvida pela Google, em que um dos argumentos, a \textit{seed}, permite especificar cada uma das funções da família. A sua implementação é disponibilizada em C++ pela empresa que a desenvolveu, e portanto de forma a poder ser utilizada ao longo do projeto foi escrito um ficheiro \textit{MEX} que permite a interface entre código MATLAB e a função. Caso seja necessário, o ficheiro pode ser compilado executando (no directório onde os ficheiros \textit{.h} e \textit{.cpp} relativos à função se encontrem) \verb|mex FarmHash.cpp|.
+Neste trabalho, utilizou-se a família de funções de dispersão denominada \textit{FarmHash}, desenvolvida pela Google, em que um dos argumentos, a \textit{seed}, permite especificar cada uma das funções da família. A sua implementação é disponibilizada em C++ pela empresa que a desenvolveu, e, portanto, de forma a poder ser utilizada ao longo do projeto, foi escrito um ficheiro \textit{MEX} que permite a interface entre código MATLAB e a função. Caso seja necessário, o ficheiro pode ser compilado executando (no directório onde os ficheiros \textit{.h} e \textit{.cpp} relativos à função se encontrem) \verb|mex FarmHash.cpp|.
 
 \section{Atributos}
 \label{sec.attributes}
@@ -94,13 +94,13 @@ Na implementação deste trabalho (ficheiro \textit{BloomFilter.m}) desenvolveu-
 \item[k]
 Número de funções de \textit{hashing} a utilizar.
 \item[byteArray]
-Estrutura de dados interna do filtro, vector de \textit{bytes}.
+Estrutura de dados interna do filtro, vetor de \textit{bytes}.
 \item[arraySize]
 Tamanho do vetor de \textit{bytes}.
 \item[amountAdded]
 Número total de elementos adicionados ao \textit{array}.
 \item[expectedMaxSize]
-Tamanho do conjunto que se pretende adicionar do vetor.
+Tamanho do conjunto que se pretende adicionar ao vecvetortor.
 \end{description}
 
 \section{Métodos}
@@ -118,12 +118,12 @@ $$ a = \left(1 - \frac{1}{n}\right)^m $$
 
 para determinar o número $k$ ótimo de funções de \textit{hashing} que devem ser utilizadas, deduz-se
 
-$$ \ln p = k * \ln \left(1 - a^k\right) \\
-\Leftrightarrow k =  \frac{n * \ln 2}{m}$$
+$$ \ln p = k \times \ln \left(1 - a^k\right) \\
+\Leftrightarrow k =  \frac{n \times \ln 2}{m}$$
 
 A partir das fórmulas acima encontradas, conclui-se também
 
-$$ n = \frac{m * \ln \left(\frac{1}{p}\right)}{\left(\ln 2\right) ^ 2} $$
+$$ n = \frac{m \times \ln \left(\frac{1}{p}\right)}{\left(\ln 2\right) ^ 2} $$
 
 Para além do construtor, existem também métodos para adicionar e verificar a existência de elementos no filtro, entre outros:
 
@@ -135,7 +135,7 @@ Verifica se o elemento passado como argumento existe no filtro (poderá haver oc
 \item[count]
 Devolve o número de vezes que um dado elemento foi adicionado ao vetor (apenas uma estimativa).
 \item[Setters]
-Coleção de funções utilizadas para modificar os atributos do \textit{Bloom-filter}, caso o campo \texttt{debug} (argumento passado ao construtor) esteja com o valor 1.
+Coleção de funções utilizadas para modificar os atributos do \textit{Bloom-filter} (utilizadas para testes ao módulo), caso o campo \texttt{debug} (argumento passado ao construtor) esteja com o valor 1.
 \end{description}
 
 Existem ainda outros métodos que não foram aqui descriminados visto ou serem privados (e portanto não relevantes à interface do módulo) ou não terem sido testados adequadamente por não terem sido necessários ao longo do trabalho.
@@ -150,15 +150,15 @@ No entanto, também foram realizados outros testes relativamente às funções d
 \subsection{Distribuição de funções de \textit{hashing}}
 \label{subsec.hashdist}
 
-Este módulo (\textit{test\_hashFunction\_distribution.m}) tem como principalmente objetivo provar que as funções de \textit{hashing} têm uma distribuição uniforme para diversos valores de \texttt{k} (neste caso, irá variar entre 1 e 10).
+Este módulo (\textit{test\_hashFunction\_distribution.m}) tem como principal objetivo provar que as funções de \textit{hashing} têm uma distribuição uniforme para diversos valores de \texttt{k} (neste caso, irá variar entre 1 e 10).
 
-Neste teste, foi gerado um conjunto de \textit{strings} aleatórias, usando a função \texttt{generateStrings}, que aceita como argumentos o tamanho do conjunto que devolverá e o tamanho máximo das \textit{strings} que irá gerar (caso o terceiro argumento seja $0$, terão tamanho fixo, caso contrário tamanho aleatório com máximo especificado pelo segundo argumentoo), e gerados diversos valores de \textit{hashing}, consoante os diversos elementos do conjunto e da \texttt{seed} correspondente.
+Neste teste, foi gerado um conjunto de \textit{strings} aleatórias, usando a função \texttt{generateStrings}, que aceita como argumentos o tamanho do conjunto que devolverá e o tamanho máximo das \textit{strings} que irá gerar (caso o terceiro argumento seja $0$, terão tamanho fixo, caso contrário tamanho aleatório com máximo especificado pelo segundo argumento), e gerados diversos valores de \textit{hashing}, consoante os diversos elementos do conjunto e da \texttt{seed} correspondente.
 
 As distribuições para cada valor de \texttt{k} deverão ser o mais uniformes possíveis, e os resultados estão de acordo, tal como evidênciado pelos histogramas da \autoref{fig:hashdist}.
 
 \begin{figure}[ht]
 \center
-\fbox{\includegraphics[height=5cm]{img/test_HashFunction_distribution}}
+\fbox{\includegraphics[height=6cm]{img/test_HashFunction_distribution}}
 \caption{Resultados das distribuições das \texttt{k} funções de \textit{hashing}}
 \label{fig:hashdist}
 \end{figure}
@@ -166,11 +166,11 @@ As distribuições para cada valor de \texttt{k} deverão ser o mais uniformes p
 \subsection{Correlação das funções de \textit{hashing}}
 \label{subsec.hashcorr}
 
-Para que se possam ser utilizar as várias funções de \textit{hashing} eficientemente (neste caso isso significa sem aumento da taxa de falsos positivos), é necessário que estas sejam descorrelacionadas (i.e., que o coeficiente de correlação respetivo seja 0). No entanto, neste trabalho considerar-se-ão valores de coeficiente de correlação inferiores a 0.01 como admissíveis (é muito difícil que estes valores sejam iguais a zero, e portanto aceita-se esta ligeira variação).
+Para que se possam utilizar as várias funções de \textit{hashing} eficientemente (neste caso, isso significa sem aumento da taxa de falsos positivos), é necessário que estas sejam descorrelacionadas (i.e., que o coeficiente de correlação respetivo seja 0). No entanto, neste trabalho considerar-se-ão valores de coeficiente de correlação inferiores a 0.01 como admissíveis (é muito difícil que estes valores sejam iguais a zero, e portanto aceita-se esta ligeira variação).
 
 Este teste encontra-se no ficheiro \textit{test\_hashFunction\_correlation.m} e, tal como noutros testes, gerar-se-á um \textit{set} de \textit{strings} aleatórias e os respetivos valores de \textit{hashing} para diferentes valores de \texttt{k}, a variar entre 1 e 100. No teste, foi criada uma matriz de dimensões \texttt{k} por \texttt{numTests} para guardar as \textit{hashes} para os diferentes pares \textit{k - string}. De seguida, calculam-se os coeficientes de correlação das funções duas a duas utilizando os resultados nas linhas da matriz anterior e a função \texttt{corrcoef} (calcula o coeficiente de correlação entre dois conjuntos, neste caso, duas linhas representativas de dois valores de \texttt{k} distintos).
 
-Por fim, é gerado um gráfico recorrendo à função \texttt{surf} que premite ilustrar os valores de correlação resultantes. Verifica-se que para diferentes valroes de \texttt{k} num par (i.e., comparando \texttt{k}s diferentes) os valores se situam geralmente bastante abaixo do erro assumido, havendo alguns picos onde efetivamente o coeficiente de correlação se aproxima deste erro. Conluí-se assim que as funções escolhidas são ``suficientemente'' descorrelacionadas, tal como se pretendia.
+Por fim, é gerado um gráfico recorrendo à função \texttt{surf} que permite ilustrar os valores de correlação resultantes. Verifica-se que para diferentes \texttt{k}s num par (i.e., comparando \texttt{k}s diferentes), os valores se situam geralmente bastante abaixo do erro assumido, havendo alguns picos onde efetivamente o coeficiente de correlação se aproxima deste erro. Conclui-se assim que as funções escolhidas são ``suficientemente'' descorrelacionadas, tal como se pretendia.
 
 \begin{figure}[ht]
 \center
@@ -184,11 +184,11 @@ Por fim, é gerado um gráfico recorrendo à função \texttt{surf} que premite 
 
 Para além do teste de correlação, foi também efetuado um teste de independência das funções de \textit{hashing} (\textit{test\_hashFunction\_independence.m}), adaptado de uma implementação disponibilizada pelo professor António Teixeira. Visto que independência implica descorrelação, este teste pode ser visto como uma versão mais forte do teste anterior. Analogamente a esse teste, estudou-se a independência das diferentes funções de \textit{hashing} duas a duas.
 
-Primeiramente é criado um \textit{set} de cem mil \textit{strings} aleatórias. De seguida constrói-se uma matriz \texttt{n} (número de \textit{strings} geradas) por \texttt{k} (número de funções de \textit{hashing} da família \textit{FarmHash} que se pretende aplicar, neste trabalho $k = 10$),  onde cada elemento da matriz simboliza o \textit{hash code} dum par (\textit{string}, \texttt{k}). Seguidamente, é gerado um vetor de 10 elementos linearmente espaçados (\texttt{x}) entre 0 e \texttt{N} (valor ao qual são limitados os \textit{hash codes}), e, para cada par de colunas, é criada uma matriz (\texttt{pmf}) de dimensão \verb|length(x) - 1| por \verb|length(x) - 1|. Guarda-se então em cada elemento da matriz o número de elementos das colunas de \textit{hash codes} que se situam num mesmo intervalo do vetor \texttt{x} já criado.
+Primeiramente é criado um \textit{set} de cem mil \textit{strings} aleatórias. De seguida constrói-se uma matriz \texttt{n} (número de \textit{strings} geradas) por \texttt{k} (número de funções de \textit{hashing} da família \textit{FarmHash} que se pretende aplicar, neste trabalho, $k = 10$),  onde cada elemento da matriz simboliza o \textit{hash code} dum par (\textit{string}, \texttt{k}). Seguidamente, é gerado um vetor de 10 elementos linearmente espaçados (\texttt{x}) entre 0 e \texttt{N} (valor ao qual são limitados os \textit{hash codes}), e, para cada par de colunas, é criada uma matriz (\texttt{pmf}) de dimensão \verb|length(x) - 1| por \verb|length(x) - 1|. Guarda-se então em cada elemento da matriz o número de elementos das colunas de \textit{hash codes} que se situam num mesmo intervalo do vetor \texttt{x} já criado.
 
-Por fim, é calculada a matriz de probabilidade conjunta de duas colunas (\textit{pmf - probability mass function}) dividindo cada elemento da matriz \textit{pmf} anterior pelo número de \textit{strings} que tinham sido criadas. A partir desta, são calculados os vetores de probabilidades individuais correspondentes às linhas e colunas da matriz de probabilidades conjuntas. Finalmente, é calculado o resultado da multiplicação destes dois últimos vetores e verifica-se qual a diferença entre esses valores e os registados na matriz \textit{pmf} (dois acontecimentos $A$ e $B$ são independentes se $P(A\&B) = P(A) * P(B)$).
+Por fim, é calculada a matriz de probabilidade conjunta de duas colunas (\textit{pmf - probability mass function}) dividindo cada elemento da matriz \textit{pmf} anterior pelo número de \textit{strings} que tinham sido criadas. A partir desta, são calculados os vetores de probabilidades individuais correspondentes às linhas e colunas da matriz de probabilidades conjuntas. Finalmente, é calculado o resultado da multiplicação destes dois últimos vetores e verifica-se qual a diferença entre esses valores e os registados na matriz \textit{pmf} (dois acontecimentos $A$ e $B$ são independentes se $P(A\&B) = P(A) \times P(B)$).
 
-Como os valores da variação dos resultados são mínimos (como se observa na \autoref{fig:hashindep}, onde todos os valores se encontram na casa dos $10^-4$), podemos considerar que a família de funções é independente dois a dois (pelo menos até ao valor de \texttt{k} considerado), o que permite a concluir que estas funções são descorrelacionadas, tal como verificado anteriormente.
+Como os valores da variação dos resultados são mínimos (como se observa na \autoref{fig:hashindep}, onde todos os valores se encontram na casa dos $10^{-4}$), podemos considerar que a família de funções é independente dois a dois (pelo menos até ao valor de \texttt{k} considerado), o que permite a concluir que estas funções são descorrelacionadas, tal como verificado anteriormente. Como trabalhar a dimensões superiores (3 a 3, 4 a 4, etc.) tornaria o processo mais complexo e demorado e, usualmente, a prova de independência é feita \textit{pairwise}, assume-se o resultado do teste como satisfatório.
 
 \begin{figure}[ht]
 \center
@@ -202,9 +202,9 @@ Como os valores da variação dos resultados são mínimos (como se observa na \
 
 O programa de teste para o valor de \texttt{k} ideal encontra-se com o nome \textit{test\_optimalK.m}.
 
-Começa-se por se criar uma instância da classe de \textit{Bloom-filter} (módulo anteriormente desenvolvido), com o campo \texttt{debug} inicializado a 1, para que se possam utilizar as funções de atribuição de valores. Geram-se então dois conjuntos (um dos quais será adicionado ao filtro, outro não) distintos de cem mil (valor que pode ser alterado) \textit{strings} cada um. \textit{strings} repetidas são removidas para que se obtenham verdadeiros \textit{sets}, e portanto o tamanho dos dois conjuntos poderá (e deverá) ser sempre ligeiramente inferior ao definido inicialmente. De seguida, define-se o tamanho do vetor de \textit{bytes} do filtro como oito vezes o tamanho do conjunto de \textit{strings} gerado que se pretende adicionar.
+Começa-se por se criar uma instância da classe de \textit{Bloom-filter} (módulo anteriormente desenvolvido), com o campo \texttt{debug} inicializado a 1, para que se possam utilizar as funções de atribuição de valores. Geram-se então dois conjuntos (um dos quais será adicionado ao filtro, outro não) distintos, com cem mil (valor que pode ser alterado) \textit{strings} cada um. \textit{Strings} repetidas são removidas para que se obtenham verdadeiros \textit{sets}, e portanto o tamanho dos dois conjuntos poderá (e deverá) ser sempre ligeiramente inferior ao definido inicialmente. De seguida, define-se o tamanho do vetor de \textit{bytes} do filtro como oito vezes o tamanho do conjunto de \textit{strings} gerado que se pretende adicionar.
 
-Por fim, itera-se sobre um vetor de \texttt{k} que se definira anteriormente (neste caso, é um vetor com valores de 1 a 15, incrementado unidade a unidade) e, para cada ciclo, define-se o \texttt{k} respetivo no objeto \textit{Bloom-filter} que está a ser utilizado. Adicionam-se então os elementos do vetor de \textit{strings} incialmente gerado e verifica-se se algum dos elementos do outro conjunto de \textit{strings} (não adicionadas) pertence ou não ao filtro. Caso pertença, é incrementado um contador, para, no final do ciclo, possa ser calculada a probabilidade de falsos positivos.
+Por fim, itera-se sobre um vetor de \texttt{k} que se definira anteriormente (neste caso, é um vetor com valores de 1 a 15, incrementado unidade a unidade) e, para cada ciclo, define-se o \texttt{k} respetivo no objeto \textit{Bloom-filter} que está a ser utilizado. Adicionam-se então os elementos do vetor de \textit{strings} incialmente gerado e verifica-se se algum dos elementos do outro conjunto de \textit{strings} (não adicionadas) pertence ou não ao filtro. Caso pertença, é incrementado um contador, para que, no final do ciclo, possa ser calculada a probabilidade de falsos positivos.
 
 Utiliza-se também a fórmula
 
@@ -212,7 +212,7 @@ $$ p =  \left(1 - e^{-\frac{km}{n}}\right)^k $$
 
 para determinar a probabilidade de falsos positivos (teórica) para os diferentes valores de \texttt{k} considerados.
 
-Usando os valores do teste acima, verificamos (\autoref{fig:optimalk}) que as diferenças entre o valor teórico e o observado são mínimas, o que significa não só que é válido utilizar a expressão teórica para definir o valor de \texttt{k} na instanciação de \textit{Bloom-filters} como também que as funções de \textit{hashing} usadas devolvem excelentes resultados (o que vem de acordo com os testes anteriores). Nas condições do iniciais deste teste vem que o valor de \texttt{k} ideal obtido experimentalmente é 6, o que concorda com o valor que teria sido utilizado por definição aquando da instanciação do \textit{Bloom-filter}, através da dedução teórica.
+Usando os valores do teste acima, verificamos (\autoref{fig:optimalk}) que as diferenças entre o valor teórico e o observado são mínimas, o que significa não só que é válido utilizar a expressão teórica para definir o valor de \texttt{k} na instanciação de \textit{Bloom-filters}, como também que as funções de \textit{hashing} usadas devolvem excelentes resultados (o que vem de acordo com os testes anteriores). Nas condições do iniciais deste teste vem que o valor de \texttt{k} ideal obtido experimentalmente é 6, o que concorda com o valor que teria sido utilizado por definição aquando da instanciação do \textit{Bloom-filter}, através da dedução teórica.
 
 \begin{figure}[ht]
 \center
@@ -226,11 +226,11 @@ Usando os valores do teste acima, verificamos (\autoref{fig:optimalk}) que as di
 
 O módulo para o teste do valor ideal do tamanho \texttt{n} do vetor encontra-se no ficheiro \textit{test\_optimalN.m}.
 
-Tal como no teste do \autoref{subsec.optimalk}, também são criados dois conjuntos de \textit{strings} aleatórias com o mesmo propósito, um para ser adicionado ao filtro e o outro não. É também criado um vetor com diferentes valores de \texttt{n}, que vão desde o tamanho do conjunto de \textit{strings} a adicionar até 10 vezes esse valor, com um incremento de metade do tamanho do conjunto entre cada.
+Tal como no teste da \autoref{subsec.optimalk}, também são criados dois conjuntos de \textit{strings} aleatórias com o mesmo propósito, um para ser adicionado ao filtro e o outro não. É também criado um vetor com diferentes valores de \texttt{n}, que vão desde o tamanho do conjunto de \textit{strings} a adicionar até 10 vezes esse valor, com um incremento de metade do tamanho do conjunto entre cada.
 
-De seguida, itera-se sobre os valores deste último vetor, criando-se uma instância de um \textit{Bloom-filter} com os valores de \texttt{n} (atributo \texttt{arraySize} do módulo) e \texttt{k} (que depende do tamanho do vetor) a cada passagem. Adiciona-se um dos conjuntos de \textit{strings}, verifica-se a existência dos elementos do outro que não foi adicionado e, por fim, calcula-se a probabilidade de falsos positivos, de maneira semelhante ao que foi feito no teste anterior. Vai sendo também calculado para cada valor de \texttt{n} o valor teórico correspondente da probabilidade de falsos positivos, e guardando estes valores num segundo vetor.
+De seguida, itera-se sobre os valores deste último vetor, criando-se uma instância de um \textit{Bloom-filter} com os valores de \texttt{n} (atributo \texttt{arraySize} do módulo) e \texttt{k} (que depende do tamanho do vetor) a cada passagem. Adiciona-se um dos conjuntos de \textit{strings}, verifica-se a existência dos elementos do outro que não foi adicionado e, por fim, calcula-se a probabilidade de falsos positivos, de maneira semelhante ao que foi feito no teste anterior. Vai sendo também calculado, para cada valor de \texttt{n}, o valor teórico correspondente da probabilidade de falsos positivos e guardando estes valores num segundo vetor.
 
-Como se verifica no gráfico da \autoref{fig:optimalnimg}, à medida que o tamanho do \textit{array} aumenta, a probabilidade de falsos positivos diminui, i.e., são inversamente proporcionais (o que está de acordo com o esperado). No entanto o mais importante com este teste é verificar que os valores experimentais são semelhantes aos teóricos, já que o importante será para um dado valor de erro admissível, dimensionar o \textit{array} interno eficientemente (pois caso contrário ou se vai ocupar memória desnecessária, ou o número de falsos positivos real será acima do admissível). Como os valores obtidos (experimentais e teóricos) são bastante semelhantes, conlui-se que a dedução teórica que é utilizada no construtor do filtro permite um bom dimensionamento da estrutura de dados interna deste.
+Como se verifica no gráfico da \autoref{fig:optimalnimg}, à medida que o tamanho do \textit{array} aumenta, a probabilidade de falsos positivos diminui, i.e., são inversamente proporcionais (o que está de acordo com o esperado). No entanto, o mais importante com este teste é verificar que os valores experimentais são semelhantes aos teóricos, já que o importante será para um dado valor de erro admissível, dimensionar o \textit{array} interno eficientemente (pois caso contrário ou se vai ocupar memória desnecessária, ou o número de falsos positivos real será acima do admissível). Como os valores obtidos (experimentais e teóricos) são bastante semelhantes, conclui-se que a dedução teórica que é utilizada no construtor do filtro permite um bom dimensionamento da estrutura de dados interna deste.
 
 \begin{figure}[ht]
 \center
@@ -240,6 +240,7 @@ Como se verifica no gráfico da \autoref{fig:optimalnimg}, à medida que o taman
 \end{figure}
 
 Os valores ideias são os presentes na \autoref{fig:optimalntext}.
+\pagebreak
 
 \begin{figure}[ht]
 \center
@@ -251,9 +252,9 @@ Os valores ideias são os presentes na \autoref{fig:optimalntext}.
 \subsection{Testes práticos do \textit{Bloom-filter}}
 \label{subsec.testebloom}
 
-Foram desenvolvidos dois módulos semelhantes para testeS mais direcionadoS ao uso real de um \textit{Bloom-filter}. Estão em dois ficheiros distintos, \textit{test\_big\_BloomFilter.m} e \textit{test\_small\_BloomFilter.m}.
+Foram desenvolvidos dois módulos semelhantes para testes mais direcionados ao uso real de um \textit{Bloom-filter}. Estão em dois ficheiros distintos, \textit{test\_big\_BloomFilter.m} e \textit{test\_small\_BloomFilter.m}.
 
-O primeiro segue o modelo dos testes anteriores, em que se gera dois \textit{sets} de um certo tamanho (neste caso, cem mil elementos) de \textit{strings} aleatórias, cria-se uma instância de um \textit{Bloom-filter} com uma probabilidade de falsos positivos de 0.0001\%, adiciona-se um dos conjuntos ao filtro e verifica-se a ocurrência de falsos positivos com o outro. Por fim, compara-se o resultado observado da probabilidade de falsos positivos com a que se definiu aquando a criação do filtro. O objetivo é que os resultados sejam o mais próximos possíveis, o que se verificou em ambos os testes.
+O primeiro segue o modelo dos testes anteriores, em que se gera dois \textit{sets} de um certo tamanho (neste caso, cem mil elementos) de \textit{strings} aleatórias, cria-se uma instância de um \textit{Bloom-filter} com uma probabilidade de falsos positivos de 0.0001\%, adiciona-se um dos conjuntos ao filtro e verifica-se a ocorrência de falsos positivos com o outro. Por fim, compara-se o resultado observado da probabilidade de falsos positivos com a que se definiu aquando a criação do filtro. O objetivo é que os resultados sejam o mais próximos possíveis, o que se verificou em ambos os testes.
 
 No segundo teste (\textit{small}), contrariamente ao primeiro em que se geram os conjuntos, definem-se conjuntos muito pequenos inicialmente e, depois, executa-se o mesmo processo que anteriormente.
 
@@ -267,7 +268,7 @@ No segundo teste (\textit{small}), contrariamente ao primeiro em que se geram os
 \chapter{Locality-Sensitive Hashing}
 \label{chap.lsh}
 
-\textit{Locality-Sensitive Hashing (LSH)} é particularmente útil quando se têm por exemplo grandes conjuntos de documentos e se pretende encontrar aqueles semelhantes entre si, como, por exemplo, encontrar notícias semelhantes (em conteúdo) em diversos \textit{websites}. Muitas das vezes com conjuntos com tamanho na ordem dos milhões, são tantas as comparações necessárias a fazer e a memória necessária para guardar os documentos, que se torna inviável a utilização de métodos ``clássicos'', por exemplo comparando os documentos no seu todo um a um.
+\textit{Locality-Sensitive Hashing (LSH)} é particularmente útil quando se têm, por exemplo, grandes conjuntos de documentos e se pretende encontrar aqueles semelhantes entre si, como, por exemplo, encontrar notícias semelhantes (em conteúdo) em diversos \textit{websites}. Muitas das vezes, com conjuntos com tamanho na ordem dos milhões, são tantas as comparações necessárias a fazer e a memória necessária para guardar os documentos, que se torna inviável a utilização de métodos ``clássicos'', por exemplo, comparando os documentos no seu todo um a um.
 
 Com o objetivo de implementar um módulo capaz de efetuar a procura pelos vizinhos mais próximos (\textit{nearest neighbor search}), guardando representações de documentos mais facilmente comparáveis e que ocupam geralmente menos espaço, seguiram-se três passos:
 
@@ -277,7 +278,7 @@ Converter documentos para conjuntos de elementos (habitualmente pequenas \textit
 \item[Minhashing]
 Converter grandes conjuntos (usualmente de \textit{shingles}) para uma pequena assinatura (por norma, vetor de \textit{hash codes}), preservando o conceito de similariedade entre diferentes documentos (neste caso, conjuntos de \textit{shingles}).
 \item[Locality-sensitive hashing]
-Reduzir o conjunto de elementos a candidatos de forma eficiênte, testando mais tarde a sua ``real'' similariedade.
+Reduzir o conjunto de elementos a candidatos de forma eficiente, testando mais tarde a sua ``real'' similariedade.
 \end{description}
 
 O módulo de \textit{LSH} está escrito no ficheiro \textit{LSH.m} e dispõe dos seguintes métodos:
@@ -290,11 +291,11 @@ Converte um conjunto (mais precisamente \textit{cell array}) de \textit{shingles
 \item[candidates]
 Devolve a lista de documentos candidatos a formarem conjuntos semelhantes, consoante a matriz de assinaturas e o \textit{threshold} passados como argumentos.
 \item[candidates\_to]
-Executa um processo smelhante ao da função \texttt{candidates}, no entanto em vez de formar conjuntos de candidatos pra uma dada matriz de assinaturas, forma uma lista de candidatos (representados numa matriz de assinaturas), face a um documento específico (representado pela sua assinatura e passada como argumento).
+Executa um processo semelhante ao da função \texttt{candidates}, no entanto em vez de formar conjuntos de candidatos para uma dada matriz de assinaturas, forma uma lista de candidatos (representados numa matriz de assinaturas), face a um documento específico (representado pela sua assinatura e passada como argumento).
 \item[similars]
 Verifica quais são os documentos de um conjunto de candidatos realmente semelhantes, consoante a matriz de candidatos, assinaturas e o \textit{threshold} passados como argumentos.
 \item[similiars\_to]
-Semelhante à função \texttt{similars}, no entanto aplica-se ao caso em que pretendemos comparar os candidatos a similares entre um único documento e outro conjunto de documentos (sendo os documentos tal como habitualmente representados pelas suas assinaturas).
+Semelhante à função \texttt{similars}, no entanto, aplica-se ao caso em que pretendemos comparar os candidatos a similares entre um único documento e outro conjunto de documentos (sendo os documentos tal como habitualmente representados pelas suas assinaturas).
 \end{description}
 
 O construtor do módulo aceita apenas um argumento (\texttt{expectedError}) que é o erro esperado quando se calcula a similaridade entre dois conjuntos representados pelas suas assinaturas obtidas segundo o método de \textit{Minhash}, face à real similaridade de Jaccard entre esses conjuntos. Este valor é utilizado para calcular o tamanho \texttt{k} das assinaturas (e portanto o número de funções de dispersão necessárias). (\texttt{k}) é o único atributo que o módulo possui (não considerando o atributo \texttt{debug} utilizado em \textit{debugging}), e é calculado utilizando a fórmula
