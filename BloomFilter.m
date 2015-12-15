@@ -3,7 +3,7 @@ classdef BloomFilter < handle
 % Class:        BloomFilter < handle
 %               
 % Constructor:  Bf = BloomFilter((falsePositiveProbability, ...
-%   expectedMaxSize[, debug]);
+%                       expectedMaxSize[, debug]);
 %               
 % Properties:   (none)
 %               
@@ -39,11 +39,13 @@ classdef BloomFilter < handle
     
     methods
         %% Constructor
-        function self = BloomFilter(falsePositiveProbability, expectedMaxSize, debug)
+        function self = BloomFilter(falsePositiveProbability, ...
+                expectedMaxSize, debug)
             self.expectedMaxSize = expectedMaxSize;
             self.amountAdded = 0;
             % n = m * ln(1 / p) / (ln(2)) ^ 2
-            self.arraySize = ceil(expectedMaxSize * log(1 / falsePositiveProbability) / (log(2)) ^ 2);
+            self.arraySize = ceil(expectedMaxSize * ...
+                log(1 / falsePositiveProbability) / (log(2)) ^ 2);
             self.byteArray = uint8(zeros(1, self.arraySize));
             % k = n * ln(2) / m
             self.k = ceil(self.arraySize * log(2) / expectedMaxSize);
@@ -72,7 +74,8 @@ classdef BloomFilter < handle
         %% Remove
         function remove(self, str)
             idx = self.getIndexes(str);
-            if min(self.byteArray(idx)) > 0 && max(self.byteArray(idx)) < 255
+            if min(self.byteArray(idx)) > 0 && ...
+                    max(self.byteArray(idx)) < 255
                 self.byteArray(idx) = self.byteArray(idx) - 1;
                 self.amountAdded = self.amountAdded - 1;
             end
