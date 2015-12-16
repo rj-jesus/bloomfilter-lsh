@@ -1,7 +1,7 @@
 % Adapted from PL07 MPEI 2015-2016
 %% Init
 clear, clc
-LSH = LSH(0.01);                        % Locality-sensitive hashing object
+LSH = LSH(0.05);                        % Locality-sensitive hashing object
 udata = load('u1m.data');               % Load movies' data
 u = udata(:, 1:2); clear udata;         % Keep only first two rows
 users = unique(u(:, 1));                % Set of users
@@ -32,7 +32,7 @@ fprintf('Computing candidates (experimental)... ');
 load('u1m.mat', 'Signatures');          % Load matrix of signatures
 threshold = 1 - 0.4;                    % chosen epsilon
 C = LSH.candidates(Signatures, ...      % Compute candidates
-    threshold);
+    threshold-0.05);
 save('u1m.mat', 'C', '-append');
 fprintf('Done.\n');
 %%% Choose which pairs are above epsilon (experimental result)
