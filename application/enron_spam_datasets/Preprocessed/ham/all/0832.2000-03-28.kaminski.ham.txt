@@ -1,6 +1,0 @@
-FROM: ted.murphy@enron.com
-hello amy :
-attached please find vince kaminski ' s " bio " . he is working on his
-presentation .
-thanks !
-shirley

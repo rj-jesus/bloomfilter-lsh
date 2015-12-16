@@ -1,6 +1,0 @@
-FROM: clayton.vernon@enron.com
-hi louise ,
-here is the information you were looking for :
-no of external transactions today = 8368
-no of external users transacting today = 1376
-savita

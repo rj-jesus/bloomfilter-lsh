@@ -1,2 +1,0 @@
-FROM: craig.buehler@enron.com
-following please find the daily enrononline executive summary .

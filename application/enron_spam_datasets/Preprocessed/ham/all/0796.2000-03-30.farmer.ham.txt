@@ -1,7 +1,0 @@
-FROM: althea.gordon@enron.com
-for april 1 , 2000 :
-cross media 989815 = 903 mmbtu
-tnct 989816 = 5878 mmbtu
-any questions , just call .
-thanks ,
-charlotte hawkins

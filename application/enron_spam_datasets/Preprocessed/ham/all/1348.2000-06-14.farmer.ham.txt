@@ -1,4 +1,0 @@
-FROM: m..schmidt@enron.com
-teco tap 100 . 000 / hpl iferc
-texoma 20 . 000 / hpl iferc
-ls hpl katy 40 . 000 / enron

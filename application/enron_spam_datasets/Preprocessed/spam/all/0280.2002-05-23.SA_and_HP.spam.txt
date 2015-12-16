@@ -1,3 +1,0 @@
-FROM: GuideToWindows@lightningcard.net
-exit list instructions
-ajrule

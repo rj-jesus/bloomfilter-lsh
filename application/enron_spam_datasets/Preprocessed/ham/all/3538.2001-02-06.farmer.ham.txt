@@ -1,1 +1,0 @@
-FROM: lance.cunningham@enron.com

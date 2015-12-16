@@ -1,3 +1,0 @@
-FROM: gsheble@iastate.edu
-( see attached file : hplno 317 . xls )
-- hplno 317 . xls

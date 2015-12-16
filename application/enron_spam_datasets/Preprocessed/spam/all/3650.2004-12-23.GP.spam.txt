@@ -1,2 +1,0 @@
-FROM: winsatluckyday03@handbag.com
-never agaln

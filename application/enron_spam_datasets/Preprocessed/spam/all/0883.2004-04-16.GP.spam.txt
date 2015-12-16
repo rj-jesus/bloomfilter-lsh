@@ -1,1 +1,0 @@
-FROM: v_sellersdq@fmb.unesp.br

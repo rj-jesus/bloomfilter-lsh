@@ -1,2 +1,0 @@
-FROM: rob.milnthorp@enron.com
-attached are the notes from this weekend .

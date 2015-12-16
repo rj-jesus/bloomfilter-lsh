@@ -1,3 +1,0 @@
-FROM: bstephen@academicplanet.com
-( see attached file : hplno 208 . xls )
-- hplno 208 . xls

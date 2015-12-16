@@ -1,4 +1,0 @@
-FROM: zariphop@math.utexas.edu
-louise , i took care of this
-- - - - - - - - - - - - - - - - - - - - - - - - - -
-jeff golden

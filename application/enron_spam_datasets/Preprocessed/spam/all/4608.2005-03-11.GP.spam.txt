@@ -1,1 +1,0 @@
-FROM: ptaqyxgg@newsaccess.us

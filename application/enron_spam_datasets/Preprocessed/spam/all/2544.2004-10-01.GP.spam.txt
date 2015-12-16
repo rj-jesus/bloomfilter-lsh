@@ -1,3 +1,0 @@
-FROM: kzl456@citiz.net
-buenos dias !
-aloha

@@ -1,2 +1,0 @@
-FROM: christie.patrick@enron.com
-attached is my quick assessment of the var training .

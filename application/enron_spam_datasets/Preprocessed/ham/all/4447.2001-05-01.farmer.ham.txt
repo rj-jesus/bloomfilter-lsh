@@ -1,3 +1,0 @@
-FROM: vasant.shanbhogue@enron.com
-( see attached file : hplno 502 . xls )
-- hplno 502 . xls

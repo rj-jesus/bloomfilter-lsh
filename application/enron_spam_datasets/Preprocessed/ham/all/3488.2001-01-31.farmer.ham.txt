@@ -1,4 +1,0 @@
-FROM: mrensink@riskcare.com
-daren - per gas control , meter 1394 will have their valves shut for the next
-3 or 4 days .
-al

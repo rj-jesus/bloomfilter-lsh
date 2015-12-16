@@ -1,2 +1,0 @@
-FROM: a..shankman@enron.com
-lavo

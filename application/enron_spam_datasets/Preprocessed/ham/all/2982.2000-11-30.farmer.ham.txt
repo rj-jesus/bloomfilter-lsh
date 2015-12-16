@@ -1,3 +1,0 @@
-FROM: enron.announcements@enron.com
-( see attached file : hplnl 201 . xls )
-- hplnl 201 . xls

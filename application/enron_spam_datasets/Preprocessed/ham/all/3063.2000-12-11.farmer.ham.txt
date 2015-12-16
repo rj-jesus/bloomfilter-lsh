@@ -1,3 +1,0 @@
-FROM: eric.thode@enron.com
-( see attached file : hplnl 212 . xls )
-- hplnl 212 . xls

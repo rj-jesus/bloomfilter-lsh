@@ -1,2 +1,0 @@
-FROM: khatun@emirates.net.ae
-http : / / jzw . afeet . com

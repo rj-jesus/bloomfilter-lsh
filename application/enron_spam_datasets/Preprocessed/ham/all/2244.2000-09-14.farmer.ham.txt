@@ -1,2 +1,0 @@
-FROM: mike.curry@enron.com
-teco tap 10 . 938 / enron

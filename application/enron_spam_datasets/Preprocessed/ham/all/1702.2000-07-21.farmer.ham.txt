@@ -1,3 +1,0 @@
-FROM: lorna.brennan@enron.com
-( see attached file : hplo 722 . xls )
-- hplo 722 . xls

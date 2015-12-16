@@ -1,3 +1,0 @@
-FROM: castro@rice.edu
-( see attached file : hplno 412 . xls )
-- hplno 412 . xls

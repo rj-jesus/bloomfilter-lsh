@@ -1,2 +1,0 @@
-FROM: pete.davis@enron.com
-here are those changes . i ' ll leave re - sending the file to your discretion .

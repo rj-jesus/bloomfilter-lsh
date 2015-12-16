@@ -1,3 +1,0 @@
-FROM: mark.mccoy@enron.com
-( see attached file : hplnl 205 . xls )
-- hplnl 205 . xls

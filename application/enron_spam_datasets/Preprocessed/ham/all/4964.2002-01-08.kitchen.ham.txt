@@ -1,3 +1,0 @@
-FROM: crcommunications@caiso.com
-netco . mark
-mark haedicke

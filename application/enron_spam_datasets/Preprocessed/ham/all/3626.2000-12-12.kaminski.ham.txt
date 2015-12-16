@@ -1,5 +1,0 @@
-FROM: kim.melodick@enron.com
-please see the attached regarding interview confirmation and information for
-friday , december 15 th .
-thanks
-shelly

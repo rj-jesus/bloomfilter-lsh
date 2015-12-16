@@ -1,4 +1,0 @@
-FROM: vince.kaminski@enron.com
-stinson ,
-this is the latest wti model for open - close trading .
-zimin

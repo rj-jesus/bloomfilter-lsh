@@ -1,4 +1,0 @@
-FROM: faretracker_008367@faretracker.expedia.customer-email.com
-other .
-regards ,
-eugenio

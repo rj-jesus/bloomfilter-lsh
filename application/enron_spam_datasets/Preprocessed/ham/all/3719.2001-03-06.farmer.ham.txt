@@ -1,3 +1,0 @@
-FROM: enron.announcements@enron.com
-( see attached file : hplno 307 . xls )
-- hplno 307 . xls

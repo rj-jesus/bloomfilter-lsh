@@ -1,2 +1,0 @@
-FROM: mjones7@txu.com
-carthage curve as opposed to the texoma curve ?

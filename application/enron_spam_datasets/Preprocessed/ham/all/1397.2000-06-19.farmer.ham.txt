@@ -1,3 +1,0 @@
-FROM: arsystem@mailman.enron.com
-( see attached file : hplo 620 . xls )
-- hplo 620 . xls

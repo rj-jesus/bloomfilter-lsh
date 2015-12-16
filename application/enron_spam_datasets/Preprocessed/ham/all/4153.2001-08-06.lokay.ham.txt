@@ -1,3 +1,0 @@
-FROM: shirley.crenshaw@enron.com
-fyi . . . thanks for your help ,
-bob

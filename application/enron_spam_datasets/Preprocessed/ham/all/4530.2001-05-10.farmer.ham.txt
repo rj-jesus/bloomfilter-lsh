@@ -1,3 +1,0 @@
-FROM: mike.mazowita@enron.com
-( see attached file : hplno 511 . xls )
-- hplno 511 . xls

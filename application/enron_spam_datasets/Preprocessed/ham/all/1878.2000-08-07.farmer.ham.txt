@@ -1,2 +1,0 @@
-FROM: pinto.leite@enron.com
-is it very dark in color ? and how big around is it ?

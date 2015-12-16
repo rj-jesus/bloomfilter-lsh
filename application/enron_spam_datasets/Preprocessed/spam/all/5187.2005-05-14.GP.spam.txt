@@ -1,5 +1,0 @@
-FROM: acavadias@myrealbox.com
-rolex : $ 129
-cartier : $ 119
-and more ?
-no thanks -

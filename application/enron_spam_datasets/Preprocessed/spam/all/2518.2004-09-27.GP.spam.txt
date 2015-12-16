@@ -1,2 +1,0 @@
-FROM: stayhnard@yahoo.com
->

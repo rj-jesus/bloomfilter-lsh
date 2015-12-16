@@ -1,5 +1,0 @@
-FROM: eric.thode@enron.com
-jeff / michelle / ken ,
-here ' s the january 25 th update .
-suzanne
-- igsupdate . xls

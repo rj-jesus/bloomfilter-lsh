@@ -1,2 +1,0 @@
-FROM: pat.gallimore@powerpool.ab.ca
-in case you would like an advance copy .

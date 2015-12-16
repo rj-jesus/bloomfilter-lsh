@@ -1,3 +1,0 @@
-FROM: rahil.jafry@enron.com
-( see attached file : hplnl 207 . xls )
-- hplnl 207 . xls

@@ -1,4 +1,0 @@
-FROM: john.sherriff@enron.com
-attached please find the oct govt affairs report . if you would like to discuss this , please let me know .
-thanks ,
-jim

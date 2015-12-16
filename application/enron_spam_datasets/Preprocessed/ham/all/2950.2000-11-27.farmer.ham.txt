@@ -1,3 +1,0 @@
-FROM: greg.piper@enron.com
-please see attached .
-mary

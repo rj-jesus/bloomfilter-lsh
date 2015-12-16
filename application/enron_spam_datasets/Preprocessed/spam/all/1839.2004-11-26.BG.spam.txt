@@ -1,3 +1,0 @@
-FROM: gatewny@pacbell.net
-words divide us , actions unite us .
-nothing that is worth doing can be achieved in a lifetime ; therefore we must be saved by hope .

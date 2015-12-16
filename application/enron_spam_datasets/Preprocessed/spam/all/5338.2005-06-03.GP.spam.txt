@@ -1,3 +1,0 @@
-FROM: wisetjswubm@nwinfo.net
-your rx source :
-cyanic

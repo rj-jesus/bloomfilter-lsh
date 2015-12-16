@@ -1,3 +1,0 @@
-FROM: melissa.becker@enron.com
-attached you will please find the form to explain the current staffing from
-18 to 20 .

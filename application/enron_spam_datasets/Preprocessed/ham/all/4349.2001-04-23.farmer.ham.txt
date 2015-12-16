@@ -1,3 +1,0 @@
-FROM: vince.kaminski@enron.com
-( see attached file : hplno 424 . xls )
-- hplno 424 . xls

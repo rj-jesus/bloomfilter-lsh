@@ -1,5 +1,0 @@
-FROM: chris.glaas@enron.com
-attached is the panama doorstep report . please let us know any comments or
-questions .
-thank you
-john

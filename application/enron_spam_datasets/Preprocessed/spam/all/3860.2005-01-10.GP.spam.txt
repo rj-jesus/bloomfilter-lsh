@@ -1,1 +1,0 @@
-FROM: kir_31@yahoo.com

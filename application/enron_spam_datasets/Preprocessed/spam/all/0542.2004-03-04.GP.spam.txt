@@ -1,2 +1,0 @@
-FROM: 1dugald@accesstoledo.com
-buy it !

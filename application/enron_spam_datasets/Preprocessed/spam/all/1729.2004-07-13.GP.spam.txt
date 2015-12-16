@@ -1,2 +1,0 @@
-FROM: gspc@gujaratpetro.com
-click here to be removed

@@ -1,2 +1,0 @@
-FROM: john.llodra@enron.com
-full day url

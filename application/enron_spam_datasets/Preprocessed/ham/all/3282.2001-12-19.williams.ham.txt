@@ -1,2 +1,0 @@
-FROM: thomas.engel@enron.com
-start date : 12 / 19 / 01 ; hourahead hour : 16 ; hourahead schedule download failed . manual intervention required .

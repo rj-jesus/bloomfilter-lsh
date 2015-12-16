@@ -1,1 +1,0 @@
-FROM: bob.hall@enron.com

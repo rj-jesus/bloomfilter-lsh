@@ -1,2 +1,0 @@
-FROM: uxrlxrwcwsmlai@gmail.com
-http : / / kst . nepel . com

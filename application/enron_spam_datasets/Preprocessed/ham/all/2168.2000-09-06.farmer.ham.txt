@@ -1,2 +1,0 @@
-FROM: jody.oberman@neg.pge.com
-deliveries continue to be 30 , 000

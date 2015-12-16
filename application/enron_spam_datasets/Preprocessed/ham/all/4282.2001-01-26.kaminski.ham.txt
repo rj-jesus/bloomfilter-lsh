@@ -1,4 +1,0 @@
-FROM: kimberly.watson@enron.com
-here are your latest rosters . let me know if you would like the spreadsheet
-with their e - mail addresses as well ! - pam ( 6223 )
-- 656 . doc

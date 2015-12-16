@@ -1,3 +1,0 @@
-FROM: craig.buehler@enron.com
-( see attached file : hpll 007 . xls )
-- hpll 007 . xls

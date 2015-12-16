@@ -1,3 +1,0 @@
-FROM: ami.chokshi@enron.com
-( see attached file : hplno 526 . xls )
-- hplno 526 . xls

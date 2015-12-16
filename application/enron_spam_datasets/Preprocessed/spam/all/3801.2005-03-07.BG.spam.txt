@@ -1,3 +1,0 @@
-FROM: lefty@spl.at
-have at you !
-jane kezdeseimiz

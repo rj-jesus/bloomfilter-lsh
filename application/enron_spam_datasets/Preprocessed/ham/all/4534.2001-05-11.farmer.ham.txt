@@ -1,3 +1,0 @@
-FROM: mechelle.stevens@enron.com
-( see attached file : hplno 512 . xls )
-- hplno 512 . xls

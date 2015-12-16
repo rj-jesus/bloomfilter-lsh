@@ -1,2 +1,0 @@
-FROM: jimboman@bigfoot.com
-teco tap 40 . 000 / enron ; 30 . 833 / hpl gas daily

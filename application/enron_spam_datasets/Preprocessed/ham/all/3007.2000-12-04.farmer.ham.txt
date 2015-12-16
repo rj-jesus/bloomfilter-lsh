@@ -1,2 +1,0 @@
-FROM: joseph.hrgovcic@enron.com
-fax of contract to follow . aa

@@ -1,3 +1,0 @@
-FROM: lee.papayoti@enron.com
-( see attached file : hplno 214 . xls )
-- hplno 214 . xls

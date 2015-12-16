@@ -1,4 +1,0 @@
-FROM: christie.patrick@enron.com
-how are things going with david ? any update ?
-thanks !
-amy

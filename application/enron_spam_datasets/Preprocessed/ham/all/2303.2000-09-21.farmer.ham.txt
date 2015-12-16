@@ -1,4 +1,0 @@
-FROM: stinson.gibner@enron.com
-per duke energy field services , we can ramp up after the outtage and keep
-the meter whole at 20 m , if we choose .
-mary

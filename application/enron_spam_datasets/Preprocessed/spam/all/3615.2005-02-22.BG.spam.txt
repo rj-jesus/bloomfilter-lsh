@@ -1,2 +1,0 @@
-FROM: kzl456@citiz.net
-they are not missing shouting today .

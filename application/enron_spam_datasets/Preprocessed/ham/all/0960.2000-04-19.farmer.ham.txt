@@ -1,2 +1,0 @@
-FROM: jackie.young@enron.com
-i would assume 40000 for midcon .

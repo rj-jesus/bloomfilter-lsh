@@ -1,7 +1,0 @@
-FROM: gdvi@frzmail.info
-your message to :
-- > distmatu @ agrocom . com . ar
-was considered unsolicited bulk e - mail ( ube ) .
-subject : just to her . . .
-return - path :
-delivery of the email was stopped !

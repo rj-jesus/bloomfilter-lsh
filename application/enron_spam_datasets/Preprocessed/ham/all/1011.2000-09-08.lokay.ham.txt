@@ -1,3 +1,0 @@
-FROM: kimberly.vaughn@enron.com
-please review the attached invitation for a great opportunity for new hire
-network members .

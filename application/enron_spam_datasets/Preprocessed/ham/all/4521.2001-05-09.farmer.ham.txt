@@ -1,3 +1,0 @@
-FROM: no.address@enron.com
-( see attached file : hplno 510 . xls )
-- hplno 510 . xls

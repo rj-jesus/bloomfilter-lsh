@@ -1,3 +1,0 @@
-FROM: admin@finconsults.com
-hi !
-here is my photo , that you asked for yesterday .

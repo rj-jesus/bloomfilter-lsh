@@ -1,2 +1,0 @@
-FROM: mary.solmonson@enron.com
-- bb pipeline update flyer . doc

@@ -1,2 +1,0 @@
-FROM: sheila.glover@enron.com
-please the attached list . the management committee names have been highlighted in bold .

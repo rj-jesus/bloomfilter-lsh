@@ -1,5 +1,0 @@
-FROM: garpny1@home.com
-please change the base purchase deals to reflect that price . i changed the
-transport tickets to show that we pay nothing .
-thanks ,
-ami

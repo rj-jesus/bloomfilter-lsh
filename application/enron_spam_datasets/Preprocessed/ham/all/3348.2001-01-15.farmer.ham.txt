@@ -1,7 +1,0 @@
-FROM: enron.announcements@enron.com
-january 12 , 2001
-teco tap 30 . 000 / enron
-january 13 , 2001
-teco tap 30 . 000 / enron
-january 14 , 2001
-teco tap 30 . 000 / enron

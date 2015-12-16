@@ -1,3 +1,0 @@
-FROM: ravi.thuraisingham@enron.com
-( see attached file : hplno 206 . xls )
-- hplno 206 . xls

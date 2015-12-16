@@ -1,2 +1,0 @@
-FROM: gpg.announcement@enron.com
-here ' s the site . . . http : / / www . hemmings . com

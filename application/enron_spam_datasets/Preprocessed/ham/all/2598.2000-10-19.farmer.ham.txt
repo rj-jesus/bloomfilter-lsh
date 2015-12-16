@@ -1,3 +1,0 @@
-FROM: pete.davis@enron.com
-october 18 , 2000
-teco tap 30 . 000 / enron ; 120 . 000 / hpl gas daily

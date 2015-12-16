@@ -1,4 +1,0 @@
-FROM: oren@ieor.berkeley.edu
-please find the attached status update for the hpl transaction . if you have any questions please contact me .
-thanks ,
-brian

@@ -1,1 +1,0 @@
-FROM: mrosl67dx@halifax.com

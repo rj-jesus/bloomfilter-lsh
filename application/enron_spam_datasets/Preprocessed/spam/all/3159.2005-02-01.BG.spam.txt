@@ -1,3 +1,0 @@
-FROM: sales@163.com
-groovy : )
-salam

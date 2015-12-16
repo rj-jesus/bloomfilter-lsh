@@ -1,1 +1,0 @@
-FROM: luwbvsgiayn@yahoo.com

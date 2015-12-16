@@ -1,3 +1,0 @@
-FROM: Marshall@spec-svcs.biz
-want a watch ?
-http : / / tqx . nepel . com

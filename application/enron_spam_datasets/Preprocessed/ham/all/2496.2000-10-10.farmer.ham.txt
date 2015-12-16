@@ -1,2 +1,0 @@
-FROM: grant.masson@enron.com
-where are we on the gas agreement for the cleburne plant ?

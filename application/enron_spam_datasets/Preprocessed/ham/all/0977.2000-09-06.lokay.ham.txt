@@ -1,2 +1,0 @@
-FROM: laura.luce@enron.com
-here is the electronic form of the agreement . thanks for your help , bob

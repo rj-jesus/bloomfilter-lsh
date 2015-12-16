@@ -1,4 +1,0 @@
-FROM: hector.mcloughlin@enron.com
-( see attached file : hplno 401 . xls ) ( see attached file : hplno 331 . xls )
-- hplno 401 . xls
-- hplno 331 . xls

@@ -1,3 +1,0 @@
-FROM: mjones7@txu.com
-( see attached file : hplnl 220 . xls )
-- hplnl 220 . xls

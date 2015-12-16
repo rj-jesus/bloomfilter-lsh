@@ -1,2 +1,0 @@
-FROM: c..gossett@enron.com
-start date : 1 / 11 / 02 ; hourahead hour : 18 ; hourahead schedule download failed . manual intervention required .

@@ -1,2 +1,0 @@
-FROM: christie.patrick@enron.com
-the report named : waha , published as of 06 / 21 / 2001 is now available for viewing on the website .

@@ -1,3 +1,0 @@
-FROM: lokay@bigfoot.com
-any interest in this conference ?
-vince

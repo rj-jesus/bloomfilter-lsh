@@ -1,3 +1,0 @@
-FROM: ecthou-domweb1@enron.com
-hi vince :
-lance ' s telephone # is : ( 512 ) 280 - 5052 .

@@ -1,2 +1,0 @@
-FROM: redactie@kmo-info.be
-not interested ?

@@ -1,4 +1,0 @@
-FROM: pete.davis@enron.com
-as we spoke of this morning .
->
-- calpine daily gas nomination 1 . doc

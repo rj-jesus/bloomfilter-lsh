@@ -1,2 +1,0 @@
-FROM: expositinside@brigid.com
-click here to be removed

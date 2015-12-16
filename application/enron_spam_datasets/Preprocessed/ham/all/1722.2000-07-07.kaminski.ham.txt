@@ -1,5 +1,0 @@
-FROM: richard.abramowicz@enron.com
-rick
-attached please find the project update .
-thanks ,
-ding .

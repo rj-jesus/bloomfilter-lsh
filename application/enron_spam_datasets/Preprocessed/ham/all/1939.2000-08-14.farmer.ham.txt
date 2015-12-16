@@ -1,2 +1,0 @@
-FROM: tracy.cummins@nesanet.org
-attached is a listing of august 2000 activity " buybacks " .

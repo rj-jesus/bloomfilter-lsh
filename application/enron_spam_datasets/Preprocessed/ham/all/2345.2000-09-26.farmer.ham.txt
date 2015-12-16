@@ -1,5 +1,0 @@
-FROM: tammie.schoppe@enron.com
-ls katy ic will remain on zero . will try to pull firm gas at teco as system
-conditions allow .
-( see attached file : hplo 927 . xls )
-- hplo 927 . xls

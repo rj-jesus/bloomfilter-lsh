@@ -1,3 +1,0 @@
-FROM: vince.kaminski@enron.com
-external user logins : 891
-external counterparty logins : 4726

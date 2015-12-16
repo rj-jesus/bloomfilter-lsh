@@ -1,2 +1,0 @@
-FROM: sgyxkdhotqfc@hooger.ch
-http : / / myself . mainoemstore . com / ? a = 3107

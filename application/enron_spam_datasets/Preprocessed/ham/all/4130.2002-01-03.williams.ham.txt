@@ -1,2 +1,0 @@
-FROM: mary.solmonson@enron.com
-start date : 1 / 3 / 02 ; hourahead hour : 22 ; hourahead schedule download failed . manual intervention required .

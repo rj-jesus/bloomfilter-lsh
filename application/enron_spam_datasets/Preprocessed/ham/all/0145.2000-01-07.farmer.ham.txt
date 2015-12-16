@@ -1,2 +1,0 @@
-FROM: audrey.robertson@enron.com
-attached are the most recent numbers .

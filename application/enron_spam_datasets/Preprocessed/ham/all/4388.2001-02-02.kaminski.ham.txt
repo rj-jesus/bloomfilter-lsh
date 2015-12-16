@@ -1,8 +1,0 @@
-FROM: james.steffes@enron.com
-dave
-- brochure . doc
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-prof . david ikenberry
-jones graduate school of management
-rice university
-713 - 348 - 5385

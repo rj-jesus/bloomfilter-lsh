@@ -1,5 +1,0 @@
-FROM: lindsay.renaud@enron.com
-andy ,
-thanks for the update and your help in articulating this issue to the
-commercial team
-ted

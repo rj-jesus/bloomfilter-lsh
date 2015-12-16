@@ -1,2 +1,0 @@
-FROM: jim.coffey@enron.com
-tables

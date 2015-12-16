@@ -1,6 +1,0 @@
-FROM: jeanne.licciardo@enron.com
-the attached spreadsheet has the revised estimates for entex citygate loads
-for april . if you need me to get with pops / unify to correct or change the
-estimates please give me a call .
-thanks
-gary

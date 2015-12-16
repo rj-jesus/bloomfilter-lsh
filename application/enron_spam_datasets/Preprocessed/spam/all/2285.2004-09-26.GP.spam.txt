@@ -1,3 +1,0 @@
-FROM: 7chisheng@absolutemotion.com
-hello !
-pama kowbtemin mine '

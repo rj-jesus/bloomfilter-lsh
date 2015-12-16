@@ -1,3 +1,0 @@
-FROM: timpowell@txu.com
-the enclosed file contains the month - to - date schedule c items for your
-viewing .

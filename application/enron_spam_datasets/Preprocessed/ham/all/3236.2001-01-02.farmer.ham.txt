@@ -1,3 +1,0 @@
-FROM: mjones7@txu.com
-( see attached file : hplnol 03 . xls )
-- hplnol 03 . xls

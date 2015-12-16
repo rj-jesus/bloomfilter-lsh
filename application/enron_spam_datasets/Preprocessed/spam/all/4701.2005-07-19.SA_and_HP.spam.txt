@@ -1,4 +1,0 @@
-FROM: bErwin45_smi@netzero.com
-this is an automatically generated delivery status notification .
-delivery to the following recipients failed .
-lnoble @ johnnicholls . co . uk

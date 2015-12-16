@@ -1,2 +1,0 @@
-FROM: babs.wilson@net2000.ch
-unsubscribe

@@ -1,1 +1,0 @@
-FROM: mbaseminar@frzmail.info

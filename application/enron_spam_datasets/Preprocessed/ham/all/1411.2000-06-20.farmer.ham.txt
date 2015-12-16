@@ -1,3 +1,0 @@
-FROM: barbara.lewis@enron.com
-( see attached file : hplo 621 . xls )
-- hplo 621 . xls

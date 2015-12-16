@@ -1,3 +1,0 @@
-FROM: karen.lindley@enron.com
-hingoran @ rice . edu
-planck @ rice . edu

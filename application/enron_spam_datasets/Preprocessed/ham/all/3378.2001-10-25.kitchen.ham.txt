@@ -1,2 +1,0 @@
-FROM: mike.roberts@enron.com
-attached please find the otc margin analysis as requested .

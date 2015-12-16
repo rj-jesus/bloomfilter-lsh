@@ -1,3 +1,0 @@
-FROM: shirley.crenshaw@enron.com
-( see attached file : hplno 419 . xls )
-- hplno 419 . xls

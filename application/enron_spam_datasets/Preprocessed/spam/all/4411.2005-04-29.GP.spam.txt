@@ -1,2 +1,0 @@
-FROM: derrenkent@comcast.net
-mail transaction failed . partial message is available .

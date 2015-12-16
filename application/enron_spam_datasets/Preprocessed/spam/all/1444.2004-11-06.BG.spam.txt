@@ -1,2 +1,0 @@
-FROM: transformers@andrews.lv
-un 5 u 6

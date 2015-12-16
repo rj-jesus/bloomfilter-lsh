@@ -1,2 +1,0 @@
-FROM: jimbomania@hotmail.com
-- experiencing god week 8 . doc

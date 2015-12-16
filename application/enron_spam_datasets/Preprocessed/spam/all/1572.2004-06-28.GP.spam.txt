@@ -1,2 +1,0 @@
-FROM: ULKAYXROY@aafinder.com
-click here to be removed

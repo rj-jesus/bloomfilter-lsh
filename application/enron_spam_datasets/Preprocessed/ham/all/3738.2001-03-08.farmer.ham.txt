@@ -1,3 +1,0 @@
-FROM: mike.roberts@enron.com
-( see attached file : hplno 309 . xls )
-- hplno 309 . xls

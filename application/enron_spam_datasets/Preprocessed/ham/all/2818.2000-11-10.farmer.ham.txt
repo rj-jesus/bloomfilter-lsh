@@ -1,2 +1,0 @@
-FROM: stinson.gibner@enron.com
-teco tap 40 . 000 / enron ; 45 . 000 / hpl iferc

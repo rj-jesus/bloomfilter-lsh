@@ -1,4 +1,0 @@
-FROM: zimin.lu@enron.com
-sally ,
-congratulations .
-vince

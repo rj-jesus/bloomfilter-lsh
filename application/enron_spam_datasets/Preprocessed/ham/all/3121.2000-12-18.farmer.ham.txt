@@ -1,3 +1,0 @@
-FROM: claire.dunnett@enron.com
-( see attached file : hplnl 219 . xls )
-- hplnl 219 . xls

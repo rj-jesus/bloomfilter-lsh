@@ -1,3 +1,0 @@
-FROM: crcommunications@caiso.com
-teco tap 30 . 000 / enron ; 120 . 000 / hpl gas daily
-ls hpl lsk ic 30 . 000 / enron

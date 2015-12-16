@@ -1,4 +1,0 @@
-FROM: lorna.brennan@enron.com
-tuesday , september 26 , 2000
-teco tap 60 . 000 / enron ; 10 . 000 hpl gas daily
-hpl ls katy no flow

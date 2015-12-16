@@ -1,4 +1,0 @@
-FROM: julie.meyers@enron.com
-draft agenda attached . please mark up at will .
->
-- boston risk conference agenda . doc

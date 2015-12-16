@@ -1,2 +1,0 @@
-FROM: jordan.mintz@enron.com
-so when are you heading over to get the monday java juice ?

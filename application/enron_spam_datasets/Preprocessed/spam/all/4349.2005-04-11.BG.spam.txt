@@ -1,6 +1,0 @@
-FROM: darrick@snark.thyr
-hello , chief : )
-wachiyahello , chief : )
-kande tne tiu
-adieu .
-uhambe kuhle

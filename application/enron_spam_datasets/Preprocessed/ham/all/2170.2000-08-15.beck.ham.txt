@@ -1,3 +1,0 @@
-FROM: mjones7@txu.com
-as requested . i ' ll work on adding rick ' s comments tommorrow pm .
-regards

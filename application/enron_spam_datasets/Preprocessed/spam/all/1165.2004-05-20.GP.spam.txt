@@ -1,2 +1,0 @@
-FROM: ali.hibbard@endorsedinformation.net
-click here to be removed

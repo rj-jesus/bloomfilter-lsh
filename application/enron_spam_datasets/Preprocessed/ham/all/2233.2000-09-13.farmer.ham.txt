@@ -1,2 +1,0 @@
-FROM: m..schmidt@enron.com
-per gas control , this will be down until the 18 th .

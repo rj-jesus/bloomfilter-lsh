@@ -1,3 +1,0 @@
-FROM: garrick.hill@enron.com
-( see attached file : lsno 608 . xls )
-- lsno 608 . xls

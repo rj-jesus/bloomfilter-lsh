@@ -1,2 +1,0 @@
-FROM: 03inigo@achilles.net
-http : / / gxz . nepel . com

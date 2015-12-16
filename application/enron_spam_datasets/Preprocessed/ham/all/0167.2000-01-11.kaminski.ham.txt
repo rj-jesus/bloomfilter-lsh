@@ -1,2 +1,0 @@
-FROM: kevin.hyatt@enron.com
-right back at you . . . . . great job

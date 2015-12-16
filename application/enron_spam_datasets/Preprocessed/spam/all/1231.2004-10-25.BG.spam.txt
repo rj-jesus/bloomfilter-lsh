@@ -1,2 +1,0 @@
-FROM: fred@bluemail.dk
-http : / / vbm . beud . com / r / giggles /

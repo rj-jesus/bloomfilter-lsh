@@ -1,4 +1,0 @@
-FROM: chairman.ken@enron.com
-vince ,
-congrats on your promotion to md .
-doug

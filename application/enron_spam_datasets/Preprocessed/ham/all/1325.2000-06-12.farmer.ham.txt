@@ -1,3 +1,0 @@
-FROM: shirley.crenshaw@enron.com
-( see attached file : hplo 613 . xls )
-- hplo 613 . xls

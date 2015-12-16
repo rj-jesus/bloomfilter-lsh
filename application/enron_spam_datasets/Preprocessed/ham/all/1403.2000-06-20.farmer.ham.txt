@@ -1,9 +1,0 @@
-FROM: william.smith@enron.com
-- - - - - - - - - - - - - - - - - - - - - - forwarded by ami chokshi / corp / enron on 06 / 20 / 2000
-04 : 44 pm - - - - - - - - - - - - - - - - - - - - - - - - - - -
-" jacqueline blanchard " on 06 / 20 / 2000 04 : 29 : 13
-pm
-to :
-cc :
-subject : revised availabilities
-- text . htm

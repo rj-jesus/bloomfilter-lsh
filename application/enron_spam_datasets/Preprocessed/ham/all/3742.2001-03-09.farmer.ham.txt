@@ -1,3 +1,0 @@
-FROM: c..bland@enron.com
-( see attached file : hplno 310 . xls )
-- hplno 310 . xls

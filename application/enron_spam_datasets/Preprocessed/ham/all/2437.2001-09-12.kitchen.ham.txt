@@ -1,2 +1,0 @@
-FROM: david.port@enron.com
-not for the faint - hearted

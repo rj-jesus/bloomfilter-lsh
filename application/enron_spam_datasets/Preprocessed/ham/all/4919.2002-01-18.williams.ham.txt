@@ -1,2 +1,0 @@
-FROM: lexi.elliott@enron.com
-full day url

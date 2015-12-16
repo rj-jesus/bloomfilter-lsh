@@ -1,2 +1,0 @@
-FROM: robert.cotten@enron.com
-teco tap 150 . 000 / hpl gas daily

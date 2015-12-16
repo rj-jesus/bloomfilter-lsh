@@ -1,4 +1,0 @@
-FROM: c..hall@enron.com
-here is this prof ' s home page at rice . his name is richard baraniuk .
-http : / / www - dsp . rice . edu / ~ richb /
-- - stinson

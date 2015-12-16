@@ -1,6 +1,0 @@
-FROM: j_martin@baylor.edu
-dr . kaminski :
-please find attached my resume and cover letter .
-sincerely ,
-bruce james
-- jameslett 60 . zip

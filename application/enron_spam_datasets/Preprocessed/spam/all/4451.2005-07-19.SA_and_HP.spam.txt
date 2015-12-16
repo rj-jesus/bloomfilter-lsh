@@ -1,2 +1,0 @@
-FROM: marmaduke@abo.freiepresse.de
-http : / / stratify . mainoemstore . com / ? a = 3107

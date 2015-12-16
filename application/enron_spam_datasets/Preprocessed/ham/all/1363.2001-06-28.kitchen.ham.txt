@@ -1,2 +1,0 @@
-FROM: castro@rice.edu
-the following is the weekly deal report covering 6 / 21 - 6 / 27 .

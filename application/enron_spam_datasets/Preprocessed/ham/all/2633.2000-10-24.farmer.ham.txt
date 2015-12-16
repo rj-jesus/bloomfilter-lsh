@@ -1,3 +1,0 @@
-FROM: gary.lamphier@enron.com
-( see attached file : hplnl 025 . xls )
-- hplnl 025 . xls

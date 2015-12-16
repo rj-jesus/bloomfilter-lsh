@@ -1,2 +1,0 @@
-FROM: r..shepperd@enron.com
-nice picture !

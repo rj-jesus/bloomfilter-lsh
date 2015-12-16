@@ -1,2 +1,0 @@
-FROM: support@amsvp02.net
-http : / / bin . nepel . com

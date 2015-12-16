@@ -1,2 +1,0 @@
-FROM: score@belluomini.net
-jdno future mailing

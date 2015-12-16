@@ -1,7 +1,0 @@
-FROM: oliver@risk.co.uk
-february 23 , 2001
-teco tap 30 . 000
-february 24 , 2001
-teco tap 17 . 500
-february 25 , 2001
-teco tap 38 . 750

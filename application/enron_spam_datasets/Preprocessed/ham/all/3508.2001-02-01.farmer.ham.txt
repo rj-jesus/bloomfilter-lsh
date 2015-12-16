@@ -1,3 +1,0 @@
-FROM: fdiebold@stern.nyu.edu
-( see attached file : hplno 202 . xls )
-- hplno 202 . xls

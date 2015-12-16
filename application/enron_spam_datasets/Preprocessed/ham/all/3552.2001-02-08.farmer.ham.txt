@@ -1,3 +1,0 @@
-FROM: marilyn.colbert@enron.com
-( see attached file : hplno 209 . xls )
-- hplno 209 . xls

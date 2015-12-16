@@ -1,3 +1,0 @@
-FROM: shirley.crenshaw@enron.com
-many thanks .
-gillian .

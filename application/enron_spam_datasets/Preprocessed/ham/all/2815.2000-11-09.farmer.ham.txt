@@ -1,5 +1,0 @@
-FROM: rickya@calpine.com
-valero deals have now been added .
-please make sure that this list is forward to anyone in your groups that
-might need it .
-julie

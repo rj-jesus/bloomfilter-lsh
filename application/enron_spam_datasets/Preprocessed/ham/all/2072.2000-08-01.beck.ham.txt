@@ -1,3 +1,0 @@
-FROM: grace.rodriguez@enron.com
-attached is a current listing of attendees for the dinner at cafe annie on
-wednesday . ted

@@ -1,4 +1,0 @@
-FROM: susan.trevino@enron.com
-please find the enclosed el paso electric model for august 27 th , 2001
-regards ,
-bert meyers

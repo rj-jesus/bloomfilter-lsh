@@ -1,3 +1,0 @@
-FROM: jeff.dasovich@enron.com
-( see attached file : hplnl 214 . xls )
-- hplnl 214 . xls

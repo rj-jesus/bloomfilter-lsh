@@ -1,1 +1,0 @@
-FROM: 1powerpromo1@verizon.net

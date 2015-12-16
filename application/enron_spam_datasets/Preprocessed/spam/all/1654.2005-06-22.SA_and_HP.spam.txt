@@ -1,4 +1,0 @@
-FROM: plague@fletcher.org
-bring on the best software . . . at the most reasonable prices !
-examine what is said , not him who speaks .
-he who knows that enough is enough will always have enough .

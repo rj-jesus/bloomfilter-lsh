@@ -1,1 +1,0 @@
-FROM: xnqpnnc@cybergrrl.com

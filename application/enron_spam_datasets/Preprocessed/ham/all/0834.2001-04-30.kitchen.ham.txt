@@ -1,2 +1,0 @@
-FROM: kevin.hyatt@enron.com
-http : / / www . worth . com / magazine / index . html

@@ -1,3 +1,0 @@
-FROM: richard.lydecker@enron.com
-resources
-see attached files

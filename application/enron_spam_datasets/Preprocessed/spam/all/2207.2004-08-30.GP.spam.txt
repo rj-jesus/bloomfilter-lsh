@@ -1,1 +1,0 @@
-FROM: Holstein@mail.mcoe.k12.ca.us

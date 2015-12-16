@@ -1,3 +1,0 @@
-FROM: bob.hall@enron.com
-fyi
-- aep contact list - mailout . xls

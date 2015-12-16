@@ -1,3 +1,0 @@
-FROM: gina.corteselli@enron.com
-( see attached file : hplo 809 . xls )
-- hplo 809 . xls

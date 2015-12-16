@@ -1,5 +1,0 @@
-FROM: susan.scott@enron.com
-sally
-as discussed with mike .
-regards
-andy

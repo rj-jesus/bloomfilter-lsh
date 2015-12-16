@@ -1,2 +1,0 @@
-FROM: Xklrsqy@altern.org
-http : / / hsw . hensi . com

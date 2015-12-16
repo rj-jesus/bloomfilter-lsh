@@ -1,3 +1,0 @@
-FROM: elizabeth.grant@enron.com
-( see attached file : hplno 420 . xls )
-- hplno 420 . xls

@@ -1,2 +1,0 @@
-FROM: lorna.brennan@enron.com
-the new sitara ticket # is 165331

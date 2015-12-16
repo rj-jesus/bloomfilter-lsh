@@ -1,1 +1,0 @@
-FROM: stanley.cocke@enron.com

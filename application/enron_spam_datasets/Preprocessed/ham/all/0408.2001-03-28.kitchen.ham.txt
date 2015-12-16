@@ -1,2 +1,0 @@
-FROM: bryan.hull@enron.com
-https : / / expertfinder . enron . com /

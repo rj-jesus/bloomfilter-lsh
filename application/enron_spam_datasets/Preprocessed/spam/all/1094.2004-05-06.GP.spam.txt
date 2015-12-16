@@ -1,4 +1,0 @@
-FROM: eulinie@wxs.nl
-to prevent future
-mailings enter your email address in the box and click the
-unsubscribe button .

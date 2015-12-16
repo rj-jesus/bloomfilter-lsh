@@ -1,3 +1,0 @@
-FROM: mjones7@txu.com
-( see attached file : hplno 519 . xls )
-- hplno 519 . xls

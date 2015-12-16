@@ -1,2 +1,0 @@
-FROM: debra.davidson@enron.com
-we are compiling the ytd numbers and will have to you shortly

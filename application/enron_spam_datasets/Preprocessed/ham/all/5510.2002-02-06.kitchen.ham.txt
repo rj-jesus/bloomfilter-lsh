@@ -1,2 +1,0 @@
-FROM: lorraine.lindberg@enron.com
-http : / / ubsintegration . corp . enron . com /

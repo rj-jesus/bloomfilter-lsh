@@ -1,3 +1,0 @@
-FROM: purepostcards@dfznet.info
-geronimo !
-panamilit

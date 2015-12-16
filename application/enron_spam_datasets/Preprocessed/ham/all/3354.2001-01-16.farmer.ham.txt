@@ -1,3 +1,0 @@
-FROM: kevin.hyatt@enron.com
-( see attached file : hplnol 17 . xls )
-- hplnol 17 . xls

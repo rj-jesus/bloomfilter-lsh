@@ -1,2 +1,0 @@
-FROM: tbksl@fastmail.fm
-to opt - out of our database click here

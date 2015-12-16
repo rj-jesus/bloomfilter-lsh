@@ -1,5 +1,0 @@
-FROM: jeffrey.gossett@enron.com
-jeff / michelle ,
-here is the daily update for the 10 th .
-suzanne
-- igsupdate . xls

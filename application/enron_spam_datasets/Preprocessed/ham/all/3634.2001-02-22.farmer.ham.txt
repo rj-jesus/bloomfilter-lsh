@@ -1,3 +1,0 @@
-FROM: stacey.richardson@enron.com
-( see attached file : hplno 223 . xls )
-- hplno 223 . xls

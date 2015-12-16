@@ -1,4 +1,0 @@
-FROM: lucy.marshall@enron.com
-attached is the bi - weekly status report .
-attachment 1 is narrative :
-attachment 2 is excel spreadsheet :

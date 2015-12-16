@@ -1,3 +1,0 @@
-FROM: office.chairman@enron.com
-( see attached file : hplno 314 . xls )
-- hplno 314 . xls

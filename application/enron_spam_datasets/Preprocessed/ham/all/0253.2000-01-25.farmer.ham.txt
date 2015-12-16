@@ -1,3 +1,0 @@
-FROM: john.gillespie@enron.com
-( see attached file : hplol 26 . xls )
-- hplol 26 . xls

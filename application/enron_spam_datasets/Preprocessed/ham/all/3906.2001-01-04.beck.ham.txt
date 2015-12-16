@@ -1,3 +1,0 @@
-FROM: pete.davis@enron.com
-revision of 5 day rolling figures due to year end macro recalculation error
-in previous flash . all other p / l numbers are correct and unchanged .

@@ -1,1 +1,0 @@
-FROM: jamesavoidance@mail2Tammy.com

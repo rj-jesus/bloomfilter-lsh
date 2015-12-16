@@ -1,2 +1,0 @@
-FROM: 03carbohydrate@xcelixon.net
-http : / / ezs . nepel . com

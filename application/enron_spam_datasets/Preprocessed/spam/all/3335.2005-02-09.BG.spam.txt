@@ -1,2 +1,0 @@
-FROM: replaces@rdm-ind.com
-un 5 u 6 sclbe

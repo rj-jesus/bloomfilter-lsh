@@ -1,2 +1,0 @@
-FROM: enron.announcements@enron.com
-http : / / www . barrington - ltd . com /

@@ -1,2 +1,0 @@
-FROM: shirley.crenshaw@enron.com
-the dpr for today is final and posted to the executive reports website .

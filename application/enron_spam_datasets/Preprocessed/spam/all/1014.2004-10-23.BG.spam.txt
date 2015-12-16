@@ -1,2 +1,0 @@
-FROM: sam22k@handbag.com
-http : / / zyf . beud . com / r / giggles /

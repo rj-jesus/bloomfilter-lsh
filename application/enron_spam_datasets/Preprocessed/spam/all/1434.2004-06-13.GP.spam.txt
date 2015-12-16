@@ -1,3 +1,0 @@
-FROM: nkebjis@timetoshining.info
-paliourg
-bye - bye

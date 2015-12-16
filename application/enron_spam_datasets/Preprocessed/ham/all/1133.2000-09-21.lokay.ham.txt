@@ -1,2 +1,0 @@
-FROM: pete.davis@enron.com
-i thought this link was interesting . . .

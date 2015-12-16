@@ -1,4 +1,0 @@
-FROM: pete.davis@enron.com
-phelim ,
-fyi
-vince

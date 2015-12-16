@@ -1,1 +1,0 @@
-FROM: pmtjorwegslaq@msn.com

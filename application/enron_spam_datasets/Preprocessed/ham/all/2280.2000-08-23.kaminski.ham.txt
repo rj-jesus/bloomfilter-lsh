@@ -1,4 +1,0 @@
-FROM: susan.scott@enron.com
-shirley ,
-please , add the date at the right place .
-vince

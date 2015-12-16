@@ -1,5 +1,0 @@
-FROM: robert.cotten@enron.com
-jeff / michelle / ken ,
-here ' s the daily update for the 29 th .
-suzanne
-- igsupdate . xls

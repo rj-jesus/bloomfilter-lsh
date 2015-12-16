@@ -1,3 +1,0 @@
-FROM: kate.symes@enron.com
-( see attached file : hplo 629 . xls )
-- hplo 629 . xls

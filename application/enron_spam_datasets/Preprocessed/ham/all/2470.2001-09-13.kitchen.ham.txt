@@ -1,3 +1,0 @@
-FROM: robert.cotten@enron.com
-here is the revised plan .
-eric

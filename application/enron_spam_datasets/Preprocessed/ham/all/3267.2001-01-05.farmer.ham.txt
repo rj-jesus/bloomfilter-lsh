@@ -1,3 +1,0 @@
-FROM: heidi.mason@enron.com
-( see attached file : hplnol 06 . xls )
-- hplnol 06 . xls

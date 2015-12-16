@@ -1,3 +1,0 @@
-FROM: brian.redmond@enron.com
-( see attached file : hplno 313 . xls )
-- hplno 313 . xls

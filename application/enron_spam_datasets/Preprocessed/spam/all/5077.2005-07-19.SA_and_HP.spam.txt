@@ -1,2 +1,0 @@
-FROM: shivery1@animail.net
-http : / / p ' s . mainoemstore . com / ? a = 3107

@@ -1,2 +1,0 @@
-FROM: francine_crouch92@planete-soft.fr
-click here to be removed

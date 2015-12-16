@@ -1,3 +1,0 @@
-FROM: david.forster@enron.com
-( see attached file : hplno 508 . xls )
-- hplno 508 . xls

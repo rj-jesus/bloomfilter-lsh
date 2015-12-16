@@ -1,2 +1,0 @@
-FROM: grace.rodriguez@enron.com
-thank you , darren .

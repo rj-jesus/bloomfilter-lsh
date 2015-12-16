@@ -1,2 +1,0 @@
-FROM: alexandergiardini@zmail.sk
-click here to be removed

@@ -1,2 +1,0 @@
-FROM: kysa.alport@enron.com
-- experiencing god week 7 . doc

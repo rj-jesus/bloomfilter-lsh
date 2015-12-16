@@ -1,3 +1,0 @@
-FROM: kate.symes@enron.com
-please find attached the final draft of the sydney / singapore presentations
-for you review and distribution . thank you .

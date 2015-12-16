@@ -1,2 +1,0 @@
-FROM: pete.davis@enron.com
-mary since i will be on call i ' ll be in here .

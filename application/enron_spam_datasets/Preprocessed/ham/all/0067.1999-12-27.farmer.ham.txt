@@ -1,3 +1,0 @@
-FROM: ben.jacoby@enron.com
-( see attached file : hpll 228 . xls )
-- hpll 228 . xls

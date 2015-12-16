@@ -1,3 +1,0 @@
-FROM: james.steffes@enron.com
-deal numbers : hpl liquids : 201952
-exxon mobil : 226713

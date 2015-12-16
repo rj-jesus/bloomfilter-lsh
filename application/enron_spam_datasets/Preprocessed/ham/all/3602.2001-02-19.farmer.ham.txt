@@ -1,3 +1,0 @@
-FROM: nancy.hernandez@enron.com
-( see attached file : hplno 220 . xls )
-- hplno 220 . xls

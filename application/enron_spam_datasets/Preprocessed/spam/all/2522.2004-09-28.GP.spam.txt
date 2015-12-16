@@ -1,2 +1,0 @@
-FROM: kursajq@china.com
-hey chang ,

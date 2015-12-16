@@ -1,4 +1,0 @@
-FROM: bob.hall@enron.com
-louise ,
-please contact me if you need further clarification .
-mrha

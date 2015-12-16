@@ -1,3 +1,0 @@
-FROM: viloris@euromail.de
-good day .
-adiu

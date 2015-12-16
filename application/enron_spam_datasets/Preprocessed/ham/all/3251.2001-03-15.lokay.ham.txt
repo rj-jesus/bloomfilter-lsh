@@ -1,2 +1,0 @@
-FROM: anita.dupont@enron.com
-click here for more information about " ets : the next generation " . . .

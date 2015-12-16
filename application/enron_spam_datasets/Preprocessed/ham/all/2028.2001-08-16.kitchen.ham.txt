@@ -1,5 +1,0 @@
-FROM: arsystem@mailman.enron.com
-mg '
-please find attached the above article from bridge news
-kind regards
-sarimah black

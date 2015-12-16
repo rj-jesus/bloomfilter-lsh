@@ -1,3 +1,0 @@
-FROM: joyce.viltz@enron.com
-( see attached file : hplo 729 . xls )
-- hplo 729 . xls

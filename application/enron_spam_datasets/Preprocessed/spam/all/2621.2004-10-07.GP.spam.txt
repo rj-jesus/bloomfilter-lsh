@@ -1,3 +1,0 @@
-FROM: Maillist6@datacds.net
-hola !
-hej da

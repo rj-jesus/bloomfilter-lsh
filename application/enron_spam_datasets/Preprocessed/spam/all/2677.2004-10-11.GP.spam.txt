@@ -1,2 +1,0 @@
-FROM: drpmarketing@rogers.com
-click here to be removed

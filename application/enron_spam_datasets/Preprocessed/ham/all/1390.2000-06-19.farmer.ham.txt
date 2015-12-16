@@ -1,2 +1,0 @@
-FROM: pete.davis@enron.com
-here is a breakdown by day of all of the counterparties .

@@ -1,3 +1,0 @@
-FROM: barry.pearce@enron.com
-please call with any questions / comments .
-best regards
