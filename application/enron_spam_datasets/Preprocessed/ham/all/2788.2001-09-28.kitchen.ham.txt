@@ -1,4 +1,0 @@
-FROM: mary.poorman@enron.com
-week ending 9 / 28 / 01 :
-glad to discuss . . .
-steve

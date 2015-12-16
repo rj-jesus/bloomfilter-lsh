@@ -1,3 +1,0 @@
-FROM: gadgets@zoolant.com
-change my email
-preferences

@@ -1,4 +1,0 @@
-FROM: karen.marshall@enron.com
-15 , 2000
-( see attached file : hplnl 115 . xls )
-- hplnl 115 . xls

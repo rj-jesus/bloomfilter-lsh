@@ -1,2 +1,0 @@
-FROM: cantekin.dincerler@enron.com
-these are my accomplishments for this year .

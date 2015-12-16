@@ -1,2 +1,0 @@
-FROM: kate.symes@enron.com
-janet . attached are the most recent numbers .

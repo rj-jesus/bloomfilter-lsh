@@ -1,3 +1,0 @@
-FROM: jinbaek@ieor.berkeley.edu
-( see attached file : hplno 403 . xls )
-- hplno 403 . xls

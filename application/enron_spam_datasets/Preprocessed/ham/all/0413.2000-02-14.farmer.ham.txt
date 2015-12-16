@@ -1,3 +1,0 @@
-FROM: enron.announcements@enron.com
-( see attached file : hplo 215 . xls )
-- hplo 215 . xls

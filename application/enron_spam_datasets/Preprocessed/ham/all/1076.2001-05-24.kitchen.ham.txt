@@ -1,2 +1,0 @@
-FROM: greg.piper@enron.com
-the following is the weekly deal report covering 5 / 17 - 5 / 23 .

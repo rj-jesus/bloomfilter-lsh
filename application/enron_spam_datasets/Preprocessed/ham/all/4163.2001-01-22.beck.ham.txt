@@ -1,2 +1,0 @@
-FROM: pete.davis@enron.com
-please review the attached t & e policy for enron net works .

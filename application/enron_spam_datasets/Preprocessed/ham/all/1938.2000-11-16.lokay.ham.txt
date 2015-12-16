@@ -1,3 +1,0 @@
-FROM: amy.fitzpatrick@enron.com
-( see attached file : twopenseason . doc )
-- twopenseason . doc

@@ -1,2 +1,0 @@
-FROM: stephen.stock@enron.com
-i have the spot ticket in with deal # 211573 .

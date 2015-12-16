@@ -1,5 +1,0 @@
-FROM: m..schmidt@enron.com
-good morning !
-if you have done so already , can you please return your feedback to me asap ?
-thanks !
-amy

@@ -1,1 +1,0 @@
-FROM: custsrv@coolgoose.co.uk

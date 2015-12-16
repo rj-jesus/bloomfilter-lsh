@@ -1,4 +1,0 @@
-FROM: 565candace@artmode.com
-exit
-list instructions
-pmoney

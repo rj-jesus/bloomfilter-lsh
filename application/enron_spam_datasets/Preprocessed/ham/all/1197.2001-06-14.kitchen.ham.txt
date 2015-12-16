@@ -1,2 +1,0 @@
-FROM: sandeep.kohli@enron.com
-the following is the weekly deal report covering 6 / 6 - 6 / 13 .

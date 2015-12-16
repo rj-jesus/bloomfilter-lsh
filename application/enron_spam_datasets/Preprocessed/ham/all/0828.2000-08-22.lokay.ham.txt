@@ -1,2 +1,0 @@
-FROM: arsystem@mailman.enron.com
-please see the attached memo from roger sumlin .

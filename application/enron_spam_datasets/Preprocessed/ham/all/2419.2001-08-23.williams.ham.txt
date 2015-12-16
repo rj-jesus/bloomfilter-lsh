@@ -1,2 +1,0 @@
-FROM: jefferson.sorenson@enron.com
-paul choi

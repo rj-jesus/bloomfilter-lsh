@@ -1,2 +1,0 @@
-FROM: rebekah.rushing@enron.com
-teco tap 51 . 250 / enron

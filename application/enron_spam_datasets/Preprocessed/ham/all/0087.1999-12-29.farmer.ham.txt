@@ -1,2 +1,0 @@
-FROM: edward.terry@enron.com
-teco tap 60 . 000 / enron

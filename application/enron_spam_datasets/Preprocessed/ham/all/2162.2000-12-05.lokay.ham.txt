@@ -1,3 +1,0 @@
-FROM: joseph.deffner@enron.com
-attached is an updated document for any distribution . i ' ve corrected the
-name of " enron oil & gas " to " eog resources " .

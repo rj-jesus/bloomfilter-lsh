@@ -1,3 +1,0 @@
-FROM: jeffery.fawcett@enron.com
-( see attached file : hplo 831 . xls )
-- hplo 831 . xls

@@ -1,2 +1,0 @@
-FROM: bninekfwas@cabana.net
-get out of list ? click here

@@ -1,3 +1,0 @@
-FROM: christopher.calger@enron.com
-( see attached file : hplo 715 . xls )
-- hplo 715 . xls

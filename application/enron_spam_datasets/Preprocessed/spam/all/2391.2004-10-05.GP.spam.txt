@@ -1,2 +1,0 @@
-FROM: paliourg@iit.demokritos.gr
-click here to be removed

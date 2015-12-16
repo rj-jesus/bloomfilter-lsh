@@ -1,5 +1,0 @@
-FROM: mariano.gomez@enron.com
-please find attached the following article :
-' e - strategy brief : enron - a matter of principles ' - the economist
-kind regards ,
-kuldeep chana

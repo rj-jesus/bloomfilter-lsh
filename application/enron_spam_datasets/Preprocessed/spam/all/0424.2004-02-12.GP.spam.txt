@@ -1,1 +1,0 @@
-FROM: bruce@bruce-guenter.dyndns.org

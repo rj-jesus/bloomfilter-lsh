@@ -1,6 +1,0 @@
-FROM: pete.davis@enron.com
-jeff / michelle / ken ,
-here is the daily update for the 7 th .
-take care ,
-suzanne
-- igsupdate . xls

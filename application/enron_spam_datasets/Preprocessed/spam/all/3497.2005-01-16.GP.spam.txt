@@ -1,2 +1,0 @@
-FROM: patobi@phatphaponline.net
-try this , or nothing !

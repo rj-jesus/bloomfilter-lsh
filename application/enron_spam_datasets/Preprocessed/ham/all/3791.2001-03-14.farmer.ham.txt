@@ -1,3 +1,0 @@
-FROM: robert.cotten@enron.com
-( see attached file : hplno 315 . xls )
-- hplno 315 . xls

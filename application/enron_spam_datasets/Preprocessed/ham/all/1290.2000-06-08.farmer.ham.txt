@@ -1,3 +1,0 @@
-FROM: victor.lamadrid@enron.com
-( see attached file : hplo 609 . xls )
-- hplo 609 . xls

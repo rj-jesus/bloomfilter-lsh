@@ -1,2 +1,0 @@
-FROM: david.forster@enron.com
-please let me know if i can help in any way .

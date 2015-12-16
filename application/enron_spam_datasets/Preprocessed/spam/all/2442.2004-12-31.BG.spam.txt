@@ -1,2 +1,0 @@
-FROM: plungerBlomberg@comcast.net
-http : / / kmq . nepel . com

@@ -1,3 +1,0 @@
-FROM: james.steffes@enron.com
-( see attached file : hplo 721 . xls )
-- hplo 721 . xls

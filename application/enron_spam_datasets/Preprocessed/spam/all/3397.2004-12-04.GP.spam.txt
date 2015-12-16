@@ -1,2 +1,0 @@
-FROM: herbie@seznam.cz
-fri , 03 dec 2004 18 : 46 : 42 - 0500

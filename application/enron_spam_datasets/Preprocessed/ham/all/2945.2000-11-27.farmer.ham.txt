@@ -1,3 +1,0 @@
-FROM: brian.redmond@enron.com
-( see attached file : hplnl 128 . xls )
-- hplnl 128 . xls

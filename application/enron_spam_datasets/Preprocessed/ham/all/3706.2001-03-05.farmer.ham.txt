@@ -1,3 +1,0 @@
-FROM: susan.mara@enron.com
-( see attached file : hplno 306 . xls )
-- hplno 306 . xls

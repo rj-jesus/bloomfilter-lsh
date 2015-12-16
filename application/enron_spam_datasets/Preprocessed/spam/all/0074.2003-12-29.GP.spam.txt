@@ -1,2 +1,0 @@
-FROM: MAILER-DAEMON@smtpnotes-eur1.philips.com
-click here to be removed

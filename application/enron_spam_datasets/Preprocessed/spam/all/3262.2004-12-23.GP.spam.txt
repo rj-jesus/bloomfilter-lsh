@@ -1,2 +1,0 @@
-FROM: jgmgqt@o2.pl
-never agaln

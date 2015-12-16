@@ -1,5 +1,0 @@
-FROM: vince.kaminski@enron.com
-here ' s some long awaited trip information . . . ( see attached file : tahoe
-informatoin . doc ) ( see attached file : tahoe . xls )
-- tahoe informatoin . doc
-- tahoe . xls

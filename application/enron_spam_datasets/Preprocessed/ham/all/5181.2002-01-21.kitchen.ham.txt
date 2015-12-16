@@ -1,2 +1,0 @@
-FROM: kate.symes@enron.com
-we are dropping a lot of marketers . it would be nice to keep 1 or 2 .

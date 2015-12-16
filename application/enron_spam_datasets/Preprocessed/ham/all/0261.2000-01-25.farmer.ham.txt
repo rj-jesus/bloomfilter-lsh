@@ -1,3 +1,0 @@
-FROM: jeff.dasovich@enron.com
-the purchase and sale is at felmont # 1 ( point sale ) . we will be terminating
-the agreement . feb should be the last month .

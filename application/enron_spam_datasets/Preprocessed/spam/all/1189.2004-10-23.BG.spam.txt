@@ -1,2 +1,0 @@
-FROM: mail.greece@pandasoftware.com
-http : / / buu . beud . com / r / giggles /

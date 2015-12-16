@@ -1,2 +1,0 @@
-FROM: mark.lay@enron.com
-on monday it will be time to check your pulse . . .

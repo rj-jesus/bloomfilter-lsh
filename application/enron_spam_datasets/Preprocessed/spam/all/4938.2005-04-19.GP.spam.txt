@@ -1,4 +1,0 @@
-FROM: back@adqueen.com
-your document is attached .
-+ + + + attachment : no virus found
-+ + + + norton antivirus - www . symantec . de

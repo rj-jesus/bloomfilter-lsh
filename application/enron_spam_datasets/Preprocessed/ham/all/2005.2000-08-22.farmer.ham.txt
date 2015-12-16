@@ -1,2 +1,0 @@
-FROM: patti.thompson@enron.com
-please see attached memo :

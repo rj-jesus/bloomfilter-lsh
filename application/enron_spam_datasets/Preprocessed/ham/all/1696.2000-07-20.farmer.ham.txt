@@ -1,3 +1,0 @@
-FROM: david.delainey@enron.com
-teco tap 20 . 000 / enron ; 100 . 000 / iferc
-ls hpl lsk ic 30 . 000 / enron

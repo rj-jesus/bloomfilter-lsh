@@ -1,5 +1,0 @@
-FROM: tom.acton@enron.com
-please find attached the following article :
-' californian utilities ' - financial times ( also sent to california distribution team )
-kind regards ,
-kuldeep chana

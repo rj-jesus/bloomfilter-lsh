@@ -1,3 +1,0 @@
-FROM: ben.jacoby@enron.com
-january 15 , 2001
-teco tap 30 . 000 / enron

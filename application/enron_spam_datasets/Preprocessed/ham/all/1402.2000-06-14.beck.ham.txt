@@ -1,5 +1,0 @@
-FROM: enron.announcements@enron.com
-dear sally ,
-as we discussed yesterday , here is the draft strawman .
-regards
-shona

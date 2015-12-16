@@ -1,2 +1,0 @@
-FROM: sxdmdsj@81.223.205.68.cfl.rr.com
->

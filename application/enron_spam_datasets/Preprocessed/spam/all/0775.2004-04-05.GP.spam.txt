@@ -1,2 +1,0 @@
-FROM: news@e-pepper.net
-click here to be removed

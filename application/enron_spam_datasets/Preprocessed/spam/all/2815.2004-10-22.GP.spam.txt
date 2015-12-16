@@ -1,2 +1,0 @@
-FROM: chester1869@mkministries.com
-click here to be removed

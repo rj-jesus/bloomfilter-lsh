@@ -1,3 +1,0 @@
-FROM: susan.scott@enron.com
-teco tap 20 . 000 / enron ; 50 . 000 / gas daily
-ls hpl lsk ic 30 . 000 / enron

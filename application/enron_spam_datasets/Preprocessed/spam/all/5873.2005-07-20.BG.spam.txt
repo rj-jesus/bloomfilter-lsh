@@ -1,2 +1,0 @@
-FROM: tybalttalbot@vivianhsu.net
-browse our watchzone for auto - matic , winding battery

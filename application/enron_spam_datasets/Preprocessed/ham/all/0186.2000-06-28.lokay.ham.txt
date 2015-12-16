@@ -1,2 +1,0 @@
-FROM: mary.cook@enron.com
-please find attached our most recent updated contact list .

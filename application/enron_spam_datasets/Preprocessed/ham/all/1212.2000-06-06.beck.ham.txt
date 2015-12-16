@@ -1,3 +1,0 @@
-FROM: ben.jacoby@enron.com
-please see the attached -
-eddie

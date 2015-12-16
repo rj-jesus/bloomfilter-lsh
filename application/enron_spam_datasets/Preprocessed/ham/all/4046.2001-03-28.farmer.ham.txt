@@ -1,3 +1,0 @@
-FROM: pete.davis@enron.com
-this has been nominated , tracked and balanced . . .
-mary

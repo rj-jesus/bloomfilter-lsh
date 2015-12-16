@@ -1,2 +1,0 @@
-FROM: james.brown@enron.com
-teco tap 67 . 500 / hpl gas daily ; 60 . 000 / enron

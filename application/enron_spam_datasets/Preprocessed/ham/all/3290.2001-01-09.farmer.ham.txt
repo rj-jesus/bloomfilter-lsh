@@ -1,3 +1,0 @@
-FROM: info@pmaconference.com
-( see attached file : hplnol 10 . xls )
-- hplnol 10 . xls

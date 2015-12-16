@@ -1,3 +1,0 @@
-FROM: mary.poorman@enron.com
-( see attached file : hplo 614 . xls )
-- hplo 614 . xls

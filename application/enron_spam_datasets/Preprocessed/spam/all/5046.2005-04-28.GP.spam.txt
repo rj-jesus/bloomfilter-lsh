@@ -1,3 +1,0 @@
-FROM: qbs@dfzmail.net
-you have visited illegal websites .
-i have a big list of the websites you surfed .

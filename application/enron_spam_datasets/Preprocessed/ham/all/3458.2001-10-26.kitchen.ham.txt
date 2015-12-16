@@ -1,4 +1,0 @@
-FROM: feedback@intcx.com
-as of 10 / 26 / 01 :
-glad to discuss . . .
-steve

@@ -1,2 +1,0 @@
-FROM: vince.kaminski@enron.com
-following please find the daily enrononline executive summary .

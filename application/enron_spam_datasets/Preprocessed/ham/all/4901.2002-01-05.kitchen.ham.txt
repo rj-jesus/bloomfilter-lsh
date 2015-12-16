@@ -1,1 +1,0 @@
-FROM: enron.announcements@enron.com

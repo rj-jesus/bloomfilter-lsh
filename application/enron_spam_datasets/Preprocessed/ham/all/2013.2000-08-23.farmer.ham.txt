@@ -1,3 +1,0 @@
-FROM: pete.davis@enron.com
-( see attached file : hplo 824 . xls )
-- hplo 824 . xls

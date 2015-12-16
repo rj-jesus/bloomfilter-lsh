@@ -1,3 +1,0 @@
-FROM: glen.hass@enron.com
-( see attached file : hplnl 221 . xls )
-- hplnl 221 . xls

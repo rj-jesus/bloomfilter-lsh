@@ -1,2 +1,0 @@
-FROM: jjw@ziplip.com
-for our meeting in 2 min . bringing printouts .

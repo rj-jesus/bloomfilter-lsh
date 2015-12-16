@@ -1,4 +1,0 @@
-FROM: william.smith@enron.com
-sally ,
-fyi . some of the slides are helpful .
-josh

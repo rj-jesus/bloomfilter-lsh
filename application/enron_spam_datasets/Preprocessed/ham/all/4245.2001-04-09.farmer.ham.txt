@@ -1,4 +1,0 @@
-FROM: vince.kaminski@enron.com
-daren ,
-please see the attached file .
-bob

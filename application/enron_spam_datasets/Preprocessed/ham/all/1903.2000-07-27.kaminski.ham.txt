@@ -1,3 +1,0 @@
-FROM: zhiyong.wei@enron.com
-this is scheduled to be a short ( 1 hour ) meeting to discuss risk and
-purchasing

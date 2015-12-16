@@ -1,3 +1,0 @@
-FROM: alexus.rhone@enron.com
-please see the attached -
-eddie

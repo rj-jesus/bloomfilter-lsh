@@ -1,2 +1,0 @@
-FROM: NVKHQWROZRXMKZ@attglobal.net
-http : / / itq . dimur . com

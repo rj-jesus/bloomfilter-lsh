@@ -1,2 +1,0 @@
-FROM: bbdiscovery@qzmail.info
-click here to be removed

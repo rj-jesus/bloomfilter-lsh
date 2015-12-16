@@ -1,3 +1,0 @@
-FROM: pete.davis@enron.com
-( see attached file : hplnl 109 . xls )
-- hplnl 109 . xls

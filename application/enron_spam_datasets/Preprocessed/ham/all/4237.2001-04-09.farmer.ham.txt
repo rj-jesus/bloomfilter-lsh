@@ -1,3 +1,0 @@
-FROM: mjaffier@stern.nyu.edu
-( see attached file : hplno 410 . xls )
-- hplno 410 . xls

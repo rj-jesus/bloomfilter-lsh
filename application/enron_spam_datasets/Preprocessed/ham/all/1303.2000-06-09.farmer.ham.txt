@@ -1,3 +1,0 @@
-FROM: karla.feldman@enron.com
-( see attached file : hplo 610 . xls )
-- hplo 610 . xls

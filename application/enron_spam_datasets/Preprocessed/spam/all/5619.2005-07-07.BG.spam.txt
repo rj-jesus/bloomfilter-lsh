@@ -1,2 +1,0 @@
-FROM: orkunalan@hotmail.com
-our new product - c i a l i s

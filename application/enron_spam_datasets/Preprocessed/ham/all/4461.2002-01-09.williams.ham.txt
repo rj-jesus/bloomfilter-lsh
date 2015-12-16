@@ -1,2 +1,0 @@
-FROM: shona.wilson@enron.com
-start date : 1 / 9 / 02 ; hourahead hour : 15 ; hourahead schedule download failed . manual intervention required .

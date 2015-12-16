@@ -1,1 +1,0 @@
-FROM: davbandella@telstra.com

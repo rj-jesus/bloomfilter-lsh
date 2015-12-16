@@ -1,2 +1,0 @@
-FROM: kimberly.whitsel.wg02@wharton.upenn.edu
-very symbolic of our current struggle

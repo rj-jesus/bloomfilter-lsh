@@ -1,3 +1,0 @@
-FROM: cp_jenkins_54@yooh.co.uk
-buenos dias !
-nan tara bhetuyaa

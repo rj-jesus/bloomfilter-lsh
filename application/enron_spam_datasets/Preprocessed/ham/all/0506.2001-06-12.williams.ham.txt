@@ -1,5 +1,0 @@
-FROM: michelle.lokay@enron.com
-greetings bill ,
-here is a copy of my career goals .
-david .
-- career goals . doc

@@ -1,1 +1,0 @@
-FROM: craig.dean@enron.com

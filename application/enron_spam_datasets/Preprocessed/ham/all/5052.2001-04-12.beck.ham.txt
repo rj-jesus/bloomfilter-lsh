@@ -1,4 +1,0 @@
-FROM: office.chairman@enron.com
-here is the egm headcount report . please let me know if you have any questions .
-thanks ,
-laurel

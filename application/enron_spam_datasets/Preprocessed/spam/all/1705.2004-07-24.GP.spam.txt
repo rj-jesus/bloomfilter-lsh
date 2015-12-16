@@ -1,1 +1,0 @@
-FROM: natascha75.schiess@veloxzone.com.br

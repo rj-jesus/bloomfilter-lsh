@@ -1,3 +1,0 @@
-FROM: ab_rasheed@yahoo.com
-shaquana
-bye : - )

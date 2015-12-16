@@ -1,2 +1,0 @@
-FROM: vince.kaminski@enron.com
-morgan gottsponer

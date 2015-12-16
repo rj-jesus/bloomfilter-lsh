@@ -1,4 +1,0 @@
-FROM: carol.st.@enron.com
-daren ,
-fyi .
-bob

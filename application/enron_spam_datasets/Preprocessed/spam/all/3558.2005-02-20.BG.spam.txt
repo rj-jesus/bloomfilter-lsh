@@ -1,3 +1,0 @@
-FROM: 12ani@a-1.be
-hey ! : )
-bidaya neuchi

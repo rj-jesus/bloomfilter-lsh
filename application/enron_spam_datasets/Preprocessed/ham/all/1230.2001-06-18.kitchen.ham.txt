@@ -1,2 +1,0 @@
-FROM: john.lavorato@enron.com
-attached is the june 8 narrative and report . i understand that this did not get distributed . the next report will be 6 / 22 .

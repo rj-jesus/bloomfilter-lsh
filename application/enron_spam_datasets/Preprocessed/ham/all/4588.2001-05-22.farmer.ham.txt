@@ -1,3 +1,0 @@
-FROM: christopher.calger@enron.com
-( see attached file : hplno 523 . xls )
-- hplno 523 . xls

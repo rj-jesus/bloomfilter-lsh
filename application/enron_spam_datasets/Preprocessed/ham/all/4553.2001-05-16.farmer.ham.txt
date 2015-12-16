@@ -1,3 +1,0 @@
-FROM: anjam.ahmad@enron.com
-( see attached file : hplno 517 . xls )
-- hplno 517 . xls

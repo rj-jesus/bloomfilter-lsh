@@ -1,2 +1,0 @@
-FROM: robbin.stewart@enron.com
-start date : 12 / 11 / 01 ; hourahead hour : 18 ; hourahead schedule download failed . manual intervention required .

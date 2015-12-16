@@ -1,2 +1,0 @@
-FROM: qifkrmleq@earthlink.net
-http : / / hayes . mainoemstore . com / ? a = 3107

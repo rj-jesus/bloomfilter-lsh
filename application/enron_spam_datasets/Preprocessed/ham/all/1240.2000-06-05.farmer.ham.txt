@@ -1,3 +1,0 @@
-FROM: kelly.johnson@enron.com
-( see attached file : hplo 606 . xls )
-- hplo 606 . xls

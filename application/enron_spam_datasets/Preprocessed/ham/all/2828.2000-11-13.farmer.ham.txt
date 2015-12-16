@@ -1,3 +1,0 @@
-FROM: clem.cernosek@enron.com
-( see attached file : hplnl 114 . xls )
-- hplnl 114 . xls

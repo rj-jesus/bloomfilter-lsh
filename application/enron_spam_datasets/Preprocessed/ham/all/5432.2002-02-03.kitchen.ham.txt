@@ -1,1 +1,0 @@
-FROM: les_clewlow@compuserve.com

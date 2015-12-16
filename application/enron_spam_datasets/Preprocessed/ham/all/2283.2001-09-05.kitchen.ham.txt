@@ -1,2 +1,0 @@
-FROM: arsystem@mailman.enron.com
-the zie projects are coming along fine : basis opts port calc is done and being tested by us . flex deal viewer coming along , probably done by the end of the month . transport options and option reports are under development . going to talk to zie about sitara reliability cause we will have a trader revolt if it crashes again .

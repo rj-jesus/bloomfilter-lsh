@@ -1,3 +1,0 @@
-FROM: bryan.seyfried@enron.com
-( see attached file : hplnl 027 . xls )
-- hplnl 027 . xls

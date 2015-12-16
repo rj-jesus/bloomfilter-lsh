@@ -1,4 +1,0 @@
-FROM: mjones7@txu.com
-mr . bayne :
-attached is the updated document . if you need anything else , please let
-me know .

@@ -1,2 +1,0 @@
-FROM: brian.redmond@enron.com
-. . . . . . . and i will be her supervisor .

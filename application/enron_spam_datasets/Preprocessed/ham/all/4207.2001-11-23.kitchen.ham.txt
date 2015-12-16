@@ -1,3 +1,0 @@
-FROM: bob.hall@enron.com
-markets
-please find the above article attached

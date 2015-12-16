@@ -1,2 +1,0 @@
-FROM: john.arnold@enron.com
-hurricane elana

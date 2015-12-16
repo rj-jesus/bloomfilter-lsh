@@ -1,3 +1,0 @@
-FROM: robert.cotten@enron.com
-( see attached file : hplo 803 . xls )
-- hplo 803 . xls

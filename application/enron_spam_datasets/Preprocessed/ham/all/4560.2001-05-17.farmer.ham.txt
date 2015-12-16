@@ -1,3 +1,0 @@
-FROM: perfmgmt@enron.com
-( see attached file : hplno 518 . xls )
-- hplno 518 . xls

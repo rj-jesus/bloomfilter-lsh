@@ -1,2 +1,0 @@
-FROM: mark.ruane@enron.com
-- hidalgo daily gas nomination . doc

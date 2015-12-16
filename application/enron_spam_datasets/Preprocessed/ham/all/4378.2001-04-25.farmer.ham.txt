@@ -1,3 +1,0 @@
-FROM: steven.leppard@enron.com
-( see attached file : hplno 426 . xls )
-- hplno 426 . xls

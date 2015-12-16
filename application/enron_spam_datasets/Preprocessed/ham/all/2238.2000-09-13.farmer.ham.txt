@@ -1,3 +1,0 @@
-FROM: tammie.schoppe@enron.com
-( see attached file : hplo 914 . xls )
-- hplo 914 . xls

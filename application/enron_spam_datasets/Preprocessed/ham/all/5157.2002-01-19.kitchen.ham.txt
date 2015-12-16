@@ -1,4 +1,0 @@
-FROM: donna.vaughn@enron.com
-ok
-- - - - - - - - - - - - - - - - - - - - - - - - - -
-sent from my blackberry wireless handheld ( www . blackberry . net )

@@ -1,3 +1,0 @@
-FROM: h9disgyn@sundial.ma.huji.ac.il
-hello , stranger ! : )
-bo yi bo wa

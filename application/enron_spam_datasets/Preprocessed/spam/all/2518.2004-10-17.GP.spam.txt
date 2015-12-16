@@ -1,3 +1,0 @@
-FROM: activity@schaefer.net
-groovy : )
-bazzo deravin

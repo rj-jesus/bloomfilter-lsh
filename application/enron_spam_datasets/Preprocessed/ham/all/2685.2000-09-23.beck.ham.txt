@@ -1,3 +1,0 @@
-FROM: ghoshr@ruf.rice.edu
-please see the following attachments for participant revisions .
-thanks , geynille

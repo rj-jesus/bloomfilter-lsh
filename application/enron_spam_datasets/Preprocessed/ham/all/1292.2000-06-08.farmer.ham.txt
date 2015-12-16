@@ -1,4 +1,0 @@
-FROM: robert.johnston@enron.com
-teco tap 30 . 000 / hpl iferc
-texoma 20 . 000 / hpl iferc
-ls hpl lsk ic 40 . 000 / enron

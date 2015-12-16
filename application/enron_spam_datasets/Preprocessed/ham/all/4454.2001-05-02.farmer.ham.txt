@@ -1,4 +1,0 @@
-FROM: announcements.enron@enron.com
-please increase deliveries into eastrans to 10 , 000 mmbtu / dy effective
-5 / 3 / 01 .
-the redeliveries will be 10 , 000 mmbtu / dy into the cartwheel .

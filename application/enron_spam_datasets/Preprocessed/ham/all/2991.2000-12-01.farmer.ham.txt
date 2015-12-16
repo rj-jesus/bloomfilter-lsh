@@ -1,2 +1,0 @@
-FROM: tammie.schoppe@enron.com
-teco tap 115 . 833 / hpl gas daily

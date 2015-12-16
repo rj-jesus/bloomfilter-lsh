@@ -1,1 +1,0 @@
-FROM: Major@wongfaye.com

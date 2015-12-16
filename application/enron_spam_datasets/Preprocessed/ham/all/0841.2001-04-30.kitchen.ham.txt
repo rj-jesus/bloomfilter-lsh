@@ -1,5 +1,0 @@
-FROM: pete.davis@enron.com
-louise ,
-as discussed , attached is the first weekly update .
-thanks ,
-don

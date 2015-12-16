@@ -1,3 +1,0 @@
-FROM: pete.davis@enron.com
-sold !
-derek

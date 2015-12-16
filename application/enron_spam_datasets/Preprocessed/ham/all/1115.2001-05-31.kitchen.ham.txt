@@ -1,2 +1,0 @@
-FROM: shirley.crenshaw@enron.com
-john

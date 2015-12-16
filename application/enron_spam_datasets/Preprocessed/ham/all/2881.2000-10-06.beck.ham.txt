@@ -1,5 +1,0 @@
-FROM: shirley.crenshaw@enron.com
-dear sally ,
-here is the lastest . i ' ll continue to keep you in the loop .
-best regards
-shona

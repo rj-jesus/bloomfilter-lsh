@@ -1,2 +1,0 @@
-FROM: fred.boas@enron.com
-teco tap 30 . 000 / enron ; 50 . 000 / hpl gas daily

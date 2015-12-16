@@ -1,3 +1,0 @@
-FROM: alexus.rhone@enron.com
-expect you ' ve seen this , but just in case . . . . .
-mrp

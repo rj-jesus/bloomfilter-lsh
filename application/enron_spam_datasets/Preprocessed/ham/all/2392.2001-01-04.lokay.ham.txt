@@ -1,2 +1,0 @@
-FROM: tanya.tamarchenko@enron.com
-please see the attached memo for tips on making your winter driving safer .

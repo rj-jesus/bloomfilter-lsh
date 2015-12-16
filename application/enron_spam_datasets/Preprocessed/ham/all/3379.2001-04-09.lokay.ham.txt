@@ -1,2 +1,0 @@
-FROM: pete.davis@enron.com
-for your information , here is the answer that was filed today .

@@ -1,3 +1,0 @@
-FROM: garrick.hill@enron.com
-someone mentioned this guy was really good - is he available ? is he good ?
-b .

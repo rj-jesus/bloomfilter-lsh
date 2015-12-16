@@ -1,2 +1,0 @@
-FROM: julie@lacimagroup.com
-- wassupsouthparkl . exe

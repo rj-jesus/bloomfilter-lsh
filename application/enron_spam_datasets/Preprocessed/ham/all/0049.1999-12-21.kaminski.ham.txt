@@ -1,3 +1,0 @@
-FROM: zhiyong.wei@enron.com
-i ' m off for my xmas break , so happy holidays to you all !
-steve

@@ -1,3 +1,0 @@
-FROM: ami.chokshi@enron.com
-teco tap 20 . 000 / enron ; 64 . 583 / hpl iferc
-ls hpl lsk ic 20 . 000 / enron

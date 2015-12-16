@@ -1,3 +1,0 @@
-FROM: sbramlet@utilicorp.com
-( see attached file : hplno 505 . xls )
-- hplno 505 . xls

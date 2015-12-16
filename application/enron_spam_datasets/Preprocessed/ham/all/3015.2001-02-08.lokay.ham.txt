@@ -1,5 +1,0 @@
-FROM: mark.frevert@enron.com
-jeff / michelle / ken ,
-here ' s the daily update for the 8 th .
-suzanne
-- igsupdate . xls

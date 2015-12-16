@@ -1,2 +1,0 @@
-FROM: megan.parker@enron.com
-281 . 343 . 8233

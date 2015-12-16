@@ -1,2 +1,0 @@
-FROM: tess.ray@enron.com
-following please find the daily enrononline executive summary .

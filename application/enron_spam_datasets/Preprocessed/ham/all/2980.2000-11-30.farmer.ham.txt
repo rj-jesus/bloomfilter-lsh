@@ -1,2 +1,0 @@
-FROM: robert.mason@enron.com
-teco tap 18 . 208 / enron ; 20 . 125 / hpl gas daily

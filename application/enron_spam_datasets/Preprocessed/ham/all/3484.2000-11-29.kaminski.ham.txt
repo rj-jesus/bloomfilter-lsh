@@ -1,4 +1,0 @@
-FROM: kevin.kindall@enron.com
-please see attached .
-thanks
-shelly

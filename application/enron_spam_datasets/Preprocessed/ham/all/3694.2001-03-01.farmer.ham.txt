@@ -1,3 +1,0 @@
-FROM: rebrooks@earthlink.net
-( see attached file : hplno 302 . xls )
-- hplno 302 . xls

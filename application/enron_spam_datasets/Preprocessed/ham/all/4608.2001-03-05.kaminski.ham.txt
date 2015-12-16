@@ -1,4 +1,0 @@
-FROM: wes.colwell@enron.com
-hey ,
-best picks are zigo and smtx
-steve

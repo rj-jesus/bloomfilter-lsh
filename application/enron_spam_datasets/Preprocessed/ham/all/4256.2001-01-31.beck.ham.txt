@@ -1,2 +1,0 @@
-FROM: c..hall@enron.com
-congrads ! ! ! !

@@ -1,2 +1,0 @@
-FROM: bruno@eyeforenergy.com
-attached are the results of the open season .

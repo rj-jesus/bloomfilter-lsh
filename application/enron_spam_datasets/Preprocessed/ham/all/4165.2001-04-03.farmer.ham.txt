@@ -1,3 +1,0 @@
-FROM: wes.colwell@enron.com
-( see attached file : hplno 404 . xls )
-- hplno 404 . xls

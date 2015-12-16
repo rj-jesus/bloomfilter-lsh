@@ -1,3 +1,0 @@
-FROM: lnncbom@yahoo.com
-buenos dias !
-doskoro

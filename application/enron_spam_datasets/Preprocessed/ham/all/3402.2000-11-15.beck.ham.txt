@@ -1,2 +1,0 @@
-FROM: shirley.crenshaw@enron.com
-here is an updated version of sally ' s group .

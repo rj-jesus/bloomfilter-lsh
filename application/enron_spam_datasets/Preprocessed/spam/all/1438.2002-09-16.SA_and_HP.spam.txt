@@ -1,2 +1,0 @@
-FROM: looznc@inco.com.lb
-to be removed from this list , click here .

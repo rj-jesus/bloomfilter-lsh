@@ -1,3 +1,0 @@
-FROM: pat.clynes@enron.com
-( see attached file : hplno 210 . xls )
-- hplno 210 . xls

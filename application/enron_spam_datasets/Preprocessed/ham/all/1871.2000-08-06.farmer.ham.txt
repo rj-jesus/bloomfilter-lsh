@@ -1,6 +1,0 @@
-FROM: vince.kaminski@enron.com
-dear daren farmer ,
-here is your username and password that you requested .
-username : dfarmer 2
-password : jungle
-you can update your info at :

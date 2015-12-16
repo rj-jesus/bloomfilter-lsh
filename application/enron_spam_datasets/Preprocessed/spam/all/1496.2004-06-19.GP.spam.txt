@@ -1,2 +1,0 @@
-FROM: managed@forex-day-trading.com
-click here to be removed

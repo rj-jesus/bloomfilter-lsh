@@ -1,3 +1,0 @@
-FROM: kent.castleman@enron.com
-- - ( see attached file : hplo 912 . xls )
-- hplo 912 . xls

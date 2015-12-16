@@ -1,3 +1,0 @@
-FROM: vqwtveiky@att.net
-hello !
-pama kowbtemin mine '

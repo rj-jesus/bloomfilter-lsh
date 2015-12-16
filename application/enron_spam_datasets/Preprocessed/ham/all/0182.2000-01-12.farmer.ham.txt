@@ -1,2 +1,0 @@
-FROM: mark.haedicke@enron.com
-here are the most recent numbers .

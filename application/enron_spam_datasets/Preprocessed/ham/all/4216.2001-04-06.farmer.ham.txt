@@ -1,4 +1,0 @@
-FROM: vince.kaminski@enron.com
-estimated actuals
-teco tap 24 . 917
-when we receive actuals from duke , i will forward them to you .

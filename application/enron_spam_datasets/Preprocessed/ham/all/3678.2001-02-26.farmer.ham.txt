@@ -1,3 +1,0 @@
-FROM: c..hall@enron.com
-( see attached file : hplno 227 . xls )
-- hplno 227 . xls

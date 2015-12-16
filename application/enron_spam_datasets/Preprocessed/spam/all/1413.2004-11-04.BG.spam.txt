@@ -1,2 +1,0 @@
-FROM: Enedina@2103.allknowingmailerz.com
-un 2 u 6

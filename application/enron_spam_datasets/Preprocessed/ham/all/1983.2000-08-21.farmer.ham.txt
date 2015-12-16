@@ -1,3 +1,0 @@
-FROM: lex.carroll@enron.com
-( see attached file : hplo 822 . xls )
-- hplo 822 . xls

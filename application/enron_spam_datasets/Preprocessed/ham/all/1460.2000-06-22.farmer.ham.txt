@@ -1,3 +1,0 @@
-FROM: lee.papayoti@enron.com
-hplr est . 65000
-wb est . 40000

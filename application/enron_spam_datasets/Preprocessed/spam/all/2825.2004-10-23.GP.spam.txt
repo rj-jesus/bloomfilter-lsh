@@ -1,3 +1,0 @@
-FROM: ebba.linden@bankone.com
-well well !
-cuidate

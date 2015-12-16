@@ -1,4 +1,0 @@
-FROM: zhiyong.wei@enron.com
-louise :
-attached is the information we discusssed regarding the vitro project . talk to you this morning .
-best regards - max

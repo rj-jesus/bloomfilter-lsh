@@ -1,7 +1,0 @@
-FROM: vince.kaminski@enron.com
-december 1 , 2000
-teco tap 35 . 000 / enron ; 105 . 625 / hpl iferc
-december 2 , 2000
-teco tap 30 . 000 / enron ; 120 . 000 / hpl iferc
-december 3 , 2000
-teco tap 30 . 000 / enron ; 120 . 000 / hpl iferc

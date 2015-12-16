@@ -1,3 +1,0 @@
-FROM: megan.parker@enron.com
-( see attached file : hplno 516 . xls )
-- hplno 516 . xls

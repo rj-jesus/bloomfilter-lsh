@@ -1,6 +1,0 @@
-FROM: enron.announcements@enron.com
-it ' s all here .
-comments appreciated .
-best regards ,
-jhherbert
-- june 2000 . pdf

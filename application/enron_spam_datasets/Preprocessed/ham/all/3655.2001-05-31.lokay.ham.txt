@@ -1,3 +1,0 @@
-FROM: pete.davis@enron.com
-attached is the planning weekly report
-- morgan gottsponer

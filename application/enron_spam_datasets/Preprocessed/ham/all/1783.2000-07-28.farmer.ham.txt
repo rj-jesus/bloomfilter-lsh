@@ -1,3 +1,0 @@
-FROM: d..steffes@enron.com
-teco tap 25 . 000 / enron ; 48 . 750 / hpl iferc
-ls hpl lsk ic 15 . 000 / enron

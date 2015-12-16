@@ -1,3 +1,0 @@
-FROM: arsystem@mailman.enron.com
-( see attached file : hplno 329 . xls )
-- hplno 329 . xls

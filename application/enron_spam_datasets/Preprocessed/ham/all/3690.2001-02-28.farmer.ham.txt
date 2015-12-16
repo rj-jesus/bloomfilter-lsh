@@ -1,3 +1,0 @@
-FROM: tara.rozen@enron.com
-( see attached file : hplno 301 . xls )
-- hplno 301 . xls

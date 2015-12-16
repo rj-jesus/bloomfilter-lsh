@@ -1,3 +1,0 @@
-FROM: megan.parker@enron.com
-( see attached file : hplnl 123 . xls )
-- hplnl 123 . xls

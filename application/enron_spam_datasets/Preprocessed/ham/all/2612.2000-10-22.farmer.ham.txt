@@ -1,3 +1,0 @@
-FROM: sharron.westbrook@enron.com
-if the above link doesn ' t work , try going to http : / / www . abacustech . net / pic
-- ram .

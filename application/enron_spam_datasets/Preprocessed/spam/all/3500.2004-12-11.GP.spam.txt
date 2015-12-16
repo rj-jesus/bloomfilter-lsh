@@ -1,8 +1,0 @@
-FROM: Mgmzjmb@altern.org
-% rndtext _ 5 _ 14
-% rndtext _ 5 _ 14
-no
-- - - - - begin pgp signature - - - - -
-version : gnupg vl . 0 . 7 ( gnu / linux )
-nhbqlfivih + fwpgncv 9 / jvy = 8 y
-- - - - - end pgp signature - - - - -

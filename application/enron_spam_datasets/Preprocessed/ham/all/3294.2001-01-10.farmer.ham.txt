@@ -1,2 +1,0 @@
-FROM: mjones7@txu.com
-deal # 565701 - one year deal out of dec -

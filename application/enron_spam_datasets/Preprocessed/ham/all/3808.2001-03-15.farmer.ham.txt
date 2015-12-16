@@ -1,3 +1,0 @@
-FROM: audrey.robertson@enron.com
-( see attached file : hplno 316 . xls )
-- hplno 316 . xls

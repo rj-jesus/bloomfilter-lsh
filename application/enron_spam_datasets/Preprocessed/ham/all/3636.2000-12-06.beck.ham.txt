@@ -1,4 +1,0 @@
-FROM: bmcmills@duke-energy.com
-please review . i ' ll have copies for you at 2 pm as well .
-thanks
-shona

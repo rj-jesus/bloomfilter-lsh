@@ -1,1 +1,0 @@
-FROM: QAPZIDOBC@msn.com

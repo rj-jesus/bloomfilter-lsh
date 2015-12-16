@@ -1,1 +1,0 @@
-FROM: service@paypal.com

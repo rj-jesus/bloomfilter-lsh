@@ -1,2 +1,0 @@
-FROM: projecthoneypot@projecthoneypot.org
-- - >

@@ -1,3 +1,0 @@
-FROM: 40enron@enron.com
-( see attached file : hplno 525 . xls )
-- hplno 525 . xls

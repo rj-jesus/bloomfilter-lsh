@@ -1,3 +1,0 @@
-FROM: ets.center@enron.com
-( see attached file : hplo 804 . xls )
-- hplo 804 . xls

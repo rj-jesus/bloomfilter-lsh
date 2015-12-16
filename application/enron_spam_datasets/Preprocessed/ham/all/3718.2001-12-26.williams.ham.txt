@@ -1,2 +1,0 @@
-FROM: office.chairman@enron.com
-start date : 12 / 26 / 01 ; hourahead hour : 5 ; hourahead schedule download failed . manual intervention required .

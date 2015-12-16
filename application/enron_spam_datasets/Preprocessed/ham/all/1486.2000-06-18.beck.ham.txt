@@ -1,2 +1,0 @@
-FROM: pete.davis@enron.com
-attached are my accomplishments for this review period .

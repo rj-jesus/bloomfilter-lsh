@@ -1,2 +1,0 @@
-FROM: megan.parker@enron.com
-start date : 12 / 17 / 01 ; hourahead hour : 15 ; hourahead schedule download failed . manual intervention required .

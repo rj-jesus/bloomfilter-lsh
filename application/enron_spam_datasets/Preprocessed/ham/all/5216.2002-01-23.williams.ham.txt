@@ -1,2 +1,0 @@
-FROM: frank.hayden@enron.com
-start date : 1 / 23 / 02 ; hourahead hour : 18 ; hourahead schedule download failed . manual intervention required .

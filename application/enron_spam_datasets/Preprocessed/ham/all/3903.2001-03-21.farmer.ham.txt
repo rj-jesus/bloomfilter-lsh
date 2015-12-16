@@ -1,3 +1,0 @@
-FROM: juliann.kemp@enron.com
-( see attached file : hplno 322 . xls )
-- hplno 322 . xls

@@ -1,4 +1,0 @@
-FROM: hector.mcloughlin@enron.com
-attached are txu fuel nominations for tuesday , october 10 , 2000 .
-( see attached file : hpll 010 . xls )
-- hpll 010 . xls

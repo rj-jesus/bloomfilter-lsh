@@ -1,3 +1,0 @@
-FROM: Phi@jmpcreative.com
-would you believe it ?
-bless

@@ -1,2 +1,0 @@
-FROM: ahmedyusuf@tiscali.no
-http : / / kst . nepel . com

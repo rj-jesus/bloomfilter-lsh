@@ -1,2 +1,0 @@
-FROM: eric.gadd@enron.com
-pb 996 @ yahoo . com

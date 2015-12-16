@@ -1,2 +1,0 @@
-FROM: ivor.denver@wanadoo.fr
-wed , 01 dec 2004 19 : 08 : 42 - 0500

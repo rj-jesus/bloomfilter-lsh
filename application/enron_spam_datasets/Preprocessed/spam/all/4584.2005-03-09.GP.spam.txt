@@ -1,2 +1,0 @@
-FROM: jeaid_naruk@yahoo.com
-vaudevillemove me

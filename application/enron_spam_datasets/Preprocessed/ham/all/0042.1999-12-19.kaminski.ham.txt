@@ -1,4 +1,0 @@
-FROM: kristin.walsh@enron.com
-hi all
-merry xmas and a happy new year !
-les .

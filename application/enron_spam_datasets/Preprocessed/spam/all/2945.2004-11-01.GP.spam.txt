@@ -1,1 +1,0 @@
-FROM: gifford@amerikanska.com

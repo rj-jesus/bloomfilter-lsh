@@ -1,2 +1,0 @@
-FROM: mtvyaa@staffordnet.com
-e . . n . . o . . u . . g . . h

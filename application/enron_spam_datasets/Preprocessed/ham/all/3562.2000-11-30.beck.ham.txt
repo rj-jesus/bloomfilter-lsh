@@ -1,2 +1,0 @@
-FROM: kim.melodick@enron.com
-as a result - new spreadsheet

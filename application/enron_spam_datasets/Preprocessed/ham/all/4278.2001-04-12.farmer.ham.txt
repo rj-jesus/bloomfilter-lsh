@@ -1,3 +1,0 @@
-FROM: richard.sage@enron.com
-( see attached file : hplno 413 . xls )
-- hplno 413 . xls

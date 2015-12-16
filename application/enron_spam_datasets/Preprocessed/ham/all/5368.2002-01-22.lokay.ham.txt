@@ -1,2 +1,0 @@
-FROM: ccarley@reliant.com
-the attached imbalances will be discussed tomorrow morning .

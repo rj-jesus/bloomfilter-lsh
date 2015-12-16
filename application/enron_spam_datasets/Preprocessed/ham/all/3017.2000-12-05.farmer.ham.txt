@@ -1,3 +1,0 @@
-FROM: 40enron@enron.com
-( see attached file : hplnl 206 . xls )
-- hplnl 206 . xls

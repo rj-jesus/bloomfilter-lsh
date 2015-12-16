@@ -1,5 +1,0 @@
-FROM: anita.dupont@enron.com
-been a great manager . i hope you ' ll keep in touch and let me know if you are
-ever in san francisco . good luck with whatever you decide to do .
-take care ,
-ami

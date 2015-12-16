@@ -1,6 +1,0 @@
-FROM: robert.cotten@enron.com
-andrew ,
-vince and grant from research would like to have risktrack on their pcs .
-can you install it for them ?
-appreciate it ,
-tanya .

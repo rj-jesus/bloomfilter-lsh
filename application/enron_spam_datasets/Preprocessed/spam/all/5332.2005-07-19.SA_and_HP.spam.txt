@@ -1,4 +1,0 @@
-FROM: usafin@insurancemail.net
-this is an automatically generated delivery status notification .
-delivery to the following recipients failed .
-roger @ gryphon . com . au

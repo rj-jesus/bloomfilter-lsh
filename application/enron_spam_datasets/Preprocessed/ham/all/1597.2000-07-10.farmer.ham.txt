@@ -1,3 +1,0 @@
-FROM: bmcmills@duke-energy.com
-( see attached file : hplo 711 . xls )
-- hplo 711 . xls

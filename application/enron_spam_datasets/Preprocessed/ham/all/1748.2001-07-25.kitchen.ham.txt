@@ -1,4 +1,0 @@
-FROM: joseph.deffner@enron.com
-pls see attached following reqeusted changes to the tt rotations .
-rgds ,
-karen .

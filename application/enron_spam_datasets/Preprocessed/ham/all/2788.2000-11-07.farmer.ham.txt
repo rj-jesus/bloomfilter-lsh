@@ -1,3 +1,0 @@
-FROM: tanya.tamarchenko@enron.com
-november 6 , 2000
-teco tap 30 . 000 / enron ; 120 . 000 / hpl iferc

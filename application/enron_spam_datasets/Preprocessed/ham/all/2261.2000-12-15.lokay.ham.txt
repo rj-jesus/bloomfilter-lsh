@@ -1,7 +1,0 @@
-FROM: stinson.gibner@enron.com
-michelle ,
-the changes for tw deal analysis to use latest basis differential based on
-receipt point
-area is in production .
-thanks ,
-mei - ling

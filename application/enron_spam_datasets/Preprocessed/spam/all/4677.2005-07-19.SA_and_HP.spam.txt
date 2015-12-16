@@ -1,2 +1,0 @@
-FROM: kathleen_worley_35@vdschoor.myweb.nl
-vakantie tot 26 juli !

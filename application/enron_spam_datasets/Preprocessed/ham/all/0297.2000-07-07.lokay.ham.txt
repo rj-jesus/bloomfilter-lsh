@@ -1,2 +1,0 @@
-FROM: iris.mack@enron.com
-- gas accounting . doc

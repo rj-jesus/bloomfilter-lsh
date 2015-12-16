@@ -1,1 +1,0 @@
-FROM: postmaster@mail.londoncapitalgroup.co.uk

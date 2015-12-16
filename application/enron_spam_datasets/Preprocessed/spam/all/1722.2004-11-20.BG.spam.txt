@@ -1,8 +1,0 @@
-FROM: Rector_4704@kaled.com
-actual replicas watches
-i have this brands available besides :
-rolex
-breguet
-glashute original
-breitling
-ikepod

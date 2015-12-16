@@ -1,3 +1,0 @@
-FROM: gary.hanks@enron.com
-teco tap 40 . 000 / enron
-98 . 750 / hpl iferc

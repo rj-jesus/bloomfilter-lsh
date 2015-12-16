@@ -1,2 +1,0 @@
-FROM: bill.williams@enron.com
-ls hpl lsk ic 8 . 750 / enron

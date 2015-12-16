@@ -1,2 +1,0 @@
-FROM: donna.vaughn@enron.com
-attached are the results from my meetings today .

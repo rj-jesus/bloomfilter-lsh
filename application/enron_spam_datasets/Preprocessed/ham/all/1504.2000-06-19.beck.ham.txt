@@ -1,6 +1,0 @@
-FROM: risk-ny@email.msn.com
-all -
-please inform esther gerratt when you are setting up new files and
-directories on the s : \ relating to mg integration . currently , we have three
-folders ( mg , mg eol , mg pres ) .
-thanks - eric

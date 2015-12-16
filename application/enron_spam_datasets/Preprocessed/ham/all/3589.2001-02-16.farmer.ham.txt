@@ -1,3 +1,0 @@
-FROM: pete.davis@enron.com
-( see attached file : hplno 217 . xls )
-- hplno 217 . xls

@@ -1,2 +1,0 @@
-FROM: j..kaminski@enron.com
-see attached memo regarding my visit to the mg - st . louis office .

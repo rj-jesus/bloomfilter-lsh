@@ -1,4 +1,0 @@
-FROM: ami.chokshi@enron.com
-thought you might be able to appreciate a limo . with style .
-( see attached file : bush - limo . jpg )
-- bush - limo . jpg

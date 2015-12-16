@@ -1,3 +1,0 @@
-FROM: richard.causey@enron.com
-teco tap 60 . 000 / enron ; 68 . 333 / hpl iferc
-ls hpl lsk ic 15 . 000 / hpl iferc

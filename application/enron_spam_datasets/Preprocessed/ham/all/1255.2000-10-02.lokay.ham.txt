@@ -1,2 +1,0 @@
-FROM: hector.mcloughlin@enron.com
-- n . e . sum - 2000 . doc

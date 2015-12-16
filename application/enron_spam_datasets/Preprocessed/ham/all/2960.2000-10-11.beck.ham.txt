@@ -1,5 +1,0 @@
-FROM: general.announcement@enron.com
-here you go ladies :
-i will forward any updates as they become available .
-thanks ,
-brenda

@@ -1,3 +1,0 @@
-FROM: tammie.schoppe@enron.com
-( see attached file : hplno 411 . xls )
-- hplno 411 . xls

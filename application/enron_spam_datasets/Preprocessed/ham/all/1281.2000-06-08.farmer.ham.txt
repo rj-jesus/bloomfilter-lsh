@@ -1,4 +1,0 @@
-FROM: d.hall@enron.com
-thanks , daren ,
-these are the only stats that we need for now .
-shari

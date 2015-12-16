@@ -1,2 +1,0 @@
-FROM: Brain@lycos.com
-not interested c - l - i - c - k here

@@ -1,3 +1,0 @@
-FROM: christine.stokes@enron.com
-teco tap 20 . 000 / enron ; 91 . 667 / hpl iferc
-ls hpl lsk ic 20 . 000 / enron

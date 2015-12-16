@@ -1,2 +1,0 @@
-FROM: worldexpos@wowgao.com
-http : / / gaj . hensi . com

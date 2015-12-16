@@ -1,5 +1,0 @@
-FROM: lana.moore@nesanet.org
-hi sally ,
-brent asked me to forward the following on fyi
-hope all is well ,
-niki

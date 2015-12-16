@@ -1,5 +1,0 @@
-FROM: carrie.slagle@enron.com
-jeff / michelle / ken ,
-here is the update report for the 23 rd .
-suzanne
-- igsupdate . xls

@@ -1,3 +1,0 @@
-FROM: eric.faucheaux@enron.com
-( see attached file : hplno 323 . xls )
-- hplno 323 . xls

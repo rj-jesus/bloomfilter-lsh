@@ -1,3 +1,0 @@
-FROM: peggy.hedstrom@enron.com
-( see attached file : hplno 531 . xls )
-- hplno 531 . xls

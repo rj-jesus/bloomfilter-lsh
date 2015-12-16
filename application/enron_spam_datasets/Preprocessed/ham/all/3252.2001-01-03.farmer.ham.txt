@@ -1,3 +1,0 @@
-FROM: shirley.crenshaw@enron.com
-teco tap 30 . 000 / enron
-ls hpl lsk ic 30 . 000 / enron

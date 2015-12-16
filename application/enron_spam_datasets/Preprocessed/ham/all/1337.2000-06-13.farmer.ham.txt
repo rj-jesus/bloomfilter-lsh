@@ -1,4 +1,0 @@
-FROM: norma.villarreal@enron.com
-teco tap 117 . 500 / hpl iferc
-texoma 20 . 000 / enron
-ls hpl katy 40 . 000 / enron

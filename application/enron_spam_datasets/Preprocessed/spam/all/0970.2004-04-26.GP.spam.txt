@@ -1,1 +1,0 @@
-FROM: vancegreen_fg@gould-ratner.com

@@ -1,6 +1,0 @@
-FROM: davila1@txu.com
-karen ,
-it has been determined that the only valid deal is a wellhead purchase from
-texlan at meter # 6788 in 11 / 00 and 12 / 00 production . please reallocate the
-meter to give all volume to texlan . thanks .
-bob

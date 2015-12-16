@@ -1,4 +1,0 @@
-FROM: richard.shapiro@enron.com
-robert ,
-there is a large variance between noms and flow at this meter . is everyone
-in the loop on this . pat

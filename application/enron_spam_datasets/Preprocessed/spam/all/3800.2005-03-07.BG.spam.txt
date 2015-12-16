@@ -1,3 +1,0 @@
-FROM: edl@floorheatech.com
-hey , man ! : )
-ca ndyi

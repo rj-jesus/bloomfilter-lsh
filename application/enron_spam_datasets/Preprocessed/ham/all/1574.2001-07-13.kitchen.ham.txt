@@ -1,2 +1,0 @@
-FROM: paul.goddard@enron.com
-please see attached .

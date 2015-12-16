@@ -1,5 +1,0 @@
-FROM: david.oxley@enron.com
-daren ,
-please click on the supply analysis tab of the attached spreadsheet to view
-the wellhead volumes through 4 / 4 / 01 .
-bob

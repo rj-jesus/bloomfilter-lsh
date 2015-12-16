@@ -1,2 +1,0 @@
-FROM: henrypeters1@iol.pt
-http : / / woe . mainoemstore . com / ? a = 3107

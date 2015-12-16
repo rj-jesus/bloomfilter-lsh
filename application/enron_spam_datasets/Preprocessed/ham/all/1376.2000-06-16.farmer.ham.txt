@@ -1,3 +1,0 @@
-FROM: lydia.cannon@enron.com
-( see attached file : hplo 617 . xls )
-- hplo 617 . xls

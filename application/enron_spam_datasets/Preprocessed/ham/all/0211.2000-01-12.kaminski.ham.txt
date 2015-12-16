@@ -1,3 +1,0 @@
-FROM: amy.fitzpatrick@enron.com
-congratulations on your promotion to md !
-alan

@@ -1,2 +1,0 @@
-FROM: VHYIOMJZ@fresnomail.com
-http : / / woe . mainoemstore . com / ? a = 3107

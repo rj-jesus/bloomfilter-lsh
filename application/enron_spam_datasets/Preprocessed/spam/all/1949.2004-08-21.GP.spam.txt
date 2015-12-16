@@ -1,2 +1,0 @@
-FROM: sales@bgfweb.com
-click here to be removed

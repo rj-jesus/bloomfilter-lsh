@@ -1,3 +1,0 @@
-FROM: robert.lloyd@enron.com
-( see attached file : hplo 712 . xls )
-- hplo 712 . xls

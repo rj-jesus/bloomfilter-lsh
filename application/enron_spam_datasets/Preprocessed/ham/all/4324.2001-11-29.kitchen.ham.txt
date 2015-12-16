@@ -1,2 +1,0 @@
-FROM: vince.kaminski@enron.com
-i can answer some of these

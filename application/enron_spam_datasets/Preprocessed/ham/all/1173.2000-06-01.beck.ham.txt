@@ -1,3 +1,0 @@
-FROM: david.oxley@enron.com
-please click on the below link to access a message from the office of the
-chairman .

@@ -1,3 +1,0 @@
-FROM: lana.belnoske@nesanet.org
-mick
-3 - 4783

@@ -1,2 +1,0 @@
-FROM: bcbridge@hotmail.com
-click here to be removed

@@ -1,2 +1,0 @@
-FROM: robert.cotten@enron.com
-please keep confidential

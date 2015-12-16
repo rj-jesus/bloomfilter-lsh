@@ -1,3 +1,0 @@
-FROM: jim.reyes@enron.com
-( see attached file : hplno 203 . xls )
-- hplno 203 . xls

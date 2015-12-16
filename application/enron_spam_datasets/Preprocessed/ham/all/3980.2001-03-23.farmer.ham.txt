@@ -1,4 +1,0 @@
-FROM: scotty.gilbert@enron.com
-daren ,
-fyi .
-bob

@@ -1,3 +1,0 @@
-FROM: enron.announcements@enron.com
-teco tap 7 . 500 / enron
-ls hpl lsk ic 30 . 000 / enron

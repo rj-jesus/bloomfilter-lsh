@@ -1,5 +1,0 @@
-FROM: kevin.hyatt@enron.com
-among other changes , please note the time changes for this evening .
-thanks ,
-joannie
-3 - 1769

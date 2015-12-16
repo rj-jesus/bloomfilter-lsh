@@ -1,3 +1,0 @@
-FROM: james.new@enron.com
-( see attached file : hplo 908 . xls )
-- hplo 908 . xls

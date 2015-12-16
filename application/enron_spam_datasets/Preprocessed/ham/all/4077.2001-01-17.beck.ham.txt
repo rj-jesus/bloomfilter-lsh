@@ -1,5 +1,0 @@
-FROM: stinson.gibner@enron.com
-dear sally :
-congratulations on your new role ! all the best with it ! ! !
-best regards ,
-joseph koothrappally

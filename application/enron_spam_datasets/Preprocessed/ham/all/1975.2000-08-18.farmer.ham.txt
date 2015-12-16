@@ -1,3 +1,0 @@
-FROM: trang.dinh@enron.com
-( see attached file : hplo 819 . xls )
-- hplo 819 . xls

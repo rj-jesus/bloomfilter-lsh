@@ -1,3 +1,0 @@
-FROM: dave@msn.com
-best wishes ,
-your friend .

@@ -1,2 +1,0 @@
-FROM: .hall@enron.com
-the july 6 th meeting from 2 : 30 till 4 : 30 is being held in eb 45 cl

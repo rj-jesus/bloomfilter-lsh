@@ -1,2 +1,0 @@
-FROM: sherlyn.schumack@enron.com
-start date : 12 / 19 / 01 ; hourahead hour : 12 ; hourahead schedule download failed . manual intervention required .

@@ -1,2 +1,0 @@
-FROM: ets.announcement@enron.com
-- calpine monthly gas nomination _ _ _ . doc

@@ -1,3 +1,0 @@
-FROM: iris.mack@enron.com
-teco tap 34 . 167 / hpl gas daily ; 30 . 000 / enron
-ls hpl lsk ic 20 . 000 / enron

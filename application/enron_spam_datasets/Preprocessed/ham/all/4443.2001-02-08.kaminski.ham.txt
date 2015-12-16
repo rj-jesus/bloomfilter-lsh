@@ -1,3 +1,0 @@
-FROM: timpowell@txu.com
-here is the most recent version of the spreadsheet and the accompanying
-assumptions .

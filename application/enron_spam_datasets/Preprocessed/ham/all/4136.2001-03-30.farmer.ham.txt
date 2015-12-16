@@ -1,2 +1,0 @@
-FROM: a..martin@enron.com
-i have added shell and deleted south hampton .

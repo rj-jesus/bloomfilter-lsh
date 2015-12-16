@@ -1,6 +1,0 @@
-FROM: carnes@fas.harvard.edu
-the 30 / d ls hpl katy i . c . gas was left off of the original version .
-call if you have any questions . . . .
-ronnie
-( see attached file : hplnl 227 . xls )
-- hplnl 227 . xls

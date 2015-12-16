@@ -1,3 +1,0 @@
-FROM: ken.skilling@enron.com
-( see attached file : hplno 228 . xls )
-- hplno 228 . xls

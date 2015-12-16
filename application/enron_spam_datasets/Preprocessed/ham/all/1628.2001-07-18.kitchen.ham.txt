@@ -1,2 +1,0 @@
-FROM: s..bradford@enron.com
-- portland promo . doc

@@ -1,6 +1,0 @@
-FROM: mark.pickering@enron.com
-jeff / michelle / ken ,
-here is the daily update for the 26 th .
-enjoy your weekend !
-suzanne
-- igsupdate . xls

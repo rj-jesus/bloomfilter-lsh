@@ -1,7 +1,0 @@
-FROM: 66gillespie@4dvision.net
-your message to :
-- > felskickat @ snillet . com
-was considered unsolicited bulk e - mail ( ube ) .
-subject : just to her . . .
-return - path :
-delivery of the email was stopped !

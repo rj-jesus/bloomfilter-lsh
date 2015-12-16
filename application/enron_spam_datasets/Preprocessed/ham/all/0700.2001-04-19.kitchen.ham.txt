@@ -1,2 +1,0 @@
-FROM: gwyn.koepke@enron.com
-i have a dinner with llodra & wood , i ' ll ask abler to go .

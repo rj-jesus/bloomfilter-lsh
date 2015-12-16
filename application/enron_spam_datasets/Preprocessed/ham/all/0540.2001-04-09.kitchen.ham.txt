@@ -1,2 +1,0 @@
-FROM: maritta.mullet@enron.com
-please respond to kelly . johnson

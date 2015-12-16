@@ -1,7 +1,0 @@
-FROM: nancy.hernandez@enron.com
-november 17 , 20000
-teco tap 30 . 000 / enron ; 33 . 750 / hpl gas daily
-november 18 , 2000
-teco tap 30 . 000 / enron ; 120 . 000 / hpl gas daily
-november 19 , 2000
-teco tap 23 . 125 / enron

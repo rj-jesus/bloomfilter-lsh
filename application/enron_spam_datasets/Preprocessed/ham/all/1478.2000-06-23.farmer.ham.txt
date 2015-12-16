@@ -1,4 +1,0 @@
-FROM: vince.kaminski@enron.com
-teco tap 100 . 000 / hpl iferc
-20 . 000 / enron
-ls hpl katy 30 . 000 / enron

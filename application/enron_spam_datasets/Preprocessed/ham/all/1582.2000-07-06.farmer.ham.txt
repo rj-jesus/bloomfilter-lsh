@@ -1,2 +1,0 @@
-FROM: derek.davies@enron.com
-teco tap 10 . 000 / enron ; 85 . 000 / hpl iferc

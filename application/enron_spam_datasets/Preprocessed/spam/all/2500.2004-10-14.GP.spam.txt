@@ -1,3 +1,0 @@
-FROM: gatewny@telus.net
-hello there !
-sode

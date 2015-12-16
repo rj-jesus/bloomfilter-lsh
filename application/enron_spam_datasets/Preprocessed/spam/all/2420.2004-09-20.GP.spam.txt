@@ -1,1 +1,0 @@
-FROM: thailifestory@yahoo.com

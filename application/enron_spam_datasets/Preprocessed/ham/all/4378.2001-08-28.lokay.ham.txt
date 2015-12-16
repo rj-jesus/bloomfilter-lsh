@@ -1,4 +1,0 @@
-FROM: 40enron@enron.com
-all the schlitterbahn tickets have been sold and we will not be purchasing any more .
-thanks
-ruth

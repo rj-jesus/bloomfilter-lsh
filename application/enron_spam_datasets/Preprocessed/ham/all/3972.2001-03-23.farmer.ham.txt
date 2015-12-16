@@ -1,3 +1,0 @@
-FROM: yvette.connevey@enron.com
-( see attached file : hplno 324 . xls )
-- hplno 324 . xls

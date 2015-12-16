@@ -1,2 +1,0 @@
-FROM: ggreen2@txu.com
-attached is the hl & p spreadsheet for january .

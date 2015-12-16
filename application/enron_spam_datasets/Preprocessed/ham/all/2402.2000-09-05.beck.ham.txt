@@ -1,4 +1,0 @@
-FROM: geraldine.irvine@enron.com
-donna and richard ,
-more information for your tracking database and report archives .
-john

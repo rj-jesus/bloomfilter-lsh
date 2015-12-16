@@ -1,5 +1,0 @@
-FROM: brent.price@enron.com
-daren - the valve for meter 1031 was not shut off in time on 3 / 1 . it flowed
-about 1 . 200 . could you please extend the deal for one day ( deal 589188 ) ?
-thanks .
-al

@@ -1,2 +1,0 @@
-FROM: tom.acton@enron.com
-attached is a marked and unmarked draft . please fax your comments to kent castleman at 713 - 646 - 8409 .

@@ -1,2 +1,0 @@
-FROM: vheystarta@hotmail.com
-.

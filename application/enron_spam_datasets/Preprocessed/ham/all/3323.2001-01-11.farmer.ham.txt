@@ -1,2 +1,0 @@
-FROM: christopher.calger@enron.com
-teco tap 47 . 500 / enron

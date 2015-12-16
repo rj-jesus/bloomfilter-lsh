@@ -1,3 +1,0 @@
-FROM: bill.fowler@enron.com
-( see attached file : hplno 221 . xls )
-- hplno 221 . xls

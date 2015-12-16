@@ -1,2 +1,0 @@
-FROM: sheri.thomas@enron.com
-john

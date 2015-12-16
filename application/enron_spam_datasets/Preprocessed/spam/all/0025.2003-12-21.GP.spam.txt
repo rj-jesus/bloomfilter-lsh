@@ -1,2 +1,0 @@
-FROM: MirandaN@yandex.ru
-click here to be removed

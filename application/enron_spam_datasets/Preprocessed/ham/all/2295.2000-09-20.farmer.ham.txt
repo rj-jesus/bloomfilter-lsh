@@ -1,3 +1,0 @@
-FROM: vince.kaminski@enron.com
-teco tap 35 . 000 / enron ; 71 . 250 / hpl gas daily
-ls hpl lsk ic 15 . 000 / enron

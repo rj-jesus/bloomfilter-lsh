@@ -1,4 +1,0 @@
-FROM: becky.caudle@enron.com
-daren ,
-please see the attached spreadsheet .
-bob

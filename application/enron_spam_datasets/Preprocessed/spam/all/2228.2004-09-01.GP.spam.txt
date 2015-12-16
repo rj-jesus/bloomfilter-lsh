@@ -1,2 +1,0 @@
-FROM: qwerty1221sasha@hotmail.com
->

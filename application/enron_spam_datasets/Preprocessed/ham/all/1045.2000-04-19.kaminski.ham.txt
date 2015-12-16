@@ -1,7 +1,0 @@
-FROM: vince.kaminski@enron.com
-mark ,
-did you have a chance to review the e & p company model
-( the old cash flow mode ) and determine if it can be used
-by fred lagrasta ' group .
-please , let me know .
-vince

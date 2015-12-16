@@ -1,2 +1,0 @@
-FROM: gpg.announcement@enron.com
-teco tap 25 . 000 / enron ; 100 . 000 / hpl gas daily

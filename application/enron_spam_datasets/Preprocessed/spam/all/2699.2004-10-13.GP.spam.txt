@@ -1,2 +1,0 @@
-FROM: amerimed@zsnmail.com
-click here to be removed

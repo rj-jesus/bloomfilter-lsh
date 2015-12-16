@@ -1,3 +1,0 @@
-FROM: mary.solmonson@enron.com
-( see attached file : hplno 321 . xls )
-- hplno 321 . xls

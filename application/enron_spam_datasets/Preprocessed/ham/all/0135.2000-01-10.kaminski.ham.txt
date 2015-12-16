@@ -1,3 +1,0 @@
-FROM: audrey.robertson@enron.com
-vince : just a short note to congratulate you on your well - deserved promotion .
-jordan
