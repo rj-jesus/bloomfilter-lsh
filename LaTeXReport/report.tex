@@ -46,12 +46,6 @@
 
 \pagenumbering{roman}
 
-\begin{abstract}
-
-ABSTRACT
-
-\end{abstract}
-
 \tableofcontents
 %\listoftables
 \listoffigures
@@ -487,11 +481,11 @@ Neste teste conseguiu-se filtrar as mensagens sem interesse, ao mesmo tempo que 
 \chapter{Conclusões}
 \label{chap.conclusões}
 
-Tendo em conta a eficiência demonstrada por filtros de \textit{Bloom}, conclui-se que estes são efetivamente ótimas estruturas quando se pretende confirmar a existência de um elemento num conjunto muito grande e se admite um pequeno erro (de falsos positivos); por outro lado e face aos resultados que apresenta, \textit{Locality-sensitive hashing} (aliado a técnicas de \textit{shingling} e \textit{minhashing}) pdoerá ser uma ótima solução em algoritmos de \textit{nearest-neighbour search} e \textit{clustering}. Estas conclusões são baseados nos resultados bastante satisfatórios de testes relativos ao módulo de \textit{Bloom-filter} e de \textit{Locality-sensitive hashing}, resultando em desvios mínimos em relação aos valores teóricos.
+Tendo em conta a eficiência demonstrada por filtros de \textit{Bloom}, conclui-se que estes são efetivamente ótimas estruturas quando se pretende confirmar a existência de um elemento num conjunto muito grande e se admite um pequeno erro (de falsos positivos); por outro lado, e face aos resultados que apresenta, \textit{Locality-sensitive hashing} (aliado a técnicas de \textit{shingling} e \textit{minhashing}) poderá ser uma ótima solução em algoritmos de \textit{nearest-neighbour search} e \textit{clustering}. Estas conclusões são baseados nos resultados bastante satisfatórios de testes relativos ao módulo de \textit{Bloom-filter} e de \textit{Locality-sensitive hashing}, resultando em desvios mínimos em relação aos valores teóricos.
 
 Juntando estes dois métodos, foi possível criar um filtro de \textit{spam} (ou de outros conteúdos) em que se obtiveram resultados satisfatórios tendo em conta os \textit{datasets} utilizados.
 
-Por fim, é de notar que qualquer modelo probabilístico é isso mesmo, apenas probabilístico, e assim sendo por mais eficiente que um filtro de \textit{Bloom}, por exemplo, possa ser, só faz sentido ser utilizado em situações onde é admissível cometer algum erro. Isto pode ser um factor limitante em algumas situações, por outro lado e sendo o mundo um lugar probabilístico a, vasta maioria dos casos monstra-nos que é possível trabalhar com alguma margem para erro, desde que esta seja suficientemente pequena. Assim, adotar aproximações probabilísticas a vários problemas pode contribuir para dar origem a soluções não só mais eficientes como até mais simples. E com o crescente aumento da informação disponível no mundo, cada vez mais soluções destas deverão ser precisas.
+Por fim, é de notar que qualquer modelo probabilístico é isso mesmo, apenas probabilístico, e assim sendo por mais eficiente que um filtro de \textit{Bloom}, por exemplo, possa ser, só faz sentido ser utilizado em situações onde é admissível cometer algum erro. Isto pode ser um factor limitante em algumas situações, por outro lado, e sendo o mundo um lugar probabilístico a, vasta maioria dos casos monstra-nos que é possível trabalhar com alguma margem para erro, desde que esta seja suficientemente pequena. Assim, adotar aproximações probabilísticas a vários problemas pode contribuir para dar origem a soluções não só mais eficientes como até mais simples. E com o crescente aumento da informação disponível no mundo, cada vez mais soluções destas deverão ser precisas.
 
 \maketitle
 \nocite{*}
