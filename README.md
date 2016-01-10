@@ -1,19 +1,17 @@
- Bloom-Filter + MinHash
+Bloom-filter + LSH
 ========================
 
 Overview
 --------
 
-Bloom-Filter + MinHash is a project which implements and uses both a Bloom filter and the MinHash technique. It is currently being developed while we take "MPEI - Métodos Probabilísticos para Engenharia Informática".
+Bloom-Filter + LSH is a project which implements and uses both a Bloom filter and the Locality sensitive hashing technique. It was developed while we were taking "MPEI - Métodos Probabilísticos para Engenharia Informática".
 
 Special Notes
 -------------
 
-Our current in use hash function ([MurmurHash3](https://code.google.com/p/smhasher/wiki/MurmurHash3)) is interfaced with a MEX function, thus it needs to be compiled:
+Our current in use hash function ([Farmhash](https://github.com/google/farmhash)) is interfaced with a MEX function, thus it needs to be compiled:
 
-```mex MurmurHash3.cpp```
-
-#### TO-DO: Get an idea of what to use this project with.
+```mex Farmhash.cpp```
 
 Pedro Martins  
 Ricardo Jesus
